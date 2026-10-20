@@ -1,0 +1,21 @@
+company,initiative,type,silo,year,description,source,last_verified
+Alphabet,Isomorphic Labs,build,ai-discovery,2021,DeepMind spinout for AI drug discovery; co-developed AlphaFold 3 (2024),TODO,TODO
+Alphabet,Verily,build,precision-data;diagnostics,2015,Life sciences / health data unit (formerly Google Life Sciences),TODO,TODO
+Alphabet,Calico,build,longevity,2013,Aging research company; partnered with AbbVie,TODO,TODO
+NVIDIA,BioNeMo,platform,ai-discovery;foundation-models,2022,Framework and models for biology/chemistry AI,TODO,TODO
+NVIDIA,NVentures / strategic investments,invest,ai-discovery,2023,Investments including Recursion; partnerships with pharma (e.g. Eli Lilly AI supercomputer),TODO,TODO
+Meta,ESM protein models,build,foundation-models,2019,ESM protein language models; team later spun out as EvolutionaryScale,TODO,TODO
+Microsoft,Microsoft Research AI for Science,build,ai-discovery;foundation-models,2022,AI for molecular / protein science research,TODO,TODO
+Amazon,AWS HealthOmics,platform,tools-omics,2022,Managed service for genomic / omics data,TODO,TODO
+OpenAI,Retro Biosciences collaboration,partner,longevity;ai-discovery,2025,GPT-4b micro model for protein engineering of reprogramming factors,TODO,TODO
+OpenAI,Chai Discovery investment,invest,ai-discovery,2024,Backed Chai Discovery,TODO,TODO
+Anthropic,Claude for Life Sciences,platform,ai-discovery;tools-omics,2025,Claude offering with life sciences connectors and partnerships,TODO,TODO
+Alphabet,Isomorphic Labs $2.1B Series B,invest,ai-discovery,2026,Alphabet/GV/CapitalG participate in Thrive-led round (May 2026),https://isomorphiclabs.com/articles/isomorphic-labs-announces-series-b-investment-round,2026-10-15
+NVIDIA,Protein complex dataset w/ Google DeepMind + EMBL,partner,foundation-models,2026,Precomputed protein-complex structures announced at GTC 2026,https://blogs.nvidia.com/blog/gtc-2026-news/,2026-10-15
+NVIDIA,Basecamp Research Series C,invest,foundation-models,2026,Participated in $140M Series C (Sep 2026),https://aiweekly.co/alerts/basecamp-research-raises-140m-series-c-at-800m-led-by-s32-anthropic-and-nvidia,2026-10-15
+Amazon,Amazon Bio Discovery,platform,ai-discovery;antibody,2026,Agentic AI app w/ biological foundation models; MSK/Bayer/Broad early users (Apr 2026),https://www.genengnews.com/topics/artificial-intelligence/aws-launches-amazon-bio-discovery-agentic-ai-to-accelerate-drug-development/,2026-10-15
+Amazon,Novo Nordisk AI drug discovery pact,partner,ai-discovery,2026,Pact + London innovation hub (Aug 2026),https://www.fiercebiotech.com/biotech/novo-nordisk-and-aws-sign-ai-drug-discovery-pact-launch-london-innovation-hub,2026-10-15
+OpenAI,GPT-Rosalind,build,ai-discovery,2026,Life sciences reasoning model; trusted-access preview; Codex Life Sciences plugin (Apr 2026),https://heise.de/-11263023,2026-10-15
+OpenAI,Chai Discovery Series C,invest,ai-discovery,2026,Participated in $400M Series C at $3.8B (Jul 2026),https://www.businesswire.com/news/home/20260713849009/en/Chai-Discovery-Announces-400M-Series-C-to-Advance-AI-Driven-Molecular-Design,2026-10-15
+Anthropic,Life Sciences Verification Program,platform,ai-discovery,2026,Beta: verified orgs get relaxed bio safeguards on Mythos/Opus/Sonnet (Sep 2026),https://www.unite.ai/ja/anthropic-launches-life-sciences-verification-program-in-beta/,2026-10-15
+Anthropic,Basecamp Research Series C (Anthology Fund) + Trillion Gene Atlas,invest;partner,foundation-models,2026,Anthology Fund in $140M Series C (Sep 2026),https://aiweekly.co/alerts/basecamp-research-raises-140m-series-c-at-800m-led-by-s32-anthropic-and-nvidia,2026-10-15

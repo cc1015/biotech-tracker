@@ -1,0 +1,104 @@
+{
+ "name": "Thrive Capital (healthcare & life-science bets)",
+ "profile": {
+  "parent": "Thrive Capital",
+  "type": "generalist-vc-bio-arm",
+  "hq": "New York, NY",
+  "founded": "",
+  "leadership": [
+   "Joshua Kushner — Founder and Managing Partner (also co-founder of Oscar Health)",
+   "Nworah Ayogu — Partner, leads healthcare investing (joined 2024)",
+   "Nitin Nohria — Executive Chairman"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "Thrive Capital Partners X",
+   "size_usd": 10000000000,
+   "year": "2026"
+  },
+  "model": "Thrive is a generalist internet and software investor with no separate bio fund. It makes large, concentrated bets on AI-native biology and healthcare, framed around 'bilingual' companies that combine medicine and technology. It leads big rounds in frontier AI drug design (Isomorphic Labs, Chai Discovery seed) and joins later rounds in longevity, neurotech and clinical AI.",
+  "summary": "Thrive has become one of the largest single sources of capital for AI drug discovery, leading Isomorphic Labs' $600M first external round in 2025 and its $2.1B round in 2026. Its health portfolio otherwise skews toward healthcare services and clinical AI, starting with Oscar Health, its first investment.",
+  "website": "https://www.thrivecap.com/",
+  "sources": [
+   "https://www.thrivecap.com/info",
+   "https://en.wikipedia.org/wiki/Thrive_Capital",
+   "https://en.wikipedia.org/wiki/Joshua_Kushner",
+   "https://en.wikipedia.org/wiki/Isomorphic_Labs",
+   "https://www.sourcery.vc/p/breaking-inside-thrive-capital-749",
+   "https://dealroom.co/investors/thrive-capital/",
+   "https://valueaddvc.com/vc/thrive-capital",
+   "https://www.tipranks.com/private-companies/investor/thrive-capital",
+   "https://venturecapitaltracker.com/thrive-capital-portfolio-companies-2026"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Isomorphic Labs",
+   "launched": "2025",
+   "role": "led",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI drug design engine spun out of Google DeepMind",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-600m-external-investment-round"
+  },
+  {
+   "name": "Chai Discovery",
+   "launched": "2024",
+   "role": "led",
+   "silo": [
+    "ai-discovery",
+    "foundation-models",
+    "antibody"
+   ],
+   "product": "Frontier AI models for molecular interaction prediction and antibody design",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.chaidiscovery.com/news/seed-announcement"
+  },
+  {
+   "name": "Benchling",
+   "launched": "2016",
+   "role": "led",
+   "silo": [
+    "lab-automation"
+   ],
+   "product": "Cloud R&D data and workflow platform for life-science labs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.benchling.com/news/benchling-announces-7m-in-new-funding-led-by-thrive-capital"
+  },
+  {
+   "name": "NewLimit",
+   "launched": "2026",
+   "role": "participated",
+   "silo": [
+    "longevity"
+   ],
+   "product": "Epigenetic reprogramming medicines, starting with alcohol-related liver disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.lw.com/en/news/2026/06/latham-watkins-advises-newlimit-on-series-c"
+  },
+  {
+   "name": "Formation Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "AI-native pharma that acquires and develops clinical-stage drugs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.sourcery.vc/p/breaking-inside-thrive-capital-749"
+  }
+ ]
+}

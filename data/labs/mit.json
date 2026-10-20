@@ -1,0 +1,416 @@
+{
+ "name": "Massachusetts Institute of Technology",
+ "profile": {
+  "city": "Cambridge, MA, USA",
+  "type": "university",
+  "tech_transfer": "MIT Technology Licensing Office (TLO)",
+  "tech_transfer_url": "https://tlo.mit.edu/",
+  "summary": "MIT's engineering-led biology, from Robert Langer's drug-delivery lab to Phillip Sharp's RNA work and the Koch and Whitehead institutes, has produced foundational companies including Biogen, Alnylam, Moderna and Ginkgo Bioworks. Its faculty are unusually prolific serial founders, with Langer alone credited with over 40 companies.",
+  "programs": [
+   "Koch Institute for Integrative Cancer Research",
+   "Whitehead Institute",
+   "Abdul Latif Jameel Clinic for Machine Learning in Health",
+   "MIT Synthetic Biology Center",
+   "Institute for Medical Engineering and Science"
+  ],
+  "website": "https://www.mit.edu",
+  "sources": [
+   "https://tlo.mit.edu/",
+   "https://en.wikipedia.org/wiki/Robert_S._Langer",
+   "https://en.wikipedia.org/wiki/Phillip_Allen_Sharp",
+   "https://en.wikipedia.org/wiki/Sangeeta_Bhatia",
+   "https://en.wikipedia.org/wiki/James_J._Collins",
+   "https://en.wikipedia.org/wiki/Ginkgo_Bioworks"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Robert Langer",
+   "lab": "Langer Lab, Koch Institute",
+   "known_for": "Controlled drug release, nanoparticles, biomaterials; 40+ companies",
+   "silo": [
+    "rna",
+    "small-molecule",
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "pi": "Phillip Sharp",
+   "lab": "Sharp Lab, Koch Institute",
+   "known_for": "RNA splicing; co-founded Biogen and Alnylam",
+   "silo": [
+    "rna",
+    "antibody"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Phillip_Allen_Sharp"
+  },
+  {
+   "pi": "Sangeeta Bhatia",
+   "lab": "Laboratory for Multiscale Regenerative Technologies",
+   "known_for": "Liver tissue engineering; nanosensor diagnostics",
+   "silo": [
+    "diagnostics",
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Sangeeta_Bhatia"
+  },
+  {
+   "pi": "James J. Collins",
+   "lab": "Collins Lab, IMES / Jameel Clinic",
+   "known_for": "Synthetic gene circuits; AI antibiotic discovery",
+   "silo": [
+    "synbio",
+    "ai-discovery"
+   ],
+   "source": "https://en.wikipedia.org/wiki/James_J._Collins"
+  },
+  {
+   "pi": "Tom Knight",
+   "lab": "Computer Science and AI Laboratory (CSAIL)",
+   "known_for": "BioBricks; co-founded Ginkgo Bioworks",
+   "silo": [
+    "synbio"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Ginkgo_Bioworks"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Moderna",
+   "year": "2010",
+   "pi": "Robert Langer",
+   "silo": [
+    "rna"
+   ],
+   "product": "mRNA vaccines and therapeutics",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2018 (NASDAQ: MRNA)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Moderna"
+  },
+  {
+   "name": "Alnylam Pharmaceuticals",
+   "year": "2002",
+   "pi": "Phillip Sharp; David Bartel; Paul Schimmel",
+   "silo": [
+    "rna"
+   ],
+   "product": "RNAi therapeutics",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2004 (NASDAQ: ALNY)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Alnylam_Pharmaceuticals"
+  },
+  {
+   "name": "Biogen",
+   "year": "1978",
+   "pi": "Phillip Sharp",
+   "silo": [
+    "antibody",
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "public",
+   "outcome": "public (NASDAQ: BIIB)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Biogen"
+  },
+  {
+   "name": "Ginkgo Bioworks",
+   "year": "2008",
+   "pi": "Tom Knight",
+   "silo": [
+    "synbio",
+    "lab-automation"
+   ],
+   "product": "Synthetic-biology cell programming platform",
+   "builder": "",
+   "status": "public",
+   "outcome": "SPAC listing 2021 (NYSE: DNA)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Ginkgo_Bioworks"
+  },
+  {
+   "name": "Momenta Pharmaceuticals",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "antibody"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Johnson & Johnson",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Sigilon Therapeutics",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Eli Lilly",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Selecta Biosciences",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "rna",
+    "cell-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "merged",
+   "outcome": "merged to form Cartesian Therapeutics",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Frequency Therapeutics",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "merged",
+   "outcome": "merged to form Korro Bio",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "BIND Therapeutics",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Pfizer",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Lyndra Therapeutics",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Innoviva",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Living Proof",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Unilever",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "SQZ Biotech",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Seer",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Tissium",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Kala",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Lyra Therapeutics",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "T2 Biosystems",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Soufflé Therapeutics",
+   "year": "",
+   "pi": "Robert Langer",
+   "silo": [
+    "rna"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Robert_S._Langer"
+  },
+  {
+   "name": "Hepregen",
+   "year": "2008",
+   "pi": "Sangeeta Bhatia",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by BioIVT 2018",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sangeeta_Bhatia"
+  },
+  {
+   "name": "Glympse Bio",
+   "year": "2015",
+   "pi": "Sangeeta Bhatia",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "merged",
+   "outcome": "merged with Sunbird Bio 2023",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sangeeta_Bhatia"
+  },
+  {
+   "name": "Satellite Bio",
+   "year": "",
+   "pi": "Sangeeta Bhatia",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sangeeta_Bhatia"
+  },
+  {
+   "name": "Amplifyer Bio",
+   "year": "",
+   "pi": "Sangeeta Bhatia",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sangeeta_Bhatia"
+  },
+  {
+   "name": "Senti Biosciences",
+   "year": "",
+   "pi": "James J. Collins",
+   "silo": [
+    "cell-therapy",
+    "synbio"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_J._Collins"
+  },
+  {
+   "name": "Cellarity",
+   "year": "",
+   "pi": "James J. Collins",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_J._Collins"
+  }
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "name": "Khosla Ventures (Health & Life Sciences)",
+ "profile": {
+  "parent": "Khosla Ventures",
+  "type": "generalist-vc-bio-arm",
+  "hq": "Menlo Park, California, USA",
+  "founded": "",
+  "leadership": [
+   "Vinod Khosla — Founder",
+   "Samir Kaul — Founding Partner & Managing Director (AI, health, sustainability)",
+   "Alex Morgan — Partner (biotech, healthcare, AI/ML)",
+   "Nessan Bermingham — Operating Partner (life sciences, nucleic-acid editing and delivery)",
+   "Uri Lopatin — Operating Partner (biotech and life sciences)",
+   "Hal Paz — Operating Partner (healthcare and life sciences)"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "Khosla Ventures VIII (eighth flagship fund)",
+   "size_usd": 1600000000,
+   "year": "2023"
+  },
+  "model": "Generalist deep-tech firm whose health practice spans therapeutics, diagnostics/medtech and digital health, investing from seed onward with a preference for technically risky, platform-scale bets. It frequently leads or co-leads seed and Series A rounds, and its operating partners sometimes co-found or run portfolio companies (e.g. Liberate Bio, Ukko). Recent therapeutics deals tilt toward AI-enabled chemistry and cell models, in vivo cell therapy and genetic medicine delivery.",
+  "summary": "Khosla is an early backer of several category-defining tools and diagnostics companies (Guardant Health, Ultima Genomics, Opentrons, Karius) and has become an increasingly active lead in AI-bio and next-generation therapeutics. Its willingness to write seed checks into unproven platforms makes it a frequent first institutional investor in Bay Area and Boston biotech.",
+  "website": "https://www.khoslaventures.com",
+  "sources": [
+   "https://www.khoslaventures.com/portfolio",
+   "https://www.khoslaventures.com/team",
+   "https://en.wikipedia.org/wiki/Khosla_Ventures",
+   "https://pulse2.com/rubedo-life-sciences-40-million-raised-to-develop-therapies-targeting-senescent-cells-driving-age-related-diseases",
+   "https://globalventuring.com/university/cellino-generates-16m-seed-round/?format=md",
+   "https://www.biospace.com/article/releases/moonwalk-biosciences-launches-with-57-million-in-financing-to-advance-a-new-class-of-precision-epigenetic-medicines/",
+   "https://pulse2.com/excelsior-sciences-95-million-raised-to-advance-automated-chemistry-and-ai-driven-drug-discovery/amp/",
+   "https://vcnewsdaily.com/stylus-medicine/venture-capital-funding/ypdkttfqcl",
+   "https://vcnewsdaily.com/Vivodyne/venture-funding.php",
+   "https://www.vcaonline.com/news/2025051314/somite-ai-announces-series-a-led-by-khosla-ventures-to-revolutionize-cell-therapy-with-ai-foundation-models/",
+   "https://www.ultimagenomics.com/blog/ultima-genomics-delivers-the-usd100-genome/",
+   "https://genengnews.com/gen-edge/lock-stock-and-barrel-liberate-bio-is-bringing-precision-delivery-to-genetic-medicines",
+   "https://www.biospace.com/press-releases/inflammatix-secures-57-million-to-advance-novel-diagnostic-for-patients-with-suspected-infections-or-sepsis",
+   "https://techcrunch.com/2021/09/23/loyal-raises-27m-aims-to-give-dog-owners-more-time-with-their-pets",
+   "https://egenesisbio.com/press-releases/egenesis-raises-191-million-series-d-financing-to-advance-lead-program-for-kidney-transplant/",
+   "https://www.biospace.com/karius-nabs-50-million-for-technology-enabling-broad-and-rapid-detection-of-infectious-diseases",
+   "https://technical.ly/uncategorized/opentrons-will-canine-funding-round"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Guardant Health",
+   "launched": "2014",
+   "role": "participated",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "Blood-based liquid biopsy tests for cancer detection and monitoring",
+   "status": "public",
+   "outcome": "IPO 2018 (NASDAQ: GH)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Khosla_Ventures"
+  },
+  {
+   "name": "Ultima Genomics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Low-cost high-throughput DNA sequencing platform (UG 100)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ultimagenomics.com/blog/ultima-genomics-delivers-the-usd100-genome/"
+  },
+  {
+   "name": "Opentrons",
+   "launched": "2018",
+   "role": "led",
+   "silo": [
+    "lab-automation"
+   ],
+   "product": "Affordable open-source liquid-handling lab robots",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://technical.ly/uncategorized/opentrons-will-canine-funding-round"
+  },
+  {
+   "name": "Karius",
+   "launched": "2017",
+   "role": "participated",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Plasma cell-free DNA test identifying infectious pathogens",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/karius-nabs-50-million-for-technology-enabling-broad-and-rapid-detection-of-infectious-diseases"
+  },
+  {
+   "name": "Inflammatix",
+   "launched": "",
+   "role": "led",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Host immune-response blood test (TriVerity) for infection and sepsis",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/press-releases/inflammatix-secures-57-million-to-advance-novel-diagnostic-for-patients-with-suspected-infections-or-sepsis"
+  },
+  {
+   "name": "Vivodyne",
+   "launched": "",
+   "role": "led",
+   "silo": [
+    "lab-automation",
+    "ai-discovery"
+   ],
+   "product": "Robotically grown human tissue models for preclinical drug testing",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://vcnewsdaily.com/Vivodyne/venture-funding.php"
+  },
+  {
+   "name": "Cellino",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "cell-therapy",
+    "lab-automation"
+   ],
+   "product": "Autonomous, AI-guided manufacturing of personalized iPSC cell therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://globalventuring.com/university/cellino-generates-16m-seed-round/?format=md"
+  },
+  {
+   "name": "Somite.ai (Cellular Intelligence)",
+   "launched": "2025",
+   "role": "led",
+   "silo": [
+    "foundation-models",
+    "cell-therapy"
+   ],
+   "product": "AI foundation models of human cell development for cell therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcaonline.com/news/2025051314/somite-ai-announces-series-a-led-by-khosla-ventures-to-revolutionize-cell-therapy-with-ai-foundation-models/"
+  },
+  {
+   "name": "Stylus Medicine",
+   "launched": "",
+   "role": "co-founded",
+   "silo": [
+    "cell-therapy",
+    "gene-editing"
+   ],
+   "product": "In vivo CAR-T via targeted genetic medicine delivery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://vcnewsdaily.com/stylus-medicine/venture-capital-funding/ypdkttfqcl",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Loyal",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "longevity",
+    "small-molecule"
+   ],
+   "product": "Drugs to extend healthy lifespan in dogs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://techcrunch.com/2021/09/23/loyal-raises-27m-aims-to-give-dog-owners-more-time-with-their-pets"
+  },
+  {
+   "name": "Rubedo Life Sciences",
+   "launched": "2024",
+   "role": "led",
+   "silo": [
+    "longevity",
+    "small-molecule"
+   ],
+   "product": "Senolytic drugs targeting senescent cells; lead RLS-1496 in dermatology",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pulse2.com/rubedo-life-sciences-40-million-raised-to-develop-therapies-targeting-senescent-cells-driving-age-related-diseases"
+  },
+  {
+   "name": "Moonwalk Biosciences",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "gene-editing",
+    "precision-data"
+   ],
+   "product": "Precision epigenetic editing medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/article/releases/moonwalk-biosciences-launches-with-57-million-in-financing-to-advance-a-new-class-of-precision-epigenetic-medicines/"
+  },
+  {
+   "name": "Excelsior Sciences",
+   "launched": "2025",
+   "role": "led",
+   "silo": [
+    "small-molecule",
+    "ai-discovery",
+    "lab-automation"
+   ],
+   "product": "Machine-executable automated chemistry for closed-loop small-molecule discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pulse2.com/excelsior-sciences-95-million-raised-to-advance-automated-chemistry-and-ai-driven-drug-discovery/amp/"
+  },
+  {
+   "name": "Liberate Bio",
+   "launched": "",
+   "role": "co-founded",
+   "silo": [
+    "rna",
+    "gene-therapy"
+   ],
+   "product": "Lipid nanoparticle delivery of nucleic acid drugs beyond the liver",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://genengnews.com/gen-edge/lock-stock-and-barrel-liberate-bio-is-bringing-precision-delivery-to-genetic-medicines"
+  },
+  {
+   "name": "Pearl Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Engineered biomaterials and programmable smart biologics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.khoslaventures.com/portfolio"
+  },
+  {
+   "name": "Ukko",
+   "launched": "",
+   "role": "participated",
+   "silo": [],
+   "product": "Immunotherapy for food allergy; lead program in peanut allergy",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.khoslaventures.com/portfolio"
+  },
+  {
+   "name": "eGenesis",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Gene-edited pig organs for human transplantation",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://egenesisbio.com/press-releases/egenesis-raises-191-million-series-d-financing-to-advance-lead-program-for-kidney-transplant/"
+  },
+  {
+   "name": "EveryONE Medicines",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "rna"
+   ],
+   "product": "Individualized genetic medicines for patients with rare variants",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.khoslaventures.com/portfolio"
+  },
+  {
+   "name": "Kamau Therapeutics",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Gene editing therapy for sickle cell disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.khoslaventures.com/portfolio"
+  }
+ ]
+}

@@ -1,0 +1,517 @@
+{
+ "name": "Third Rock Ventures",
+ "profile": {
+  "type": "vc-company-creation",
+  "hq": "Boston, MA",
+  "founded": "2007",
+  "founders": [
+   "Mark Levin",
+   "Kevin Starr",
+   "Robert Tepper"
+  ],
+  "leadership": [
+   "Mark Levin — Founding Partner",
+   "Kevin Starr — Founding Partner",
+   "Robert Tepper — Founding Partner / Partner",
+   "Abbie Celniker — Partner",
+   "Reid Huber — Partner",
+   "Jeffrey Tong — Partner",
+   "Kevin Gillis — Partner",
+   "Andrea van Elsas — Partner",
+   "Jigar Raythatha — Partner"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "Third Rock Ventures Fund VI",
+   "size_usd": 1100000000,
+   "year": "2022"
+  },
+  "model": "Third Rock incubates companies in-house: partners evaluate emerging science in areas of unmet need, then spend an extended seed period validating mechanisms and maturing a lead program before a public launch. Partners often take interim executive and R&D roles at launch, then hand off to recruited management while staying on the board.",
+  "summary": "One of the most prolific Boston-based biotech company builders, it reports more than 70 companies launched and contributions to 27 approved products. Its alumni include Agios, bluebird bio, Foundation Medicine, Blueprint, MyoKardia and Relay, and it continues to launch several companies a year.",
+  "website": "https://www.thirdrockventures.com",
+  "sources": [
+   "https://www.thirdrockventures.com/portfolio",
+   "https://www.thirdrockventures.com/approach",
+   "https://www.thirdrockventures.com/people",
+   "https://www.thirdrockventures.com/media-center",
+   "https://en.wikipedia.org/wiki/Third_Rock_Ventures",
+   "https://www.privateequitywire.co.uk/third-rock-ventures-raises-11bn-fund-vi/"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Agios Pharmaceuticals",
+   "launched": "2008",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Metabolism-targeted drugs; PK activator mitapivat for hemolytic anemias",
+   "status": "public",
+   "outcome": "IPO 2013 (NASDAQ: AGIO)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Constellation Pharmaceuticals",
+   "launched": "2008",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Epigenetic gene-expression modulators for cancer",
+   "status": "acquired",
+   "outcome": "Acquired by MorphoSys 2021 for ~$1.7B",
+   "outcome_value_usd": 1700000000,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "bluebird bio",
+   "launched": "2010",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Lentiviral gene therapies for beta-thalassemia, sickle cell and CALD",
+   "status": "acquired",
+   "outcome": "IPO 2013; taken private by Carlyle and SK Capital 2025",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Foundation Medicine",
+   "launched": "2010",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "Comprehensive genomic profiling tests for cancer",
+   "status": "acquired",
+   "outcome": "IPO 2013; Roche bought remaining stake 2018 (~$2.4B)",
+   "outcome_value_usd": 2400000000,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Sage Therapeutics",
+   "launched": "2011",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Neuroactive steroids for postpartum depression (zuranolone)",
+   "status": "acquired",
+   "outcome": "IPO 2014; acquired by Supernus 2025",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Blueprint Medicines",
+   "launched": "2011",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Kinase inhibitors; avapritinib for systemic mastocytosis",
+   "status": "acquired",
+   "outcome": "IPO 2015; acquired by Sanofi 2025 for up to ~$9.5B",
+   "outcome_value_usd": 9500000000,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Global Blood Therapeutics",
+   "launched": "2012",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Sickle cell disease therapies (voxelotor)",
+   "status": "acquired",
+   "outcome": "IPO 2015; acquired by Pfizer 2022 for $5.4B",
+   "outcome_value_usd": 5400000000,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "MyoKardia",
+   "launched": "2012",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision cardiology; myosin inhibitor mavacamten",
+   "status": "acquired",
+   "outcome": "IPO 2015; acquired by Bristol Myers Squibb 2020 for $13.1B",
+   "outcome_value_usd": 13100000000,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Nurix Therapeutics",
+   "launched": "2013",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "E3 ligase-based degraders, lead BTK degrader for B-cell cancers",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: NRIX)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Editas Medicine",
+   "launched": "2013",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "CRISPR (Cas9/Cas12a) genome-editing medicines",
+   "status": "public",
+   "outcome": "IPO 2016 (NASDAQ: EDIT)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Jounce Therapeutics",
+   "launched": "2013",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Immuno-oncology antibodies",
+   "status": "acquired",
+   "outcome": "IPO 2017; acquired by Concentra Biosciences 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Voyager Therapeutics",
+   "launched": "2014",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "AAV gene therapies and capsids for CNS diseases",
+   "status": "public",
+   "outcome": "IPO 2015 (NASDAQ: VYGR)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Revolution Medicines",
+   "launched": "2015",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "RAS(ON) inhibitors for RAS-driven cancers",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: RVMD)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Neon Therapeutics",
+   "launched": "2015",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Neoantigen-targeted cancer vaccines and T-cell therapies",
+   "status": "acquired",
+   "outcome": "IPO 2018; acquired by BioNTech 2020",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Decibel Therapeutics",
+   "launched": "2015",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Gene therapies to restore hearing and balance",
+   "status": "acquired",
+   "outcome": "IPO 2021; acquired by Regeneron 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Relay Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Protein-motion-based small molecules for precision oncology",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: RLAY)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Fulcrum Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small molecules modulating gene expression in genetic diseases",
+   "status": "public",
+   "outcome": "IPO 2019 (NASDAQ: FULC)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Pliant Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Integrin inhibitors for fibrotic diseases",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: PLRX)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Magenta Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Antibody-based conditioning for stem cell transplant",
+   "status": "defunct",
+   "outcome": "IPO 2018; wound down 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Goldfinch Bio",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision therapies for kidney diseases",
+   "status": "defunct",
+   "outcome": "Wound down 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Tango Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Synthetic-lethal oncology; PRMT5 inhibitor vopimetostat",
+   "status": "public",
+   "outcome": "Public via SPAC 2021 (NASDAQ: TNGX)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Casma Therapeutics",
+   "launched": "2018",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "Autophagy-based degradation of disease targets",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Celsius Therapeutics",
+   "launched": "2018",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-TREM1 antibody for inflammatory bowel disease",
+   "status": "acquired",
+   "outcome": "Acquired by AbbVie 2024",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Maze Therapeutics",
+   "launched": "2019",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Genetics-guided drugs for chronic kidney disease (MZE829, MZE782)",
+   "status": "public",
+   "outcome": "IPO 2025 (NASDAQ: MAZE)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Thrive Earlier Detection",
+   "launched": "2019",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Multi-cancer early detection blood test",
+   "status": "acquired",
+   "outcome": "Acquired by Exact Sciences 2020 (~$2.15B)",
+   "outcome_value_usd": 2150000000,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "MOMA Therapeutics",
+   "launched": "2020",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Drugs targeting molecular-machine conformational changes",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Flare Therapeutics",
+   "launched": "2021",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Transcription-factor drugs; PPARG inhibitor FX-909 for bladder cancer",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Asher Biotherapeutics",
+   "launched": "2021",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Cell-type-selective cytokine immunotherapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Abata Therapeutics",
+   "launched": "2021",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Tissue-specific Treg cell therapies for autoimmunity",
+   "status": "defunct",
+   "outcome": "Wound down 2025",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Septerna",
+   "launched": "2022",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral small molecules for GPCR targets",
+   "status": "public",
+   "outcome": "IPO 2024 (NASDAQ: SEPN)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Terremoto Biosciences",
+   "launched": "2022",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Covalent drugs for undrugged oncology targets",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Rapport Therapeutics",
+   "launched": "2022",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Receptor-associated-protein-targeted CNS drugs; RAP-219 for epilepsy",
+   "status": "public",
+   "outcome": "IPO 2024 (NASDAQ: RAPP)",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Clasp Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "antibody"
+   ],
+   "product": "T-cell engagers against cancer neoantigen drivers",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Marea Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Cardiometabolic biologics for hypertriglyceridemia and acromegaly",
+   "status": "merged",
+   "outcome": "Combined with Lisata Therapeutics (NASDAQ: LSTA) 2026 alongside $225M private placement",
+   "outcome_value_usd": null,
+   "source": "https://www.cooley.com/news/coverage/2026/2026-09-17-lisata-therapeutics-announces-acquisition-of-marea-therapeutics-concurrent-%24225-million-private-placement"
+  },
+  {
+   "name": "Trace Neuroscience",
+   "launched": "2024",
+   "silo": [
+    "rna"
+   ],
+   "product": "Antisense oligonucleotides for neurodegeneration; TRCN-1023 for ALS",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Merida Biosciences",
+   "launched": "2025",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Antibodies that clear pathogenic autoantibodies; MER511 for Graves' disease",
+   "status": "private",
+   "outcome": "Lilly agreed in 2026 to acquire it for up to $2.875B (closing expected Q4 2026). Merida's site already calls itself a Lilly subsidiary; closing not yet confirmed",
+   "outcome_value_usd": 2875000000.0,
+   "source": "https://www.contractpharma.com/breaking-news/lilly-to-acquire-merida-biosciences-for-2-875b/"
+  },
+  {
+   "name": "Syremis Therapeutics",
+   "launched": "2025",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Neuropsychiatric drugs; dual M1/M4 agonist ST-905 for schizophrenia",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Azalea Therapeutics",
+   "launched": "2025",
+   "silo": [
+    "gene-editing",
+    "cell-therapy"
+   ],
+   "product": "In vivo genome engineering for cancer immunotherapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  },
+  {
+   "name": "Inflection Medicine",
+   "launched": "2025",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Lifetime genomic-medicine infrastructure linking genomics to clinical care",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thirdrockventures.com/portfolio"
+  }
+ ]
+}

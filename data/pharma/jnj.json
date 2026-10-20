@@ -1,0 +1,470 @@
+{
+ "company": "Johnson & Johnson",
+ "profile": {
+  "legal_name": "Johnson & Johnson",
+  "hq": "New Brunswick, New Jersey, United States",
+  "founded": "1886",
+  "founders_or_origin": "Founded in New Brunswick, NJ by brothers Robert Wood Johnson I, James Wood Johnson and Edward Mead Johnson",
+  "ceo": "Joaquin Duato",
+  "ceo_since": "2022",
+  "ticker": "NYSE:JNJ",
+  "website": "https://www.jnj.com",
+  "revenue_usd": 94193000000,
+  "revenue_year": "2025",
+  "employees": 138200,
+  "employees_year": "2025",
+  "therapeutic_areas": [
+   "Oncology",
+   "Immunology",
+   "Neuroscience",
+   "Cardiovascular",
+   "Surgery",
+   "Vision",
+   "Orthopaedics"
+  ],
+  "top_products": [
+   {
+    "name": "Darzalex",
+    "what": "Multiple myeloma (anti-CD38 antibody)",
+    "revenue_usd": 14351000000,
+    "year": "2025"
+   },
+   {
+    "name": "Stelara",
+    "what": "Psoriasis, Crohn's disease, ulcerative colitis",
+    "revenue_usd": 6078000000,
+    "year": "2025"
+   },
+   {
+    "name": "Tremfya",
+    "what": "Psoriasis, psoriatic arthritis, IBD",
+    "revenue_usd": 5155000000,
+    "year": "2025"
+   },
+   {
+    "name": "Invega franchise",
+    "what": "Long-acting injectable schizophrenia treatments",
+    "revenue_usd": 3810000000,
+    "year": "2025"
+   },
+   {
+    "name": "Erleada",
+    "what": "Prostate cancer",
+    "revenue_usd": 3574000000,
+    "year": "2025"
+   },
+   {
+    "name": "Carvykti",
+    "what": "Multiple myeloma CAR-T therapy",
+    "revenue_usd": 1887000000,
+    "year": "2025"
+   }
+  ],
+  "venture_arm": {
+   "name": "Johnson & Johnson Innovation - JJDC",
+   "founded": "1973",
+   "fund_size_usd": null,
+   "url": "",
+   "notable_investments": [
+    "Biosense Webster",
+    "Omrix",
+    "Tibotec"
+   ]
+  },
+  "summary": "The world's largest diversified healthcare company by revenue, now focused on two segments, Innovative Medicine (formerly Janssen) and MedTech, after splitting off its consumer-health arm as Kenvue in 2023. It has grown chiefly through acquisitions such as Centocor, Alza, Synthes, Actelion, Abiomed, Shockwave and Intra-Cellular, and plans to separate its DePuy Synthes orthopaedics business by 2027.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Johnson_%26_Johnson",
+   "https://www.investor.jnj.com/investor-news/news-details/2026/Johnson--Johnson-reports-Q4-and-Full-Year-2025-results/",
+   "https://globalventuring.com/corporate/how-johnson-johnson-innovation-lasted-50-decades/?format=md",
+   "https://www.jnj.com/innovativemedicine/uk/about-us/our-heritage",
+   "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-intent-to-separate-its-orthopaedics-business"
+  ]
+ },
+ "events": [
+  {
+   "year": "1886",
+   "type": "founding",
+   "counterparty": "",
+   "via": "",
+   "result": "Johnson & Johnson",
+   "value_usd": null,
+   "status": "completed",
+   "description": "The three Johnson brothers start the company in New Brunswick, New Jersey, making sterile surgical dressings.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "1953",
+   "type": "founding",
+   "counterparty": "",
+   "via": "Janssen Pharmaceutica",
+   "result": "Janssen Pharmaceutica",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Dr. Paul Janssen founds the Belgian research-driven drug company that later anchors J&J's pharmaceutical business.",
+   "source": "https://www.jnj.com/innovativemedicine/uk/about-us/our-heritage"
+  },
+  {
+   "year": "1961",
+   "type": "acquisition",
+   "counterparty": "Janssen Pharmaceutica",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "J&J buys Belgium's Janssen Pharmaceutica, which grows into the core of its prescription-drug operations.",
+   "source": "https://www.jnj.com/innovativemedicine/uk/about-us/our-heritage"
+  },
+  {
+   "year": "1973",
+   "type": "venture-arm",
+   "counterparty": "",
+   "via": "",
+   "result": "Johnson & Johnson Development Corporation (JJDC)",
+   "value_usd": null,
+   "status": "completed",
+   "description": "J&J sets up JJDC, among the oldest continuously operating corporate venture units, investing from the balance sheet.",
+   "source": "https://globalventuring.com/corporate/how-johnson-johnson-innovation-lasted-50-decades/?format=md"
+  },
+  {
+   "year": "1979",
+   "type": "founding",
+   "counterparty": "",
+   "via": "Centocor",
+   "result": "Centocor",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Centocor is founded in Philadelphia; it later develops Remicade and becomes Janssen Biotech.",
+   "source": "https://en.wikipedia.org/wiki/Janssen_Pharmaceuticals"
+  },
+  {
+   "year": "1986",
+   "type": "acquisition",
+   "counterparty": "LifeScan",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "J&J acquires LifeScan, the blood-glucose monitoring company behind the OneTouch meters.",
+   "source": "https://en.wikipedia.org/wiki/LifeScan"
+  },
+  {
+   "year": "1998",
+   "type": "acquisition",
+   "counterparty": "DePuy",
+   "via": "",
+   "result": "",
+   "value_usd": 3500000000,
+   "status": "completed",
+   "description": "J&J buys orthopaedics maker DePuy, divested after Roche's Corange purchase, and folds its own orthopaedic unit into it.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "1999",
+   "type": "acquisition",
+   "counterparty": "Centocor",
+   "via": "",
+   "result": "",
+   "value_usd": 4900000000,
+   "status": "completed",
+   "description": "Stock-swap merger brings in Centocor and its anti-TNF antibody Remicade as a wholly owned subsidiary.",
+   "source": "https://www.pharmaceuticalonline.com/doc/jj-centocor-complete-merger-0001"
+  },
+  {
+   "year": "2001",
+   "type": "acquisition",
+   "counterparty": "Alza",
+   "via": "",
+   "result": "",
+   "value_usd": 10500000000,
+   "status": "completed",
+   "description": "All-stock purchase of drug-delivery specialist Alza, adding controlled-release technologies such as Concerta.",
+   "source": "https://en.wikipedia.org/wiki/Alza"
+  },
+  {
+   "year": "2002",
+   "type": "acquisition",
+   "counterparty": "Tibotec",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "J&J acquires HIV-drug developer Tibotec after JJDC had invested in it in the late 1990s.",
+   "source": "https://globalventuring.com/corporate/how-johnson-johnson-innovation-lasted-50-decades/?format=md"
+  },
+  {
+   "year": "2006",
+   "type": "acquisition",
+   "counterparty": "Guidant",
+   "via": "",
+   "result": "Boston Scientific",
+   "value_usd": null,
+   "status": "terminated",
+   "description": "Guidant scraps its merger pact with J&J for Boston Scientific's richer bid; J&J collects a $705 million break fee.",
+   "source": "https://www.auntminnie.com/clinical-news/interventional/article/15576050/guidant-ditches-jj-for-boston-scientific"
+  },
+  {
+   "year": "2006",
+   "type": "acquisition",
+   "counterparty": "Pfizer Consumer Healthcare",
+   "via": "",
+   "result": "",
+   "value_usd": 16600000000,
+   "status": "completed",
+   "description": "All-cash purchase of Pfizer's consumer unit, adding Listerine, Nicorette and Sudafed to J&J's consumer arm.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000200406/000020040606000166/exhibitninetynineone.txt"
+  },
+  {
+   "year": "2011",
+   "type": "acquisition",
+   "counterparty": "Crucell",
+   "via": "",
+   "result": "",
+   "value_usd": 2400000000,
+   "status": "completed",
+   "description": "Dutch vaccine maker Crucell is acquired and later renamed Janssen Vaccines.",
+   "source": "https://en.wikipedia.org/wiki/Janssen_Pharmaceuticals"
+  },
+  {
+   "year": "2012",
+   "type": "acquisition",
+   "counterparty": "Synthes",
+   "via": "",
+   "result": "DePuy Synthes",
+   "value_usd": 19700000000,
+   "status": "completed",
+   "description": "J&J buys Swiss trauma and spine implant maker Synthes and combines it with DePuy.",
+   "source": "https://en.wikipedia.org/wiki/Synthes"
+  },
+  {
+   "year": "2014",
+   "type": "divestiture",
+   "counterparty": "The Carlyle Group",
+   "via": "",
+   "result": "Ortho Clinical Diagnostics",
+   "value_usd": 4150000000,
+   "status": "completed",
+   "description": "J&J sells its Ortho Clinical Diagnostics lab-testing unit to Carlyle; it later merges with Quidel as QuidelOrtho.",
+   "source": "https://en.wikipedia.org/wiki/Ortho_Clinical_Diagnostics"
+  },
+  {
+   "year": "2015",
+   "type": "divestiture",
+   "counterparty": "Cardinal Health",
+   "via": "",
+   "result": "Cardinal Health (Cordis)",
+   "value_usd": 1944000000,
+   "status": "completed",
+   "description": "J&J sells its Cordis cardiovascular device business to Cardinal Health.",
+   "source": "https://en.wikipedia.org/wiki/Cordis_(medical)"
+  },
+  {
+   "year": "2017",
+   "type": "acquisition",
+   "counterparty": "Abbott Medical Optics",
+   "via": "",
+   "result": "",
+   "value_usd": 4325000000,
+   "status": "completed",
+   "description": "Purchase of Abbott's eye-surgery business, expanding J&J Vision into cataract and refractive surgery.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2017",
+   "type": "acquisition",
+   "counterparty": "Actelion",
+   "via": "",
+   "result": "",
+   "value_usd": 30000000000,
+   "status": "completed",
+   "description": "J&J's largest-ever deal buys Swiss pulmonary-hypertension leader Actelion.",
+   "source": "https://en.wikipedia.org/wiki/Actelion"
+  },
+  {
+   "year": "2017",
+   "type": "spin-off",
+   "counterparty": "Actelion",
+   "via": "Actelion",
+   "result": "Idorsia",
+   "value_usd": null,
+   "status": "completed",
+   "description": "As part of the Actelion deal, its drug-discovery and early-clinical unit is spun out and listed in Switzerland as Idorsia.",
+   "source": "https://en.wikipedia.org/wiki/Actelion"
+  },
+  {
+   "year": "2018",
+   "type": "divestiture",
+   "counterparty": "Platinum Equity",
+   "via": "",
+   "result": "LifeScan (Platinum Equity)",
+   "value_usd": 2100000000,
+   "status": "completed",
+   "description": "The LifeScan diabetes-monitoring business is sold to private-equity firm Platinum Equity.",
+   "source": "https://en.wikipedia.org/wiki/LifeScan"
+  },
+  {
+   "year": "2019",
+   "type": "acquisition",
+   "counterparty": "Auris Health",
+   "via": "",
+   "result": "",
+   "value_usd": 3400000000,
+   "status": "completed",
+   "description": "Ethicon buys robotic bronchoscopy developer Auris Health in cash, plus up to $2.35B in milestones.",
+   "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-completion-of-acquisition-of-auris-health-inc"
+  },
+  {
+   "year": "2019",
+   "type": "divestiture",
+   "counterparty": "Fortive",
+   "via": "",
+   "result": "Fortive (Advanced Sterilization Products)",
+   "value_usd": 2800000000,
+   "status": "completed",
+   "description": "J&J sells its Advanced Sterilization Products business, part of Ethicon, to Fortive.",
+   "source": "https://www.jnj.com/johnson-johnson-completes-divestiture-of-advanced-sterilization-products-asp-to-fortive-corporation"
+  },
+  {
+   "year": "2020",
+   "type": "acquisition",
+   "counterparty": "Momenta Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 6500000000,
+   "status": "completed",
+   "description": "Adds Momenta and its FcRn antibody nipocalimab for autoantibody-driven diseases.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2022",
+   "type": "acquisition",
+   "counterparty": "Abiomed",
+   "via": "",
+   "result": "",
+   "value_usd": 16600000000,
+   "status": "completed",
+   "description": "J&J buys heart-pump maker Abiomed (Impella), building out its cardiovascular medtech franchise.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2023",
+   "type": "spin-off",
+   "counterparty": "",
+   "via": "",
+   "result": "Kenvue",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Consumer health floats as Kenvue in a May IPO (about $3.8B raised), then is split off via an August share exchange.",
+   "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-final-results-of-exchange-offer-and-finalizes-separation-of-kenvue-inc"
+  },
+  {
+   "year": "2023",
+   "type": "rename",
+   "counterparty": "",
+   "via": "Janssen Pharmaceutica",
+   "result": "Johnson & Johnson Innovative Medicine",
+   "value_usd": null,
+   "status": "completed",
+   "description": "The Janssen Pharmaceutical Companies are rebranded as Johnson & Johnson Innovative Medicine.",
+   "source": "https://www.jnj.com/innovativemedicine/uk/about-us/our-heritage"
+  },
+  {
+   "year": "2024",
+   "type": "divestiture",
+   "counterparty": "Kenvue",
+   "via": "",
+   "result": "Kenvue",
+   "value_usd": 3600000000,
+   "status": "completed",
+   "description": "J&J disposes of its last 9.5% Kenvue stake through a debt-for-equity exchange.",
+   "source": "https://www.pharmaceuticalprocessingworld.com/johnson-johnson-brings-in-billions-from-remaining-kenvue-stake/"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Ambrx Biopharma",
+   "via": "",
+   "result": "",
+   "value_usd": 2000000000,
+   "status": "completed",
+   "description": "Purchase of antibody-drug conjugate developer Ambrx, focused on prostate cancer.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Shockwave Medical",
+   "via": "",
+   "result": "",
+   "value_usd": 13100000000,
+   "status": "completed",
+   "description": "J&J buys intravascular lithotripsy device maker Shockwave to expand in coronary and peripheral artery disease.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Proteologix",
+   "via": "",
+   "result": "",
+   "value_usd": 850000000,
+   "status": "completed",
+   "description": "Adds Proteologix's bispecific antibodies for atopic dermatitis and asthma.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Intra-Cellular Therapies",
+   "via": "",
+   "result": "",
+   "value_usd": 14600000000,
+   "status": "completed",
+   "description": "J&J acquires Intra-Cellular and its schizophrenia/depression drug Caplyta, deepening its neuroscience franchise.",
+   "source": "https://en.wikipedia.org/wiki/Johnson_%26_Johnson"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Halda Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 3050000000,
+   "status": "completed",
+   "description": "All-cash buy of Halda and its RIPTAC platform, led by an oral prostate cancer candidate.",
+   "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-completes-acquisition-of-halda-therapeutics-and-its-novel-platform-to-revolutionize-cancer-treatment-and-enable-next-generation-oral-therapies"
+  },
+  {
+   "year": "2025",
+   "type": "spin-off",
+   "counterparty": "",
+   "via": "",
+   "result": "DePuy Synthes",
+   "value_usd": null,
+   "status": "pending",
+   "description": "J&J announces plans to separate its roughly $9.2B orthopaedics unit as standalone DePuy Synthes within 18–24 months.",
+   "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-announces-intent-to-separate-its-orthopaedics-business"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Kimberly-Clark",
+   "via": "Kenvue",
+   "result": "Kimberly-Clark",
+   "value_usd": 48700000000,
+   "status": "pending",
+   "description": "After leaving J&J, Kenvue agrees to a cash-and-stock combination with Kimberly-Clark, expected to close in 2026.",
+   "source": "https://en.wikipedia.org/wiki/Kenvue"
+  },
+  {
+   "year": "2026",
+   "type": "acquisition",
+   "counterparty": "Firefly Bio",
+   "via": "",
+   "result": "",
+   "value_usd": 1000000000,
+   "status": "completed",
+   "description": "Cash purchase of Firefly Bio and its degrader-antibody conjugate platform aimed at KRAS-driven tumors.",
+   "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-completes-acquisition-of-firefly-bio-inc-to-advance-next-generation-oncology-innovation"
+  }
+ ]
+}

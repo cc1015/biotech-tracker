@@ -1,0 +1,385 @@
+{
+ "name": "Broad Institute of MIT and Harvard",
+ "profile": {
+  "city": "Cambridge, MA, USA",
+  "type": "research institute",
+  "tech_transfer": "Office of Strategic Alliances and Partnering (OSAP)",
+  "tech_transfer_url": "https://www.broadinstitute.org/osap",
+  "summary": "The Broad couples large-scale genomics with genome-editing pioneers such as Feng Zhang and David Liu, whose CRISPR, base-editing and prime-editing patents underpin a cluster of public gene-editing companies. It also licenses AAV capsids, spatial and screening tools, and cancer-genomics know-how that seeded companies like Foundation Medicine.",
+  "programs": [
+   "Merkin Institute of Transformative Technologies in Healthcare",
+   "Broad Clinical Labs",
+   "Cancer Dependency Map Consortium",
+   "Deerfield Management therapeutics partnership",
+   "Stanley Center for Psychiatric Research"
+  ],
+  "website": "https://www.broadinstitute.org",
+  "sources": [
+   "https://www.broadinstitute.org/osap",
+   "https://en.wikipedia.org/wiki/Broad_Institute",
+   "https://en.wikipedia.org/wiki/Feng_Zhang",
+   "https://en.wikipedia.org/wiki/David_R._Liu",
+   "https://en.wikipedia.org/wiki/Stuart_Schreiber"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Feng Zhang",
+   "lab": "Zhang Lab (Broad / McGovern Institute, MIT)",
+   "known_for": "CRISPR-Cas9 and Cas13 tools; protein-nanoparticle delivery",
+   "silo": [
+    "gene-editing",
+    "diagnostics",
+    "rna"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Feng_Zhang"
+  },
+  {
+   "pi": "David R. Liu",
+   "lab": "Liu Lab / Merkin Institute",
+   "known_for": "Base editing, prime editing, phage-assisted continuous evolution",
+   "silo": [
+    "gene-editing",
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "pi": "Stuart Schreiber",
+   "lab": "Chemical Biology Program",
+   "known_for": "Chemical biology; small-molecule probes; serial founder",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Stuart_Schreiber"
+  },
+  {
+   "pi": "Matthew Meyerson / Levi Garraway",
+   "lab": "Cancer Genomics (Broad / Dana-Farber)",
+   "known_for": "Large-panel tumor mutation profiling leading to Foundation Medicine",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Foundation_Medicine"
+  },
+  {
+   "pi": "Sekar Kathiresan",
+   "lab": "Cardiovascular Disease Initiative",
+   "known_for": "Human genetics of coronary disease; founded Verve",
+   "silo": [
+    "gene-editing"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Sekar_Kathiresan"
+  },
+  {
+   "pi": "Ben Deverman",
+   "lab": "Vector Engineering",
+   "known_for": "Engineered AAV capsids crossing the blood-brain barrier",
+   "silo": [
+    "gene-therapy"
+   ],
+   "source": "https://www.insideprecisionmedicine.com/news-and-features/apertura-launches-with-67-million-financing-to-improve-gene-delivery"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Editas Medicine",
+   "year": "2013",
+   "pi": "Feng Zhang; David R. Liu",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "CRISPR-Cas9/Cas12a in vivo editing medicines for rare disease",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2016 (NASDAQ: EDIT)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Editas_Medicine"
+  },
+  {
+   "name": "Beam Therapeutics",
+   "year": "2017",
+   "pi": "David R. Liu; Feng Zhang",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Base-editing therapies for genetic diseases",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: BEAM)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Beam_Therapeutics"
+  },
+  {
+   "name": "Prime Medicine",
+   "year": "2019",
+   "pi": "David R. Liu",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Prime-editing therapies for genetic diseases",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2022 (NASDAQ: PRME)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Prime_Medicine"
+  },
+  {
+   "name": "Arbor Biotechnologies",
+   "year": "2016",
+   "pi": "Feng Zhang",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Therapeutic development of Cas13 and novel CRISPR enzymes",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Feng_Zhang"
+  },
+  {
+   "name": "Sherlock Biosciences",
+   "year": "2019",
+   "pi": "Feng Zhang",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "CRISPR-Cas13-based (SHERLOCK) molecular diagnostics",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by OraSure Technologies 2024",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sherlock_Biosciences"
+  },
+  {
+   "name": "Aera Therapeutics",
+   "year": "2023",
+   "pi": "Feng Zhang",
+   "silo": [
+    "gene-therapy",
+    "rna"
+   ],
+   "product": "Human-derived protein nanoparticles for delivering genetic medicines",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pharmaphorum.com/news/aera-tx-launches-193m-financing-genetic-meds"
+  },
+  {
+   "name": "Pairwise",
+   "year": "",
+   "pi": "David R. Liu",
+   "silo": [
+    "gene-editing",
+    "synbio"
+   ],
+   "product": "Genome editing for crop agriculture",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "name": "Exo Therapeutics",
+   "year": "",
+   "pi": "David R. Liu",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Novel small-molecule drug discovery",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "name": "nChroma Bio",
+   "year": "",
+   "pi": "David R. Liu",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Epigenetic editing medicines and editing delivery",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "name": "Resonance Medicine",
+   "year": "",
+   "pi": "David R. Liu",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Evolved enzymes for unmet medical needs",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "name": "Foundation Medicine",
+   "year": "2010",
+   "pi": "Levi Garraway; Matthew Meyerson",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "Comprehensive tumor genomic profiling tests",
+   "builder": "Third Rock Ventures",
+   "status": "acquired",
+   "outcome": "IPO 2013; Roche bought remaining stake 2018 for $2.4B",
+   "outcome_value_usd": 2400000000,
+   "source": "https://en.wikipedia.org/wiki/Foundation_Medicine"
+  },
+  {
+   "name": "Verve Therapeutics",
+   "year": "",
+   "pi": "Sekar Kathiresan",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "One-time in vivo base-editing for cardiovascular risk genes",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Eli Lilly 2025 (~$1.0B upfront, up to ~$1.3B with CVR)",
+   "outcome_value_usd": 1000000000,
+   "source": "https://www.biospace.com/press-releases/lilly-to-acquire-verve-therapeutics-to-advance-one-time-treatments-for-people-with-high-cardiovascular-risk"
+  },
+  {
+   "name": "Apertura Gene Therapy",
+   "year": "2022",
+   "pi": "Ben Deverman",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Engineered AAV capsids (TfR1-targeting) for CNS gene therapy",
+   "builder": "Deerfield Management",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.insideprecisionmedicine.com/news-and-features/apertura-launches-with-67-million-financing-to-improve-gene-delivery"
+  },
+  {
+   "name": "Kate Therapeutics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "AAV gene therapies for neuromuscular disorders",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Novartis 2024 for up to $1.1B",
+   "outcome_value_usd": 1100000000,
+   "source": "https://globalgenes.org/raredaily/novartis-acquires-gene-therapy-developer-kate-for-up-to-1-1-billion/"
+  },
+  {
+   "name": "Jaguar Gene Therapy",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Gene therapies incl. Broad-licensed JAG201 for Phelan-McDermid syndrome",
+   "builder": "Deerfield Management",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.broadinstitute.org/osap"
+  },
+  {
+   "name": "Curio Bioscience",
+   "year": "2023",
+   "pi": "",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Slide-seq/Slide-tags spatial transcriptomics kits",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Takara Bio USA 2025",
+   "outcome_value_usd": null,
+   "source": "https://www.broadinstitute.org/osap"
+  },
+  {
+   "name": "Bifrost Biosystems",
+   "year": "2024",
+   "pi": "",
+   "silo": [
+    "tools-omics",
+    "lab-automation"
+   ],
+   "product": "Optical pooled screening linking cell phenotype to genotype",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.broadinstitute.org/osap"
+  },
+  {
+   "name": "Jnana Therapeutics",
+   "year": "",
+   "pi": "Stuart Schreiber",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small molecules for solute carriers; PKU program",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Otsuka 2024 for $800M upfront (+ up to $325M milestones)",
+   "outcome_value_usd": 800000000,
+   "source": "https://otsuka-us.com/news/otsuka-pharmaceutical-acquire-jnana-therapeutics-inc"
+  },
+  {
+   "name": "Kojin Therapeutics",
+   "year": "",
+   "pi": "Stuart Schreiber",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stuart_Schreiber"
+  },
+  {
+   "name": "H3 Biomedicine",
+   "year": "",
+   "pi": "Stuart Schreiber",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stuart_Schreiber"
+  },
+  {
+   "name": "Forma Therapeutics",
+   "year": "",
+   "pi": "Stuart Schreiber",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stuart_Schreiber"
+  }
+ ]
+}

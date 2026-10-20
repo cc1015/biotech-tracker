@@ -1,0 +1,442 @@
+{
+ "name": "ARCH Venture Partners",
+ "profile": {
+  "type": "vc-company-creation",
+  "hq": "Chicago, IL",
+  "founded": "1986",
+  "founders": [
+   "Steven Lazarus",
+   "Robert Nelsen",
+   "Keith Crandell",
+   "Clinton Bybee"
+  ],
+  "leadership": [
+   "Robert Nelsen — Co-founder & Managing Director",
+   "Keith Crandell — Co-founder & Managing Director",
+   "Kristina Burow — Managing Director",
+   "Mark McDonnell — Managing Director",
+   "Steve Gillis — Managing Director",
+   "Paul Berns — Managing Director"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "ARCH Venture Fund XIII",
+   "size_usd": 3000000000,
+   "year": "2024"
+  },
+  "model": "ARCH mainly co-founds companies around breakthrough academic science, often with star scientists and serial entrepreneurs, and sizes financings from small seeds to $1B+ launches (e.g., Xaira). Its partners frequently serve as founding board members and recruit leadership while the firm leads successive rounds.",
+  "summary": "Spun out of the University of Chicago/Argonne in 1986, ARCH is among the largest early-stage biotech investors, with $3B+ flagship funds. It has co-founded category-defining companies such as Illumina, Alnylam, Juno, Beam, Sana and Xaira.",
+  "website": "https://www.archventure.com",
+  "sources": [
+   "https://www.archventure.com/portfolio/",
+   "https://www.archventure.com/about/",
+   "https://www.archventure.com/?p=3224",
+   "https://en.wikipedia.org/wiki/ARCH_Venture_Partners"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Illumina",
+   "launched": "1998",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "DNA sequencing and array platforms",
+   "status": "public",
+   "outcome": "IPO 2000 (NASDAQ: ILMN)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "founding_unconfirmed": true,
+   "outcome_unverified": true
+  },
+  {
+   "name": "Alnylam Pharmaceuticals",
+   "launched": "2002",
+   "silo": [
+    "rna"
+   ],
+   "product": "RNAi therapeutics (patisiran, vutrisiran)",
+   "status": "public",
+   "outcome": "IPO 2004 (NASDAQ: ALNY)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "founding_unconfirmed": true,
+   "outcome_unverified": true
+  },
+  {
+   "name": "Kythera Biopharmaceuticals",
+   "launched": "2005",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Aesthetic medicine; injectable for submental fat (Kybella)",
+   "status": "acquired",
+   "outcome": "IPO 2012; acquired by Allergan 2015 for ~$2.1B",
+   "outcome_value_usd": 2100000000,
+   "source": "https://www.archventure.com/portfolio/",
+   "founding_unconfirmed": true,
+   "outcome_unverified": true
+  },
+  {
+   "name": "Receptos",
+   "launched": "2009",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "GPCR-targeted immunology drugs; S1P modulator ozanimod",
+   "status": "acquired",
+   "outcome": "IPO 2013; acquired by Celgene 2015 for ~$7.2B",
+   "outcome_value_usd": 7200000000,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Juno Therapeutics",
+   "launched": "2013",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "CAR-T cancer immunotherapies",
+   "status": "acquired",
+   "outcome": "IPO 2014; acquired by Celgene 2018 for ~$9B",
+   "outcome_value_usd": 9000000000,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Denali Therapeutics",
+   "launched": "2015",
+   "silo": [
+    "small-molecule",
+    "antibody"
+   ],
+   "product": "Brain-penetrant therapies for neurodegeneration",
+   "status": "public",
+   "outcome": "IPO 2017 (NASDAQ: DNLI)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Codiak BioSciences",
+   "launched": "2015",
+   "silo": [],
+   "product": "Engineered exosome therapeutics",
+   "status": "defunct",
+   "outcome": "IPO 2020; bankruptcy 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Gossamer Bio",
+   "launched": "2015",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Seralutinib for pulmonary arterial hypertension",
+   "status": "public",
+   "outcome": "IPO 2019 (NASDAQ: GOSS)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Vir Biotechnology",
+   "launched": "2016",
+   "silo": [
+    "antibody",
+    "rna"
+   ],
+   "product": "Antibodies and siRNA for infectious disease and cancer",
+   "status": "public",
+   "outcome": "IPO 2019 (NASDAQ: VIR)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Vividion Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Chemoproteomics-derived small molecules for undruggable targets",
+   "status": "acquired",
+   "outcome": "Acquired by Bayer 2021 for $1.5B upfront (up to $2B)",
+   "outcome_value_usd": 1500000000,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Beam Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Base-editing medicines",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: BEAM)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Lyell Immunopharma",
+   "launched": "2018",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Engineered T-cell therapies for solid and blood cancers",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: LYEL)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Sana Biotechnology",
+   "launched": "2018",
+   "silo": [
+    "cell-therapy",
+    "gene-therapy"
+   ],
+   "product": "Engineered and hypoimmune cells as medicines",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: SANA)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Boundless Bio",
+   "launched": "2018",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Therapies targeting ecDNA-driven cancers",
+   "status": "public",
+   "outcome": "IPO 2024 (NASDAQ: BOLD)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Erasca",
+   "launched": "2018",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "RAS/MAPK pathway inhibitors for cancer",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: ERAS)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Brii Biosciences",
+   "launched": "2018",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Infectious and CNS disease medicines for China and US",
+   "status": "public",
+   "outcome": "IPO 2021 (HKEX: 2137)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "founding_unconfirmed": true,
+   "outcome_unverified": true
+  },
+  {
+   "name": "Prime Medicine",
+   "launched": "2019",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Prime-editing gene therapies",
+   "status": "public",
+   "outcome": "IPO 2022 (NASDAQ: PRME)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Maze Therapeutics",
+   "launched": "2019",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Genetics-guided drugs for chronic kidney disease",
+   "status": "public",
+   "outcome": "IPO 2025 (NASDAQ: MAZE)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Neumora Therapeutics",
+   "launched": "2019",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Data-driven precision medicines for brain disorders",
+   "status": "public",
+   "outcome": "IPO 2023 (NASDAQ: NMRA)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "EQRx",
+   "launched": "2020",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Lower-priced versions of validated drugs",
+   "status": "acquired",
+   "outcome": "IPO via SPAC 2021; acquired by Revolution Medicines 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "National Resilience",
+   "launched": "2020",
+   "silo": [],
+   "product": "Advanced biomanufacturing network",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/"
+  },
+  {
+   "name": "Human Immunology Biosciences (HI-Bio)",
+   "launched": "2021",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Precision immunology antibodies (felzartamab)",
+   "status": "acquired",
+   "outcome": "Acquired by Biogen 2024 for $1.15B upfront (up to $1.8B)",
+   "outcome_value_usd": 1150000000,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Altos Labs",
+   "launched": "2022",
+   "silo": [
+    "longevity"
+   ],
+   "product": "Cellular rejuvenation programming",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Rapport Therapeutics",
+   "launched": "2022",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision neurology; RAP-219 for epilepsy",
+   "status": "public",
+   "outcome": "IPO 2024 (NASDAQ: RAPP)",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Metsera",
+   "launched": "2022",
+   "silo": [],
+   "product": "Next-generation injectable and oral obesity peptides",
+   "status": "acquired",
+   "outcome": "IPO 2025; acquired by Pfizer 2025 for up to ~$10B",
+   "outcome_value_usd": 10000000000,
+   "source": "https://www.biospace.com/press-releases/pfizer-completes-acquisition-of-metsera"
+  },
+  {
+   "name": "Orbital Therapeutics",
+   "launched": "2022",
+   "silo": [
+    "rna"
+   ],
+   "product": "Circular RNA platform; in vivo CAR-T OTX-201",
+   "status": "acquired",
+   "outcome": "Acquired by Bristol Myers Squibb 2025 for $1.5B",
+   "outcome_value_usd": 1500000000,
+   "source": "https://www.pharmalive.com/bristol-myers-buys-orbital-therapeutics-for-1-5-billion-in-cell-therapy-push/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Aera Therapeutics",
+   "launched": "2023",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Human protein nanoparticles to deliver genetic medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/"
+  },
+  {
+   "name": "Xaira Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI-driven antibody and protein drug design",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/"
+  },
+  {
+   "name": "Mirador Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "precision-data",
+    "ai-discovery"
+   ],
+   "product": "Precision immunology medicines from patient data",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/"
+  },
+  {
+   "name": "Moonwalk Biosciences",
+   "launched": "2024",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Precision epigenetic editing medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/article/releases/moonwalk-biosciences-launches-with-57-million-in-financing-to-advance-a-new-class-of-precision-epigenetic-medicines/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "City Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "rna"
+   ],
+   "product": "Next-generation RNAi; lead CITY-FXI for thrombosis",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.archventure.com/portfolio/",
+   "founding_unconfirmed": true
+  }
+ ]
+}

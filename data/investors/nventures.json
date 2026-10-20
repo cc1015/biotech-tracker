@@ -1,0 +1,203 @@
+{
+ "name": "NVentures (life sciences & AI-bio)",
+ "profile": {
+  "parent": "NVIDIA",
+  "type": "tech-corporate-vc",
+  "hq": "Santa Clara, California, USA",
+  "founded": "",
+  "leadership": [],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "",
+   "size_usd": null,
+   "year": ""
+  },
+  "model": "NVIDIA's corporate venture arm invests off the balance sheet in AI-native startups, with 'digital biology' named as one of its core focus areas alongside AI infrastructure and robotics. In biotech it typically joins rather than leads rounds, backing generative-protein, AI-chemistry and biological foundation-model companies that often build on NVIDIA's BioNeMo and GPU stack.",
+  "summary": "NVentures has become one of the most visible strategic investors in AI-for-biology, appearing on cap tables of Generate Biomedicines, EvolutionaryScale, ArsenalBio and a wave of 2024–2026 AI-chemistry startups. Its participation signals technical alignment with NVIDIA's compute and model ecosystem rather than biotech-specific capital.",
+  "website": "https://www.nvidia.com/en-us/startups/nventures/",
+  "sources": [
+   "https://www.nvidia.com/en-us/startups/nventures/",
+   "https://www.vcbacked.co/directory/investors/nventures",
+   "https://www.vcbacked.co/directory/investors/nventures?page=2",
+   "https://www.vcbacked.co/directory/investors/nventures?page=3",
+   "https://www.vcbacked.co/company/generate-biomedicines",
+   "https://www.vcbacked.co/company/evolutionaryscale",
+   "https://www.vcbacked.co/company/arsenalbio",
+   "https://www.vcbacked.co/company/vilya",
+   "https://www.vcbacked.co/company/evozyne",
+   "https://www.vcbacked.co/company/charm-therapeutics",
+   "https://www.vcbacked.co/company/achira",
+   "https://www.vcbacked.co/company/relation-therapeutics",
+   "https://www.vcbacked.co/company/proxima",
+   "https://www.luxcapital.com/companies/evolutionaryscale",
+   "https://www.evolutionaryscale.ai/"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Generate Biomedicines",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "antibody",
+    "foundation-models"
+   ],
+   "product": "Generative AI-designed protein and antibody therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/generate-biomedicines"
+  },
+  {
+   "name": "EvolutionaryScale",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "foundation-models"
+   ],
+   "product": "ESM3 generative protein language model",
+   "status": "acquired",
+   "outcome": "acquired 2025; now part of Biohub",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/evolutionaryscale"
+  },
+  {
+   "name": "ArsenalBio",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "cell-therapy",
+    "synbio"
+   ],
+   "product": "Programmable CAR-T cell therapies for solid tumors",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/arsenalbio"
+  },
+  {
+   "name": "Vilya",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Computationally designed drugs precisely targeting disease biology",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/vilya"
+  },
+  {
+   "name": "Evozyne",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "Generative AI protein design for therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/evozyne"
+  },
+  {
+   "name": "CHARM Therapeutics",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "Deep learning on 3D protein-ligand structures for drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/charm-therapeutics"
+  },
+  {
+   "name": "Achira",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "AI plus physics-based simulation for drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/achira"
+  },
+  {
+   "name": "Relation Therapeutics",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "precision-data"
+   ],
+   "product": "Human-data-driven machine learning drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/relation-therapeutics"
+  },
+  {
+   "name": "Proxima Bio",
+   "launched": "2026",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "Programmable medicines modulating protein-protein interactions",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/proxima"
+  },
+  {
+   "name": "Basecamp Research",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "foundation-models",
+    "gene-editing"
+   ],
+   "product": "EDEN biological foundation models for drug design and genetic medicine",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nvidia.com/en-us/startups/nventures/"
+  },
+  {
+   "name": "Edison Scientific",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Kosmos AI scientist for literature analysis and hypothesis generation",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nvidia.com/en-us/startups/nventures/"
+  },
+  {
+   "name": "OpenEvidence",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "AI clinical decision support search engine for physicians",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nvidia.com/en-us/startups/nventures/"
+  }
+ ]
+}

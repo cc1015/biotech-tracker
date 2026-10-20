@@ -1,0 +1,481 @@
+{
+ "name": "a16z Bio + Health",
+ "profile": {
+  "parent": "Andreessen Horowitz",
+  "type": "generalist-vc-bio-arm",
+  "hq": "",
+  "founded": "2014",
+  "leadership": [
+   "Vineeta Agarwala — General Partner, leads Bio + Health investments across biotech, life-science software and digital health",
+   "Jorge Conde — General Partner, Bio + Health (therapeutics, diagnostics, tools, software)",
+   "Julie Yoo — Bio + Health team member (title not confirmed)",
+   "Vijay Pande — founder of the Bio + Health strategy; announced he was stepping down in June 2025"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "Bio + Health fund (fifth bio vehicle)",
+   "size_usd": 700000000,
+   "year": "2026"
+  },
+  "model": "Backs companies that pair biology with computation and engineering, from AI-native drug discovery and design platforms to modality companies and diagnostics. It often leads or co-leads seed and Series A rounds and takes board seats. It invests from company creation through growth, and in January 2025 it added a separate Lilly-backed biotech ecosystem fund of up to $500M.",
+  "summary": "One of the first generalist VC firms to build a dedicated bio fund, starting with a $200M Bio Fund in the mid-2010s. Its portfolio includes insitro, Freenome, Scribe, Dyno and IDRx, which GSK bought for up to $1.15B.",
+  "website": "https://a16z.com/bio-health/",
+  "sources": [
+   "https://a16z.com/bio-health/",
+   "https://a16z.com/portfolio/",
+   "https://a16z.com/investments/",
+   "https://a16z.com/author/vineeta-agarwala",
+   "https://a16z.com/author/jorge-conde",
+   "https://techcrunch.com/?p=3017628",
+   "https://www.cooley.com/news/coverage/2026/2026-01-09-andreessen-horowitz-raises-more-than-$15-billion-in-new-funds",
+   "https://techcrunch.com/2016/06/09/liquid-biopsy-startup-freenome-lands-5-5-million-led-by-andreessen-horowitz",
+   "https://www.financierworldwide.com/fw-news/2025/1/14/gsk-to-acquire-idrx-for-115bn",
+   "https://synapse.patsnap.com/article/idrx-secures-120m-series-b-to-advance-new-gist-treatment"
+  ]
+ },
+ "companies": [
+  {
+   "name": "insitro",
+   "launched": "2018",
+   "role": "led",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Machine-learning drug discovery built on large in-house perturbation datasets",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/insitro-announces-143-million-raised-in-series-b-financing"
+  },
+  {
+   "name": "Scribe Therapeutics",
+   "launched": "2018",
+   "role": "led",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Engineered CRISPR genetic medicines, now focused on cardiometabolic disease",
+   "status": "public",
+   "outcome": "Public (Nasdaq: SCTX)",
+   "outcome_value_usd": null,
+   "source": "https://www.biotecnika.org/2020/10/platform-for-engineering-crispr-based-medicines-by-scribe-therapeutics/"
+  },
+  {
+   "name": "Freenome",
+   "launched": "2016",
+   "role": "led",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "AI-driven multiomic blood tests for early cancer detection",
+   "status": "public",
+   "outcome": "Public via SPAC (FRNM)",
+   "outcome_value_usd": null,
+   "source": "https://techcrunch.com/2016/06/09/liquid-biopsy-startup-freenome-lands-5-5-million-led-by-andreessen-horowitz"
+  },
+  {
+   "name": "Dyno Therapeutics",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "gene-therapy",
+    "ai-discovery"
+   ],
+   "product": "AI-designed AAV capsids for better gene-therapy delivery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-dyno-therapeutics/"
+  },
+  {
+   "name": "BigHat Biosciences",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "antibody",
+    "ai-discovery"
+   ],
+   "product": "ML-guided design and optimization of antibody therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://news.crunchbase.com/health-wellness-biotech/creating-better-drugs-bighat-biosciences-raises-19m-series-a-for-antibody-platform/"
+  },
+  {
+   "name": "Genesis Therapeutics (now Genesis Molecular AI)",
+   "launched": "2019",
+   "role": "led",
+   "silo": [
+    "small-molecule",
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI foundation models for small-molecule drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://biospace.com/genesis-therapeutics-secures-52m-series-a-to-further-accelerate-ai-innovation-and-to-launch-drug-discovery-and-amp-development-pipeline"
+  },
+  {
+   "name": "Cartography Biosciences",
+   "launched": "2020",
+   "role": "led",
+   "silo": [
+    "antibody"
+   ],
+   "product": "T-cell-engaging bispecific antibodies against novel tumor antigens",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-cartography-biosciences/"
+  },
+  {
+   "name": "IDRx",
+   "launched": "2022",
+   "role": "led",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision KIT inhibitors for gastrointestinal stromal tumors",
+   "status": "acquired",
+   "outcome": "Acquired by GSK 2025 for up to $1.15B ($1B upfront)",
+   "outcome_value_usd": 1150000000,
+   "source": "https://a16z.com/announcement/investing-in-idrx/"
+  },
+  {
+   "name": "Inceptive",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "rna",
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI-designed mRNA molecules for vaccines and therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.maginative.com/article/inceptive-raises-100-million-to-design-new-vaccines-and-therapies-with-ai"
+  },
+  {
+   "name": "Formation Bio",
+   "launched": "2024",
+   "role": "led",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "AI-native pharma that in-licenses and develops clinical-stage drugs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-formation-bio/"
+  },
+  {
+   "name": "Arda Therapeutics",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "antibody",
+    "tools-omics"
+   ],
+   "product": "Single-cell discovery of disease cells, cleared with targeted biologics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-arda-therapeutics/"
+  },
+  {
+   "name": "Vicinitas Therapeutics",
+   "launched": "2022",
+   "role": "led",
+   "silo": [
+    "small-molecule",
+    "protein-degradation"
+   ],
+   "product": "DUBTAC small molecules that stabilize target proteins",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-vicinitas-therapeutics/"
+  },
+  {
+   "name": "Octant Bio",
+   "launched": "2019",
+   "role": "led",
+   "silo": [
+    "small-molecule",
+    "synbio"
+   ],
+   "product": "Engineered reporter cell lines for small-molecule discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-octant/"
+  },
+  {
+   "name": "EQRx",
+   "launched": "2019",
+   "role": "led",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Lower-cost versions of medicines against validated targets",
+   "status": "acquired",
+   "outcome": "Acquired by Revolution Medicines",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/why-were-investing-in-eqrx/"
+  },
+  {
+   "name": "Gate Bioscience",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small 'molecular gates' that block secretion of disease proteins",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-gate-bio/"
+  },
+  {
+   "name": "Valar Labs",
+   "launched": "2021",
+   "role": "led",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "AI tests on histology slides to predict cancer prognosis and response",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-valar-labs/"
+  },
+  {
+   "name": "Phylo",
+   "launched": "2026",
+   "role": "led",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Agentic research environment built on the Biomni biomedical agent",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/why-we-invested-in-phylo/"
+  },
+  {
+   "name": "Orbital Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "rna"
+   ],
+   "product": "Linear and circular RNA medicines for in vivo cell reprogramming",
+   "status": "acquired",
+   "outcome": "Acquired by Bristol Myers Squibb",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/article/releases/orbital-therapeutics-secures-270-million-in-series-a-financing-to-unleash-full-potential-of-rna-medicines/"
+  },
+  {
+   "name": "GC Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Transcription-factor-programmed iPSC-derived off-the-shelf cell therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-gc-therapeutics/"
+  },
+  {
+   "name": "Function Oncology",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [
+    "precision-data",
+    "tools-omics"
+   ],
+   "product": "CRISPR functional profiling of patient tumor cells for therapy matching",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-function-oncology/"
+  },
+  {
+   "name": "Stipple Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "High-throughput discovery of cell-specific epitopes for cancer biologics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-stipple-bio/"
+  },
+  {
+   "name": "BioAge Labs",
+   "launched": "2017",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "longevity"
+   ],
+   "product": "Drugs targeting molecular causes of aging-related and metabolic disease",
+   "status": "public",
+   "outcome": "IPO 2024 (Nasdaq: BIOA), ~$198M raised",
+   "outcome_value_usd": 198000000,
+   "source": "https://www.iposcoop.com/?p=33668"
+  },
+  {
+   "name": "Maze Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Human-genetics-driven precision medicines",
+   "status": "public",
+   "outcome": "IPO 2025 (Nasdaq: MAZE), $140M raised",
+   "outcome_value_usd": 140000000,
+   "source": "https://www.iposcoop.com/?p=34412"
+  },
+  {
+   "name": "Nautilus Biotechnology",
+   "launched": "2018",
+   "role": "participated",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Single-molecule proteomics platform",
+   "status": "public",
+   "outcome": "Public via SPAC (NAUT)",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Aktis Oncology",
+   "launched": "2026",
+   "role": "participated",
+   "silo": [
+    "radiopharma"
+   ],
+   "product": "Miniprotein-based alpha radiopharmaceuticals for cancer",
+   "status": "public",
+   "outcome": "Public (AKTS)",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Alpha-9 Oncology",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "radiopharma"
+   ],
+   "product": "Peptide-based radiopharmaceuticals for oncology",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Erasca",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision oncology drugs against the RAS/MAPK pathway",
+   "status": "public",
+   "outcome": "Public (Nasdaq: ERAS)",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Tmunity Therapeutics",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Next-generation CAR-T cell therapies",
+   "status": "acquired",
+   "outcome": "Acquired by Kite Pharma",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Patch Biosciences",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "gene-therapy",
+    "synbio"
+   ],
+   "product": "Machine-designed regulatory sequences for gene therapy",
+   "status": "acquired",
+   "outcome": "Acquired by Ginkgo Bioworks",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Ultima Genomics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Low-cost high-throughput DNA sequencing architecture",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Asimov",
+   "launched": "2017",
+   "role": "participated",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Cells, genetic parts and software for biologics manufacturing design",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Boltz",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "foundation-models"
+   ],
+   "product": "Open frontier biomolecular AI models and infrastructure",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "ROME Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Therapies targeting the genome's repetitive 'dark' regions for cancer and autoimmunity",
+   "status": "acquired",
+   "outcome": "Acquired by Pretzel Therapeutics",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/portfolio/"
+  }
+ ]
+}

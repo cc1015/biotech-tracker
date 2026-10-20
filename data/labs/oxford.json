@@ -1,0 +1,454 @@
+{
+ "name": "University of Oxford",
+ "profile": {
+  "city": "Oxford, United Kingdom",
+  "type": "university",
+  "tech_transfer": "Oxford University Innovation (OUI)",
+  "tech_transfer_url": "https://innovation.ox.ac.uk/",
+  "summary": "Oxford says it has created over 350 companies since 1987 and ranks as the UK's leading university for spinouts, with landmark exits including Oxford Nanopore, Immunocore and Vaccitech (now Barinthus), the latter tied to the Jenner Institute's ChAdOx vaccine platform. A dedicated investor, Oxford Science Enterprises, backs a broad portfolio of Oxford therapeutics, diagnostics and health-tech companies.",
+  "programs": [
+   "Oxford Science Enterprises (founded 2015 as Oxford Sciences Innovation)",
+   "University Challenge Seed Fund",
+   "OUI Incubator",
+   "Jenner Institute"
+  ],
+  "website": "https://www.ox.ac.uk",
+  "sources": [
+   "https://innovation.ox.ac.uk/",
+   "https://innovation.ox.ac.uk/investing/our-portfolio-companies",
+   "https://www.oxfordscienceenterprises.com/portfolio/",
+   "https://en.wikipedia.org/wiki/Oxford_University_Innovation",
+   "https://en.wikipedia.org/wiki/Oxford_Science_Enterprises",
+   "https://en.wikipedia.org/wiki/Graham_Richards"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Hagan Bayley",
+   "lab": "Department of Chemistry",
+   "known_for": "Protein nanopores for DNA sequencing",
+   "silo": [
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Oxford_Nanopore_Technologies"
+  },
+  {
+   "pi": "Adrian Hill / Sarah Gilbert",
+   "lab": "Jenner Institute",
+   "known_for": "ChAdOx viral-vector vaccines; R21 malaria vaccine",
+   "silo": [
+    "gene-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Adrian_V._S._Hill"
+  },
+  {
+   "pi": "Carol Robinson",
+   "lab": "Department of Chemistry",
+   "known_for": "Native mass spectrometry of membrane proteins",
+   "silo": [
+    "small-molecule",
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Carol_V._Robinson"
+  },
+  {
+   "pi": "Bent Jakobsen",
+   "lab": "(Avidex origin)",
+   "known_for": "Engineered soluble T-cell receptors (ImmTACs)",
+   "silo": [
+    "antibody",
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Immunocore"
+  },
+  {
+   "pi": "Luke Alphey",
+   "lab": "Oxford Insect Technologies founder",
+   "known_for": "Genetically engineered self-limiting insects",
+   "silo": [
+    "synbio"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Flyttr"
+  },
+  {
+   "pi": "Graham Richards",
+   "lab": "Department of Chemistry",
+   "known_for": "Computational chemistry; university spinout funding model",
+   "silo": [
+    "ai-discovery"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Graham_Richards"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Oxford Nanopore Technologies",
+   "year": "2005",
+   "pi": "Hagan Bayley",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Nanopore DNA/RNA sequencing devices",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2021 (LSE: ONT)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Oxford_Nanopore_Technologies"
+  },
+  {
+   "name": "Vaccitech (now Barinthus Biotherapeutics)",
+   "year": "2016",
+   "pi": "Adrian Hill; Sarah Gilbert",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Viral-vector immunotherapies (ChAdOx platform)",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2021 on Nasdaq (now BRNS)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Barinthus_Biotherapeutics"
+  },
+  {
+   "name": "Oxford Biomedica",
+   "year": "1995",
+   "pi": "",
+   "silo": [
+    "gene-therapy",
+    "cell-therapy"
+   ],
+   "product": "Viral-vector gene and cell therapy development",
+   "builder": "",
+   "status": "public",
+   "outcome": "listed on AIM 1996; now LSE: OXB",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Oxford_Biomedica"
+  },
+  {
+   "name": "Immunocore",
+   "year": "2008",
+   "pi": "Bent Jakobsen",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Tebentafusp for uveal melanoma and related immunotherapies",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: IMCR)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Immunocore"
+  },
+  {
+   "name": "Adaptimmune",
+   "year": "2008",
+   "pi": "",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "T-cell therapies incl. Tecelra for solid tumors",
+   "builder": "",
+   "status": "public",
+   "outcome": "sold Tecelra and lete-cel to US WorldMeds 2025 for $55M",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Adaptimmune"
+  },
+  {
+   "name": "Oxitec (now Flyttr)",
+   "year": "2002",
+   "pi": "Luke Alphey",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Genetically engineered self-limiting insects for pest control",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Intrexon 2015 for $160M",
+   "outcome_value_usd": 160000000,
+   "source": "https://en.wikipedia.org/wiki/Flyttr"
+  },
+  {
+   "name": "Oxford Molecular",
+   "year": "1989",
+   "pi": "Graham Richards",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "merged",
+   "outcome": "LSE float 1992; merged into Accelrys 2001",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Graham_Richards"
+  },
+  {
+   "name": "InhibOx (now Oxford Drug Design)",
+   "year": "2001",
+   "pi": "Graham Richards",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Graham_Richards"
+  },
+  {
+   "name": "OMass Therapeutics",
+   "year": "",
+   "pi": "Carol Robinson",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Native mass spectrometry to drug hard targets",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Carol_V._Robinson"
+  },
+  {
+   "name": "PepGen",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "rna"
+   ],
+   "product": "Enhanced-delivery oligonucleotides for muscle and brain",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Evox Therapeutics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "rna"
+   ],
+   "product": "Engineered exosome drug delivery",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "MiroBio",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Immune checkpoint agonists for autoimmunity",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Sitryx",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral immunometabolism drugs for autoimmune disease",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "SpyBiotech",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Protein-superglue vaccine platform",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Nucleome Therapeutics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "ai-discovery",
+    "tools-omics"
+   ],
+   "product": "Non-coding genome mapping for drug targets",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Base Genomics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "DNA methylation sequencing for early cancer detection",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Caristo Diagnostics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "AI coronary inflammation imaging for heart risk",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Perspectum",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "Quantitative MRI for organ disease",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Refeyn",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Mass photometry instruments",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Ultromics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "diagnostics",
+    "ai-discovery"
+   ],
+   "product": "AI echocardiography analysis",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Theolytics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Engineered oncolytic viruses",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Dark Blue Therapeutics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "small-molecule",
+    "protein-degradation"
+   ],
+   "product": "Drugs against cancer-specific vulnerabilities",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "T-Cypher Bio",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Immune system mapping for therapy design",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "Alveogene",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Inhaled gene therapy for rare lung diseases",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.oxfordscienceenterprises.com/portfolio/"
+  },
+  {
+   "name": "ionSIGHT",
+   "year": "2025",
+   "pi": "",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Native mass spectrometry for drug discovery",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ox.ac.uk/investing/our-portfolio-companies"
+  },
+  {
+   "name": "Dyna Therapeutics",
+   "year": "2026",
+   "pi": "",
+   "silo": [],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ox.ac.uk/investing/our-portfolio-companies"
+  }
+ ]
+}

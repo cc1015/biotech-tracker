@@ -1,0 +1,308 @@
+{
+ "name": "Dana-Farber Cancer Institute",
+ "profile": {
+  "city": "Boston, MA, USA",
+  "type": "hospital",
+  "tech_transfer": "Belfer Office for Dana-Farber Innovations",
+  "tech_transfer_url": "https://innovations.dana-farber.org/",
+  "summary": "Dana-Farber, a Harvard teaching hospital and NCI-designated cancer center, is a hub for targeted protein degradation, chromatin biology and cancer immunology, licensing work that became C4 Therapeutics, Foghorn, Neon and Neomorph. Its Center for Protein Degradation (with Deerfield) and in-house Accelerator fund steadily convert lab programs into startups.",
+  "programs": [
+   "Dana-Farber Accelerator (founded 2010 as Herzstein Accelerator Fund)",
+   "Center for Protein Degradation (with Deerfield Management)",
+   "DFCI LAUNCHPAD Center for Antibody Discovery"
+  ],
+  "website": "https://www.dana-farber.org",
+  "sources": [
+   "https://innovations.dana-farber.org/",
+   "https://innovations.dana-farber.org/the-accelerator/",
+   "https://innovations.dana-farber.org/our-team/leadership/",
+   "https://en.wikipedia.org/wiki/Dana%E2%80%93Farber_Cancer_Institute",
+   "https://en.wikipedia.org/wiki/Nathanael_Gray",
+   "https://en.wikipedia.org/wiki/Cigall_Kadoch"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Nathanael Gray (formerly)",
+   "lab": "Department of Cancer Biology",
+   "known_for": "Kinase inhibitors and degraders; serial founder",
+   "silo": [
+    "small-molecule",
+    "protein-degradation"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Gray"
+  },
+  {
+   "pi": "Eric Fischer",
+   "lab": "Center for Protein Degradation",
+   "known_for": "Molecular glue degraders; structural biology",
+   "silo": [
+    "protein-degradation"
+   ],
+   "source": "https://innovations.dana-farber.org/research-story/neomorph-activating-the-bodys-disposal-system-to-remove-cancer-causing-proteins/"
+  },
+  {
+   "pi": "Cigall Kadoch",
+   "lab": "Kadoch Lab, Dana-Farber",
+   "known_for": "BAF chromatin-remodeling complexes in cancer",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Cigall_Kadoch"
+  },
+  {
+   "pi": "Catherine J. Wu",
+   "lab": "Division of Stem Cell Transplantation and Cellular Therapies",
+   "known_for": "Personalized neoantigen cancer vaccines",
+   "silo": [
+    "rna",
+    "cell-therapy"
+   ],
+   "source": "https://innovations.dana-farber.org/research-story/a-breakthrough-in-precision-oncology-the-science-behind-personalized-neoantigen-cancer-vaccines/"
+  },
+  {
+   "pi": "Gordon Freeman",
+   "lab": "Dana-Farber / Harvard Medical School",
+   "known_for": "PD-1/PD-L1 and B7 immune checkpoint pathways",
+   "silo": [
+    "antibody"
+   ],
+   "source": "https://innovations.dana-farber.org/research-story/discovering-a-new-pathway-to-enhance-the-immune-response-against-hard-to-treat-cancers/"
+  },
+  {
+   "pi": "Loren Walensky",
+   "lab": "Department of Pediatric Oncology",
+   "known_for": "Hydrocarbon-stapled peptides",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://innovations.dana-farber.org/research-story/new-antiviral-nasal-spray-developed-at-dana-farber-could-curb-covid-19-and-other-viruses/"
+  },
+  {
+   "pi": "Matthew Meyerson",
+   "lab": "Center for Cancer Genomics",
+   "known_for": "Cancer genome profiling; Foundation Medicine origins",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Matthew_Meyerson"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "C4 Therapeutics",
+   "year": "",
+   "pi": "Nathanael Gray; Jay Bradner",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "Targeted protein degraders for cancer",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Gray"
+  },
+  {
+   "name": "Foghorn Therapeutics",
+   "year": "2016",
+   "pi": "Cigall Kadoch",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Chromatin-regulatory-system drugs (e.g., SMARCA2 inhibitors)",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020 on Nasdaq ($120M)",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/discoveries-on-genome-regulating-complexes-spark-new-class-of-cancer-therapeutics/"
+  },
+  {
+   "name": "Syros Pharmaceuticals",
+   "year": "",
+   "pi": "Nathanael Gray",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Gray",
+   "origin_unconfirmed": true
+  },
+  {
+   "name": "Gatekeeper Pharmaceuticals",
+   "year": "",
+   "pi": "Nathanael Gray",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Gray",
+   "origin_unconfirmed": true
+  },
+  {
+   "name": "Petra Pharma",
+   "year": "",
+   "pi": "Nathanael Gray",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Nathanael_Gray",
+   "origin_unconfirmed": true
+  },
+  {
+   "name": "Neomorph",
+   "year": "",
+   "pi": "Eric Fischer",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "Molecular glue degraders",
+   "builder": "Deerfield Management",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/neomorph-activating-the-bodys-disposal-system-to-remove-cancer-causing-proteins/"
+  },
+  {
+   "name": "Neon Therapeutics",
+   "year": "2015",
+   "pi": "Catherine J. Wu; Nir Hacohen",
+   "silo": [
+    "rna",
+    "cell-therapy"
+   ],
+   "product": "Personalized neoantigen vaccines and T-cell therapies",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by BioNTech 2020 for $67M",
+   "outcome_value_usd": 67000000,
+   "source": "https://en.wikipedia.org/wiki/Edward_F._Fritsch"
+  },
+  {
+   "name": "Foundation Medicine",
+   "year": "2010",
+   "pi": "Matthew Meyerson; Levi Garraway",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "Comprehensive tumor genomic profiling",
+   "builder": "Third Rock Ventures",
+   "status": "acquired",
+   "outcome": "Roche bought remaining stake 2018 for $2.4B",
+   "outcome_value_usd": 2400000000,
+   "source": "https://en.wikipedia.org/wiki/Foundation_Medicine"
+  },
+  {
+   "name": "Immunitas Therapeutics",
+   "year": "",
+   "pi": "Kai Wucherpfennig",
+   "silo": [
+    "antibody"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Christoph_Westphal"
+  },
+  {
+   "name": "NextPoint Therapeutics",
+   "year": "",
+   "pi": "Gordon Freeman",
+   "silo": [
+    "antibody",
+    "adc"
+   ],
+   "product": "B7H7/HHLA2-targeted checkpoint inhibitor, T-cell engager and ADC",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/discovering-a-new-pathway-to-enhance-the-immune-response-against-hard-to-treat-cancers/"
+  },
+  {
+   "name": "Red Queen Therapeutics",
+   "year": "",
+   "pi": "Loren Walensky",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Stapled-lipopeptide antiviral nasal spray",
+   "builder": "Apple Tree Partners",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/new-antiviral-nasal-spray-developed-at-dana-farber-could-curb-covid-19-and-other-viruses/"
+  },
+  {
+   "name": "Aevum Therapeutics",
+   "year": "",
+   "pi": "Bruce Spiegelman",
+   "silo": [],
+   "product": "Long-acting engineered irisin for Parkinson's disease",
+   "builder": "Cure VC",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/turning-exercise-biology-into-a-therapeutic-candidate-for-parkinsons-disease/"
+  },
+  {
+   "name": "Precede Biosciences",
+   "year": "",
+   "pi": "Matthew Freedman",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Epigenomic liquid biopsy for treatment guidance",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/a-simple-blood-test-provides-actionable-insights-to-guide-cancer-treatment/"
+  },
+  {
+   "name": "Xsphera Biosciences",
+   "year": "2019",
+   "pi": "David Barbie",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Patient-derived tumor spheroids for ex vivo drug testing",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/new-technology-tests-cancer-treatments-on-live-tissue-samples/"
+  },
+  {
+   "name": "Nanocan Therapeutics",
+   "year": "",
+   "pi": "G. Mike Makrigiorgos",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Drug-loaded nanoparticle spacers for brachytherapy",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovations.dana-farber.org/research-story/nanotechnology-maximizes-cancer-treatment-effectiveness-while-minimizing-side-effects/"
+  }
+ ]
+}

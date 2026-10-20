@@ -1,0 +1,1820 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>biotech-tracker</title>
+<link rel="preconnect" href="https://img.logo.dev" crossorigin>
+<link rel="dns-prefetch" href="https://img.logo.dev">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface-1: #ffffff;
+  --border: #1a1814;
+  --grid: #d9d3c5;
+  --text-primary: #1a1814;
+  --text-secondary: #4a463e;
+  --text-muted: #7a7466;
+  --accent: #8a2b1d;
+  --series-1: #8a2b1d;
+  --good: #2f6b2f;
+  --warning: #9a6a00;
+  --critical: #b0302a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text-primary); font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; font-variant-numeric: tabular-nums; }
+code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; }
+a { color: var(--text-primary); text-decoration: underline; text-decoration-color: var(--grid); text-underline-offset: 2px; }
+a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px 48px; }
+header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 28px 0 8px; border-bottom: 3px double var(--border); }
+header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin: 0; letter-spacing: -0.01em; }
+header .meta { color: var(--text-muted); font-size: 12px; }
+nav { display: flex; gap: 18px; border-bottom: 1px solid var(--border); margin-bottom: 24px; overflow-x: auto; }
+nav button { background: none; border: 0; color: var(--text-secondary); padding: 8px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; cursor: pointer; white-space: nowrap; }
+nav button[aria-selected="true"] { color: var(--text-primary); box-shadow: inset 0 -2px 0 var(--accent); }
+.grid { display: grid; gap: 28px 40px; }
+.kpis { display: flex; flex-wrap: wrap; gap: 6px 28px; font-size: 13px; color: var(--text-secondary); padding-bottom: 14px; margin-bottom: 24px; border-bottom: 1px solid var(--grid); }
+.kpis b { color: var(--text-primary); font-weight: 600; }
+.two { grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); }
+.card { min-width: 0; border-top: 1px solid var(--border); padding-top: 10px; }
+.card h2 { font-size: 17px; font-weight: 600; margin: 0 0 2px; }
+.card .sub { color: var(--text-muted); font-size: 12px; margin: 0 0 12px; }
+.bars { display: grid; grid-template-columns: minmax(90px, 38%) 1fr; gap: 5px 10px; align-items: center; }
+.bars .lbl { color: var(--text-secondary); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .track { position: relative; height: 16px; border-left: 1px solid var(--text-muted); }
+.bars .bar { position: absolute; left: 0; top: 3px; height: 10px; background: var(--series-1); }
+.bars .val { position: absolute; top: -1px; font-size: 12px; color: var(--text-primary); padding-left: 6px; white-space: nowrap; }
+.bars .track:hover .bar { opacity: 0.8; }
+.tip { white-space: pre-line; position: fixed; pointer-events: none; background: var(--text-primary); color: var(--bg); font-size: 12px; padding: 4px 7px; z-index: 10; display: none; max-width: 260px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.filters input, .filters select { font-size: 12px; color: var(--text-primary); background: transparent; border: 0; border-bottom: 1px solid var(--text-muted); border-radius: 0; padding: 5px 2px; min-width: 0; }
+.filters input { flex: 1 1 220px; }
+.filters input:focus, .filters select:focus { outline: none; border-bottom-color: var(--accent); }
+.count { color: var(--text-muted); font-size: 12px; margin-bottom: 8px; }
+.table-wrap { overflow-x: auto; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-weight: 500; color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; cursor: pointer; user-select: none; position: sticky; top: 0; background: var(--bg); }
+th[data-sort]:hover { color: var(--text-primary); }
+td { padding: 9px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.num { text-align: right; font-size: 13px; white-space: nowrap; }
+td.nowrap { white-space: nowrap; }
+.chip { font-size: 12px; color: var(--text-secondary);  white-space: nowrap; }
+.chip ~ .chip::before { content: " / "; color: var(--text-muted); } /* ~ not +: a <wbr> sits between chips */
+.muted { color: var(--text-muted); }
+.note { color: var(--text-muted); font-size: 13px; margin-top: 2px; }
+.conf { white-space: nowrap; font-size: 12px; }
+.conf .ic { display: inline-block; width: 14px; font-weight: 700; }
+.conf.c2 .ic { color: var(--good); } .conf.c1 .ic { color: var(--warning); } .conf.c0 .ic { color: var(--critical); }
+.feed { list-style: none; margin: 0; padding: 0; }
+.feed li { padding: 8px 0; border-bottom: 1px solid var(--grid); display: grid; grid-template-columns: 96px 1fr; gap: 10px; }
+.feed li:last-child { border-bottom: 0; }
+.feed .d { color: var(--text-muted); font-size: 12px; }
+.legend { color: var(--text-muted); font-size: 13px; margin-top: 10px; }
+/* timeline + pulse */
+:root { --cat-1: #2a78d6; --cat-2: #eb6834; --cat-3: #1baf7a; }
+.tl-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.seg { display: flex; flex-wrap: wrap; gap: 2px; }
+.seg button { background: none; border: 1px solid var(--grid); color: var(--text-secondary); font: inherit; font-size: 12px; padding: 3px 9px; cursor: pointer; }
+.seg button[aria-pressed="true"] { border-color: var(--text-primary); color: var(--text-primary); font-weight: 600; }
+.key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+.key i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.key i.hollow { background: none !important; border: 2px solid var(--text-muted); width: 9px; height: 9px; }
+.pulse { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: 24px 32px; }
+.pulse .p { border-top: 1px solid var(--grid); padding-top: 8px; min-width: 0; }
+.pulse h3 { font-size: 14px; margin: 0; }
+.pulse .stat { font-size: 12px; color: var(--text-muted); margin: 1px 0 6px; }
+.mix { display: flex; gap: 2px; height: 8px; margin-bottom: 8px; }
+.mix span { display: block; height: 100%; }
+.mix span:first-child { border-radius: 4px 0 0 4px; } .mix span:last-child { border-radius: 0 4px 4px 0; } .mix span:only-child { border-radius: 4px; }
+.pulse ul { list-style: none; margin: 0; padding: 0; font-size: 13px; }
+.pulse li { margin: 0 0 4px; line-height: 1.35; }
+.pulse li .amt { color: var(--text-muted); font-size: 12px; white-space: nowrap; }
+a.co { color: var(--text-primary); font-weight: 700; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--text-primary) 35%, transparent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a.co:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.cochip:has(a.co) .logo, .corow:has(a.co) .logo, .sp-co:has(a.co) .logo, .ev-co:has(a.co) .logo { cursor: pointer; }
+.aka { color: var(--text-secondary); font-weight: 400; }
+.logo { display: inline-flex; align-items: center; justify-content: center; flex: none; vertical-align: middle; }
+.logo:not(.m) .mono { display: none; }
+.logo img, .logo svg { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+.logo.sm { height: 16px; max-width: 44px; } .logo.sm img { height: 16px; width: auto; } .logo.sm.m { width: 16px; } .logo.sm .mono { width: 16px; height: 16px; }
+.logo.md { width: 60px; height: 26px; } .logo.md .mono { width: 26px; height: 26px; }
+.logo.lg { width: 180px; height: 64px; justify-content: flex-start; } .logo.lg .mono { width: 64px; height: 64px; }
+.corow { display: flex; gap: 12px; align-items: center; }
+.cos { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-bottom: 2px; }
+.cochip { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; font-size: 13px; }
+.cochip .logo.sm { justify-content: flex-start; }
+.back { background: none; border: 0; padding: 0; font: inherit; font-size: 12px; color: var(--text-secondary); cursor: pointer; text-transform: uppercase; letter-spacing: 0.06em; }
+.back:hover { color: var(--accent); }
+.pf-head { padding: 14px 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+.pf-head h2 { font-size: 28px; letter-spacing: -0.02em; margin: 6px 0 2px; }
+.pf-head .desc { color: var(--text-secondary); margin: 0; }
+.pf-head .meta { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr)); gap: 14px 24px; margin: 0 0 28px; }
+.facts div { border-top: 1px solid var(--grid); padding-top: 6px; min-width: 0; }
+.facts dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.facts dd { margin: 2px 0 0; font-size: 16px; overflow-wrap: anywhere; }
+.pf-sec { margin-bottom: 30px; }
+.pf-sec h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.pf-sec h3 .muted { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.kv { display: grid; grid-template-columns: 170px 1fr; gap: 6px 16px; margin: 0; font-size: 14px; }
+.kv dt { color: var(--text-muted); }
+.kv dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 600px) { .kv { grid-template-columns: 1fr; gap: 0; } .kv dd { margin-bottom: 8px; } }
+/* overview views */
+.tl-bar { display: flex; justify-content: flex-end; align-items: center; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.key { align-items: center; }
+.key .seg button { font-size: 11px; padding: 2px 8px; }
+[data-href] { cursor: pointer; }
+.board { display: grid; gap: 2px; }
+.b-head-row { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 22px 0 4px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.b-head-row h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin: 0; }
+.b-row { display: grid; grid-template-columns: 48px minmax(200px, 460px) 1fr 84px; gap: 12px; align-items: center; padding: 6px 4px; border-bottom: 1px solid var(--grid); }
+.b-rank { color: var(--text-muted); font-size: 12px; text-align: right; }
+.b-row.major { padding: 9px 4px; }
+.b-row.major .b-cos .cochip { font-size: 15px; font-weight: 600; }
+.b-row.major .b-bar { height: 18px; top: -1px; }
+.b-row.major .b-val { font-size: 15px; top: -3px; }
+.b-cos { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; min-width: 0; }
+.verb { color: var(--text-muted); font-size: 12px; font-style: italic; }
+.hl { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+.lt-chip.hl { background: var(--bg); box-shadow: 0 0 0 2px var(--text-primary); z-index: 3; }
+.flash { animation: flash 1.4s ease-out; }
+@keyframes flash { 0% { background: color-mix(in srgb, var(--accent) 25%, transparent); } 100% { background: transparent; } }
+#cb-top { margin-left: 10px; } #cb-top button { font-size: 11px; padding: 2px 8px; }
+#cb-type button { display: inline-flex; align-items: center; gap: 5px; }
+#cb-type i { width: 9px; height: 9px; border-radius: 50%; margin: 0; }
+.lt-label i.sw { vertical-align: 0; }
+.b-track { position: relative; height: 16px; }
+.b-bar { position: absolute; left: 0; top: 1px; height: 14px; border-radius: 0 4px 4px 0; }
+.b-val { position: absolute; top: -1px; padding-left: 6px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.b-meta { font-size: 12px; color: var(--text-muted); text-align: right; line-height: 1.25; }
+.b-meta span { display: block; font-size: 11px; }
+.b-und { margin-top: 18px; }
+.b-und h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 500; margin: 0 0 6px; }
+.b-urow { display: grid; grid-template-columns: 56px minmax(150px, 280px) 1fr; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: 13px; align-items: baseline; }
+.b-urow .d { color: var(--text-muted); font-size: 12px; }
+.b-head { color: var(--text-secondary); }
+@media (max-width: 640px) { .b-row { grid-template-columns: 44px 1fr 64px; } .b-row .b-track { grid-column: 2 / -1; grid-row: 2; } .b-urow { grid-template-columns: 50px 1fr; } .b-urow .b-head { grid-column: 2; } }
+.lt { position: relative; }
+.lt-lane { position: absolute; left: 0; right: 0; border-top: 1px solid var(--grid); }
+.lt-label { position: absolute; left: 0; font-size: 12px; color: var(--text-secondary); line-height: 1.2; }
+.lt-label span { display: block; color: var(--text-muted); font-size: 11px; }
+.lt-grid { position: absolute; top: 0; width: 0; border-left: 1px dashed var(--grid); }
+.lt-tick { position: absolute; transform: translateX(-50%); font-size: 11px; color: var(--text-muted); }
+.lt-chip { position: absolute; width: max-content; display: flex; align-items: center; gap: 3px; height: 20px; cursor: pointer; padding: 0 4px; border: 1px solid; border-left-width: 3px; border-radius: 4px; background: var(--bg); font-size: 11px; font-weight: 600; white-space: nowrap; overflow: hidden; }
+.lt-chip:hover { z-index: 2; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+/* tiers: $5B+ solid, $1–5B tinted, under $1B outline, undisclosed dashed */
+.lt-chip { border-color: var(--c); }
+.lt-chip.major { background: var(--c); border-color: var(--c); color: var(--text-primary); font-weight: 700; font-size: 12px; }
+.lt-chip.major .logo { background: var(--bg); border-radius: 3px; padding: 1px; }
+.lt-chip.mid { background: color-mix(in srgb, var(--c) 22%, var(--bg)); font-weight: 700; }
+.lt-chip.minor { font-weight: 500; color: var(--text-secondary); }
+.lt-chip.undisclosed { border-style: dashed; border-left-style: solid; font-weight: 400; color: var(--text-muted); }
+.tier-key { display: inline-flex; align-items: center; gap: 4px 12px; flex-wrap: wrap; margin-left: auto; color: var(--text-muted); }
+.tier-key span { display: inline-flex; align-items: center; gap: 5px; }
+.tier-key .lt-chip { position: static; display: inline-block; width: 22px; height: 12px; padding: 0; }
+.lt-chip .logo.sm { max-width: 20px; }
+.lt-chip span:last-child { margin-left: auto; padding-left: 2px; }
+.prod { font-size: 13px; color: var(--text-secondary); margin-top: 2px; max-width: 560px; }
+.b-party { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; }
+.b-cos { display: block; }
+.b-prod { font-size: 12px; color: var(--text-muted); margin-top: 3px; line-height: 1.35; }
+.b-prod b { color: var(--text-secondary); font-weight: 600; }
+.b-nd { font-size: 12px; color: var(--text-muted); font-style: italic; }
+.b-rank { white-space: nowrap; }
+.b-meta span + span { color: var(--text-muted); }
+#cb-sort button { font-size: 11px; padding: 2px 8px; }
+.ev-type { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.ev-title { font-size: 26px !important; line-height: 1.2; margin: 8px 0 10px !important; max-width: 900px; }
+.ev-party { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 15px; }
+.ev-party .cochip { font-size: 15px; font-weight: 600; }
+.ev-cos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 14px 28px; }
+.ev-co { display: grid; grid-template-columns: 60px 1fr; gap: 12px; align-items: start; }
+.ev-role { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); border: 1px solid var(--grid); padding: 0 5px; margin-right: 6px; vertical-align: 1px; }
+.ev-prod { color: var(--text-secondary); font-size: 14px; margin: 2px 0; }
+.ev-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 14px; }
+.ev-card { border: 1px solid var(--grid); border-top: 3px solid var(--grid); padding: 10px 12px 12px; min-width: 0; }
+.ev-card.primary { border-top-color: var(--text-primary); }
+.ev-card h4 { font-size: 15px; line-height: 1.3; margin: 6px 0 6px; }
+.ev-card p { margin: 0; color: var(--text-secondary); font-size: 13px; }
+.ev-src { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12px; }
+.ev-src .fav { width: 16px; height: 16px; }
+.badge { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid var(--grid); padding: 0 5px; color: var(--text-muted); }
+.ph-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: 20px 28px; }
+.ph-card { display: flex; flex-direction: column; border: 1px solid var(--grid); border-top: 2px solid var(--border); padding: 12px 14px 12px; text-decoration: none; color: var(--text-primary); border-radius: 3px; transition: border-color .12s, box-shadow .12s, transform .12s; }
+.ph-card:hover { border-color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,.08); transform: translateY(-1px); }
+.ph-card:hover h3, .ph-card:hover .ph-go { color: var(--accent); }
+.ph-go { margin-top: auto; padding-top: 10px; font-size: 12px; font-weight: 600; color: var(--text-secondary); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, currentColor 40%, transparent); }
+.ph-card h3 { font-size: 18px; margin: 8px 0 0; }
+.ph-card .logo.lg { width: 140px; height: 44px; }
+.ph-card dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 10px 0 6px; }
+.ph-card dt { font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+.ph-card dd { margin: 0; font-size: 15px; }
+.ft-key { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 12px; color: var(--text-secondary); margin-bottom: 8px; }
+.ft-key i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.ft-key i.hollow { background: var(--bg); border: 2px solid var(--cat-2); width: 8px; height: 8px; }
+.ft { position: relative; }
+.ft svg { position: absolute; inset: 0; overflow: visible; }
+.ft svg [data-tip] { cursor: help; }
+.ft-chip { position: absolute; width: max-content; display: flex; align-items: center; gap: 5px; height: 26px; padding: 0 7px 0 4px; background: var(--bg); border: 1px solid var(--grid); border-left: 3px solid var(--cat-2); border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; z-index: 1; }
+.ft-chip.out { border-left-color: var(--cat-1); }
+.ft-chip.dead { opacity: 0.6; border-right-color: var(--text-muted) !important; font-weight: 500; }
+.ft-chip.right { transform: translateX(-100%); border-left: 1px solid var(--grid); border-right: 3px solid var(--cat-2); }
+.ft-chip.out.right { border-right-color: var(--cat-1); }
+.ft-chip .logo.sm { width: 30px; max-width: 30px; justify-content: center; } /* fixed slot: label width can't change when the image arrives */
+.ft-chip .logo.sm img { max-width: 30px; }
+.ft-chip em { font-style: normal; font-weight: 400; color: var(--text-muted); font-size: 11px; }
+.ft-chip a { text-decoration: none; color: var(--text-muted); font-weight: 400; }
+.ft-chip:hover { z-index: 3; box-shadow: 0 1px 5px rgba(0,0,0,.18); }
+.ft-chip[data-go] { cursor: pointer; }
+.ft-trunk { position: absolute; display: flex; align-items: center; gap: 6px; font-size: 13px; z-index: 1; }
+.ft-wrap { overflow-x: auto; border-top: 1px solid var(--grid); border-bottom: 1px solid var(--grid); }
+.ph-prods { display: grid; grid-template-columns: minmax(140px, 300px) 1fr; gap: 6px 14px; align-items: center; }
+.ph-prods .track { position: relative; height: 18px; margin-right: 100px; } /* room for the value label at the bar tip */
+@media (max-width: 600px) { .ph-prods { grid-template-columns: 1fr; gap: 2px; } .ph-prods .track { margin-bottom: 8px; } }
+.ph-prods .bar { position: absolute; left: 0; top: 3px; height: 12px; background: var(--series-1); border-radius: 0 4px 4px 0; }
+.ph-prods .val { position: absolute; top: 0; padding-left: 6px; font-size: 12px; white-space: nowrap; }
+a.chip.silo { text-decoration: none; color: var(--text-secondary); }
+a.chip.silo:hover { color: var(--accent); text-decoration: underline; }
+.bars .lbl a { color: inherit; text-decoration: none; } .bars .lbl a:hover { color: var(--accent); text-decoration: underline; }
+.pulse h3 a { color: inherit; text-decoration: none; } .pulse h3 a:hover { color: var(--accent); }
+.sp-chart { display: flex; align-items: flex-end; gap: 4px; height: 130px; max-width: 760px; padding-top: 16px; }
+.sp-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; min-width: 18px; position: relative; }
+.sp-bar { width: 100%; max-width: 34px; background: var(--series-1); border-radius: 4px 4px 0 0; min-height: 0; }
+.sp-v { font-size: 11px; color: var(--text-secondary); margin-bottom: 2px; }
+.sp-m { font-size: 10px; color: var(--text-muted); margin-top: 4px; height: 12px; }
+.sp-cos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 14px 26px; }
+.sp-co { display: grid; grid-template-columns: 64px 1fr; gap: 10px; align-items: start; }
+.bd-chart .sp-col { min-width: 10px; }
+.bd-stack { width: 100%; max-width: 30px; display: flex; flex-direction: column; border-radius: 4px 4px 0 0; overflow: hidden; gap: 1px; }
+.bd-stack i { display: block; min-height: 2px; }
+.bd-st { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 0 5px; border: 1px solid var(--c); color: var(--text-secondary); border-left-width: 3px; }
+.bd-silos { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.bd-silos .chip ~ .chip::before { content: none; }
+.pf-group { font-size: 17px; margin: 34px 0 4px; padding-top: 12px; border-top: 3px double var(--border); }
+.bd-role { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 0 5px; background: color-mix(in srgb, var(--accent) 12%, var(--bg)); color: var(--text-secondary); }
+.lab-pi { border-top: 1px solid var(--grid); padding-top: 6px; }
+/* trials */
+.tr-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); gap: 10px; margin-top: 14px; }
+.tr-tile { text-align: left; background: none; border: 1px solid var(--grid); border-top: 3px solid var(--text-primary); padding: 8px 10px; font: inherit; cursor: pointer; color: var(--text-primary); }
+.tr-tile.on { box-shadow: 0 0 0 2px var(--accent); } .tr-tile.clear { border-top-color: var(--grid); color: var(--text-secondary); }
+.tr-tile span { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+.tr-tile b { display: block; font-size: 24px; font-weight: 600; margin: 2px 0 4px; }
+.tr-tile small { color: var(--text-muted); font-size: 11px; }
+.tr-split { display: flex; gap: 2px; height: 6px; margin-bottom: 4px; } .tr-split em { display: block; border-radius: 3px; }
+.tr-top { list-style: none; margin: 0; padding: 0; } .tr-top li { padding: 4px 0; border-bottom: 1px solid var(--grid); display: flex; justify-content: space-between; gap: 10px; }
+.tr-silos { display: grid; grid-template-columns: minmax(160px, 260px) 1fr; gap: 6px 14px; align-items: center; }
+.tr-silos .lbl { font-size: 13px; color: var(--text-primary); text-decoration: none; } .tr-silos .lbl:hover { color: var(--accent); }
+.tr-pair div { position: relative; height: 10px; margin: 2px 0; } .tr-pair i { display: block; height: 100%; border-radius: 0 3px 3px 0; }
+.tr-pair span { position: absolute; top: -3px; font-size: 11px; color: var(--text-secondary); padding-left: 4px; }
+.tr-pair div { display: flex; align-items: center; } .tr-pair div span { position: static; }
+.tr-ms { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .04em; padding: 0 4px; border-left: 3px solid var(--text-muted); color: var(--text-secondary); margin: 1px 0; }
+.tr-ms.results { border-color: var(--good); } .tr-ms.stopped { border-color: var(--critical); } .tr-ms.completed { border-color: var(--cat-1); } .tr-ms.registered { border-color: var(--text-muted); }
+.tr-table td:nth-child(3) { min-width: 300px; width: 48%; }
+.tr-table td:nth-child(4) { min-width: 150px; max-width: 220px; }
+.tr-table .cochip { white-space: normal; align-items: flex-start; }
+.tr-table td:nth-child(6) { min-width: 90px; }
+.tr-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+/* outlook */
+.ol-intro { border-left: 3px solid var(--accent); padding: 8px 12px; margin-bottom: 22px; font-size: 13px; color: var(--text-secondary); max-width: 900px; }
+.ol-sec { margin-bottom: 28px; }
+.ol-score { display: inline-flex; align-items: center; gap: 6px; min-width: 110px; }
+.ol-score i { display: block; height: 8px; width: 70px; background: var(--grid); border-radius: 0 4px 4px 0; position: relative; overflow: hidden; }
+.ol-score i { background: linear-gradient(to right, var(--series-1) 0 100%) no-repeat; background-color: var(--grid); }
+.ol-score b { font-size: 13px; font-variant-numeric: tabular-nums; }
+.ol-why { display: flex; flex-wrap: wrap; gap: 3px 6px; }
+.ol-why span { font-size: 11.5px; color: var(--text-secondary); border: 1px solid var(--grid); padding: 0 5px; border-radius: 2px; }
+.ol-buyer { margin: 2px 0; white-space: nowrap; }
+.ol-card { border-top: 1px solid var(--grid); padding-top: 6px; }
+.ol-table td:nth-child(2) { min-width: 180px; }
+/* frontiers */
+.fr-mom { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr)); gap: 8px; }
+.fr-tile { text-align: left; background: none; border: 1px solid var(--grid); padding: 7px 9px; font: inherit; cursor: pointer; color: var(--text-primary); border-radius: 3px; }
+.fr-tile.on { box-shadow: 0 0 0 2px var(--accent); }
+.fr-tile span { display: block; font-size: 11.5px; color: var(--text-secondary); line-height: 1.25; min-height: 2.5em; }
+.fr-tile b { font-size: 20px; font-weight: 600; margin-right: 6px; } .fr-tile em { font-style: normal; font-size: 12px; color: var(--text-muted); }
+.fr-tile em.up { color: var(--good); } .fr-tile em.dn { color: var(--critical); }
+.fr-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 1px; }
+.fr-src { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 0 5px; border-left: 3px solid var(--text-muted); color: var(--text-secondary); }
+.fr-src.lab-paper { border-color: var(--cat-1); } .fr-src.lab-preprint { border-color: var(--cat-3); } .fr-src.industry-preprint { border-color: var(--cat-2); }
+.fr-ind { color: var(--text-secondary); }
+/* shared structure */
+.mast-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+.nav-sep { flex: none; width: 1px; height: 14px; background: var(--grid); margin: 0 4px; align-self: center; }
+.page-head { padding: 4px 0 14px; }
+.page-head h2 { font-size: 22px; margin: 0 0 2px; } .page-head p { margin: 0; color: var(--text-secondary); }
+details.about { margin: 0 0 14px; font-size: 13px; color: var(--text-muted); max-width: 860px; }
+details.about summary { cursor: pointer; color: var(--text-secondary); width: max-content; }
+details.about p { margin: 6px 0 0; }
+[hidden] { display: none !important; }
+@media (max-width: 600px) { .two { grid-template-columns: 1fr; } .feed li { grid-template-columns: 1fr; gap: 0; } header h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mast-top"><span id="dateline"></span><span>Deals · companies · trials · science</span></div>
+    <h1>biotech-tracker</h1>
+  </header>
+  <nav role="tablist" id="tabs">
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="news">News</button>
+    <button role="tab" data-tab="universe">Companies</button>
+    <button role="tab" data-tab="trials">Trials</button>
+    <i class="nav-sep"></i>
+    <button role="tab" data-tab="pharma">Pharma families</button>
+    <button role="tab" data-tab="tech">Tech entrants</button>
+    <button role="tab" data-tab="builders">Ventures</button>
+    <i class="nav-sep"></i>
+    <button role="tab" data-tab="labs">Labs</button>
+    <button role="tab" data-tab="silos">Silos</button>
+    <button role="tab" data-tab="frontiers">Frontiers</button>
+    <i class="nav-sep"></i>
+    <button role="tab" data-tab="outlook">Forecast</button>
+  </nav>
+  <div class="page-head" id="page-head"></div>
+
+  <section id="overview">
+    <div class="card" style="margin-bottom:28px">
+      <div class="tl-head">
+        <div><h2>Overview</h2><p class="sub" style="margin:0">Each chip is a deal, placed by date. Darker means bigger. Click one for its story.</p></div>
+      </div>
+      <div class="tl-bar">
+        <div class="seg" id="tl-range" role="group" aria-label="Time window">
+          <button data-m="3">3M</button><button data-m="6" aria-pressed="true">6M</button><button data-m="12">12M</button><button data-m="0">All</button>
+        </div>
+      </div>
+      <div class="key" id="tl-key"></div>
+      <div id="timeline"></div>
+    </div>
+    <div class="grid two">
+      <div class="card"><h2>News events by silo</h2><p class="sub">Count of events tagged with each silo (an event can carry several)</p><div class="bars" id="chart-silo"></div></div>
+      <div class="card"><h2>Disclosed deal value by silo</h2><p class="sub">Sum of headline amounts, US$ (biobucks include milestones)</p><div class="bars" id="chart-silo-usd"></div></div>
+      <div class="card"><h2>How companies are built</h2><p class="sub">Companies by origin</p><div class="bars" id="chart-origin"></div></div>
+      <div class="card"><h2>Tech entrants by company</h2><p class="sub">Tracked life-sciences moves (build, partner, invest, platform)</p><div class="bars" id="chart-tech"></div></div>
+    </div>
+    <div class="card" style="margin-top:28px"><h2>Silo pulse</h2><p class="sub">What's moving in each silo in the selected window. The bar shows the mix of event types; the biggest events are listed underneath.</p><div class="pulse" id="pulse"></div></div>
+  </section>
+
+  <section id="news" hidden>
+    <div class="filters">
+      <input type="search" id="news-q" placeholder="Search headline, company, notes…" aria-label="Search news">
+      <select id="news-cat" aria-label="Category"></select>
+      <select id="news-silo" aria-label="Silo"></select>
+      <select id="news-conf" aria-label="Confirmation">
+        <option value="">Any confirmation</option>
+        <option value="2">2+ sources</option>
+        <option value="1">Single source</option>
+        <option value="0">No source</option>
+      </select>
+    </div>
+    <div class="count" id="news-count"></div>
+    <div class="table-wrap"><table id="news-table"></table></div>
+    <p class="legend"><b>Confirmation</b> counts the primary <code>source</code> plus the independent trackers in <code>confirmed_by</code> (BioBucks, Cure, Fierce). <span class="conf c2"><span class="ic">✓</span>2+ sources</span> · <span class="conf c1"><span class="ic">!</span>single source</span> · <span class="conf c0"><span class="ic">✕</span>no source</span></p>
+  </section>
+
+  <section id="universe" hidden>
+    <details class="about"><summary>About this data</summary><p>Every biotech/pharma company found in public sources: ClinicalTrials.gov industry sponsors, Wikidata, SEC EDGAR, SEC Form D, plus the hand-checked list and the news log. Built by machine, so check a company's profile before you rely on it. Click any company to open its profile.</p></details>
+    <div class="filters">
+      <input type="search" id="u-q" placeholder="Search name or common name, HQ, country, parent…" aria-label="Search companies">
+      <select id="u-sort" aria-label="Sort by">
+        <option value="size">Sort: largest first</option>
+        <option value="news">Sort: most news coverage</option>
+        <option value="recent">Sort: most recent activity</option>
+        <option value="trials">Sort: most clinical trials</option>
+        <option value="name">Sort: name A–Z</option>
+      </select>
+      <select id="u-src" aria-label="Source"></select>
+      <select id="u-country" aria-label="Country"></select>
+      <select id="u-status" aria-label="Status"></select>
+      <select id="u-active" aria-label="Activity">
+        <option value="">Any activity</option>
+        <option value="news">In the news</option>
+        <option value="1">Active in last 12 months</option>
+        <option value="3">Active in last 3 yrs</option>
+        <option value="5">Active in last 5 yrs</option>
+      </select>
+    </div>
+    <div class="count" id="u-count"></div>
+    <div class="table-wrap"><table id="u-table"></table></div>
+    <button class="back" id="u-more" style="margin-top:12px" hidden></button>
+  </section>
+
+  <section id="profile" hidden></section>
+
+  <section id="event" hidden></section>
+
+  <section id="pharma" hidden></section>
+
+  <section id="pharmapage" hidden></section>
+
+  <section id="silopage" hidden></section>
+
+  <section id="builderpage" hidden></section>
+
+  <section id="labs" hidden></section>
+
+  <section id="trials" hidden></section>
+
+  <section id="outlook" hidden></section>
+
+  <section id="frontiers" hidden></section>
+
+  <section id="tech" hidden>
+    <div class="filters">
+      <input type="search" id="tech-q" placeholder="Search initiative or description…" aria-label="Search tech entrants">
+      <select id="tech-co" aria-label="Company"></select>
+      <select id="tech-type" aria-label="Type"></select>
+    </div>
+    <div class="count" id="tech-count"></div>
+    <div class="table-wrap"><table id="tech-table"></table></div>
+  </section>
+
+  <section id="builders" hidden>
+    <div class="table-wrap"><table id="builders-table"></table></div>
+  </section>
+
+  <section id="silos" hidden>
+    <div class="count">Silos from <code>taxonomy/silos.md</code>, with how often each appears in the data</div>
+    <div class="table-wrap"><table id="silos-table"></table></div>
+  </section>
+</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+// ---------- helpers ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const isTodo = v => !v || v.trim() === "" || v.trim().toUpperCase() === "TODO";
+const list = v => isTodo(v) ? [] : v.split(";").map(s => s.trim()).filter(s => s && s.toUpperCase() !== "TODO");
+const siloName = id => DATA.silos[id] || id;
+const usd = n => {
+  if (!n) return "";
+  const a = Math.abs(n);
+  if (a >= 1e9) return "$" + (n / 1e9).toFixed(a >= 1e10 ? 0 : 1).replace(/\.0$/, "") + "B";
+  if (a >= 1e6) return "$" + Math.round(n / 1e6) + "M";
+  return "$" + n.toLocaleString();
+};
+const link = (url, label) => isTodo(url) ? '<span class="muted">TODO</span>' : `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label || host(url))}</a>`;
+const host = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return u; } };
+const chips = arr => arr.map(x => `<span class="chip">${esc(x)}</span>`).join("<wbr>"); // <wbr>: long lists can wrap
+const countBy = (rows, keyFn) => {
+  const m = new Map();
+  rows.forEach(r => keyFn(r).forEach(k => m.set(k, (m.get(k) || 0) + 1)));
+  return m;
+};
+const sumBy = (rows, keyFn, valFn) => {
+  const m = new Map();
+  rows.forEach(r => { const v = valFn(r); if (v) keyFn(r).forEach(k => m.set(k, (m.get(k) || 0) + v)); });
+  return m;
+};
+
+// confirmation = primary source (if any) + independent trackers in confirmed_by
+DATA.news.forEach(n => {
+  n._amt = Number(n.amount_usd) || 0;
+  n._trackers = list(n.confirmed_by);
+  const trackerUrlIsSource = /biobucks|wewillcure|fiercebiotech/.test(n.source || "");
+  // a tracker cited as the primary source shouldn't count twice
+  n._conf = (isTodo(n.source) ? 0 : 1) + n._trackers.length - (trackerUrlIsSource && n._trackers.length ? 1 : 0);
+  n._silos = list(n.silo);
+});
+DATA.news.forEach((n, i) => n._i = i);
+DATA.tech.forEach((t, i) => t._i = i);
+const confCell = n => {
+  const lvl = n._conf >= 2 ? 2 : n._conf;
+  const label = lvl === 2 ? `${n._conf} sources` : lvl === 1 ? "single source" : "no source";
+  const ic = lvl === 2 ? "✓" : lvl === 1 ? "!" : "✕";
+  const t = n._trackers.length ? ` title="Also listed by: ${esc(n._trackers.join(", "))}"` : "";
+  return `<span class="conf c${lvl}"${t}><span class="ic">${ic}</span>${label}</span>`;
+};
+
+// ---------- tooltip ----------
+const tip = $("#tip");
+document.addEventListener("mousemove", e => {
+  const t = e.target.closest("[data-tip]");
+  if (!t) { tip.style.display = "none"; return; }
+  tip.textContent = t.dataset.tip;
+  tip.style.display = "block";
+  const x = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8);
+  tip.style.left = x + "px"; tip.style.top = (e.clientY + 14) + "px";
+});
+
+// ---------- bar chart (single series, horizontal) ----------
+function bars(el, map, { fmt = v => v, label = k => k, limit = 10, unit = "", href = null } = {}) {
+  let entries = [...map.entries()].sort((a, b) => b[1] - a[1]);
+  if (entries.length > limit) {
+    const rest = entries.slice(limit - 1).reduce((s, e) => s + e[1], 0);
+    entries = entries.slice(0, limit - 1).concat([["Other", rest]]);
+  }
+  if (!entries.length) { el.innerHTML = '<span class="muted">No data yet</span>'; return; }
+  const max = Math.max(...entries.map(e => e[1]));
+  // leave ~22% of the track for the value label at the tip
+  el.innerHTML = entries.map(([k, v]) => {
+    const w = (v / max) * 78;
+    const name = k === "Other" ? "Other" : label(k);
+    const h = href && k !== "Other" ? href(k) : "";
+    return `<div class="lbl" title="${esc(name)}">${h ? `<a href="${esc(h)}">${esc(name)}</a>` : esc(name)}</div>
+      <div class="track" data-tip="${esc(name)}: ${esc(fmt(v))}${unit}">
+        <div class="bar" style="width:${w}%"></div>
+        <div class="val" style="left:${w}%">${esc(fmt(v))}</div>
+      </div>`;
+  }).join("");
+}
+
+// ---------- table with sorting ----------
+function table(el, cols, rows, limit = Infinity) {
+  let sortKey = null, dir = 1;
+  const render = () => {
+    const sorted = sortKey == null ? rows : [...rows].sort((a, b) => {
+      const c = cols.find(c => c.key === sortKey);
+      const va = c.sort ? c.sort(a) : a[sortKey] ?? "", vb = c.sort ? c.sort(b) : b[sortKey] ?? "";
+      return (va > vb ? 1 : va < vb ? -1 : 0) * dir;
+    });
+    el.innerHTML = `<thead><tr>${cols.map(c => `<th data-sort="${c.key}">${esc(c.label)}</th>`).join("")}</tr></thead>
+      <tbody>${sorted.length ? sorted.slice(0, limit).map(r => `<tr>${cols.map(c => `<td class="${c.cls || ""}">${c.render ? c.render(r) : esc(r[c.key])}</td>`).join("")}</tr>`).join("")
+      : `<tr><td colspan="${cols.length}" class="muted">No matching rows</td></tr>`}${sorted.length > limit
+      ? `<tr><td colspan="${cols.length}" class="muted">Showing ${limit} of ${sorted.length.toLocaleString()}. Search or filter to narrow.</td></tr>` : ""}</tbody>`;
+    el.querySelectorAll("th").forEach(th => th.onclick = () => {
+      const k = th.dataset.sort; dir = sortKey === k ? -dir : 1; sortKey = k; render();
+    });
+  };
+  render();
+}
+
+function fillSelect(el, label, values, fmt = v => v) {
+  el.innerHTML = `<option value="">${esc(label)}</option>` +
+    [...new Set(values)].filter(Boolean).sort().map(v => `<option value="${esc(v)}">${esc(fmt(v))}</option>`).join("");
+}
+const matchQ = (q, ...fields) => !q || fields.join(" ").toLowerCase().includes(q);
+
+// ---------- overview ----------
+function overview() {
+  const n = DATA.news;
+  const fin = n.filter(x => ["financing", "ipo"].includes(x.category)).reduce((s, x) => s + x._amt, 0);
+  const ma = n.filter(x => x.category === "m&a").reduce((s, x) => s + x._amt, 0);
+  const multi = n.filter(x => x._conf >= 2).length;
+  const latest = n.map(x => x.date).sort().at(-1) || "";
+  const tiles = [
+    ["Events tracked", n.length, `latest ${latest}`],
+    ["Financings + IPOs", usd(fin), `${n.filter(x => ["financing", "ipo"].includes(x.category)).length} rounds`],
+    ["M&A value", usd(ma), `${n.filter(x => x.category === "m&a").length} deals`],
+    ["Multi-source confirmed", Math.round(100 * multi / (n.length || 1)) + "%", `${multi} of ${n.length} events`],
+    ["Companies", DATA.universe.length.toLocaleString(), `${DATA.companies.length} hand-checked · ${DATA.tech.length} tech moves`],
+  ];
+
+
+  bars($("#chart-silo"), countBy(n, x => x._silos.length ? x._silos : ["unassigned"]), { label: k => k === "unassigned" ? "Unassigned" : siloName(k), unit: " events", href: k => DATA.siloInfo[k] ? "#silo/" + k : "" });
+  bars($("#chart-silo-usd"), sumBy(n, x => x._silos.length ? x._silos : ["unassigned"], x => x._amt), { fmt: usd, label: k => k === "unassigned" ? "Unassigned" : siloName(k), href: k => DATA.siloInfo[k] ? "#silo/" + k : "" });
+  bars($("#chart-origin"), countBy(DATA.companies, c => [isTodo(c.origin) ? "unknown" : c.origin]), { unit: " companies" });
+  bars($("#chart-tech"), countBy(DATA.tech, t => [t.company]), { unit: " moves" });
+
+}
+
+// ---------- news ----------
+function news() {
+  fillSelect($("#news-cat"), "All categories", DATA.news.map(x => x.category));
+  fillSelect($("#news-silo"), "All silos", DATA.news.flatMap(x => x._silos), siloName);
+  const cols = [
+    { key: "date", label: "Date", cls: "nowrap" },
+    { key: "companies", label: "Companies", sort: r => (r._cos[0] || {}).n || "", render: r => `<div class="cos">${r._cos.map(coChip).join("")}</div>` },
+    { key: "headline", label: "Headline", render: r => `${evLink(r)}${r._cov.length ? ` <span class="muted">· ${r._cov.length} article${r._cov.length === 1 ? "" : "s"}</span>` : ""}${isTodo(r.notes) ? "" : `<div class="note">${esc(r.notes)}</div>`}` },
+    { key: "category", label: "Type", render: r => chips([r.category]) },
+    { key: "silo", label: "Silo", render: r => siloChips(r._silos) },
+    { key: "amount_usd", label: "Amount", cls: "num", render: r => usd(r._amt), sort: r => r._amt },
+    { key: "_conf", label: "Confirmation", render: confCell, sort: r => r._conf },
+  ];
+  const go = () => {
+    const q = $("#news-q").value.toLowerCase(), cat = $("#news-cat").value, silo = $("#news-silo").value, conf = $("#news-conf").value;
+    const rows = DATA.news.filter(x => matchQ(q, x.headline, x.companies, x.notes)
+      && (!cat || x.category === cat) && (!silo || x._silos.includes(silo))
+      && (conf === "" || Math.min(x._conf, 2) === Number(conf)));
+    $("#news-count").textContent = `${rows.length} of ${DATA.news.length} events · ${usd(rows.reduce((s, x) => s + x._amt, 0)) || "$0"} disclosed`;
+    table($("#news-table"), cols, rows.sort((a, b) => b.date.localeCompare(a.date)));
+  };
+  ["#news-q", "#news-cat", "#news-silo", "#news-conf"].forEach(s => $(s).addEventListener("input", go));
+  go();
+}
+
+// ---------- companies (universe) ----------
+const SRC_NAME = { curated: "Hand-checked", ctgov: "ClinicalTrials.gov", wikidata: "Wikidata", sec: "SEC EDGAR", formd: "SEC Form D", news: "News log" };
+const TODAY = new Date().toISOString().slice(0, 10);
+DATA.universe.forEach(u => {
+  u._src = list(u.sources);
+  u._trials = Number(u.ct_trials) || 0;
+  u._emp = Number(u.employees) || 0;
+  u._sold = Number(u.formd_sold_usd) || 0;
+  // registry start dates can be planned future dates; activity counts up to today
+  const ct = u.ct_last_started || (u.ct_latest_start <= TODAY ? u.ct_latest_start : "");
+  u._last = [ct, u.formd_latest, u.last_news].filter(Boolean).sort().at(-1) || "";
+  // size estimate on one log scale: ~100k staff ≈ ~1,000 trials ≈ 5; a $100M raise ≈ a ~200-person company
+  u._size = Math.max(Math.log10(u._emp + 1), 1.67 * Math.log10(u._trials + 1), u._sold ? Math.log10(u._sold) - 5.7 : 0, 0);
+});
+const akaTag = u => u.aka ? ` <span class="aka">(${esc(u.aka)})</span>` : "";
+const coLink = u => `<a class="co" href="#co/${u.id}">${esc(u.name)}</a>${akaTag(u)}`;
+
+// ---------- logos ----------
+// real logos are cleaned Wikimedia Commons SVGs (sweep/fetch_logos.py); everyone else gets an initials badge
+const LOGO_INK = ["#8a2b1d", "#2f6b2f", "#2a5d8f", "#7a4f9a", "#9a6a00", "#3d6b6b"];
+const LOGO_SKIP = /^(the|inc|ltd|llc|plc|co|corp|ag|sa|nv|bv|gmbh|kk|and|of|a|s|&)$/i;
+function initials(name) {
+  const w = name.replace(/\(.*?\)/g, " ").split(/[^A-Za-z0-9]+/).filter(x => x && !LOGO_SKIP.test(x));
+  if (!w.length) return "?";
+  if (w[0].length <= 4 && w[0] === w[0].toUpperCase() && /[A-Z]/.test(w[0])) return w[0].slice(0, 3); // GSK, ITM
+  return (w[0][0] + (w[1] && !/^(therapeutics|pharmaceuticals?|pharma|bio\w*|labs?|sciences?|medicines?|health|group|holdings?)$/i.test(w[1]) ? w[1][0] : "")).toUpperCase();
+}
+function monogram(name) {
+  let h = 0; for (const ch of name) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  const ink = LOGO_INK[h % LOGO_INK.length], t = initials(name);
+  return `<svg class="mono" viewBox="0 0 40 40" role="img" aria-label="${esc(name)}"><circle cx="20" cy="20" r="18.5" fill="none" stroke="${ink}" stroke-width="1.5"/><text x="20" y="20" dy=".35em" text-anchor="middle" font-size="${t.length > 2 ? 11 : 15}" font-weight="700" fill="${ink}" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">${esc(t)}</text></svg>`;
+}
+// size: "sm" (news chips), "md" (lists), "lg" (profile header)
+// Logo.dev (when sweep/.env has LOGO_DEV_TOKEN): looked up by website domain, else ticker, else name.
+// fallback=404 makes a miss fail, and onerror then shows the initials badge that's already in the markup.
+const LEGAL = /[,.\s]+(inc|incorporated|corp|corporation|co|company|ltd|limited|llc|plc|ag|sa|s\.a|nv|bv|gmbh|kk|se|ab|as|a\/s|spa|srl|pte|pty|holdings?)\.?$/i;
+const plainName = n => { let s = n.replace(/\(.*?\)/g, "").trim(), t; while ((t = s.replace(LEGAL, "").replace(/\s+(and|&)$/i, "").trim()) !== s) s = t; return s; };
+function logoDev(u, size) {
+  if (!DATA.logoToken) return "";
+  const px = 128; // one size for every placement: each logo is fetched once and reused from cache
+  let path;
+  const host = u.website ? (() => { try { return new URL(u.website).hostname.replace(/^www\./, ""); } catch { return ""; } })() : "";
+  if (host) path = encodeURIComponent(host);
+  else if (u.ticker && /^[A-Z.]{1,6}$/.test(u.ticker.split(":").pop())) path = "ticker/" + encodeURIComponent(u.ticker.split(":").pop());
+  else path = "name/" + encodeURIComponent(plainName(u.aka || u.name || u.n));
+  return `https://img.logo.dev/${path}?token=${encodeURIComponent(DATA.logoToken)}&size=${px}&format=png&fallback=404`;
+}
+const logo = (src, name, size = "md") => src
+  ? `<span class="logo ${size}"><img src="${esc(src)}" alt="${esc(name)} logo" loading="lazy" onerror="logoErr(this)">${monogram(name)}</span>`
+  : `<span class="logo ${size} m">${monogram(name)}</span>`;
+// a failed logo gets one delayed retry (Logo.dev rate-limits bursts), then the initials badge
+// a missing logo shows the initials badge at once (no retry: with one shared size per company, throttling is rare)
+function logoErr(img) { img.parentNode.classList.add("m"); img.remove(); }
+const uLogo = (u, size = "md") => logo(u.logo || logoDev(u, size), u.aka || u.name, size);
+// a company in a news/tech row: {n, id, logo}
+const coChip = e => `<span class="cochip">${e.id != null ? uLogo(DATA.universe[e.id], "sm") : logo(e.logo || logoDev(e, "sm"), e.n, "sm")}${e.id != null ? `<a class="co" href="#co/${e.id}">${esc(e.n)}</a>` : `<span>${esc(e.n)}</span>`}</span>`;
+
+const sizeLabel = u => u._emp ? `${u._emp >= 1000 ? Math.round(u._emp / 1000) + "k" : u._emp} staff`
+  : u._trials ? `${u._trials.toLocaleString()} trial${u._trials === 1 ? "" : "s"}`
+  : u._sold ? `${usd(u._sold)} raised` : "";
+const SORTS = {
+  size: (a, b) => b._size - a._size || b.news_count - a.news_count,
+  news: (a, b) => b.news_count - a.news_count || b._last.localeCompare(a._last) || b._size - a._size,
+  recent: (a, b) => b._last.localeCompare(a._last) || b._size - a._size,
+  trials: (a, b) => b._trials - a._trials,
+  name: (a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }),
+};
+
+function universe() {
+  const U = DATA.universe;
+  fillSelect($("#u-src"), "All sources", U.flatMap(u => u._src), s => SRC_NAME[s] || s);
+  fillSelect($("#u-country"), "All countries", U.map(u => u.country));
+  fillSelect($("#u-status"), "Any status", U.map(u => u.status));
+  const val = v => isTodo(v) ? '<span class="muted">—</span>' : esc(v);
+  const cols = [
+    { key: "name", label: "Company", render: r => `<div class="corow">${uLogo(r)}<div>${coLink(r)}${r.curated ? ' <span class="chip">hand-checked</span>' : ""}<div class="note">${[r.hq, r.country].filter(v => !isTodo(v)).map(esc).join(", ") || "—"}${isTodo(r.founded) ? "" : " · " + esc(r.founded)}${r.parent ? " · part of " + esc(r.parent) : ""}</div>${r.prod && r.prod.product ? `<div class="prod">${esc(r.prod.product)}</div>` : ""}</div></div>` },
+    { key: "_size", label: "Size (est.)", cls: "nowrap", sort: r => r._size, render: r => sizeLabel(r) || '<span class="muted">—</span>' },
+    { key: "news_count", label: "Coverage", cls: "num", sort: r => r.news_count, render: r => r.news_count ? `${r.news_count} item${r.news_count === 1 ? "" : "s"}` : '<span class="muted">—</span>' },
+    { key: "_last", label: "Last activity", cls: "nowrap", render: r => val(r._last) },
+    { key: "status", label: "Status", render: r => `${val(r.status)}${r.ticker ? `<div class="note">${esc(r.ticker)}</div>` : ""}` },
+    { key: "sources", label: "Found in", render: r => chips(r._src.map(s => SRC_NAME[s] || s)) },
+  ];
+  const go = () => {
+    const q = $("#u-q").value.toLowerCase(), s = $("#u-src").value, c = $("#u-country").value, st = $("#u-status").value, a = $("#u-active").value;
+    const since = a && a !== "news" ? `${new Date().getFullYear() - Number(a)}${TODAY.slice(4)}` : "";
+    const rows = U.filter(u => matchQ(q, u.name, u.aka, u.other_names, u.prod && u.prod.product, u.prod && u.prod.lead_asset, u.hq, u.country, u.ticker, u.parent, u.description)
+      && (!s || u._src.includes(s)) && (!c || u.country === c) && (!st || u.status === st)
+      && (a !== "news" || u.news_count) && (!since || u._last >= since)).sort(SORTS[$("#u-sort").value]);
+    $("#u-count").textContent = `${rows.length.toLocaleString()} of ${U.length.toLocaleString()} companies`;
+    table($("#u-table"), cols, rows, shown);
+    $("#u-more").hidden = rows.length <= shown;
+    $("#u-more").textContent = `Show ${Math.min(100, rows.length - shown)} more`;
+  };
+  let shown = 100;
+  $("#u-more").onclick = () => { shown += 100; go(); };
+  ["#u-q", "#u-sort", "#u-src", "#u-country", "#u-status", "#u-active"].forEach(s => $(s).addEventListener("input", () => { shown = 100; }));
+  ["#u-q", "#u-sort", "#u-src", "#u-country", "#u-status", "#u-active"].forEach(s => $(s).addEventListener("input", go));
+  try { const v = localStorage.getItem("ct-usort"); if (v && SORTS[v]) $("#u-sort").value = v; } catch {}
+  $("#u-sort").addEventListener("input", () => { try { localStorage.setItem("ct-usort", $("#u-sort").value); } catch {} });
+  go();
+}
+
+// ---------- company profile ----------
+function profile(id) {
+  const u = DATA.universe[id], el = $("#profile");
+  if (!u) { el.innerHTML = '<p class="muted">Company not found.</p>'; return; }
+  const c = u.cur >= 0 ? DATA.companies[u.cur] : null;
+  const has = v => !isTodo(v);
+  const fact = (label, v) => has(String(v ?? "")) ? `<div><dt>${esc(label)}</dt><dd>${v}</dd></div>` : "";
+  const kv = pairs => `<dl class="kv">${pairs.filter(([, v]) => has(String(v ?? ""))).map(([k, v]) => `<dt>${esc(k)}</dt><dd>${v}</dd>`).join("")}</dl>`;
+  const sec = (title, body, n) => `<div class="pf-sec"><h3>${esc(title)}${n != null ? ` <span class="muted">· ${n}</span>` : ""}</h3>${body}</div>`;
+  const where = [u.hq, u.country].filter(has).map(esc).join(", ");
+
+  const news = u._news.map(j => DATA.news[j]).sort((a, b) => b.date.localeCompare(a.date));
+  const leads = u._leads.map(j => DATA.leads[j]).sort((a, b) => (b.published || "").localeCompare(a.published || ""));
+  const tech = u._tech.map(j => DATA.tech[j]);
+  const builders = u._builders.map(j => DATA.builders[j]);
+  const ctNames = list(u.ct_names);
+
+  const links = [
+    has(u.website) && ["Website", link(u.website)],
+    u.wikidata && ["Wikidata", link(`https://www.wikidata.org/wiki/${u.wikidata}`, u.wikidata)],
+    u.sec_cik && ["SEC filings", link(`https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${u.sec_cik}`, "CIK " + u.sec_cik)],
+    ["ClinicalTrials.gov", link("https://clinicaltrials.gov/search?" + new URLSearchParams({ lead: ctNames[0] || u.name }), "search trials")],
+    ["News search", link("https://news.google.com/search?" + new URLSearchParams({ q: `"${u.name}"` }), "Google News")],
+    has(u.source) && ["Primary record", link(u.source)],
+  ].filter(Boolean);
+
+  el.innerHTML = `
+    <button class="back" id="pf-back">← All companies</button>
+    <div class="pf-head">
+      ${uLogo(u, "lg")}
+      <h2>${esc(u.name)}${akaTag(u)}</h2>
+      ${has(u.description) ? `<p class="desc">${esc(u.description)}</p>` : ""}
+      <div class="meta">${[where, has(u.founded) && "founded " + esc(u.founded), u.parent && "part of " + esc(u.parent), u.curated && "hand-checked"].filter(Boolean).join(" · ")}${(() => { const f = DATA.pharma.find(p => p.uid === u.id); return f ? ` · <a href="#ph/${f.slug}">family tree & full profile →</a>` : ""; })()}</div>
+    </div>
+    <dl class="facts">
+      ${fact("Size (est.)", sizeLabel(u))}
+      ${fact("Employees", u._emp ? u._emp.toLocaleString() : "")}
+      ${fact("Status", esc(u.status))}
+      ${fact("Ticker", esc(u.ticker))}
+      ${fact("Clinical trials", u._trials ? u._trials.toLocaleString() : "")}
+      ${fact("Latest trial start", esc(u.ct_latest_start))}
+      ${fact("Last Form D raise", u._sold ? `${usd(u._sold)} <span class="muted">(${esc(u.formd_latest)})</span>` : "")}
+      ${fact("News coverage", u.news_count ? `${u.news_count} item${u.news_count === 1 ? "" : "s"}` : "")}
+      ${fact("Last activity", esc(u._last))}
+    </dl>
+    ${u.prod ? sec("What they make", kv([
+      ["Product", esc(u.prod.product)],
+      ["Lead program", esc(u.prod.lead_asset)],
+      ["Modality", esc(u.prod.modality)],
+      ["Stage", esc(u.prod.stage)],
+      ["Source", u.prod.source ? link(u.prod.source) + ` <span class="muted">· checked ${esc(u.prod.last_verified || "")}</span>` : ""],
+    ])) : ""}
+    ${c ? sec("Hand-checked profile", kv([
+      ["Silo", siloChips(list(c.silo))],
+      ["Model", esc(c.model)],
+      ["Origin", esc(c.origin) + (has(c.origin_detail) ? `<div class="note">${esc(c.origin_detail)}</div>` : "")],
+      ["Builder / investors", esc(c.builder_or_lead_investors)],
+      ["Stage", esc(c.stage)],
+      ["Status", esc(c.status)],
+      ["Notes", esc(c.notes)],
+      ["Source", link(c.source, "source") + ` <span class="muted">· verified ${has(c.last_verified) ? esc(c.last_verified) : "TODO"}</span>`],
+    ])) : ""}
+    ${news.length ? sec("News", `<ul class="feed">${news.map(n => `<li><span class="d">${esc(n.date)}</span><div><div class="cos">${n._cos.map(coChip).join("")}</div>${evLink(n)} ${chips([n.category])}${n._amt ? ` <span class="muted">${usd(n._amt)}</span>` : ""}<div class="note">${confCell(n)}${has(n.notes) ? " · " + esc(n.notes) : ""}</div></div></li>`).join("")}</ul>`, news.length) : ""}
+    ${tech.length ? sec("Tech-company moves", `<ul class="feed">${tech.map(t => `<li><span class="d">${esc(t.year)}</span><div><b>${esc(t.company)}</b> · ${link(t.source, t.initiative)} ${chips(list(t.type))}<div class="note">${esc(t.description)}</div></div></li>`).join("")}</ul>`, tech.length) : ""}
+    ${(() => {
+      const lab = DATA.labs.flatMap(l => (l.created || []).filter(c => c.uid === u.id).map(c => ({ l, c })));
+      const iv = DATA.investors.flatMap(v => (v.created || []).filter(c => c.uid === u.id).map(c => ({ v, c })));
+      const rows = [...lab.map(({ l, c }) => [`Spun out of`, `<a href="#lab/${l.slug}">${esc(l.name)}</a>${c.pi ? ` <span class="muted">(${esc(c.pi)})</span>` : ""}${c.year ? ` <span class="muted">${esc(c.year)}</span>` : ""}`]),
+        ...iv.map(({ v, c }) => [`Backed by`, `<a href="#iv/${v.slug}">${esc(v.name)}</a>${c.role ? ` <span class="muted">${esc(c.role)}</span>` : ""}`])];
+      return rows.length ? sec("Origins and backers", `<dl class="kv">${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>`) : "";
+    })()}
+    ${builders.length ? sec("Built or backed by", kv(builders.map(b => [b.name, `${esc(b.type)}${has(b.hq) ? " · " + esc(b.hq) : ""}${b.slug ? ` · <a href="#bd/${b.slug}">venture builder profile →</a>` : ""}<div class="note">${esc(isTodo(b.model) ? (b.profile || {}).model || "" : b.model)}</div>`])), builders.length) : ""}
+    ${leads.length ? sec("Unconfirmed leads", `<p class="note" style="margin:0 0 6px">Picked up by the lead collector and not yet checked.</p><ul class="feed">${leads.map(l => `<li><span class="d">${esc((l.published || "").slice(0, 10))}</span><div>${link(l.url, l.title)}<div class="note">${esc(l.source_name || l.platform)}${l.status && l.status !== "new" ? " · " + esc(l.status) : ""}</div></div></li>`).join("")}</ul>`, leads.length) : ""}
+    ${sec("Clinical trials", '<div id="pf-trials" class="muted">Loading from ClinicalTrials.gov…</div>', u._trials ? `${u._trials.toLocaleString()} as lead sponsor` : null)}
+    ${sec("Record", kv([
+      ["Found in", chips(u._src.map(s => SRC_NAME[s] || s))],
+      ["Common name", esc(u.aka)],
+      ["Also listed as", list(u.other_names).map(esc).join("<br>")],
+      ["Registry names", ctNames.map(esc).join("<br>")],
+      ...links,
+      ["List built", esc(u.last_verified)],
+    ]))}`;
+  $("#pf-back").onclick = () => { history.length > 1 ? history.back() : (location.hash = "companies"); };
+  trials(u, ctNames);
+}
+
+// live: the company's most recent trials, straight from the registry (it allows cross-origin requests)
+let trialsReq = 0;
+async function trials(u, names) {
+  const out = $("#pf-trials"), my = ++trialsReq;
+  const p = new URLSearchParams({ fields: "NCTId,BriefTitle,Phase,OverallStatus,StartDate,Condition", sort: "StartDate:desc", pageSize: "15", countTotal: "true" });
+  if (names.length) p.set("filter.advanced", names.slice(0, 15).map(n => `AREA[LeadSponsorName]"${n.replace(/"/g, "")}"`).join(" OR "));
+  else p.set("query.lead", u.name);
+  try {
+    const r = await fetch("https://clinicaltrials.gov/api/v2/studies?" + p);
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    if (my !== trialsReq) return; // user moved on to another profile
+    const st = d.studies || [];
+    if (!st.length) { out.textContent = "No trials found with this company as lead sponsor."; return; }
+    const nice = s => (s || "").toLowerCase().replace(/_/g, " ");
+    out.className = "";
+    out.innerHTML = `<div class="table-wrap"><table><thead><tr><th>Start</th><th>Trial</th><th>Phase</th><th>Status</th></tr></thead><tbody>${st.map(s => {
+      const ps = s.protocolSection, id = ps.identificationModule.nctId;
+      return `<tr><td class="nowrap">${esc(ps.statusModule?.startDateStruct?.date || "")}</td>
+        <td>${link("https://clinicaltrials.gov/study/" + id, ps.identificationModule.briefTitle)}<div class="note">${esc(id)}${ps.conditionsModule?.conditions ? " · " + esc(ps.conditionsModule.conditions.slice(0, 3).join(", ")) : ""}</div></td>
+        <td class="nowrap">${esc((ps.designModule?.phases || []).map(x => x.replace("PHASE", "Ph ").replace("EARLY_Ph 1", "Early Ph 1").replace("NA", "n/a")).join(" / "))}</td>
+        <td>${esc(nice(ps.statusModule?.overallStatus))}</td></tr>`;
+    }).join("")}</tbody></table></div><p class="note">Most recent ${st.length} of ${(d.totalCount || st.length).toLocaleString()} · loaded live from ClinicalTrials.gov</p>`;
+  } catch (e) {
+    if (my === trialsReq) out.innerHTML = `Couldn't reach ClinicalTrials.gov (${esc(e.message)}). Use the search link below.`;
+  }
+}
+
+// ---------- tech entrants ----------
+function tech() {
+  const T = DATA.tech;
+  fillSelect($("#tech-co"), "All companies", T.map(t => t.company));
+  fillSelect($("#tech-type"), "All types", T.flatMap(t => list(t.type)));
+  const cols = [
+    { key: "company", label: "Company", render: r => coChip(r._co) },
+    { key: "initiative", label: "Initiative", render: r => `${link(r.source, r.initiative)}<div class="note">${esc(r.description)}</div>${r._cos.length ? `<div class="cos">${r._cos.map(coChip).join("")}</div>` : ""}` },
+    { key: "type", label: "Type", render: r => chips(list(r.type)) },
+    { key: "silo", label: "Silo", render: r => siloChips(list(r.silo)) },
+    { key: "year", label: "Year", cls: "nowrap" },
+  ];
+  const go = () => {
+    const q = $("#tech-q").value.toLowerCase(), c = $("#tech-co").value, ty = $("#tech-type").value;
+    const rows = T.filter(t => matchQ(q, t.initiative, t.description) && (!c || t.company === c) && (!ty || list(t.type).includes(ty)));
+    $("#tech-count").textContent = `${rows.length} of ${T.length} moves`;
+    table($("#tech-table"), cols, rows.sort((a, b) => (b.year || "").localeCompare(a.year || "")));
+  };
+  ["#tech-q", "#tech-co", "#tech-type"].forEach(s => $(s).addEventListener("input", go));
+  go();
+}
+
+// ---------- builders + silos ----------
+function silos() {
+  const nc = countBy(DATA.news, x => x._silos), usdM = sumBy(DATA.news, x => x._silos, x => x._amt);
+  const rows = Object.entries(DATA.silos).map(([id, name]) => ({ id, name, news: nc.get(id) || 0, cos: siloCos(id).size, usd: usdM.get(id) || 0 }));
+  table($("#silos-table"), [
+    { key: "name", label: "Silo", render: r => `<a class="co" href="#silo/${esc(r.id)}">${esc(r.name)}</a><div class="note">${esc((DATA.siloInfo[r.id] || {})["enabling discovery / trigger"] || (DATA.siloInfo[r.id] || {}).trigger || "")}</div>` },
+    { key: "news", label: "News events", cls: "num" },
+    { key: "usd", label: "Disclosed value", cls: "num", render: r => usd(r.usd) || '<span class="muted">—</span>' },
+    { key: "cos", label: "Companies", cls: "num" },
+  ], rows.sort((a, b) => b.news - a.news));
+}
+
+// ---------- timeline + silo pulse ----------
+const CATS = [
+  { id: "raise", label: "Raise / IPO", color: "var(--cat-1)", has: c => c === "financing" || c === "ipo" },
+  { id: "ma", label: "M&A", color: "var(--cat-2)", has: c => c === "m&a" },
+  { id: "deal", label: "Partnership / launch / other", color: "var(--cat-3)", has: () => true },
+];
+const catOf = n => CATS.find(c => c.has(n.category));
+const parseDate = d => { const [y, m, dd] = d.split("-").map(Number); return new Date(y, (m || 6) - 1, dd || 15); };
+const mainSilo = n => n._silos[0] || "unassigned";
+const siloLabel = k => k === "unassigned" ? "Unassigned" : k === "other" ? "Other silos" : siloName(k);
+let tlMonths = 6;
+
+function inWindow() {
+  const latest = Math.max(...DATA.news.map(n => parseDate(n.date)));
+  const start = tlMonths ? new Date(new Date(latest).setMonth(new Date(latest).getMonth() - tlMonths)) : Math.min(...DATA.news.map(n => parseDate(n.date)));
+  return { rows: DATA.news.filter(n => parseDate(n.date) >= start), start: new Date(start), end: new Date(latest) };
+}
+
+// ---------- overview: switchable views of the same window of events ----------
+
+const catKey = () => CATS.map(c => `<span><i style="background:${c.color}"></i>${c.label}</span>`).join("");
+const tipFor = n => `${n.date} · ${catOf(n).label}${n._amt ? " · " + usd(n._amt) : " · amount not disclosed"}\n${n._cos.map(e => e.n + (prodOf(e) ? " — " + prodOf(e) : "")).join("\n")}\n${n.headline}\n(click for the event page)`;
+const evAttrs = n => `data-tip="${esc(tipFor(n))}" data-go="#ev/${n._i}"`;
+const evLink = (n, text) => `<a href="#ev/${n._i}">${esc(text ?? n.headline)}</a>`;
+const prodOf = e => e.id != null ? (DATA.universe[e.id].prod || {}).product || "" : "";
+const leadCo = n => n._cos[0] || { n: n.companies || "?", id: null, logo: "" };
+const coLogo = (e, size) => e.id != null ? uLogo(DATA.universe[e.id], size) : logo(e.logo || logoDev(e, size), e.n, size);
+const shortDate = d => parseDate(d).toLocaleString("en-US", { month: "short", day: "numeric" });
+
+function timeline() { vCombo(); }
+
+// who did what to whom, read from the headline: "X to acquire Y", "X licenses from Y", "X to merge with Y"
+const ROLE_VERBS = [
+  [/^(.+?)\s+(?:to acquire|acquires|to buy|buys|completes (?:its )?acquisition of)\s/i, "acquires", "→"],
+  [/^(.+?)\s+(?:to merge with|merges with|completes (?:its )?merger with)\s/i, "merges with", "+"],
+  [/^(.+?)\s+(?:licenses from|in-licenses from|licenses)\s/i, "licenses from", "←"],
+];
+const nameHit = (e, text) => {
+  const t = text.toLowerCase(), n = plainName(e.n).toLowerCase();
+  return t.includes(n) || n.includes(t.trim()) || t.includes(n.split(/\s+/)[0]);
+};
+function roles(n) {
+  const cos = n._cos.slice(0, 4);
+  for (const [re, verb, glyph] of ROLE_VERBS) {
+    const m = n.headline.match(re);
+    if (!m) continue;
+    const i = cos.findIndex(e => nameHit(e, m[1]));
+    if (i < 0 || cos.length < 2) break;
+    return { cos: [cos[i], ...cos.filter((_, j) => j !== i)], verb, glyph };
+  }
+  return { cos, verb: cos.length > 1 ? (catOf(n).id === "deal" ? "with" : "and") : "", glyph: "⇄" };
+}
+const coName = e => esc(plainName(e.n));
+const chipFor = (e, size = "sm") => `<span class="cochip">${coLogo(e, size)}<span>${coName(e)}</span></span>`;
+const partyLine = n => {
+  const r = roles(n);
+  if (r.cos.length < 2) return r.cos.map(e => chipFor(e)).join("");
+  return `${chipFor(r.cos[0])}<span class="verb">${esc(r.verb)}</span>${r.cos.slice(1).map(e => chipFor(e)).join('<span class="verb">&</span>')}`;
+};
+
+let comboType = "all", comboAll = false, comboSort = "new", comboTop = 25;
+// "top" = biggest and most covered: log of the disclosed amount, plus articles and trackers reporting it
+const evRank = n => Math.log10((n._amt || 0) + 1) + 0.8 * ((n._cov || []).length + (n._trackers || []).length);
+// deal-size tiers: the shade of a timeline chip says how big the deal is
+const TIERS = [{ id: "major", min: 5e9, label: "$5B+" }, { id: "mid", min: 1e9, label: "$1–5B" }, { id: "minor", min: 1, label: "under $1B" }, { id: "undisclosed", min: 0, label: "not disclosed" }];
+const tierOf = n => TIERS.find(t => n._amt >= t.min).id;
+// timeline on top, board below; both show the same events and highlight each other
+function vCombo() {
+  const el = $("#timeline"), win = inWindow();
+  const inWin = win.rows.filter(n => comboType === "all" || catOf(n).id === comboType);
+  const rows = comboTop ? [...inWin].sort((a, b) => evRank(b) - evRank(a)).slice(0, comboTop) : inWin;
+  const id = n => DATA.news.indexOf(n);
+  // the legend doubles as the type filter
+  $("#tl-key").innerHTML = `<span class="seg" id="cb-type">${[{ id: "all", label: "All types" }, ...CATS].map(c => `<button data-t="${c.id}" aria-pressed="${comboType === c.id}">${c.color ? `<i style="background:${c.color}"></i>` : ""}${esc(c.label.split(" /")[0])}</button>`).join("")}</span>`;
+  $("#tl-key").innerHTML += `<span class="seg" id="cb-top">${[[25, "Top 25"], [50, "Top 50"], [0, "All"]].map(([k, l]) => `<button data-n="${k}" aria-pressed="${comboTop === k}">${l}${k === 0 ? ` <span class="muted">${inWin.length}</span>` : ""}</button>`).join("")}</span>`;
+  $("#tl-key").innerHTML += `<span class="tier-key">Deal size: ${TIERS.map(t => `<span><b class="lt-chip ${t.id}" style="--c:var(--text-secondary)"></b>${t.label}</span>`).join("")}</span>`;
+  $("#cb-type").onclick = e => { const b = e.target.closest("button"); if (b) { comboType = b.dataset.t; comboAll = false; vCombo(); } };
+  $("#cb-top").onclick = e => { const b = e.target.closest("button"); if (b) { comboTop = Number(b.dataset.n); comboAll = false; vCombo(); } };
+  if (!rows.length) { el.innerHTML = '<p class="muted">No events in this window.</p>'; return; }
+
+  // ---- timeline ----
+  const W = el.clientWidth || 900, L = W < 560 ? 76 : 132, R = 8, ROW = 24;
+  const { start, end } = win, t0 = +start - 2 * 864e5, t1 = +end + 2 * 864e5;
+  const chipW = n => {
+    const txt = n._amt ? usd(n._amt) : "—", big = tierOf(n) === "major";
+    return 14 + 23 * Math.max(1, Math.min(2, n._cos.length)) + txt.length * (big ? 8 : 7.2);
+  };
+  const x = d => L + (W - L - R - 96) * ((+d - t0) / (t1 - t0));
+  const months = []; const m = new Date(start.getFullYear(), start.getMonth() + 1, 1);
+  while (m <= end) { months.push(new Date(m)); m.setMonth(m.getMonth() + 1); }
+  let y0 = 0, tl = "";
+  const lanes = CATS.filter(c => comboType === "all" || c.id === comboType).map(c => {
+    const ns = rows.filter(n => catOf(n) === c).sort((a, b) => parseDate(a.date) - parseDate(b.date));
+    const ends = [];
+    const placed = ns.map(n => {
+      const px = x(parseDate(n.date)), w = chipW(n);
+      let r = ends.findIndex(e => e + 3 <= px);
+      if (r < 0) { r = ends.length; ends.push(0); }
+      ends[r] = px + w;
+      return { n, px, r, w };
+    });
+    const h = Math.max(1, ends.length) * ROW + 12, lane = { c, ns, placed, y: y0, h };
+    y0 += h;
+    return lane;
+  });
+  const H = y0 + 20;
+  months.forEach(d => tl += `<div class="lt-grid" style="left:${x(d)}px;height:${H - 20}px"></div><div class="lt-tick" style="left:${x(d)}px;top:${H - 17}px">${d.toLocaleString("en-US", { month: "short" })}</div>`);
+  lanes.forEach(({ c, ns, placed, y, h }) => {
+    const sum = ns.reduce((a, n) => a + n._amt, 0);
+    tl += `<div class="lt-lane" style="top:${y}px;height:${h}px"></div><div class="lt-label" style="top:${y + 6}px;width:${L - 10}px"><i class="sw" style="background:${c.color}"></i>${esc(c.label.split(" /")[0])}<span>${ns.length} event${ns.length === 1 ? "" : "s"}${sum ? " · " + usd(sum) : ""}</span></div>`;
+    placed.forEach(({ n, px, r, w }) => {
+      const rr = roles(n);
+      tl += `<div class="lt-chip ${tierOf(n)}" data-ev="${id(n)}" data-go="#ev/${n._i}" style="left:${px}px;top:${y + 6 + r * ROW}px;min-width:${w}px;--c:${c.color}" data-tip="${esc(tipFor(n))}">${rr.cos.slice(0, 2).map(e => coLogo(e, "sm")).join("")}<span>${n._amt ? usd(n._amt) : "—"}</span></div>`;
+    });
+  });
+
+  // ---- list: newest first (default) or largest first ----
+  const byNew = (a, b) => b.date.localeCompare(a.date) || b._amt - a._amt;
+  const ranked = comboSort === "new" ? [...rows].sort(byNew) : rows.filter(n => n._amt).sort((a, b) => b._amt - a._amt);
+  const und = comboSort === "new" ? [] : rows.filter(n => !n._amt).sort(byNew);
+  const LIMIT = 12, top = comboAll ? ranked : ranked.slice(0, LIMIT), max = Math.max(1, ...rows.map(n => n._amt));
+  const bar = n => (n._amt / max) * 80;
+  const prodLine = n => {
+    const ps = roles(n).cos.filter(prodOf).slice(0, 2);
+    return ps.length ? `<div class="b-prod">${ps.map(e => `<b>${coName(e)}</b> ${esc(prodOf(e))}`).join(" · ")}</div>` : "";
+  };
+  const board = top.map((n, i) => `
+    <div class="b-row ${tierOf(n)}" data-ev="${id(n)}" ${evAttrs(n)}>
+      <div class="b-rank">${comboSort === "new" ? shortDate(n.date) : i + 1}</div>
+      <div class="b-cos"><div class="b-party">${partyLine(n)}</div>${prodLine(n)}</div>
+      <div class="b-track">${n._amt ? `<div class="b-bar" style="width:${bar(n)}%;background:${catOf(n).color}"></div><span class="b-val" style="left:${bar(n)}%">${usd(n._amt)}</span>` : '<span class="b-nd">amount not disclosed</span>'}</div>
+      <div class="b-meta">${comboSort === "new" ? "" : shortDate(n.date)}<span>${esc(catOf(n).label.split(" /")[0])}</span>${n._cov.length ? `<span>${n._cov.length} article${n._cov.length === 1 ? "" : "s"}</span>` : ""}</div>
+    </div>`).join("");
+  el.innerHTML = `<div class="lt" style="height:${H}px">${tl}</div>
+    <div class="b-head-row"><h3>${comboSort === "new" ? "Newest first" : "Largest first"}</h3>
+      <span class="seg" id="cb-sort"><button data-s="new" aria-pressed="${comboSort === "new"}">Newest</button><button data-s="big" aria-pressed="${comboSort === "big"}">Largest</button></span>
+      <span class="note">Partnership amounts are biobucks (they include milestones). Click an event for its page and coverage.</span></div>
+    <div class="board">${board || '<p class="muted">No events in this selection.</p>'}</div>
+    ${ranked.length > LIMIT ? `<button class="back" id="cb-all" style="margin-top:10px">${comboAll ? "Show " + LIMIT : `Show all ${ranked.length}`}</button>` : ""}
+    ${und.length ? `<div class="b-und"><h3>Amount not disclosed · ${und.length}</h3>${und.map(n => `
+      <div class="b-urow" data-ev="${id(n)}" ${evAttrs(n)}><span class="d">${shortDate(n.date)}</span><span class="cos">${partyLine(n)}</span><span class="b-head">${esc(n.headline)}</span></div>`).join("")}</div>` : ""}`;
+  const all = $("#cb-all"); if (all) all.onclick = () => { comboAll = !comboAll; vCombo(); };
+  el.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = "eager"; i.fetchPriority = "high"; }); // first screen: don't wait
+  $("#cb-sort").onclick = e => { const b = e.target.closest("button"); if (b) { comboSort = b.dataset.s; comboAll = false; vCombo(); } };
+
+  // ---- linking: hover highlights the same event in both places ----
+  const mark = (ev, on) => el.querySelectorAll(`[data-ev="${ev}"]`).forEach(x => x.classList.toggle("hl", on));
+  el.onmouseover = e => { const t = e.target.closest("[data-ev]"); if (t) mark(t.dataset.ev, true); };
+  el.onmouseout = e => { const t = e.target.closest("[data-ev]"); if (t) mark(t.dataset.ev, false); };
+}
+
+document.addEventListener("click", e => {
+  const lg = e.target.closest(".logo");
+  if (lg && !e.target.closest("a")) { const a = lg.closest(".cochip, .corow, .sp-co, .ev-co")?.querySelector("a.co"); if (a) { location.hash = a.getAttribute("href"); return; } }
+});
+document.addEventListener("click", e => { const d = e.target.closest("[data-go]"); if (d && !e.target.closest("a, button")) location.hash = d.dataset.go; });
+
+
+// ---------- event page ----------
+const KIND = { "press-release": "Press release", filing: "Filing", "trade-press": "Trade press", news: "News", tracker: "Tracker" };
+const ROLE_NAMES = { acquires: ["Acquirer", "Target"], "licenses from": ["Licensee", "Licensor"], "merges with": ["Merging", "Merging"] };
+function eventPage(i) {
+  const n = DATA.news[i], el = $("#event");
+  if (!n) { el.innerHTML = '<p class="muted">Event not found.</p>'; return; }
+  const c = catOf(n), r = roles(n), names = ROLE_NAMES[r.verb] || [];
+  const longDate = parseDate(n.date).toLocaleString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  const cov = [...n._cov].sort((a, b) => (a.kind === "press-release" || a.kind === "filing" ? 0 : 1) - (b.kind === "press-release" || b.kind === "filing" ? 0 : 1) || (a.published || "").localeCompare(b.published || ""));
+  const rel = n._rel.map(j => DATA.leads[j]);
+  const sec = (title, body, k) => `<div class="pf-sec"><h3>${esc(title)}${k != null ? ` <span class="muted">· ${k}</span>` : ""}</h3>${body}</div>`;
+  const coCard = (e, role) => {
+    const u = e.id != null ? DATA.universe[e.id] : null, p = (u && u.prod) || {};
+    const where = u ? [u.hq, u.country].filter(v => !isTodo(v)).map(esc).join(", ") : "";
+    return `<div class="ev-co">
+      ${coLogo(e, "md")}
+      <div>
+        <div>${role ? `<span class="ev-role">${esc(role)}</span>` : ""}${u ? `<a class="co" href="#co/${e.id}">${esc(plainName(e.n))}</a>` : `<b>${esc(e.n)}</b>`}</div>
+        ${p.product ? `<div class="ev-prod">${esc(p.product)}</div>` : ""}
+        <div class="note">${[p.lead_asset && "Lead: " + esc(p.lead_asset), p.stage && esc(p.stage), where, u && u.status && esc(u.status)].filter(Boolean).join(" · ")}${p.source ? ` · ${link(p.source, "source")}` : ""}</div>
+      </div></div>`;
+  };
+  el.innerHTML = `
+    <button class="back" id="ev-back">← Back</button>
+    <div class="pf-head">
+      <div class="ev-type"><i class="sw" style="background:${c.color}"></i>${esc(c.label)} · ${longDate}</div>
+      <h2 class="ev-title">${esc(n.headline)}</h2>
+      <div class="ev-party">${partyLine(n)}</div>
+    </div>
+    <dl class="facts">
+      <div><dt>Amount</dt><dd>${n._amt ? usd(n._amt) + (c.id === "deal" ? ' <span class="muted" style="font-size:12px">biobucks, incl. milestones</span>' : "") : '<span class="muted">not disclosed</span>'}</dd></div>
+      <div><dt>Type</dt><dd>${esc(n.category)}</dd></div>
+      ${n._silos.length ? `<div><dt>Silo</dt><dd style="font-size:14px">${siloChips(n._silos)}</dd></div>` : ""}
+      <div><dt>Confirmation</dt><dd style="font-size:14px">${confCell(n)}</dd></div>
+      <div><dt>Coverage</dt><dd>${cov.length} article${cov.length === 1 ? "" : "s"}</dd></div>
+    </dl>
+    ${sec("Companies involved", `<div class="ev-cos">${r.cos.map((e, k) => coCard(e, names[Math.min(k, names.length - 1)])).join("")}</div>`)}
+    ${sec("Coverage", cov.length ? `<div class="ev-cards">${cov.map(a => `
+      <article class="ev-card${a.kind === "press-release" || a.kind === "filing" ? " primary" : ""}">
+        <div class="ev-src">${DATA.logoToken ? `<img class="fav" src="https://img.logo.dev/${encodeURIComponent(host(a.url))}?token=${encodeURIComponent(DATA.logoToken)}&size=32&format=png&fallback=404" alt="" loading="lazy" onerror="this.remove()">` : ""}<b>${esc(a.outlet || host(a.url))}</b><span class="badge">${esc(KIND[a.kind] || a.kind || "Article")}</span><span class="muted">${esc(a.published || "")}</span></div>
+        <h4>${link(a.url, a.title || a.url)}</h4>
+        ${a.summary ? `<p>${esc(a.summary)}</p>` : ""}
+      </article>`).join("")}</div>`
+      : `<p class="muted">No articles collected for this event yet. ${link("https://news.google.com/search?" + new URLSearchParams({ q: n._cos.slice(0, 2).map(e => `"${plainName(e.n)}"`).join(" ") }), "Search Google News")}</p>`, cov.length || null)}
+    ${rel.length ? sec("Possibly related", `<p class="note" style="margin:0 0 6px">Unconfirmed leads that name these companies within 10 days of the event.</p><ul class="feed">${rel.map(l => `<li><span class="d">${esc((l.published || "").slice(0, 10))}</span><div>${link(l.url, l.title)}<div class="note">${esc(l.source_name || l.platform)}</div></div></li>`).join("")}</ul>`, rel.length) : ""}
+    ${sec("Record", `<dl class="kv">
+      <dt>Source of record</dt><dd>${link(n.source, host(n.source))}</dd>
+      ${n._trackers.length ? `<dt>Also listed by</dt><dd>${n._trackers.map(esc).join(", ")}</dd>` : ""}
+      ${isTodo(n.notes) ? "" : `<dt>Notes</dt><dd>${esc(n.notes)}</dd>`}
+    </dl>`)}`;
+  $("#ev-back").onclick = () => { history.length > 1 ? history.back() : (location.hash = "overview"); };
+}
+
+// ---------- pharma families ----------
+const PH_IN = new Set(["acquisition", "merger"]), PH_OUT = new Set(["spin-off", "divestiture"]);
+const PH_COLOR = { in: "var(--cat-2)", out: "var(--cat-1)", other: "var(--cat-3)" };
+const phYear = e => parseInt(e.year, 10) || null;
+const phEntity = (name, uid, logoSrc) => uid != null ? { n: DATA.universe[uid].aka || DATA.universe[uid].name, id: uid, logo: DATA.universe[uid].logo } : { n: name, id: null, logo: logoSrc || "" };
+const phCo = ph => phEntity(ph.company, ph.uid, "");
+const phDone = e => !e.status || e.status === "completed";
+// a spin-off whose result is the company itself is where it came from (AbbVie out of Abbott), not something it shed
+const phOrigin = (ph, e) => PH_OUT.has(e.type) && !e.via && sameCo(e.result, ph.company);
+const sameCo = (a, b) => { a = plainName(a || "").toLowerCase(); b = plainName(b || "").toLowerCase(); return a && b && (a === b || a.includes(b) || b.includes(a)); };
+
+function pharmaIndex() {
+  const el = $("#pharma");
+  if (!DATA.pharma.length) { el.innerHTML = '<p class="muted">No pharma histories yet. Add data/pharma/&lt;slug&gt;.json files and rebuild.</p>'; return; }
+  el.innerHTML = `<details class="about"><summary>About this data</summary><p>How the biggest drugmakers were assembled: the mergers and acquisitions that built them, what they spun off, and their venture arms. Click a company for its family tree and full profile.</p></details>
+    <div class="ph-grid">${DATA.pharma.map(ph => {
+      const p = ph.profile || {}, ev = ph.events;
+      const acq = ev.filter(e => PH_IN.has(e.type) && !e.via && phDone(e)), spun = ev.filter(e => e.type === "spin-off" && !e.via && !phOrigin(ph, e));
+      const total = acq.reduce((s, e) => s + (Number(e.value_usd) || 0), 0);
+      const biggest = [...acq].sort((a, b) => (b.value_usd || 0) - (a.value_usd || 0))[0];
+      return `<a class="ph-card" href="#ph/${ph.slug}">
+        ${uLogoLike(phCo(ph), "lg")}
+        <h3>${esc(ph.company)}</h3>
+        <div class="note">${esc(p.hq || "")}${p.founded ? " · founded " + esc(p.founded) : ""}${(() => { const o = ev.find(e => phOrigin(ph, e)); return o ? ` · spun off from ${esc(o.counterparty)} ${esc(o.year)}` : ""; })()}</div>
+        <dl>
+          <div><dt>Revenue</dt><dd>${p.revenue_usd ? usd(p.revenue_usd) : "—"}<span class="muted"> ${esc(p.revenue_year || "")}</span></dd></div>
+          <div><dt>Deals in tree</dt><dd>${acq.length}</dd></div>
+          <div><dt>Disclosed M&A</dt><dd>${total ? usd(total) : "—"}</dd></div>
+        </dl>
+        ${biggest && biggest.value_usd ? `<div class="note">Biggest: ${esc(biggest.counterparty)} (${esc(biggest.year)}, ${usd(biggest.value_usd)})</div>` : ""}
+        ${spun.length ? `<div class="note">Spun off: ${[...new Set(spun.map(e => e.result || e.counterparty))].map(esc).join(", ")}</div>` : ""}
+        <span class="ph-go">Family tree & profile →</span>
+      </a>`;
+    }).join("")}</div>`;
+}
+const uLogoLike = (e, size) => e.id != null ? uLogo(DATA.universe[e.id], size) : logo(e.logo || logoDev(e, size), e.n, size);
+
+// family tree: the company is the trunk; acquisitions join from above, spin-offs leave below.
+// an acquired company's own earlier history ("via") sits on its branch.
+function familyTree(ph, extra = 0) {
+  const ev = ph.events.filter(phYear), Y1 = new Date().getFullYear();
+  const top = ev.filter(e => PH_IN.has(e.type) && !e.via);
+  const nested = ev.filter(e => e.via);
+  const branches = top.map(e => ({ e, kids: nested.filter(k => sameCo(k.via, e.counterparty)) }));
+  // nested history whose parent branch isn't in the tree becomes its own branch, labeled "via"
+  nested.filter(k => !branches.some(b => b.kids.includes(k)) && PH_IN.has(k.type)).forEach(k => branches.push({ e: k, kids: [], orphan: true }));
+  const origin = ev.find(e => phOrigin(ph, e));
+  const outs = ev.filter(e => PH_OUT.has(e.type) && !e.via && e !== origin);
+  const marks = ev.filter(e => !PH_IN.has(e.type) && !PH_OUT.has(e.type) && !e.via);
+  const years = ev.map(phYear);
+  const Y0 = Math.min(...years, Y1 - 10) - 2;
+  const W = Math.max(1040, $("#pharmapage").clientWidth || 1000), L = 16, R = 16, ROW = 34, CW = n => 34 + Math.min(150, n.length * 6.6);
+  // the axis spans the whole width at even year spacing; it starts early enough that the labels of the
+  // earliest branches (which sit left of their line) fit over the empty years before them
+  let Ys = Y0;
+  const x = y => L + (W - L - R) * ((y - Ys) / (Y1 + 1 - Ys));
+  const firstOf = e => Math.min(phYear(e) - 3, ...nested.filter(k => sameCo(k.via, e.counterparty)).map(phYear));
+  const labelW = b => CW(b.e.counterparty || "?") + 110;
+  for (let k = 0; k < 12; k++) {
+    const short = Math.max(0, ...branches.map(b => 8 + extra + labelW(b) - x(firstOf(b.e))));
+    if (short < 1) break;
+    Ys -= short / ((W - L - R) / (Y1 + 1 - Ys)); // convert the missing pixels to years
+  }
+  const place = (items, span) => { const ends = []; return items.map(it => { const [a, b] = span(it); let r = ends.findIndex(z => z + 8 <= a); if (r < 0) { r = ends.length; ends.push(0); } ends[r] = b; return { ...it, r }; }); };
+  // branches: line from earliest known year (or a short stub) to the join year
+  const bs = place(branches.sort((a, b) => phYear(a.e) - phYear(b.e)).map(b => {
+    const join = phYear(b.e), first = Math.min(join - 3, ...b.kids.map(phYear));
+    const name = b.e.counterparty || "?";
+    return { ...b, join, first, name };
+  }), b => [Math.max(0, x(b.first) - CW(b.name) - 110), x(b.join) + 6]);
+  const outName = e => e.type === "spin-off" ? (e.result || e.counterparty)
+    : !e.result || sameCo(e.counterparty, e.result) ? `sold to ${e.result || e.counterparty}` : `${e.counterparty} → ${e.result}`;
+  const subW = 80;
+  // late outflows flip their label to the left of the drop line so it stays on the canvas
+  const os = place(outs.sort((a, b) => phYear(a) - phYear(b)).map(e => { const name = outName(e), xs = x(phYear(e)), w = 26 + CW(name) + subW; return { e, name, flip: xs + w > W - R, w }; }),
+    o => { const xs = x(phYear(o.e)); return o.flip ? [xs - o.w, xs + 4] : [xs, xs + o.w]; });
+  const upRows = Math.max(1, ...bs.map(b => b.r + 1)), dnRows = Math.max(0, ...os.map(o => o.r + 1));
+  const trunkY = 26 + upRows * ROW + 18, H = trunkY + 26 + dnRows * ROW + 40;
+  let svg = "", html = "";
+  // year grid
+  for (let y = Math.ceil(Ys / 5) * 5; y <= Y1; y += 5) {
+    svg += `<line x1="${x(y)}" x2="${x(y)}" y1="0" y2="${H - 22}" stroke="var(--grid)" stroke-dasharray="2 3"/><text x="${x(y)}" y="${H - 6}" font-size="11" fill="var(--text-muted)" text-anchor="middle">${y}</text>`;
+  }
+  // trunk
+  const co = phCo(ph);
+  svg += `<line x1="${L}" x2="${x(Y1 + 1) - 4}" y1="${trunkY}" y2="${trunkY}" stroke="var(--text-primary)" stroke-width="4" stroke-linecap="round"/>`;
+  html += `<div class="ft-trunk" style="left:${L}px;top:${trunkY + 8}px">${uLogoLike(co, "sm")}<b>${esc(ph.company)}</b>${origin ? `<span class="muted"> spun off from ${esc(origin.counterparty)} in ${esc(origin.year)}</span>` : ph.profile && ph.profile.founded ? `<span class="muted"> since ${esc(ph.profile.founded)}</span>` : ""}</div>`;
+  const chip = (e, ent, cls, left, top, label, sub) => {
+    const tip = `${e.year} · ${e.type}${e.value_usd ? " · " + usd(e.value_usd) : ""}${e.status && e.status !== "completed" ? " · " + e.status : ""}\n${e.description || ""}`;
+    const go = ent.id != null ? `data-go="#co/${ent.id}"` : "";
+    const short = label.length > 26 ? label.slice(0, 25).trimEnd() + "…" : label;
+    return `<div class="ft-chip ${cls}" style="left:${left}px;top:${top}px" data-tip="${esc(label + "\n" + tip)}" ${go}>${uLogoLike(ent, "sm")}<span>${esc(short)}</span>${sub ? `<em>${esc(sub)}</em>` : ""}${e.source && ent.id == null ? `<a href="${esc(e.source)}" target="_blank" rel="noopener" title="source">↗</a>` : ""}</div>`;
+  };
+  bs.forEach(b => {
+    const y = trunkY - 26 - b.r * ROW - 14, xj = x(b.join), x0 = x(b.first);
+    if (b.e.status === "terminated") {
+      // abandoned: a grey dashed stub that never reaches the trunk
+      svg += `<path d="M${x0},${y} H${xj - 6}" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${xj - 2}" y="${y + 4}" font-size="12" fill="var(--text-muted)">✕</text>`;
+    } else {
+      const dash = b.e.status === "pending" ? 'stroke-dasharray="5 4"' : "";
+      svg += `<path d="M${x0},${y} H${xj - 14} C${xj - 4},${y} ${xj},${y + 6} ${xj},${y + 16} V${trunkY}" fill="none" stroke="${PH_COLOR.in}" stroke-width="2" ${dash}/>`;
+      svg += `<circle cx="${xj}" cy="${trunkY}" r="4.5" fill="${b.e.status === "pending" ? "var(--bg)" : PH_COLOR.in}" stroke="${b.e.status === "pending" ? PH_COLOR.in : "var(--bg)"}" stroke-width="2"/>`;
+    }
+    b.kids.forEach(k => {
+      const kx = x(phYear(k)), inflow = PH_IN.has(k.type);
+      svg += `<circle cx="${kx}" cy="${y}" r="3.5" fill="${inflow ? "var(--bg)" : PH_COLOR.out}" stroke="${inflow ? PH_COLOR.in : PH_COLOR.out}" stroke-width="2" data-tip="${esc(`${k.year} · ${b.name} ${k.type === "merger" ? "merged with" : k.type === "acquisition" ? "acquired" : k.type} ${k.counterparty}${k.result ? " → " + k.result : ""}${k.value_usd ? " · " + usd(k.value_usd) : ""}\n${k.description || ""}`)}"/>`;
+    });
+    const ent = phEntity(b.name, b.e.cid, b.e.clogo);
+    // chip sits left of its branch so the line (and the acquired company's own history dots) stays visible
+    html += chip(b.e, ent, `in right${b.e.status === "terminated" ? " dead" : ""}`, x0 - 4, y - 13, b.name, `${b.e.year}${b.e.value_usd ? " · " + usd(b.e.value_usd) : ""}${b.e.status === "terminated" ? " · abandoned" : b.e.status === "pending" ? " · pending" : ""}${b.kids.length ? ` · +${b.kids.length} earlier` : ""}${b.orphan ? " · via " + b.e.via : ""}`);
+  });
+  os.forEach(o => {
+    const y = trunkY + 26 + o.r * ROW + 14, xs = x(phYear(o.e));
+    const d = o.flip ? -1 : 1;
+    svg += `<path d="M${xs},${trunkY} V${y - 16} C${xs},${y - 6} ${xs + 4 * d},${y} ${xs + 14 * d},${y} H${xs + 22 * d}" fill="none" stroke="${PH_COLOR.out}" stroke-width="2" ${o.e.type === "divestiture" ? 'stroke-dasharray="4 3"' : ""}/>`;
+    svg += `<circle cx="${xs}" cy="${trunkY}" r="4.5" fill="${PH_COLOR.out}" stroke="var(--bg)" stroke-width="2"/>`;
+    const ent = phEntity(o.name, o.e.rid ?? o.e.cid, "");
+    html += chip(o.e, ent, o.flip ? "out right" : "out", o.flip ? xs - 22 : xs + 22, y - 13, o.name, `${o.e.year}${o.e.value_usd ? " · " + usd(o.e.value_usd) : ""}`);
+  });
+  marks.forEach(m => {
+    const mx = x(phYear(m));
+    svg += `<rect x="${mx - 4}" y="${trunkY - 4}" width="8" height="8" transform="rotate(45 ${mx} ${trunkY})" fill="${PH_COLOR.other}" stroke="var(--bg)" stroke-width="1.5" data-tip="${esc(`${m.year} · ${m.type}: ${m.counterparty || ""}${m.result ? " → " + m.result : ""}${m.value_usd ? " · " + usd(m.value_usd) : ""}\n${m.description || ""}`)}"/>`;
+  });
+  return `<div class="ft-key"><span><i style="background:${PH_COLOR.in}"></i>Acquired / merged in</span><span><i style="background:${PH_COLOR.out}"></i>Spun off (solid) or sold (dashed)</span><span><i style="background:${PH_COLOR.other};border-radius:1px;transform:rotate(45deg)"></i>Venture arm, JV, stake, rename</span><span><i class="hollow"></i>Earlier history of an acquired company</span><span><i style="background:none;border:1.5px dashed var(--text-muted)"></i>Abandoned (✕) or pending (dashed join)</span></div>
+    <div class="ft-wrap"><div class="ft" style="width:${W}px;height:${H}px"><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${svg}</svg>${html}</div></div>`;
+}
+
+function pharmaPage(slug) {
+  const ph = DATA.pharma.find(p => p.slug === slug), el = $("#pharmapage");
+  if (!ph) { el.innerHTML = '<p class="muted">Not found.</p>'; return; }
+  const p = ph.profile || {}, co = phCo(ph), va = p.venture_arm || {};
+  const sec = (title, body, k) => `<div class="pf-sec"><h3>${esc(title)}${k != null ? ` <span class="muted">· ${k}</span>` : ""}</h3>${body}</div>`;
+  const fact = (k, v) => v ? `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>` : "";
+  const prods = (p.top_products || []).filter(x => x.name), pmax = Math.max(1, ...prods.map(x => x.revenue_usd || 0));
+  const news = co.id != null ? DATA.universe[co.id]._news.map(j => DATA.news[j]).sort((a, b) => b.date.localeCompare(a.date)) : [];
+  const typeLabel = { acquisition: "Acquired", merger: "Merged", "spin-off": "Spun off", divestiture: "Sold", "joint-venture": "Joint venture", stake: "Stake", "venture-arm": "Venture arm", rename: "Renamed", founding: "Founded" };
+  const evRows = [...ph.events].sort((a, b) => String(b.year).localeCompare(String(a.year)));
+  el.innerHTML = `
+    <button class="back" id="ph-back">← All pharma families</button>
+    <div class="pf-head">
+      ${uLogoLike(co, "lg")}
+      <h2>${esc(ph.company)}</h2>
+      ${p.summary ? `<p class="desc" style="max-width:860px">${esc(p.summary)}</p>` : ""}
+      <div class="meta">${[p.legal_name, p.hq, p.founded && "founded " + p.founded, p.founders_or_origin].filter(Boolean).map(esc).join(" · ")}${co.id != null ? ` · <a href="#co/${co.id}">company record & trials →</a>` : ""}</div>
+    </div>
+    <dl class="facts">
+      ${fact("Revenue", p.revenue_usd ? `${usd(p.revenue_usd)} <span class="muted">${esc(p.revenue_year || "")}</span>` : "")}
+      ${fact("Employees", p.employees ? `${Number(p.employees).toLocaleString()} <span class="muted">${esc(p.employees_year || "")}</span>` : "")}
+      ${fact("CEO", p.ceo ? `${esc(p.ceo)}${p.ceo_since ? ` <span class="muted">since ${esc(p.ceo_since)}</span>` : ""}` : "")}
+      ${fact("Ticker", esc(p.ticker || ""))}
+      ${fact("Website", p.website ? link(p.website) : "")}
+      ${fact("Venture arm", va.name ? esc(va.name) : "")}
+    </dl>
+    ${sec("Family tree", `<div id="ph-tree">${familyTree(ph)}</div>`, `${ph.events.length} events`)}
+    ${prods.length ? sec("Top products", `<div class="ph-prods">${prods.map(x => `<div class="lbl">${esc(x.name)}<span class="note"> ${esc(x.what || "")}</span></div><div class="track">${x.revenue_usd ? `<div class="bar" style="width:${(x.revenue_usd / pmax) * 78}%"></div><div class="val" style="left:${(x.revenue_usd / pmax) * 78}%">${usd(x.revenue_usd)} <span class="muted">${esc(x.year || "")}</span></div>` : '<span class="muted" style="font-size:12px">revenue not given</span>'}</div>`).join("")}</div>`) : ""}
+    ${(p.therapeutic_areas || []).length ? sec("Therapeutic areas", chips(p.therapeutic_areas)) : ""}
+    ${va.name ? sec("Venture arm", `<dl class="kv"><dt>Name</dt><dd>${va.url ? link(va.url, va.name) : esc(va.name)}</dd>${va.founded ? `<dt>Founded</dt><dd>${esc(va.founded)}</dd>` : ""}${va.fund_size_usd ? `<dt>Fund size</dt><dd>${usd(va.fund_size_usd)}</dd>` : ""}${(va.notable_investments || []).length ? `<dt>Notable investments</dt><dd>${va.notable_investments.map(esc).join(", ")}</dd>` : ""}</dl>`) : ""}
+    ${news.length ? sec("In the tracker's news", `<ul class="feed">${news.map(n => `<li><span class="d">${esc(n.date)}</span><div>${evLink(n)} ${n._amt ? `<span class="muted">${usd(n._amt)}</span>` : ""}</div></li>`).join("")}</ul>`, news.length) : ""}
+    ${sec("All deals and changes", `<div class="table-wrap"><table><thead><tr><th>Year</th><th>What</th><th>Company</th><th>Value</th><th>Details</th></tr></thead><tbody>${evRows.map(e => {
+      const ent = phEntity(e.counterparty || "", e.cid, e.clogo);
+      return `<tr><td class="nowrap">${esc(e.year)}</td><td class="nowrap"><span class="sw" style="background:${PH_IN.has(e.type) ? PH_COLOR.in : PH_OUT.has(e.type) ? PH_COLOR.out : PH_COLOR.other}"></span>${esc(typeLabel[e.type] || e.type)}${e.status && e.status !== "completed" ? ` <span class="muted">(${esc(e.status)})</span>` : ""}</td>
+        <td><span class="cochip">${uLogoLike(ent, "sm")}${ent.id != null ? `<a class="co" href="#co/${ent.id}">${esc(e.counterparty)}</a>` : esc(e.counterparty || "")}</span>${e.result ? `<div class="note">→ ${esc(e.result)}</div>` : ""}${e.via ? `<div class="note">via ${esc(e.via)}</div>` : ""}</td>
+        <td class="num">${e.value_usd ? usd(e.value_usd) : '<span class="muted">—</span>'}</td>
+        <td>${esc(e.description || "")}${e.source ? ` <span class="note">${link(e.source, "source")}</span>` : ""}</td></tr>`;
+    }).join("")}</tbody></table></div>`, ph.events.length)}
+    ${(p.sources || []).length ? sec("Profile sources", p.sources.map(u => link(u)).join(" · ")) : ""}`;
+  $("#ph-back").onclick = () => { location.hash = "pharma"; };
+  el.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = "eager"; i.fetchPriority = "high"; }); // the tree is the page: load its logos now
+  const ft = el.querySelector(".ft");
+  if (ft) {
+    const f = ft.getBoundingClientRect(), over = Math.max(0, ...[...ft.querySelectorAll(".ft-chip")].map(c => f.left + 4 - c.getBoundingClientRect().left));
+    if (over > 0.5) $("#ph-tree").innerHTML = familyTree(ph, Math.ceil(over) + 4);
+  }
+
+}
+
+// ---------- silo pages ----------
+const siloLink = id => DATA.siloInfo[id] ? `<a class="chip silo" href="#silo/${esc(id)}">${esc(siloName(id))}</a>` : `<span class="chip">${esc(siloName(id))}</span>`;
+const siloChips = ids => ids.map(siloLink).join("<wbr>");
+// product "modality" text -> silo, for companies nobody has tagged by hand yet
+const SILO_KW = {
+  "small-molecule": /small[- ]molecule|oral (drug|small)/i, antibody: /antibod|biologic|bispecific/i, adc: /antibody[- ]drug conjugate|\badc\b/i,
+  radiopharma: /radio(pharma|ligand|isotope)|radiopharmaceutical/i, "cell-therapy": /cell therap|car-t|\bcar\b|\bnk\b|\btil\b/i,
+  "gene-therapy": /gene therap|\baav\b|lentivir/i, "gene-editing": /gene[- ]edit|base edit|prime edit|crispr|epigenetic edit/i,
+  rna: /\brna\b|mrna|sirna|\baso\b|antisense|oligonucleotide/i, "protein-degradation": /degrad|protac|molecular glue/i, microbiome: /microbiom/i,
+  "ai-discovery": /\bai\b|machine learning|generative|protein design|computational/i, "foundation-models": /foundation model|virtual cell|protein language/i,
+  "lab-automation": /lab automation|autonomous lab|self-driving lab|robotic/i, synbio: /synthetic biology|biomanufactur/i,
+  "tools-omics": /sequencing|single-cell|spatial|proteomic|genomic tools/i, diagnostics: /diagnos|liquid biopsy/i, "precision-data": /real-world data|clinical data|\behr\b/i,
+  longevity: /longevity|aging|rejuvenat/i,
+};
+// companies in a silo: tagged by hand, involved in the silo's news, or whose product line names the modality
+function siloCos(id) {
+  const cos = new Map();
+  const add = (uid, why) => { if (uid == null) return; const c = cos.get(uid) || { uid, why: new Set() }; c.why.add(why); cos.set(uid, c); };
+  DATA.universe.forEach(u => {
+    if (u.cur >= 0 && list(DATA.companies[u.cur].silo).includes(id)) add(u.id, "tagged");
+    if (u.prod && SILO_KW[id] && SILO_KW[id].test(`${u.prod.modality || ""} ${u.prod.product || ""}`)) add(u.id, "product");
+  });
+  DATA.news.filter(n => n._silos.includes(id)).forEach(n => n._cos.forEach(e => add(e.id, "in the news")));
+  return cos;
+}
+function siloPage(id) {
+  const info = DATA.siloInfo[id], el = $("#silopage");
+  if (!info) { el.innerHTML = '<p class="muted">Silo not found.</p>'; return; }
+  const sec = (title, body, k) => `<div class="pf-sec"><h3>${esc(title)}${k != null ? ` <span class="muted">· ${k}</span>` : ""}</h3>${body}</div>`;
+  const news = DATA.news.filter(n => n._silos.includes(id)).sort((a, b) => b.date.localeCompare(a.date));
+  const total = news.reduce((s, n) => s + n._amt, 0);
+  const mix = CATS.map(c => [c, news.filter(n => catOf(n) === c)]).filter(([, ns]) => ns.length);
+  const coList = [...siloCos(id).values()].map(c => ({ ...c, u: DATA.universe[c.uid] }))
+    .sort((a, b) => b.why.size - a.why.size || (b.u.news_count || 0) - (a.u.news_count || 0) || b.u._size - a.u._size);
+  const builders = DATA.builders.filter(b => list(b.silos_focus).includes(id));
+  const tech = DATA.tech.filter(t => list(t.silo).includes(id));
+  // events per month (single series), so you can see whether the silo is heating up
+  const months = new Map();
+  news.forEach(n => { const k = n.date.slice(0, 7); months.set(k, (months.get(k) || 0) + 1); });
+  const keys = [...months.keys()].sort(), mlist = [];
+  if (keys.length) { for (let d = new Date(keys[0] + "-01"); d <= new Date(keys[keys.length - 1] + "-01"); d.setMonth(d.getMonth() + 1)) mlist.push(d.toISOString().slice(0, 7)); }
+  const mmax = Math.max(1, ...months.values());
+  const chart = mlist.length > 1 ? `<div class="sp-chart">${mlist.map(k => {
+    const v = months.get(k) || 0, dt = new Date(k + "-15"), lbl = dt.toLocaleString("en-US", { month: "short" }) + (dt.getMonth() === 0 || k === mlist[0] ? " " + String(dt.getFullYear()).slice(2) : "");
+    return `<div class="sp-col" data-tip="${esc(`${new Date(k + "-15").toLocaleString("en-US", { month: "long", year: "numeric" })}: ${v} event${v === 1 ? "" : "s"}`)}"><span class="sp-v">${v || ""}</span><div class="sp-bar" style="height:${(v / mmax) * 100}%"></div><span class="sp-m">${lbl}</span></div>`;
+  }).join("")}</div>` : "";
+  const why = { tagged: "hand-checked", product: "by product", "in the news": "in the news" };
+  el.innerHTML = `
+    <button class="back" id="sp-back">← All silos</button>
+    <div class="pf-head">
+      <div class="ev-type">${esc(info.group || "Silo")}</div>
+      <h2>${esc(info.name)}</h2>
+      ${info.notes ? `<p class="desc" style="max-width:820px">${esc(info.notes.replace(/`/g, ""))}</p>` : ""}
+    </div>
+    <dl class="facts">
+      <div><dt>Enabling discovery</dt><dd style="font-size:14px">${esc(info["enabling discovery / trigger"] || info.trigger || "—")}</dd></div>
+      ${info["typical origin"] ? `<div><dt>Typical origin</dt><dd style="font-size:14px">${esc(info["typical origin"])}</dd></div>` : ""}
+      <div><dt>News events</dt><dd>${news.length}</dd></div>
+      <div><dt>Disclosed value</dt><dd>${total ? usd(total) : "—"}</dd></div>
+      <div><dt>Companies</dt><dd>${coList.length}</dd></div>
+      <div><dt>Builders · tech moves</dt><dd>${builders.length} · ${tech.length}</dd></div>
+    </dl>
+    ${news.length ? sec("Activity", `${mix.length ? `<div class="mix" style="max-width:520px">${mix.map(([c, ns]) => `<span style="flex:${ns.length};background:${c.color}" data-tip="${esc(c.label)}: ${ns.length}"></span>`).join("")}</div><div class="key" style="margin-bottom:10px">${mix.map(([c, ns]) => `<span><i style="background:${c.color}"></i>${esc(c.label)} ${ns.length}</span>`).join("")}</div>` : ""}${chart}`) : ""}
+    ${(() => { const ps = frFor(it => it.silo.includes(id)), m = DATA.frontiers && DATA.frontiers.momentum[id];
+      return ps.length || m ? sec("Research frontier", `${m ? `<div class="note" style="margin-bottom:6px">${m[1].toLocaleString()} matching preprints in the last 30 days (${m[0].toLocaleString()} in the 30 before)</div>` : ""}<ul class="feed fr-feed">${ps.slice(0, 6).map(frItem).join("")}</ul>`, ps.length || null) : ""; })()}
+    ${(() => { const ts = (DATA.trials.trials || []).filter(t => t.silo.includes(id)).sort((a, z) => trWhen(z).localeCompare(trWhen(a)));
+      if (!ts.length) return ""; const ind = ts.filter(t => t.sector === "industry").length;
+      return sec(`Clinical trials · last ${DATA.trials.days} days`, `<div class="note" style="margin-bottom:6px">${ind} industry · ${ts.length - ind} academic & government · matched from trial wording</div>${trialList(ts)}`, ts.length); })()}
+    ${sec("Events", news.length ? `<ul class="feed">${news.map(n => `<li><span class="d">${esc(n.date)}</span><div><div class="b-party">${partyLine(n)}</div>${evLink(n)} ${n._amt ? `<span class="muted">${usd(n._amt)}</span>` : ""} ${chips([catOf(n).label.split(" /")[0]])}</div></li>`).join("")}</ul>` : '<p class="muted">No events tagged with this silo yet.</p>', news.length || null)}
+    ${coList.length ? sec("Companies", `<div class="sp-cos">${coList.map(c => `<div class="sp-co">${uLogo(c.u, "md")}<div><a class="co" href="#co/${c.uid}">${esc(c.u.aka || c.u.name)}</a>${c.u.prod && c.u.prod.product ? `<div class="prod">${esc(c.u.prod.product)}</div>` : ""}<div class="note">${[...c.why].map(w => why[w]).join(" · ")}</div></div></div>`).join("")}</div>`, coList.length) : ""}
+    ${builders.length ? sec("Venture builders focused here", `<dl class="kv">${builders.map(b => `<dt>${b.slug ? `<a href="#bd/${b.slug}">${esc(b.name)}</a>` : esc(b.name)}</dt><dd>${esc(isTodo(b.model) ? (b.profile || {}).model || "" : b.model)}${isTodo(b.notable_companies) ? "" : `<div class="note">${esc(b.notable_companies)}</div>`}</dd>`).join("")}</dl>`, builders.length) : ""}
+    ${(() => { const ls = DATA.labs.filter(l => (l.created || []).some(c => (c.silo || []).includes(id)) || (l.labs || []).some(x => (x.silo || []).includes(id)));
+      return ls.length ? sec("Labs producing companies here", `<div>${ls.map(l => `<a href="#lab/${l.slug}">${esc(l.name)}</a> <span class="muted">${(l.created || []).filter(c => (c.silo || []).includes(id)).length}</span>`).join(" · ")}</div>`, ls.length) : ""; })()}
+    ${(() => { const iv = DATA.investors.filter(v => (v.created || []).some(c => (c.silo || []).includes(id)));
+      return iv.length ? sec("Investors with life-science arms active here", `<div>${iv.map(v => `<a href="#iv/${v.slug}">${esc(v.name)}</a> <span class="muted">${v.created.filter(c => (c.silo || []).includes(id)).length}</span>`).join(" · ")}</div>`, iv.length) : ""; })()}
+    ${tech.length ? sec("Tech companies moving in", `<ul class="feed">${tech.map(t => `<li><span class="d">${esc(t.year)}</span><div>${coChip(t._co)} · ${link(t.source, t.initiative)}<div class="note">${esc(t.description)}</div></div></li>`).join("")}</ul>`, tech.length) : ""}
+    <p class="note">Silo definitions live in <code>taxonomy/silos.md</code>. Companies "by product" are matched from their product line's wording, so check before relying on them.</p>`;
+  $("#sp-back").onclick = () => { location.hash = "silos"; };
+}
+
+// ---------- builders: index + profile pages ----------
+const BD_STATUS = [
+  { id: "private", label: "Private", color: "var(--text-muted)" },
+  { id: "public", label: "Public (IPO)", color: "var(--cat-1)" },
+  { id: "acquired", label: "Acquired / merged", color: "var(--cat-2)", has: s => s === "acquired" || s === "merged" },
+  { id: "defunct", label: "Shut down", color: "var(--critical)" },
+  { id: "unknown", label: "Status unknown", color: "var(--grid)", has: s => !s },
+];
+const bdStatus = c => BD_STATUS.find(s => s.has ? s.has(c.status) : s.id === c.status) || BD_STATUS[BD_STATUS.length - 1];
+// builders aren't in the company list, so their logo comes from Logo.dev by website domain (or an initials badge)
+const bdLogo = (b, size) => logo(b.profile && b.profile.website && DATA.logoToken
+  ? `https://img.logo.dev/${encodeURIComponent(host(b.profile.website))}?token=${encodeURIComponent(DATA.logoToken)}&size=${size === "lg" ? 128 : 64}&format=png&retina=true&fallback=404` : "", b.name, size);
+const bdCo = c => c.uid != null ? { n: DATA.universe[c.uid].aka || DATA.universe[c.uid].name, id: c.uid, logo: DATA.universe[c.uid].logo } : { n: c.name, id: null, logo: "" };
+
+// one page type for builders, investors' life-science arms and academic labs: a profile plus the companies
+// they built / backed / spun out, with what became of each
+const PF_KINDS = {
+  bd: { list: () => DATA.builders, tab: "builders", back: "All ventures", companies: "Companies they built", verb: "built" },
+  iv: { list: () => DATA.investors, tab: "builders", back: "All ventures", companies: "Life-science portfolio", verb: "backed" },
+  lab: { list: () => DATA.labs, tab: "labs", back: "All labs", companies: "Spinouts", verb: "spun out" },
+};
+const pfCard = (kind, b) => {
+  const cs = b.created || [], p = b.profile || {};
+  const by = id => cs.filter(c => bdStatus(c).id === id).length;
+  const exits = cs.reduce((s, c) => s + (Number(c.outcome_value_usd) || 0), 0);
+  const silos = [...new Set([...list(b.silos_focus || ""), ...cs.flatMap(c => c.silo || [])])].filter(id => DATA.siloInfo[id]);
+  const meta = kind === "lab" ? [p.type, p.city] : [p.type || b.type, p.hq || b.hq, p.founded && "since " + p.founded];
+  const inner = `${bdLogo(b, "lg")}
+    <h3>${esc(b.name)}</h3>
+    <div class="note">${meta.filter(v => v && !isTodo(v)).map(esc).join(" · ")}${kind === "iv" && p.parent ? ` · part of ${esc(p.parent)}` : ""}</div>
+    ${cs.length ? `<dl><div><dt>${kind === "lab" ? "Spinouts" : kind === "iv" ? "Bio portfolio" : "Companies built"}</dt><dd>${cs.length}</dd></div><div><dt>Public</dt><dd>${by("public")}</dd></div><div><dt>Acquired</dt><dd>${by("acquired")}</dd></div></dl>
+      <div class="mix">${BD_STATUS.map(s => [s, by(s.id)]).filter(([, v]) => v).map(([s, v]) => `<span style="flex:${v};background:${s.color}" data-tip="${esc(s.label)}: ${v}"></span>`).join("")}</div>
+      ${exits ? `<div class="note">Disclosed exit value: ${usd(exits)}</div>` : ""}` : `<div class="note" style="margin-top:8px">${esc(isTodo(b.model || "") ? "" : b.model || "")}</div>`}
+    ${kind === "lab" && (b.labs || []).length ? `<div class="note" style="margin-top:6px">${b.labs.slice(0, 4).map(l => esc(l.pi)).join(" · ")}</div>` : ""}
+    ${silos.length ? `<div class="note" style="margin-top:6px">${silos.slice(0, 5).map(siloName).map(esc).join(" · ")}</div>` : ""}`;
+  return b.slug ? `<a class="ph-card" href="#${kind}/${b.slug}">${inner}<span class="ph-go">${kind === "lab" ? "Profile & spinouts" : "Profile & companies"} →</span></a>` : `<div class="ph-card">${inner}<div class="note">Profile not researched yet</div></div>`;
+};
+
+function builders() {
+  const el = $("#builders");
+  el.innerHTML = `<h2 class="pf-group" style="margin-top:0;padding-top:0;border-top:0">Venture builders</h2>
+    <details class="about"><summary>About this data</summary><p>Venture studios and company-creation investors: firms that <em>start</em> biotech companies, in-house or with academic founders, rather than only funding them. Click one for its profile and every company it built.</p></details>
+    <div class="ph-grid">${DATA.builders.map(b => pfCard("bd", b)).join("")}</div>
+    ${DATA.investors.length ? `<h2 class="pf-group">Investors with life-science arms</h2>
+      <details class="about"><summary>About this data</summary><p>Generalist and tech investors whose main business is elsewhere (software VC, a tech company) but which run a dedicated biotech practice. They increasingly lead AI-bio rounds.</p></details>
+      <div class="ph-grid">${DATA.investors.map(b => pfCard("iv", b)).join("")}</div>` : ""}`;
+}
+function labs() {
+  const el = $("#labs");
+  el.innerHTML = DATA.labs.length ? `<details class="about"><summary>About this data</summary><p>Universities and institutes whose science keeps turning into companies: the labs and PIs behind them, and what became of each spinout. Click one for its profile.</p></details>
+    <div class="ph-grid">${[...DATA.labs].sort((a, z) => (z.created || []).length - (a.created || []).length).map(b => pfCard("lab", b)).join("")}</div>`
+    : '<p class="muted">No academic profiles yet. Add data/labs/&lt;slug&gt;.json files and rebuild.</p>';
+}
+
+let bdFilter = "all";
+function builderPage(slug, kind = "bd") {
+  const K = PF_KINDS[kind], b = K.list().find(x => x.slug === slug), el = $("#builderpage");
+  if (!b) { el.innerHTML = '<p class="muted">Not found.</p>'; return; }
+  const p = b.profile || {}, cs = [...(b.created || [])].sort((a, z) => String(z.launched || "").localeCompare(String(a.launched || "")));
+  const sec = (title, body, k) => `<div class="pf-sec"><h3>${esc(title)}${k != null ? ` <span class="muted">· ${k}</span>` : ""}</h3>${body}</div>`;
+  const fact = (k, v) => v ? `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>` : "";
+  const counts = Object.fromEntries(BD_STATUS.map(s => [s.id, cs.filter(c => bdStatus(c).id === s.id).length]));
+  const exits = cs.reduce((s, c) => s + (Number(c.outcome_value_usd) || 0), 0);
+  const silos = [...countBy(cs, c => (c.silo || []).filter(id => DATA.siloInfo[id])).entries()].sort((a, z) => z[1] - a[1]);
+  const yrs = cs.map(c => parseInt(c.launched, 10)).filter(Boolean), y0 = Math.min(...yrs), y1 = Math.max(...yrs);
+  const perYear = []; if (yrs.length) for (let y = y0; y <= y1; y++) perYear.push([y, BD_STATUS.map(s => cs.filter(c => parseInt(c.launched, 10) === y && bdStatus(c).id === s.id).length)]);
+  const ymax = Math.max(1, ...perYear.map(([, v]) => v.reduce((a, z) => a + z, 0)));
+  const chart = perYear.length > 1 ? `<div class="sp-chart bd-chart">${perYear.map(([y, v]) => {
+    const t = v.reduce((a, z) => a + z, 0);
+    return `<div class="sp-col" data-tip="${esc(`${y}: ${t}${t ? "\n" + BD_STATUS.map((s, i) => v[i] ? `${s.label}: ${v[i]}` : "").filter(Boolean).join("\n") : ""}`)}"><span class="sp-v">${t || ""}</span><div class="bd-stack" style="height:${(t / ymax) * 100}%">${BD_STATUS.map((s, i) => v[i] ? `<i style="flex:${v[i]};background:${s.color}"></i>` : "").reverse().join("")}</div><span class="sp-m">${y % 5 === 0 || y === y0 || y === y1 ? y : ""}</span></div>`;
+  }).join("")}</div>` : "";
+  const shown = cs.filter(c => bdFilter === "all" || bdStatus(c).id === bdFilter);
+  const news = DATA.news.filter(n => n._cos.some(e => e.id != null && cs.some(c => c.uid === e.id))).sort((a, z) => z.date.localeCompare(a.date));
+  const role = { "co-founded": "Co-founded", led: "Led round", participated: "Participated" };
+  const labsList = (b.labs || []);
+  el.innerHTML = `
+    <button class="back" id="bd-back">← ${esc(K.back)}</button>
+    <div class="pf-head">
+      ${bdLogo(b, "lg")}
+      <h2>${esc(b.name)}</h2>
+      ${p.summary ? `<p class="desc" style="max-width:860px">${esc(p.summary)}</p>` : ""}
+      <div class="meta">${[p.parent && "part of " + p.parent, p.type || b.type, p.hq || b.hq || p.city, p.founded && (kind === "iv" ? "bio practice since " : "founded ") + p.founded, (p.founders || []).length && "founded by " + p.founders.join(", ")].filter(v => v && !isTodo(v)).map(esc).join(" · ")}${p.website ? ` · ${link(p.website)}` : ""}</div>
+    </div>
+    <dl class="facts">
+      ${fact(kind === "lab" ? "Spinouts" : kind === "iv" ? "Bio companies" : "Companies built", cs.length ? String(cs.length) : "")}
+      ${fact("Public", counts.public ? String(counts.public) : "")}
+      ${fact("Acquired / merged", counts.acquired ? String(counts.acquired) : "")}
+      ${fact("Disclosed exits", exits ? usd(exits) : "")}
+      ${fact(kind === "iv" ? "Life-science capital" : "Assets under management", p.aum_usd ? usd(p.aum_usd) : "")}
+      ${fact("Latest fund", p.latest_fund && p.latest_fund.name ? `${esc(p.latest_fund.name)}${p.latest_fund.size_usd ? " · " + usd(p.latest_fund.size_usd) : ""}${p.latest_fund.year ? ` <span class="muted">${esc(p.latest_fund.year)}</span>` : ""}` : "")}
+      ${fact("Tech transfer", p.tech_transfer ? (p.tech_transfer_url ? link(p.tech_transfer_url, p.tech_transfer) : esc(p.tech_transfer)) : "")}
+    </dl>
+    ${p.model ? sec(kind === "iv" ? "Thesis and how they invest" : "How they build companies", `<p style="margin:0;max-width:860px">${esc(p.model)}</p>`) : ""}
+    ${(p.programs || []).length ? sec("Programs and funds", `<div>${p.programs.map(esc).join(" · ")}</div>`) : ""}
+    ${(p.leadership || []).length ? sec("Leadership", `<div>${p.leadership.map(esc).join(" · ")}</div>`) : ""}
+    ${labsList.length ? sec("Labs and PIs behind the spinouts", `<div class="sp-cos">${labsList.map(l => {
+      const mine = cs.filter(c => c.pi && l.pi && c.pi.toLowerCase().includes(l.pi.split(" ").slice(-1)[0].toLowerCase()));
+      return `<div class="lab-pi"><b>${esc(l.pi)}</b>${l.lab ? ` <span class="muted">${esc(l.lab)}</span>` : ""}<div class="prod">${esc(l.known_for || "")}</div><div class="note">${(l.silo || []).filter(id => DATA.siloInfo[id]).map(siloLink).join(" ")}${mine.length ? ` · ${mine.length} spinout${mine.length === 1 ? "" : "s"}: ${mine.slice(0, 5).map(c => esc(c.name)).join(", ")}` : ""}${l.source ? " · " + link(l.source, "source") : ""}</div></div>`;
+    }).join("")}</div>`, labsList.length) : ""}
+    ${cs.length ? sec("Track record", `<div class="mix" style="max-width:520px">${BD_STATUS.filter(s => counts[s.id]).map(s => `<span style="flex:${counts[s.id]};background:${s.color}" data-tip="${esc(s.label)}: ${counts[s.id]}"></span>`).join("")}</div>
+      <div class="key" style="margin-bottom:6px">${BD_STATUS.filter(s => counts[s.id]).map(s => `<span><i style="background:${s.color}"></i>${esc(s.label)} ${counts[s.id]}</span>`).join("")}</div>
+      ${chart ? `<div class="note" style="margin:12px 0 0">Companies ${K.verb} per year${kind === "iv" ? " (year of first investment)" : ""}, coloured by what became of them</div>${chart}` : ""}`) : ""}
+    ${silos.length ? sec("Silos", `<div class="bd-silos">${silos.map(([id, n]) => `<a class="chip silo" href="#silo/${esc(id)}">${esc(siloName(id))} <b>${n}</b></a>`).join("<wbr>")}</div>`) : ""}
+    ${cs.length ? sec(K.companies, `<span class="seg" id="bd-filter" style="margin-bottom:12px">${[["all", "All", cs.length], ...BD_STATUS.map(s => [s.id, s.label, counts[s.id]])].filter(([, , n]) => n).map(([k, l, n]) => `<button data-f="${k}" aria-pressed="${bdFilter === k}">${esc(l)} <span class="muted">${n}</span></button>`).join("")}</span>
+      <div class="sp-cos">${shown.map(c => {
+        const e = bdCo(c), st = bdStatus(c);
+        const extra = [c.role && role[c.role] ? `<span class="bd-role">${esc(role[c.role])}</span>` : "", c.pi ? `PI: ${esc(c.pi)}` : "",
+          c.builder ? (c.builder_slug ? `built with <a href="#bd/${c.builder_slug}">${esc(c.builder)}</a>` : `built with ${esc(c.builder)}`) + (c.builder_unconfirmed ? ' <span class="vt-flag" title="Inferred from an early funding round, not confirmed co-founding">unconfirmed</span>' : "") : ""].filter(Boolean).join(" · ");
+        return `<div class="sp-co">${uLogoLike(e, "md")}<div>
+          <div>${e.id != null ? `<a class="co" href="#co/${e.id}">${esc(c.name)}</a>` : `<b>${esc(c.name)}</b>`} <span class="muted">${esc(c.launched || "")}</span></div>
+          ${c.product ? `<div class="prod">${esc(c.product)}</div>` : ""}
+          ${extra ? `<div class="note">${extra}</div>` : ""}
+          <div class="note"><span class="bd-st" style="--c:${st.color}">${esc(st.id === "acquired" && c.status === "merged" ? "Merged" : st.label)}</span>${c.outcome ? " " + esc(c.outcome) : ""}${c.outcome_unverified ? ' <span class="vt-flag" title="Exit details not yet checked against a source">unverified</span>' : ""}${c.founding_unconfirmed ? ' <span class="vt-flag" title="Sources confirm an investment but not that this builder founded it">founding unconfirmed</span>' : ""}${c.origin_unconfirmed ? ' <span class="vt-flag" title="The science may come from an affiliated institution; not confirmed from a fetched page">origin unconfirmed</span>' : ""}${(c.silo || []).length ? " · " + c.silo.filter(id => DATA.siloInfo[id]).map(siloLink).join(" ") : ""}${c.source ? " · " + link(c.source, "source") : ""}</div>
+        </div></div>`;
+      }).join("")}</div>`, cs.length) : `<p class="muted">No company list researched yet.</p>`}
+    ${(() => { if (kind !== "lab") return ""; const ps = frFor(it => it.lab === slug);
+      return ps.length ? sec("Latest papers and preprints", `<ul class="feed fr-feed">${ps.slice(0, 8).map(frItem).join("")}</ul>${ps.length > 8 ? `<p class="note">+ ${ps.length - 8} more in the Frontiers tab</p>` : ""}`, ps.length) : ""; })()}
+    ${(() => { if (kind !== "lab") return ""; const ts = (DATA.trials.trials || []).filter(t => t.lab === slug).sort((a, z) => trWhen(z).localeCompare(trWhen(a)));
+      return ts.length ? sec(`Trials it sponsors · last ${DATA.trials.days} days`, `<p class="note" style="margin:0 0 6px">Includes affiliated hospitals. From the ClinicalTrials.gov snapshot.</p>${trialList(ts)}`, ts.length) : ""; })()}
+    ${news.length ? sec("Their companies in the tracker's news", `<ul class="feed">${news.map(n => `<li><span class="d">${esc(n.date)}</span><div><div class="b-party">${partyLine(n)}</div>${evLink(n)} ${n._amt ? `<span class="muted">${usd(n._amt)}</span>` : ""}</div></li>`).join("")}</ul>`, news.length) : ""}
+    ${(p.sources || []).length ? sec("Sources", p.sources.map(u => link(u)).join(" · ")) : ""}`;
+  $("#bd-back").onclick = () => { location.hash = K.tab; };
+  const f = $("#bd-filter"); if (f) f.onclick = e => { const x = e.target.closest("button"); if (x) { bdFilter = x.dataset.f; builderPage(slug, kind); } };
+}
+
+// ---------- clinical trials (ClinicalTrials.gov snapshot) ----------
+const TR_MS = [
+  { id: "registered", label: "Newly registered", date: t => t.posted },
+  { id: "results", label: "Results posted", date: t => t.results },
+  { id: "completed", label: "Completed", date: t => t.pcd },
+  { id: "stopped", label: "Stopped", date: t => t.updated },
+];
+const TR_SECTOR = { industry: { label: "Industry", color: "var(--cat-1)" }, academic: { label: "Academic & government", color: "var(--cat-3)" } };
+const trWhen = t => TR_MS.filter(m => t.milestones.includes(m.id)).map(m => m.date(t) || "").sort().at(-1) || "";
+const trSponsor = t => t.uid != null ? { n: DATA.universe[t.uid].aka || DATA.universe[t.uid].name, id: t.uid, logo: DATA.universe[t.uid].logo } : { n: t.sponsor, id: null, logo: "" };
+const trSponsorHTML = t => {
+  const e = trSponsor(t), lab = t.lab && DATA.labs.find(l => l.slug === t.lab);
+  const name = e.id != null ? `<a class="co" href="#co/${e.id}">${esc(e.n)}</a>` : lab ? `<a class="co" href="#lab/${lab.slug}">${esc(t.sponsor)}</a>` : `<b>${esc(t.sponsor)}</b>`;
+  return `<span class="cochip">${uLogoLike(e, "sm")}${name}</span>`;
+};
+let trState = { sector: "all", ms: "all", phase: "", silo: "", q: "", shown: 100 };
+function trialsTab() {
+  const el = $("#trials"), D = DATA.trials, T = D.trials || [];
+  if (!T.length) { el.innerHTML = '<p class="muted">No trial snapshot yet. Run <code>python3 sweep/fetch_trials.py</code> and rebuild.</p>'; return; }
+  T.forEach(t => { t._when = t._when || trWhen(t); });
+  const s = trState;
+  const pass = t => (s.sector === "all" || t.sector === s.sector) && (s.ms === "all" || t.milestones.includes(s.ms))
+    && (!s.phase || t.phase.split("/").includes(s.phase)) && (!s.silo || t.silo.includes(s.silo))
+    && matchQ(s.q, t.title, t.acronym, t.sponsor, t.conditions.join(" "), t.interventions.join(" "), t.id);
+  const rows = T.filter(pass).sort((a, b) => b._when.localeCompare(a._when));
+  // headline counts: each milestone, industry vs academic (ignores the milestone filter so the tiles stay comparable)
+  const base = T.filter(t => (!s.phase || t.phase.split("/").includes(s.phase)) && (!s.silo || t.silo.includes(s.silo)) && matchQ(s.q, t.title, t.acronym, t.sponsor, t.conditions.join(" "), t.interventions.join(" "), t.id));
+  const tile = m => {
+    const ms = base.filter(t => t.milestones.includes(m.id)), ind = ms.filter(t => t.sector === "industry").length, ac = ms.length - ind;
+    return `<button class="tr-tile${s.ms === m.id ? " on" : ""}" data-ms="${m.id}"><span>${esc(m.label)}</span><b>${ms.length.toLocaleString()}</b>
+      <i class="tr-split"><em style="flex:${ind || 0.0001};background:${TR_SECTOR.industry.color}"></em><em style="flex:${ac || 0.0001};background:${TR_SECTOR.academic.color}"></em></i>
+      <small>${ind.toLocaleString()} industry · ${ac.toLocaleString()} academic</small></button>`;
+  };
+  // top sponsors in the current selection, per sector
+  const top = sec => [...countBy(rows.filter(t => t.sector === sec), t => [t.sponsor]).entries()].sort((a, b) => b[1] - a[1]).slice(0, 8)
+    .map(([name, n]) => { const t = rows.find(x => x.sponsor === name); return `<li>${trSponsorHTML(t)} <span class="muted">${n}</span></li>`; }).join("");
+  // silo mix: industry vs academic counts per silo (two series, same scale)
+  const siloRows = Object.keys(DATA.siloInfo).map(id => [id, rows.filter(t => t.silo.includes(id) && t.sector === "industry").length, rows.filter(t => t.silo.includes(id) && t.sector !== "industry").length])
+    .filter(([, a, b]) => a + b).sort((x, y) => (y[1] + y[2]) - (x[1] + x[2]));
+  const smax = Math.max(1, ...siloRows.map(([, a, b]) => Math.max(a, b)));
+  const phases = [...new Set(T.flatMap(t => t.phase.split("/")).filter(Boolean))].sort();
+  const msLabel = Object.fromEntries(TR_MS.map(m => [m.id, m.label]));
+  el.innerHTML = `
+    <details class="about"><summary>About this data</summary><p>Drug, biologic and gene-therapy trials (phase 1–3) on ClinicalTrials.gov with a milestone in the last ${D.days} days (since ${esc(D.since)}; snapshot ${esc(D.fetched)}). <b style="color:${TR_SECTOR.industry.color}">Industry</b> means a company is the lead sponsor; <b style="color:${TR_SECTOR.academic.color}">academic & government</b> covers universities, hospitals, NIH and cooperative groups.</p></details>
+    <div class="filters">
+      <span class="seg" id="tr-sector">${[["all", "All sponsors"], ["industry", "Industry"], ["academic", "Academic & government"]].map(([k, l]) => `<button data-v="${k}" aria-pressed="${s.sector === k}">${l}</button>`).join("")}</span>
+      <input type="search" id="tr-q" placeholder="Search trial, sponsor, condition, drug, NCT id…" value="${esc(s.q)}" aria-label="Search trials">
+      <select id="tr-phase" aria-label="Phase"><option value="">All phases</option>${phases.map(p => `<option value="${p}"${s.phase === p ? " selected" : ""}>Phase ${p.replace("EARLY_", "early ")}</option>`).join("")}</select>
+      <select id="tr-silo" aria-label="Silo"><option value="">All silos</option>${Object.entries(DATA.silos).map(([k, v]) => `<option value="${k}"${s.silo === k ? " selected" : ""}>${esc(v)}</option>`).join("")}</select>
+    </div>
+    <div class="tr-tiles">${TR_MS.map(tile).join("")}${s.ms !== "all" ? `<button class="tr-tile clear" data-ms="all"><span>Show all milestones</span></button>` : ""}</div>
+    <div class="grid two" style="margin:18px 0 22px">
+      <div class="card"><h2>Most active industry sponsors</h2><p class="sub">Trials in this selection</p><ul class="tr-top">${top("industry") || '<li class="muted">None</li>'}</ul></div>
+      <div class="card"><h2>Most active academic & government sponsors</h2><p class="sub">Trials in this selection</p><ul class="tr-top">${top("academic") || '<li class="muted">None</li>'}</ul></div>
+    </div>
+    ${siloRows.length ? `<div class="card" style="margin-bottom:22px"><h2>Trials by silo</h2><p class="sub">Matched from intervention and condition wording, so most small-molecule trials with plain drug names aren't tagged. <span style="color:${TR_SECTOR.industry.color}">■</span> industry <span style="color:${TR_SECTOR.academic.color}">■</span> academic</p>
+      <div class="tr-silos">${siloRows.map(([id, a, b]) => `<a class="lbl" href="#silo/${id}">${esc(siloName(id))}</a><div class="tr-pair"><div data-tip="${esc(siloName(id))}: ${a} industry"><i style="width:${(a / smax) * 80}%;background:${TR_SECTOR.industry.color}"></i><span>${a}</span></div><div data-tip="${esc(siloName(id))}: ${b} academic"><i style="width:${(b / smax) * 80}%;background:${TR_SECTOR.academic.color}"></i><span>${b}</span></div></div>`).join("")}</div></div>` : ""}
+    <div class="count">${rows.length.toLocaleString()} trials${s.ms !== "all" ? " · " + esc(msLabel[s.ms]) : ""}</div>
+    <div class="table-wrap"><table class="tr-table"><thead><tr><th>Date</th><th>Milestone</th><th>Trial</th><th>Sponsor</th><th>Phase</th><th>Status</th><th>N</th></tr></thead><tbody>${rows.slice(0, s.shown).map(t => `
+      <tr><td class="nowrap">${esc(t._when)}</td>
+      <td class="nowrap">${t.milestones.map(m => `<span class="tr-ms ${m}">${esc(msLabel[m])}</span>`).join("<br>")}</td>
+      <td>${link("https://clinicaltrials.gov/study/" + t.id, t.title)}<div class="note">${esc(t.id)}${t.acronym ? " · " + esc(t.acronym) : ""} · ${esc(t.conditions.slice(0, 2).join(", "))}${t.interventions.length ? " · " + esc(t.interventions.slice(0, 2).join(", ")) : ""}</div>${t.why ? `<div class="note">Why stopped: ${esc(t.why)}</div>` : ""}${t.silo.length ? `<div class="note">${siloChips(t.silo)}</div>` : ""}</td>
+      <td><i class="tr-dot" style="background:${TR_SECTOR[t.sector].color}" title="${TR_SECTOR[t.sector].label}"></i>${trSponsorHTML(t)}</td>
+      <td class="nowrap">${esc(t.phase.replace("EARLY_", "early "))}</td>
+      <td>${esc(t.status.toLowerCase().replace(/_/g, " "))}</td>
+      <td class="num">${t.n ? Number(t.n).toLocaleString() : "—"}</td></tr>`).join("")}</tbody></table></div>
+    ${rows.length > s.shown ? `<button class="back" id="tr-more" style="margin-top:10px">Show ${Math.min(100, rows.length - s.shown)} more</button>` : ""}`;
+  const redo = patch => { Object.assign(trState, patch); trialsTab(); };
+  $("#tr-sector").onclick = e => { const b = e.target.closest("button"); if (b) redo({ sector: b.dataset.v, shown: 100 }); };
+  el.querySelectorAll(".tr-tile").forEach(b => b.onclick = () => redo({ ms: s.ms === b.dataset.ms ? "all" : b.dataset.ms, shown: 100 }));
+  $("#tr-phase").onchange = e => redo({ phase: e.target.value, shown: 100 });
+  $("#tr-silo").onchange = e => redo({ silo: e.target.value, shown: 100 });
+  let qt; $("#tr-q").oninput = e => { clearTimeout(qt); qt = setTimeout(() => { redo({ q: e.target.value.toLowerCase(), shown: 100 }); const i = $("#tr-q"); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }, 250); };
+  const more = $("#tr-more"); if (more) more.onclick = () => redo({ shown: s.shown + 100 });
+}
+// recent trials list for a lab page or silo page
+const trialList = ts => `<ul class="feed">${ts.slice(0, 12).map(t => `<li><span class="d">${esc(t._when || trWhen(t))}</span><div>${link("https://clinicaltrials.gov/study/" + t.id, t.title)}<div class="note">${t.milestones.map(m => (TR_MS.find(x => x.id === m) || {}).label).join(", ")} · phase ${esc(t.phase || "—")} · ${trSponsorHTML(t)}</div></div></li>`).join("")}</ul>${ts.length > 12 ? `<p class="note">+ ${ts.length - 12} more in the Trials tab</p>` : ""}`;
+
+// ---------- outlook: signal-based predictions (not a trained model) ----------
+// therapeutic areas from free text (trial conditions, product lines, pharma profiles)
+const TA_RULES = {
+  oncology: /cancer|tumou?r|carcinoma|lymphoma|leuk(a)?emia|myeloma|melanoma|sarcoma|glioma|oncolog|neoplasm|nsclc/i,
+  immunology: /arthritis|psoriasis|lupus|colitis|crohn|dermatitis|asthma|autoimmun|immunolog|inflammat|sj[oö]gren|hidradenitis|urticaria|copd/i,
+  neuroscience: /alzheimer|parkinson|epilep|schizophren|depress|\bals\b|amyotrophic|migraine|neuro|huntington|multiple sclerosis|pain|psychiat|bipolar/i,
+  cardiometabolic: /obes|diabet|cardio|heart|hypertens|nash|mash|lipid|cholesterol|metabolic|kidney|renal|thrombo|atrial/i,
+  infectious: /hiv|hepatitis|influenza|vaccin|infect|covid|rsv|malaria|tubercul|antibiot|viral|bacteri/i,
+  rare: /rare|duchenne|spinal muscular|hemophilia|haemophilia|sickle|fabry|gaucher|pompe|cystic fibrosis|amyloid|thalass|orphan|lysosomal/i,
+  ophthalmology: /retina|macular|ophthalm|eye|glaucoma|uveitis/i,
+};
+const taOf = text => Object.entries(TA_RULES).filter(([, rx]) => rx.test(text || "")).map(([k]) => k);
+const yearsAgo = (d, n) => d && d >= `${new Date().getFullYear() - n}${new Date().toISOString().slice(4, 10)}`;
+// weights: every score is a sum of these named, capped signals (shown on the page)
+const W = {
+  lateStage: 25, recentResults: 8, approved: 18, pharmaPartner: 20, anyPartner: 8, hotSilo: 12, funding: 10, backed: 5, publicCo: 6, failed: -12,
+};
+let OUTLOOK = null;
+function computeOutlook() {
+  if (OUTLOOK) return OUTLOOK;
+  const U = DATA.universe, N = DATA.news, T = (DATA.trials && DATA.trials.trials) || [];
+  const pharmaIds = new Set(DATA.pharma.map(p => p.uid).filter(x => x != null));
+  const trialsBy = new Map(); T.forEach(t => { if (t.uid != null) { if (!trialsBy.has(t.uid)) trialsBy.set(t.uid, []); trialsBy.get(t.uid).push(t); } });
+  const acquired = new Set(), buyers = new Set();
+  N.forEach(n => { if (n.category === "m&a") { const r = roles(n); r.cos.slice(1).forEach(e => e.id != null && acquired.add(e.id)); if (r.cos[0] && r.cos[0].id != null) buyers.add(r.cos[0].id); } });
+  // already owned: completed buys in the pharma family trees, builders' "acquired/merged" companies, and any subsidiary
+  DATA.pharma.forEach(p => p.events.forEach(e => { if (PH_IN.has(e.type) && phDone(e) && e.cid != null) acquired.add(e.cid); }));
+  [...DATA.builders, ...DATA.investors, ...DATA.labs].forEach(b => (b.created || []).forEach(c => { if (c.uid != null && (c.status === "acquired" || c.status === "merged")) acquired.add(c.uid); }));
+  U.forEach(u => { if (u.parent || /\b(GK|K\.K\.|Japan|China|Korea|Taiwan|Europe|UK|USA|Deutschland|France|Italia)\b/.test(u.name) && /\b(GK|K\.K\.|Ltd|GmbH|S\.A\.|Inc)\b/.test(u.name)) acquired.add(u.id); });
+  // "big" = a top-15 pharma, a company that buys others, or one with a large workforce or trial portfolio
+  const big = u => pharmaIds.has(u.id) || buyers.has(u.id) || u._emp > 3000 || u._trials > 120 || (trialsBy.get(u.id) || []).length >= 8;
+  // silo heat: share of the last 12 months' M&A + partnerships in each silo
+  const recent = N.filter(n => yearsAgo(n.date, 1) && (n.category === "m&a" || n.category === "partnership"));
+  const heat = countBy(recent, n => n._silos), hmax = Math.max(1, ...heat.values());
+  const backedBy = new Map();
+  [...DATA.builders, ...DATA.investors].forEach(b => (b.created || []).forEach(c => { if (c.uid != null) { if (!backedBy.has(c.uid)) backedBy.set(c.uid, []); backedBy.get(c.uid).push(b.name); } }));
+  // pharma interest: silos and therapeutic areas from its own trials, news deals and profile
+  const PH = DATA.pharma.filter(p => p.uid != null).map(p => {
+    const ts = trialsBy.get(p.uid) || [], deals = N.filter(n => n._cos.some(e => e.id === p.uid));
+    const silo = countBy([...ts.map(t => ({ s: t.silo })), ...deals.map(n => ({ s: n._silos }))], x => x.s);
+    const ta = new Set([...taOf((p.profile.therapeutic_areas || []).join(" ")), ...ts.flatMap(t => taOf(t.conditions.join(" ")))]);
+    const pace = p.events.filter(e => PH_IN.has(e.type) && !e.via && (parseInt(e.year, 10) || 0) >= new Date().getFullYear() - 3 && phDone(e)).length
+      + deals.filter(n => n.category === "m&a" && yearsAgo(n.date, 1)).length;
+    const platformDeals = deals.filter(n => n.category === "partnership" && n._silos.some(s => ["ai-discovery", "foundation-models", "lab-automation"].includes(s))).length;
+    return { p, uid: p.uid, silo, ta, pace, platformDeals, partners: new Set(deals.filter(n => n.category === "partnership").flatMap(n => n._cos.map(e => e.id))) };
+  });
+  // ---- 1. M&A targets ----
+  const candidates = U.filter(u => !big(u) && !acquired.has(u.id) && u.status !== "defunct" && (u.prod || u._news.length || trialsBy.has(u.id)));
+  const scoreTarget = (u, excludeEvent = null) => {
+    const ts = trialsBy.get(u.id) || [], why = [];
+    const news = u._news.map(j => N[j]).filter(n => n !== excludeEvent);
+    const stage = ((u.prod || {}).stage || "").toLowerCase();
+    let s = 0;
+    const ph3 = ts.filter(t => t.phase.includes("3") && !t.milestones.includes("stopped"));
+    if (ph3.length || /phase 3/.test(stage)) { s += W.lateStage; why.push(`phase 3 program${ph3.length ? ` (${ph3.length} trial${ph3.length > 1 ? "s" : ""})` : ""}`); }
+    else if (ts.some(t => t.phase.includes("2")) || /phase 2/.test(stage)) { s += W.lateStage * 0.5; why.push("phase 2 program"); }
+    if (ts.some(t => t.milestones.includes("results") && /[23]/.test(t.phase))) { s += W.recentResults; why.push("phase 2/3 results posted in last 90 days"); }
+    if (/approved|commercial|marketed/.test(stage) || /\bmarkets?\b|commerciali[sz]ed|approved/i.test((u.prod || {}).product || "")) { s += W.approved; why.push("sells an approved product"); }
+    const partners = news.filter(n => n.category === "partnership").flatMap(n => n._cos.filter(e => e.id !== u.id));
+    const pharmaP = partners.filter(e => pharmaIds.has(e.id));
+    if (pharmaP.length) { s += W.pharmaPartner; why.push(`partnered with ${[...new Set(pharmaP.map(e => plainName(e.n)))].slice(0, 2).join(", ")}`); }
+    else if (partners.length) { s += W.anyPartner; why.push("has a partnership"); }
+    const silos = [...new Set([...news.flatMap(n => n._silos), ...ts.flatMap(t => t.silo), ...(u.cur >= 0 ? list(DATA.companies[u.cur].silo) : [])])];
+    const h = Math.max(0, ...silos.map(id => heat.get(id) || 0)) / hmax;
+    if (h > 0.2) { s += W.hotSilo * h; why.push(`active M&A silo (${siloName(silos.sort((a, b) => (heat.get(b) || 0) - (heat.get(a) || 0))[0])})`); }
+    const raise = news.filter(n => (n.category === "financing" || n.category === "ipo") && yearsAgo(n.date, 1) && n._amt >= 1e8);
+    if (raise.length) { s += W.funding; why.push(`raised ${usd(Math.max(...raise.map(n => n._amt)))} in the last year`); }
+    const bb = backedBy.get(u.id);
+    if (bb) { s += W.backed; why.push(`backed by ${bb.slice(0, 2).join(", ")}`); }
+    if (u.status === "public") { s += W.publicCo; why.push("publicly listed"); }
+    if (ts.some(t => t.milestones.includes("stopped") && /[23]/.test(t.phase))) { s += W.failed; why.push("a phase 2/3 trial was stopped"); }
+    const ta = new Set([...ts.flatMap(t => taOf(t.conditions.join(" "))), ...taOf(((u.prod || {}).product || "") + " " + ((u.prod || {}).lead_asset || ""))]);
+    return { u, s: Math.round(s), why, silos, ta };
+  };
+  const fit = (tg, ph) => {
+    let s = 0; const why = [];
+    const taHit = [...tg.ta].filter(x => ph.ta.has(x));
+    if (taHit.length) { s += 35 * Math.min(1, taHit.length / Math.max(1, tg.ta.size)); why.push(taHit.join(", ")); }
+    const siloHit = tg.silos.filter(id => ph.silo.get(id));
+    if (siloHit.length) { s += Math.min(25, 8 * siloHit.reduce((a, id) => a + Math.log2(1 + ph.silo.get(id)), 0)); why.push(`works in ${siloName(siloHit[0])}`); }
+    s += Math.min(20, ph.pace * 4); if (ph.pace >= 3) why.push(`${ph.pace} deals in 3 yrs`);
+    if (ph.partners.has(tg.u.id)) { s += 30; why.push("already partners"); }
+    return { ph, s: Math.round(s), why };
+  };
+  const targets = candidates.map(u => scoreTarget(u)).filter(t => t.s >= 20).sort((a, b) => b.s - a.s).slice(0, 40)
+    .map(t => ({ ...t, buyers: PH.map(ph => fit(t, ph)).sort((a, b) => b.s - a.s).slice(0, 3) }));
+  // ---- backtest: score each tracked acquisition's target without the deal itself, and see where it ranks ----
+  const pool = candidates.map(u => scoreTarget(u).s).sort((a, b) => b - a);
+  const bt = N.filter(n => n.category === "m&a").map(n => { const r = roles(n), e = r.cos[1]; return e && e.id != null ? { n, u: U[e.id] } : null; }).filter(Boolean)
+    .filter(x => !big(x.u)).map(x => { const sc = scoreTarget(x.u, x.n).s, rank = pool.filter(v => v > sc).length; return { ...x, sc, pct: 1 - rank / Math.max(1, pool.length) }; });
+  // ---- 3. partnerships: platform companies x pharmas doing platform deals ----
+  const platforms = candidates.filter(u => /platform|tools/.test(((u.prod || {}).stage || "")) || ((u.prod || {}).modality || "").match(/ai|platform/i)
+    || (u.cur >= 0 && DATA.companies[u.cur].model === "platform")).map(u => {
+    const tg = scoreTarget(u), raise = u._news.map(j => N[j]).filter(n => (n.category === "financing") && yearsAgo(n.date, 2));
+    const momentum = Math.min(30, raise.reduce((a, n) => a + Math.log10(Math.max(n._amt, 1e6)) - 5, 0) * 6) + (backedBy.get(u.id) ? 10 : 0);
+    const partners = PH.map(ph => { const f = fit(tg, ph); return { ph, s: Math.round(f.s * 0.6 + ph.platformDeals * 12), why: [ph.platformDeals ? `${ph.platformDeals} platform deal${ph.platformDeals > 1 ? "s" : ""} this year` : "", ...f.why].filter(Boolean) }; })
+      .filter(x => !x.ph.partners.has(u.id)).sort((a, b) => b.s - a.s).slice(0, 3);
+    return { u, s: Math.round(momentum + (tg.s * 0.4)), partners, why: [raise.length ? `raised ${usd(Math.max(...raise.map(n => n._amt)))}` : "", backedBy.get(u.id) ? `backed by ${backedBy.get(u.id)[0]}` : "", ...tg.why.slice(0, 2)].filter(Boolean) };
+  }).filter(p => p.s >= 15).sort((a, b) => b.s - a.s).slice(0, 20);
+  // ---- 4. academia -> industry ----
+  // licensable = the institution plausibly owns the asset: a code-named investigational agent or an academic-made modality
+  // (trials of approved industry drugs, e.g. "atezolizumab plus chemo", aren't licensing candidates)
+  const novel = t => t.interventions.some(i => /[A-Z]{1,6}[- ]?\d{2,6}[A-Z]?/.test(i) && !/placebo/i.test(i))
+    || t.silo.some(s => ["cell-therapy", "gene-therapy", "gene-editing", "rna"].includes(s));
+  const acad = T.filter(t => t.sector !== "industry" && novel(t) && (t.milestones.includes("results") || t.milestones.includes("completed")) && /[23]/.test(t.phase)).map(t => {
+    const h = Math.max(0, ...t.silo.map(id => heat.get(id) || 0)) / hmax, ta = taOf(t.conditions.join(" ") + " " + t.title);
+    let s = (t.phase.includes("3") ? 30 : 18) + (t.milestones.includes("results") ? 15 : 5) + h * 15 + Math.min(10, Math.log10((t.n || 10)) * 3);
+    const why = [`phase ${t.phase}`, t.milestones.includes("results") ? "results posted" : "completed", h > 0.2 ? `hot silo (${siloName(t.silo[0])})` : ""].filter(Boolean);
+    const partners = PH.map(ph => { const hit = ta.filter(x => ph.ta.has(x)); const sh = t.silo.filter(id => ph.silo.get(id)); return { ph, s: hit.length * 20 + sh.length * 15 + Math.min(15, ph.pace * 3), why: [...hit, ...sh.map(siloName)] }; })
+      .sort((a, b) => b.s - a.s).slice(0, 3);
+    return { t, s: Math.round(s), why, partners };
+  }).sort((a, b) => b.s - a.s).slice(0, 25);
+  const labsNext = DATA.labs.map(l => {
+    const cs = l.created || [], recentSpin = cs.filter(c => (parseInt(c.launched, 10) || 0) >= new Date().getFullYear() - 4).length;
+    const tr = T.filter(t => t.lab === l.slug), late = tr.filter(t => /[23]/.test(t.phase)).length;
+    const siloH = Math.max(0, ...cs.flatMap(c => c.silo || []).map(id => heat.get(id) || 0)) / hmax;
+    const s = Math.round(Math.min(40, recentSpin * 6) + Math.min(25, tr.length * 1.5) + Math.min(15, late * 2) + siloH * 20);
+    return { l, s, why: [recentSpin ? `${recentSpin} spinouts in 4 yrs` : "", tr.length ? `${tr.length} trials in 90 days` : "", siloH > 0.3 ? "works in hot silos" : ""].filter(Boolean) };
+  }).sort((a, b) => b.s - a.s);
+  OUTLOOK = { targets, bt, platforms, acad, labsNext, poolSize: pool.length, heat };
+  return OUTLOOK;
+}
+const coCell = u => `<span class="cochip">${uLogo(u, "sm")}<a class="co" href="#co/${u.id}">${esc(u.aka || u.name)}</a></span>`;
+const phCell = ph => `<a class="cochip" href="#ph/${ph.p.slug}" style="text-decoration:none">${uLogoLike(phCo(ph.p), "sm")}<span>${esc(ph.p.company)}</span></a>`;
+const scoreBar = (s, max = 100) => `<span class="ol-score"><i style="background-size:${Math.max(4, Math.min(100, (s / max) * 100))}% 100%"></i><b>${s}</b></span>`;
+function outlookTab() {
+  const el = $("#outlook"), O = computeOutlook();
+  const sec = (title, sub, body) => `<div class="card ol-sec"><h2>${esc(title)}</h2><p class="sub">${sub}</p>${body}</div>`;
+  const btTop = O.bt.filter(x => x.pct >= 0.9).length;
+  el.innerHTML = `
+    <div class="ol-intro"><b>Signals to explore, not a working prediction.</b> A time-split test (below) found that, on data the tracker can properly date, these signals don't yet predict which companies get acquired. Each score adds up named signals from the tracker's own data (trials, deals, products, backers) with the weights listed under "How the scores work". It points to where deals are <em>plausible</em>, and every row shows why. It isn't investment advice, and it only knows what the tracker knows.
+      <div style="margin-top:6px;font-size:12px">Rankings are generated automatically from public data. They are not investment advice or a recommendation to buy, sell or hold any security.</div></div>
+    ${sec("Likely acquisition targets", "Smaller companies with the profile acquirers usually buy: late-stage assets, existing pharma partners, hot silos and funding momentum. Likely buyers are matched on therapeutic area, silo and deal pace.",
+      `<div class="table-wrap"><table class="ol-table"><thead><tr><th>#</th><th>Company</th><th>Score</th><th>Why</th><th>Likely buyers</th></tr></thead><tbody>${O.targets.slice(0, 25).map((t, i) => `
+        <tr><td class="num">${i + 1}</td><td>${coCell(t.u)}${t.u.prod && t.u.prod.product ? `<div class="note">${esc(t.u.prod.product)}</div>` : ""}</td><td>${scoreBar(t.s, 96)}</td>
+        <td><div class="ol-why">${t.why.map(w => `<span>${esc(w)}</span>`).join("")}</div></td>
+        <td>${t.buyers.map(b => `<div class="ol-buyer">${phCell(b.ph)} <span class="note">${esc(b.why.slice(0, 2).join(" · "))}</span></div>`).join("")}</td></tr>`).join("")}</tbody></table></div>`)}
+    ${sec("Likely platform partnerships", "Platform and AI companies with funding momentum, paired with the big pharmas that are doing the most platform deals and work in the same areas. Existing partners are excluded.",
+      `<div class="sp-cos">${O.platforms.map(p => `<div class="ol-card"><div>${coCell(p.u)} ${scoreBar(p.s, 70)}</div>${p.u.prod && p.u.prod.product ? `<div class="prod">${esc(p.u.prod.product)}</div>` : ""}<div class="ol-why">${p.why.map(w => `<span>${esc(w)}</span>`).join("")}</div><div class="note" style="margin-top:4px">Likely partners: ${p.partners.map(x => phCell(x.ph)).join(" ")}</div></div>`).join("") || '<p class="muted">No platform companies with enough signal yet.</p>'}</div>`)}
+    ${sec("Academic programs likely to be licensed", "Phase 2/3 academic trials of the institution's own agents (code-named drugs, cell, gene and RNA therapies) that just posted results or completed, weighted toward hot silos. Licensing or a spinout often follows. Likely industry partners are matched on therapeutic area and silo.",
+      `<div class="table-wrap"><table class="ol-table"><thead><tr><th>Trial</th><th>Sponsor</th><th>Score</th><th>Why</th><th>Likely partners</th></tr></thead><tbody>${O.acad.map(a => `
+        <tr><td>${link("https://clinicaltrials.gov/study/" + a.t.id, a.t.title)}<div class="note">${esc(a.t.id)} · ${esc(a.t.conditions.slice(0, 2).join(", "))}</div></td><td>${trSponsorHTML(a.t)}</td><td>${scoreBar(a.s, 75)}</td>
+        <td><div class="ol-why">${a.why.map(w => `<span>${esc(w)}</span>`).join("")}</div></td><td>${a.partners.map(b => `<div class="ol-buyer">${phCell(b.ph)}</div>`).join("")}</td></tr>`).join("")}</tbody></table></div>`)}
+    ${sec("Labs most likely to spin out next", "Recent spinout pace, current trial activity and how hot their silos are.",
+      `<div class="sp-cos">${O.labsNext.map(x => `<div class="ol-card"><div><a class="co" href="#lab/${x.l.slug}">${esc(x.l.name)}</a> ${scoreBar(x.s, 100)}</div><div class="ol-why">${x.why.map(w => `<span>${esc(w)}</span>`).join("")}</div></div>`).join("")}</div>`)}
+    ${sec("How the scores work", "Plain sums of capped signals. Change the weights in <code>web/template.html</code> (the <code>W</code> object).",
+      `<dl class="kv">
+        <dt>Target score</dt><dd>phase 3 program +${W.lateStage} (phase 2 +${W.lateStage / 2}) · phase 2/3 results in last 90 days +${W.recentResults} · approved product +${W.approved} · partnered with a top-15 pharma +${W.pharmaPartner} (other partner +${W.anyPartner}) · silo's share of the last year's M&A and partnering, up to +${W.hotSilo} · raised $100M+ in the last year +${W.funding} · backed by a tracked venture builder or investor +${W.backed} · public +${W.publicCo} · stopped phase 2/3 trial ${W.failed}. Big pharma and companies already being acquired are excluded.</dd>
+        <dt>Buyer fit</dt><dd>therapeutic-area overlap with the target (from both sides' trial conditions) up to 35 · the pharma's own trials and deals in the target's silo up to 25 · completed acquisitions in the last 3 years up to 20 · already partners +30.</dd>
+        ${DATA.forecast ? (() => { const F = DATA.forecast, row = (k, r) => `<tr><td>${esc(k)}</td><td class="num">${r.auc ?? "—"}</td><td class="num">${r.hits_top25 ?? "—"}</td><td class="num">${r.hits_top10pct ?? "—"}</td></tr>`;
+          return `<dt>Time-split test</dt><dd>Fitted a logistic regression on companies' features as of ${esc(F.train.split(",")[0].replace("features ", ""))} (${F.train_positives} acquired by June), then scored the ${F.test["fitted model"].positives} companies acquired from June onward that it never saw, among ${F.test["fitted model"].candidates.toLocaleString()} candidates. AUC: 0.5 is chance, 1.0 is perfect.
+            <div class="table-wrap" style="margin:6px 0"><table style="font-size:13px"><thead><tr><th>Method</th><th>AUC</th><th>Hits in top 25</th><th>Hits in top 10%</th></tr></thead><tbody>
+            ${Object.entries(F.test).map(([k, r]) => row(k, r)).join("")}${Object.entries(F.leakage_check || {}).map(([k, r]) => row("fitted, " + k, r)).join("")}</tbody></table></div>
+            <b>Verdict: no demonstrated skill.</b> The good-looking scores disappear once product-line features are removed. Product lines were often researched <em>because</em> a company was in the news, including for being acquired, so they leak the answer. Using only properly dated features, the model is at chance. The rankings here are a way to browse plausible candidates, not predictions. Re-run <code>python3 sweep/fit_forecast.py</code> as the tracker accumulates dated history.</dd>`; })() : ""}
+        <dt>Backtest</dt><dd>${O.bt.length ? `Scoring the ${O.bt.length} acquired companies in the news log <em>with the deal itself removed</em>, ${btTop} ranked in the top 10% of ${O.poolSize.toLocaleString()} candidates (${O.bt.map(x => `${esc(plainName(x.u.aka || x.u.name))}: top ${Math.max(1, Math.round((1 - x.pct) * 100))}%`).join(", ")}). Treat this as a sanity check, not a validation: the sample is tiny, and other signals (partnerships, the silo's heat) still come from the same period.` : "Not enough tracked acquisitions to check yet."}</dd>
+        <dt>Blind spots</dt><dd>No financials (cash runway, market cap, patent cliffs), no private-company data beyond the news log, and silo tags from keyword matching. Subsidiaries are excluded only when the data names a parent, so some units of larger groups (especially Chinese pharma groups) can still appear. A company the tracker barely covers can't score well.</dd>
+      </dl>`)}`;
+}
+
+// ---------- frontiers: latest papers and preprints ----------
+const FR_SRC = { pubmed: "Lab papers", biorxiv: "Preprints", medrxiv: "Preprints" };
+let frState = { kind: "all", silo: "", q: "", shown: 60 };
+const frKind = it => it.src === "pubmed" ? "lab-paper" : it.industry.length && !it.lab ? "industry-preprint" : "lab-preprint";
+const frItem = it => {
+  const lab = it.lab && DATA.labs.find(l => l.slug === it.lab);
+  const full = it.doi ? ` · <a href="https://libkey.io/${esc(it.doi)}" target="_blank" rel="noopener" title="Full text through your library (LibKey)">full text</a>` : "";
+  return `<li><span class="d">${esc(it.date)}</span><div>
+    <div class="fr-meta"><span class="fr-src ${frKind(it)}">${esc(frKind(it) === "lab-paper" ? "Paper" : frKind(it) === "industry-preprint" ? "Industry preprint" : "Preprint")}</span> ${esc(it.venue)}</div>
+    ${link(it.url, it.title)}
+    <div class="note">${esc(it.authors)}${it.pi ? ` · PI <b>${esc(it.pi)}</b>` : ""}${lab ? ` · <a href="#lab/${lab.slug}">${esc(lab.name)}</a>` : it.inst ? " · " + esc(it.inst) : ""}${full}</div>
+    ${it.industry.length ? `<div class="note fr-ind">Industry: ${it.industry.map(esc).join(", ")}</div>` : ""}
+    ${it.silo.length ? `<div class="note">${siloChips(it.silo)}</div>` : ""}
+  </div></li>`;
+};
+function frontiersTab() {
+  const el = $("#frontiers"), F = DATA.frontiers;
+  if (!F) { el.innerHTML = '<p class="muted">No papers yet. Run <code>python3 sweep/fetch_frontiers.py</code> and rebuild.</p>'; return; }
+  const s = frState, items = F.items;
+  const pass = it => (s.kind === "all" || frKind(it) === s.kind) && (!s.silo || it.silo.includes(s.silo))
+    && matchQ(s.q, it.title, it.authors, it.pi, it.inst, it.venue, it.industry.join(" "), it.snip);
+  const rows = items.filter(pass).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const mom = Object.entries(F.momentum).map(([id, [prev, cur]]) => ({ id, prev, cur, ch: prev ? (cur - prev) / prev : null }))
+    .filter(m => DATA.siloInfo[m.id] && m.cur + m.prev >= 10).sort((a, b) => b.cur - a.cur);
+  const kinds = [["all", "Everything"], ["lab-paper", "Tracked labs: papers"], ["lab-preprint", "Tracked labs: preprints"], ["industry-preprint", "Industry preprints"]];
+  const count = k => k === "all" ? items.length : items.filter(it => frKind(it) === k).length;
+  el.innerHTML = `
+    <details class="about"><summary>About this data</summary><p>The earliest signal: what the leading labs are publishing and preprinting, and which fields are gaining momentum, often years before companies form or deals happen. Papers come from PubMed for the PIs on the Labs pages (last 6 months). Preprints come from bioRxiv and medRxiv (last ${F.days} days, ${F.preprints_scanned.toLocaleString()} scanned). Preprints aren't peer-reviewed. "Full text" opens through your library via LibKey.</p></details>
+    <div class="card" style="margin-bottom:20px"><h2>Field momentum</h2><p class="sub">New bioRxiv + medRxiv preprints matching each silo: last 30 days vs the 30 before. Keyword-matched, so read it as direction, not exact counts. Click a silo to filter.</p>
+      <div class="fr-mom">${mom.map(m => `<button class="fr-tile${s.silo === m.id ? " on" : ""}" data-silo="${m.id}"><span>${esc(siloName(m.id))}</span><b>${m.cur.toLocaleString()}</b><em class="${m.ch == null ? "" : m.ch >= 0.05 ? "up" : m.ch <= -0.05 ? "dn" : ""}">${m.ch == null ? "new" : `${m.ch >= 0 ? "▲" : "▼"} ${Math.abs(Math.round(m.ch * 100))}%`}</em></button>`).join("")}</div></div>
+    <div class="filters">
+      <span class="seg" id="fr-kind">${kinds.map(([k, l]) => `<button data-v="${k}" aria-pressed="${s.kind === k}">${l} <span class="muted">${count(k)}</span></button>`).join("")}</span>
+      <input type="search" id="fr-q" placeholder="Search title, author, lab, company…" value="${esc(s.q)}" aria-label="Search papers">
+      ${s.silo ? `<button class="back" id="fr-clear">Clear silo: ${esc(siloName(s.silo))} ✕</button>` : ""}
+    </div>
+    <div class="count">${rows.length.toLocaleString()} items</div>
+    <ul class="feed fr-feed">${rows.slice(0, s.shown).map(frItem).join("") || '<li class="muted">Nothing matches.</li>'}</ul>
+    ${rows.length > s.shown ? `<button class="back" id="fr-more" style="margin-top:10px">Show ${Math.min(60, rows.length - s.shown)} more</button>` : ""}`;
+  const redo = p => { Object.assign(frState, p); frontiersTab(); };
+  $("#fr-kind").onclick = e => { const b = e.target.closest("button"); if (b) redo({ kind: b.dataset.v, shown: 60 }); };
+  el.querySelectorAll(".fr-tile").forEach(b => b.onclick = () => redo({ silo: s.silo === b.dataset.silo ? "" : b.dataset.silo, shown: 60 }));
+  const c = $("#fr-clear"); if (c) c.onclick = () => redo({ silo: "", shown: 60 });
+  const m = $("#fr-more"); if (m) m.onclick = () => redo({ shown: s.shown + 60 });
+  let qt; $("#fr-q").oninput = e => { clearTimeout(qt); qt = setTimeout(() => { redo({ q: e.target.value.toLowerCase(), shown: 60 }); const i = $("#fr-q"); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }, 250); };
+}
+const frFor = pred => DATA.frontiers ? DATA.frontiers.items.filter(pred).sort((a, b) => (b.date || "").localeCompare(a.date || "")) : [];
+
+function pulse() {
+  const { rows } = inWindow();
+  const bySilo = new Map();
+  rows.forEach(n => { const k = mainSilo(n); if (!bySilo.has(k)) bySilo.set(k, []); bySilo.get(k).push(n); });
+  const items = [...bySilo.entries()].sort((a, b) => b[1].length - a[1].length || b[1].reduce((s, n) => s + n._amt, 0) - a[1].reduce((s, n) => s + n._amt, 0)).slice(0, 9);
+  $("#pulse").innerHTML = items.map(([k, ns]) => {
+    const total = ns.reduce((s, n) => s + n._amt, 0);
+    const mix = CATS.map(c => [c, ns.filter(n => catOf(n) === c).length]).filter(([, v]) => v);
+    const top = ns.slice().sort((a, b) => b._amt - a._amt || b.date.localeCompare(a.date)).slice(0, 3);
+    return `<div class="p">
+      <h3>${DATA.siloInfo[k] ? `<a href="#silo/${esc(k)}">${esc(siloLabel(k))}</a>` : esc(siloLabel(k))}</h3>
+      <div class="stat">${ns.length} event${ns.length > 1 ? "s" : ""}${total ? " · " + usd(total) + " disclosed" : ""}</div>
+      <div class="mix">${mix.map(([c, v]) => `<span style="flex:${v};background:${c.color}" data-tip="${c.label}: ${v}"></span>`).join("")}</div>
+      <ul>${top.map(n => `<li>${evLink(n, n.headline.replace(/\s*\(.*?\)\s*/g, " ").trim())} ${n._amt ? `<span class="amt">${usd(n._amt)}</span>` : ""}</li>`).join("")}</ul>
+    </div>`;
+  }).join("");
+}
+
+$("#tl-range").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  tlMonths = Number(b.dataset.m);
+  $("#tl-range").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  timeline(); pulse();
+});
+let rsz; addEventListener("resize", () => { clearTimeout(rsz); rsz = setTimeout(() => {
+  timeline();
+  const ph = location.hash.match(/^#ph\/([a-z0-9-]+)$/); if (ph && !$("#pharmapage").hidden) pharmaPage(ph[1]); // trees fill the new width
+}, 150); });
+
+// ---------- tabs ----------
+const PAGE_HEADS = {
+  news: ["News", "Every tracked event, with the companies involved and how well it's sourced."],
+  universe: ["Companies", "Every drug and biotech company we can find, from startups to big pharma."],
+  trials: ["Clinical trials", "What industry and academia registered, finished, reported or stopped in the last 90 days."],
+  pharma: ["Pharma families", "How the largest drugmakers were assembled, and what they shed."],
+  tech: ["Tech entrants", "What the big technology companies are doing in the life sciences."],
+  builders: ["Ventures", "The studios and investors that start and back biotech companies."],
+  labs: ["Labs", "The universities and institutes whose science keeps becoming companies."],
+  silos: ["Silos", "The scientific fields companies come out of, and how busy each one is."],
+  frontiers: ["Frontiers", "What leading labs are publishing now, and which fields are gaining momentum."],
+  outlook: ["Forecast", "Signals that sometimes come before a deal. Exploratory; see the test results below."],
+};
+function showTab(id) {
+  const ph = PAGE_HEADS[id];
+  $("#page-head").innerHTML = ph ? `<h2>${esc(ph[0])}</h2><p>${esc(ph[1])}</p>` : "";
+  $("#page-head").hidden = !ph;
+  const tab = id === "profile" ? "universe" : id === "event" ? "news" : id === "pharmapage" ? "pharma" : id === "silopage" ? "silos" : id === "builderpage" ? pfTab : id;
+  document.querySelectorAll("nav button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab === tab));
+  document.querySelectorAll("section").forEach(s => s.hidden = s.id !== id);
+  if (!["profile", "event", "pharmapage", "silopage", "builderpage"].includes(id)) try { localStorage.setItem("ct-tab", id); } catch {}
+  if (id === "overview") timeline(); // width is 0 while hidden
+}
+let listScroll = 0, pfTab = "builders";
+function route() {
+  const h = decodeURIComponent(location.hash.slice(1)), m = h.match(/^co\/(\d+)$/), ev = h.match(/^ev\/(\d+)$/);
+  const ph = h.match(/^ph\/([a-z0-9-]+)$/), sl = h.match(/^silo\/([a-z0-9-]+)$/), bd = h.match(/^(bd|iv|lab)\/([a-z0-9-]+)$/);
+  if (bd) {
+    pfTab = PF_KINDS[bd[1]].tab; bdFilter = "all";
+    showTab("builderpage"); builderPage(bd[2], bd[1]); scrollTo(0, 0);
+  } else if (sl) {
+    showTab("silopage"); siloPage(sl[1]); scrollTo(0, 0);
+  } else if (ph) {
+    showTab("pharmapage"); pharmaPage(ph[1]); scrollTo(0, 0);
+  } else if (ev) {
+    showTab("event"); eventPage(Number(ev[1])); scrollTo(0, 0);
+  } else if (m) {
+    if ($("#profile").hidden) listScroll = scrollY;
+    showTab("profile"); profile(Number(m[1])); scrollTo(0, 0);
+  } else if (h && !["profile", "event", "pharmapage", "silopage", "builderpage"].includes(h) && document.getElementById(h)) {
+    const fromProfile = !$("#profile").hidden;
+    showTab(h);
+    // the hash matches the section's id, so the browser would jump past the masthead; keep the page at the top
+    requestAnimationFrame(() => scrollTo(0, fromProfile && h === "universe" ? listScroll : 0));
+  }
+}
+$("#tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b) location.hash = b.dataset.tab; });
+addEventListener("hashchange", route);
+
+$("#dateline").textContent = new Date(DATA.built + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" }) + " · updated daily";
+overview(); timeline(); pulse(); news(); universe(); pharmaIndex(); tech(); builders(); labs(); trialsTab(); outlookTab(); frontiersTab(); silos();
+if (location.hash) route();
+else try { const t = localStorage.getItem("ct-tab"); if (t && document.getElementById(t) && !["profile", "event", "pharmapage", "silopage", "builderpage"].includes(t)) showTab(t === "companies" ? "universe" : t); } catch {}
+// opening the page on a tab address: the browser's jump-to-anchor happens after load, so undo it then
+addEventListener("load", () => { const h = location.hash.slice(1); if (h && document.getElementById(h) && document.getElementById(h).tagName === "SECTION") setTimeout(() => scrollTo(0, 0), 0); });
+</script>
+<footer class="wrap" id="credits" style="color:var(--text-muted);font-size:12px;padding-top:0"></footer>
+<script>
+if (DATA.logoToken) $("#credits").innerHTML = 'Logos provided by <a href="https://logo.dev" target="_blank">Logo.dev</a> and Wikimedia Commons. Logos are trademarks of their owners and identify each company only.';
+else $("#credits").textContent = "Logos from Wikimedia Commons. Logos are trademarks of their owners and identify each company only.";
+</script>
+</body>
+</html>

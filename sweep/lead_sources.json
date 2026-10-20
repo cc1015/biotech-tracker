@@ -1,0 +1,41 @@
+{
+  "lookback_days": 8,
+  "signal_terms": [
+    "raises", "raised", "financing", "funding", "seed", "series a", "series b", "series c", "series d",
+    "series e", "series f", "private placement", "ipo", "initial public offering", "acquire", "acquires",
+    "acquisition", "merger", "merge", "to buy", "collaboration", "license", "licensing", "partnership",
+    "partners with", "launches", "emerges from stealth", "stealth", "spinout", "spin-out", "spun out",
+    "upfront", "milestones"
+  ],
+  "biotech_terms": [
+    "biotech", "therapeutics", "bio", "pharma", "biosciences", "medicines", "drug", "clinical",
+    "gene", "cell therapy", "antibody", "rna", "protein", "oncology", "life sciences", "biologics"
+  ],
+  "rss": {
+    "GlobeNewswire Biotech": "https://www.globenewswire.com/RssFeed/industry/4573-Biotechnology/feedTitle/GlobeNewswire%20-%20Industry%20News%20on%20Biotechnology",
+    "PR Newswire Biotech": "https://www.prnewswire.com/rss/health-latest-news/biotechnology-list.rss",
+    "PR Newswire Health": "https://www.prnewswire.com/rss/health-latest-news/health-latest-news-list.rss",
+    "Business Wire M&A": "https://feed.businesswire.com/rss/home/?rss=G1QFDERJXkJeEFtRWA=="
+  },
+  "google_news_queries": [
+    "biotech \"seed round\"",
+    "biotech \"series a\"",
+    "therapeutics raises",
+    "\"emerges from stealth\" biotech",
+    "biotech acquisition",
+    "\"AI drug discovery\" raises",
+    "\"life sciences\" (NVIDIA OR OpenAI OR Anthropic OR Google OR Microsoft OR Amazon OR Meta)"
+  ],
+  "bluesky_search_queries": [
+    "biotech seed round",
+    "biotech series a",
+    "emerges from stealth therapeutics",
+    "biotech acquires"
+  ],
+  "bluesky_accounts": [],
+  "sec_form_d": {
+    "industry_groups": ["Biotechnology", "Pharmaceuticals"],
+    "min_amount_usd": 1000000,
+    "max_filings": 60
+  }
+}

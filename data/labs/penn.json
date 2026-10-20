@@ -1,0 +1,440 @@
+{
+ "name": "University of Pennsylvania",
+ "profile": {
+  "city": "Philadelphia, PA, USA",
+  "type": "university",
+  "tech_transfer": "Penn Center for Innovation (PCI)",
+  "tech_transfer_url": "https://pci.upenn.edu/",
+  "summary": "Penn is the birthplace of the first FDA-approved CAR-T therapy (Kymriah, Carl June's group) and of the Weissman/Karikó modified-mRNA technology behind the COVID-19 vaccines, and James Wilson's gene therapy program supplied AAV vectors to multiple approved drugs. PCI reported 26 startups launched in FY2025, and Capstan's $2.1B sale to AbbVie shows the scale of its cell- and mRNA-therapy spinouts.",
+  "programs": [
+   "PCI Ventures",
+   "Penn StartUP Fund",
+   "PxB Fund (Penn-BioNTech Innovative Therapeutics Seed Fund)",
+   "Penn Medicine Co-Investment Program",
+   "Pennovation Works",
+   "NextUP grants"
+  ],
+  "website": "https://www.upenn.edu",
+  "sources": [
+   "https://pci.upenn.edu/",
+   "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/",
+   "https://pci.upenn.edu/about/stats-and-reports/pci-year-in-review-fy2025/",
+   "https://pci.upenn.edu/penns-three-investment-funds-for-startups/",
+   "https://en.wikipedia.org/wiki/Carl_June",
+   "https://en.wikipedia.org/wiki/Drew_Weissman",
+   "https://en.wikipedia.org/wiki/Katalin_Karik%C3%B3",
+   "https://en.wikipedia.org/wiki/James_Wilson_(scientist)",
+   "https://en.wikipedia.org/wiki/Tisagenlecleucel",
+   "https://en.wikipedia.org/wiki/Spark_Therapeutics"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Carl June",
+   "lab": "Perelman School of Medicine",
+   "known_for": "CAR-T cell therapy; tisagenlecleucel (Kymriah)",
+   "silo": [
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Tisagenlecleucel"
+  },
+  {
+   "pi": "Drew Weissman",
+   "lab": "Perelman School of Medicine",
+   "known_for": "Nucleoside-modified mRNA; lipid nanoparticle delivery",
+   "silo": [
+    "rna"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Drew_Weissman"
+  },
+  {
+   "pi": "Katalin Karikó",
+   "lab": "Perelman School of Medicine (former faculty)",
+   "known_for": "Modified-nucleoside mRNA; 2023 Nobel Prize",
+   "silo": [
+    "rna"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Katalin_Karik%C3%B3"
+  },
+  {
+   "pi": "James M. Wilson",
+   "lab": "Penn Gene Therapy Program (former director)",
+   "known_for": "AAV vector discovery (e.g., AAV9) and gene therapy",
+   "silo": [
+    "gene-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/James_Wilson_(scientist)"
+  },
+  {
+   "pi": "Saar Gill",
+   "lab": "Division of Hematology-Oncology",
+   "known_for": "CAR-macrophages; in vivo cell engineering",
+   "silo": [
+    "cell-therapy"
+   ],
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "pi": "Jean Bennett",
+   "lab": "Department of Ophthalmology",
+   "known_for": "Retinal gene therapy (Luxturna)",
+   "silo": [
+    "gene-therapy"
+   ],
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "pi": "John Lambris",
+   "lab": "Department of Pathology",
+   "known_for": "Complement biology and complement-targeting therapeutics",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Capstan Therapeutics",
+   "year": "",
+   "pi": "Carl June; Bruce Levine; Drew Weissman; Hamideh Parhiz",
+   "silo": [
+    "cell-therapy",
+    "rna"
+   ],
+   "product": "In vivo mRNA-LNP CAR-T therapies",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by AbbVie for $2.1B",
+   "outcome_value_usd": 2100000000,
+   "source": "https://pci.upenn.edu/about/stats-and-reports/pci-year-in-review-fy2025/"
+  },
+  {
+   "name": "Cabaletta Bio",
+   "year": "",
+   "pi": "Aimee Payne; Michael Milone",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Engineered T-cell therapies for autoimmune disease",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Carisma Therapeutics",
+   "year": "",
+   "pi": "Saar Gill",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "CAR-macrophage immunotherapy for solid tumors",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Interius BioTherapeutics",
+   "year": "",
+   "pi": "Saar Gill",
+   "silo": [
+    "cell-therapy",
+    "gene-therapy"
+   ],
+   "product": "In vivo CAR cell and gene therapy",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Passage Bio",
+   "year": "",
+   "pi": "James M. Wilson",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "AAV gene therapies for CNS disorders",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "REGENXBIO",
+   "year": "",
+   "pi": "James M. Wilson",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "AAV gene therapies",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_Wilson_(scientist)"
+  },
+  {
+   "name": "Scout Bio",
+   "year": "",
+   "pi": "James M. Wilson",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_Wilson_(scientist)"
+  },
+  {
+   "name": "Genovo",
+   "year": "",
+   "pi": "James M. Wilson",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_Wilson_(scientist)"
+  },
+  {
+   "name": "Gemma Biotherapeutics",
+   "year": "2024",
+   "pi": "James M. Wilson",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Gene therapies for rare diseases",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_Wilson_(scientist)"
+  },
+  {
+   "name": "Iecure",
+   "year": "",
+   "pi": "James M. Wilson",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Gene-editing therapies",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Apellis Pharmaceuticals",
+   "year": "",
+   "pi": "John Lambris",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Complement C3 inhibitor therapies",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Kira Pharmaceuticals",
+   "year": "",
+   "pi": "Wenchao Song",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Therapies for complement-mediated diseases",
+   "builder": "",
+   "status": "merged",
+   "outcome": "merging with Jasper Therapeutics",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/"
+  },
+  {
+   "name": "Opus Genetics",
+   "year": "",
+   "pi": "Jean Bennett",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Gene therapy for inherited retinal diseases",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Ascidian Therapeutics",
+   "year": "",
+   "pi": "Jean Bennett",
+   "silo": [
+    "rna",
+    "gene-therapy"
+   ],
+   "product": "RNA exon editing (trans-splicing) therapeutics",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Spark Therapeutics",
+   "year": "2013",
+   "pi": "Katherine High",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "AAV gene therapies incl. Luxturna for inherited retinal dystrophy",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "IPO 2015 (NASDAQ: ONCE); acquired by Roche 2019 for $4.3B",
+   "outcome_value_usd": 4300000000,
+   "source": "https://en.wikipedia.org/wiki/Spark_Therapeutics",
+   "origin_unconfirmed": true
+  },
+  {
+   "name": "RNARx",
+   "year": "2006",
+   "pi": "Katalin Karikó; Drew Weissman",
+   "silo": [
+    "rna"
+   ],
+   "product": "Modified-nucleoside mRNA therapeutics",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Drew_Weissman"
+  },
+  {
+   "name": "Dispatch Bio",
+   "year": "",
+   "pi": "Carl June; Andy Minn",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Immune-based cancer therapies",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "ViTToria Biotherapeutics",
+   "year": "",
+   "pi": "Marco Ruella",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "CAR-based cell therapies",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/about/stats-and-reports/pci-year-in-review-fy2025/"
+  },
+  {
+   "name": "BlueWhale Bio",
+   "year": "",
+   "pi": "James Riley",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Cell therapy products and manufacturing",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Vivodyne",
+   "year": "",
+   "pi": "Dan Huh",
+   "silo": [
+    "tools-omics",
+    "lab-automation"
+   ],
+   "product": "Lab-grown human tissues for drug testing",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/about/stats-and-reports/pci-year-in-review-fy2025/"
+  },
+  {
+   "name": "EpiVario",
+   "year": "",
+   "pi": "Shelley Berger",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Epigenetic therapies for addiction and psychiatric disorders",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "First PAGE Biosciences",
+   "year": "",
+   "pi": "Rahul Kohli; Junwei Shi; Shelley Berger; John Wherry",
+   "silo": [
+    "gene-editing",
+    "tools-omics"
+   ],
+   "product": "Genome-editing reagents",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "TrevaRx Biomedical",
+   "year": "",
+   "pi": "Robert Mach",
+   "silo": [
+    "radiopharma"
+   ],
+   "product": "PARP-1-targeted radiopharmaceuticals",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Satellite Biosciences",
+   "year": "",
+   "pi": "Christopher Chen",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Engineered tissue satellites delivering living cells",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  }
+ ]
+}

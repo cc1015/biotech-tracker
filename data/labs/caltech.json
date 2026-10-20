@@ -1,0 +1,459 @@
+{
+ "name": "California Institute of Technology",
+ "profile": {
+  "city": "Pasadena, USA",
+  "type": "university",
+  "tech_transfer": "Caltech Office of Technology Transfer and Corporate Partnerships (OTTCP)",
+  "tech_transfer_url": "https://innovation.caltech.edu/",
+  "summary": "Caltech is a small, invention-heavy institute where several companies that defined whole tool categories got their start, among them automated DNA sequencing (Applied Biosystems) and microfluidics (Fluidigm), along with protein-design firms such as Xencor. Directed evolution, nanoparticle delivery, AAV capsid engineering and microbiome work from its labs continue to spin out gene-therapy, synbio and therapeutics companies, now with seed money from the institute itself.",
+  "programs": [
+   "Caltech Seed fund (with Wilson Hill Ventures)",
+   "Rothenberg Innovation Initiative (RI²)",
+   "Gates Grubstake Fund",
+   "The Gates Investment Fund",
+   "Caltech Innovation Center",
+   "Bill Gross Prize for Entrepreneurship",
+   "Timothy D. Ryan Summer Entrepreneurship Program"
+  ],
+  "website": "https://www.caltech.edu/",
+  "sources": [
+   "https://innovation.caltech.edu/",
+   "https://innovation.caltech.edu/new-ventures",
+   "https://www.caltech.edu/about/news/new-private-venture-funding-available-to-launch-caltech-startups",
+   "https://jacobsinstitute.caltech.edu/impact-highlights",
+   "https://en.wikipedia.org/wiki/California_Institute_of_Technology"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Frances Arnold",
+   "lab": "Chemical Engineering / Bioengineering (Arnold Lab)",
+   "known_for": "Directed evolution of enzymes; Nobel Prize in Chemistry 2018",
+   "silo": [
+    "synbio"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Frances_Arnold"
+  },
+  {
+   "pi": "David Baltimore",
+   "lab": "Biology (Baltimore Lab)",
+   "known_for": "Stem-cell-engineered T-cell immunotherapies; gene therapy",
+   "silo": [
+    "gene-therapy",
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/David_Baltimore"
+  },
+  {
+   "pi": "Mark E. Davis",
+   "lab": "Chemical Engineering (Davis Lab)",
+   "known_for": "Cyclodextrin polymer nanoparticles for drug and siRNA delivery",
+   "silo": [
+    "rna",
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Mark_E._Davis"
+  },
+  {
+   "pi": "Leroy Hood",
+   "lab": "Biology (Hood Lab, Caltech era to 1992)",
+   "known_for": "Automated DNA sequencing instruments",
+   "silo": [
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Leroy_Hood"
+  },
+  {
+   "pi": "Stephen Quake",
+   "lab": "Applied Physics / Bioengineering (Caltech 1996–2005)",
+   "known_for": "Integrated microfluidics; single-molecule DNA sequencing",
+   "silo": [
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Stephen_Quake"
+  },
+  {
+   "pi": "Viviana Gradinaru",
+   "lab": "Biology & Biological Engineering (Gradinaru Lab)",
+   "known_for": "Engineered AAV capsids for brain-wide gene delivery",
+   "silo": [
+    "gene-therapy"
+   ],
+   "source": "https://www.capsida.com/about"
+  },
+  {
+   "pi": "Sarkis Mazmanian",
+   "lab": "Biology & Biological Engineering (Mazmanian Lab)",
+   "known_for": "Gut microbiome–brain axis; B. fragilis PSA",
+   "silo": [
+    "microbiome"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Sarkis_Mazmanian"
+  },
+  {
+   "pi": "Stephen L. Mayo",
+   "lab": "Biology & Chemistry (Mayo Lab)",
+   "known_for": "Computational protein design; Fc and antibody engineering",
+   "silo": [
+    "antibody",
+    "ai-discovery"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Stephen_L._Mayo"
+  },
+  {
+   "pi": "Raymond J. Deshaies",
+   "lab": "Biology (Deshaies Lab)",
+   "known_for": "Ubiquitin-proteasome biology; co-conceived PROTACs with Craig Crews",
+   "silo": [
+    "protein-degradation",
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Raymond_J._Deshaies"
+  },
+  {
+   "pi": "Mikhail Shapiro",
+   "lab": "Chemical Engineering / Medical Engineering (Shapiro Lab)",
+   "known_for": "Programmable cell therapies; brain-computer interfaces",
+   "silo": [
+    "cell-therapy"
+   ],
+   "source": "https://www.caltech.edu/about/news/new-private-venture-funding-available-to-launch-caltech-startups"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Applied Biosystems",
+   "year": "1981",
+   "pi": "Leroy Hood",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Automated DNA sequencers and synthesizers built on Caltech-licensed technology",
+   "builder": "",
+   "status": "merged",
+   "outcome": "merged with Invitrogen 2008 to form Life Technologies (acquired by Thermo Fisher 2014)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Applied_Biosystems"
+  },
+  {
+   "name": "Fluidigm (now Standard BioTools)",
+   "year": "1999",
+   "pi": "Stephen Quake",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Integrated microfluidic chips for genomics and single-cell analysis",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2011 (NASDAQ: FLDM); renamed Standard BioTools (NASDAQ: LAB) 2022",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Fluidigm"
+  },
+  {
+   "name": "Helicos BioSciences",
+   "year": "2003",
+   "pi": "Stephen Quake",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "First commercial single-molecule DNA sequencer, using Caltech-licensed patents",
+   "builder": "Flagship Ventures",
+   "status": "defunct",
+   "outcome": "delisted 2010; Chapter 11 bankruptcy 2012",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Helicos_Biosciences"
+  },
+  {
+   "name": "Xencor",
+   "year": "1997",
+   "pi": "Stephen L. Mayo",
+   "silo": [
+    "antibody"
+   ],
+   "product": "XmAb engineered Fc/bispecific antibody platform; discovered tafasitamab",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stephen_L._Mayo"
+  },
+  {
+   "name": "Protabit",
+   "year": "",
+   "pi": "Stephen L. Mayo",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Computational protein design software and services",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stephen_L._Mayo"
+  },
+  {
+   "name": "Calimmune",
+   "year": "2006",
+   "pi": "David Baltimore",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Ex vivo hematopoietic stem cell gene therapy (CAL-H for sickle cell)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by CSL Behring 2017 for $91M upfront (plus milestones)",
+   "outcome_value_usd": 91000000,
+   "source": "https://www.australianmanufacturing.com.au/csl-behring-buys-us-biotech-company-calimmune/"
+  },
+  {
+   "name": "Immune Design",
+   "year": "2008",
+   "pi": "David Baltimore",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "GLAAS and ZVex platforms that generate antigen-specific killer T cells",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Merck 2019 for ~$300M",
+   "outcome_value_usd": 300000000,
+   "source": "https://www.biospace.com/article/merck-acquires-immune-design-for-300-million-in-cash/"
+  },
+  {
+   "name": "Insert Therapeutics",
+   "year": "",
+   "pi": "Mark E. Davis",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Cyclodextrin-containing polymers for drug delivery (IT-101)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "became an Arrowhead Research subsidiary",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/arrowhead-research-corporation-subsidiary-founding-scientist-b-dr-mark-e-davis-b-elected-to-the-national-academy-of-sciences"
+  },
+  {
+   "name": "Calando Pharmaceuticals",
+   "year": "",
+   "pi": "Mark E. Davis",
+   "silo": [
+    "rna"
+   ],
+   "product": "Targeted polymer nanoparticles delivering siRNA to tumors",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "became an Arrowhead Research subsidiary",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/arrowhead-research-corporation-subsidiary-founding-scientist-b-dr-mark-e-davis-b-elected-to-the-national-academy-of-sciences"
+  },
+  {
+   "name": "Cerulean Pharma",
+   "year": "",
+   "pi": "Mark E. Davis",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "CRLX101 nanoparticle-drug conjugate licensed from Caltech/Calando in 2009",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/CRLX101"
+  },
+  {
+   "name": "Capsida Biotherapeutics",
+   "year": "",
+   "pi": "Viviana Gradinaru",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Engineered AAV capsids for IV brain-wide and ocular gene therapy",
+   "builder": "Versant Ventures; Westlake Village BioPartners",
+   "status": "private",
+   "outcome": "launched 2021 with $140M including AbbVie collaboration",
+   "outcome_value_usd": null,
+   "source": "https://www.capsida.com/about",
+   "builder_unconfirmed": true
+  },
+  {
+   "name": "Axial Biotherapeutics",
+   "year": "",
+   "pi": "Sarkis Mazmanian",
+   "silo": [
+    "microbiome"
+   ],
+   "product": "Gut-targeted small molecule AB-2004 for autism irritability",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.microbiometimes.com/?p=2957"
+  },
+  {
+   "name": "Symbiotix Biotherapies",
+   "year": "",
+   "pi": "Sarkis Mazmanian",
+   "silo": [
+    "microbiome"
+   ],
+   "product": "B. fragilis-derived PSA sugar for intestinal disease and MS",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sarkis_Mazmanian"
+  },
+  {
+   "name": "Provivi",
+   "year": "2013",
+   "pi": "Frances Arnold",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Enzyme-made pheromones as alternatives to crop pesticides",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Frances_Arnold"
+  },
+  {
+   "name": "Gevo",
+   "year": "2005",
+   "pi": "Frances Arnold",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Renewable fuels and chemicals via engineered microbes",
+   "builder": "",
+   "status": "public",
+   "outcome": "NASDAQ: GEVO",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Gevo"
+  },
+  {
+   "name": "Aralez Bio",
+   "year": "2019",
+   "pi": "Frances Arnold",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Engineered enzymes producing noncanonical amino acids for peptide drugs",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://jacobsinstitute.caltech.edu/impact-highlights"
+  },
+  {
+   "name": "Protomer Technologies",
+   "year": "2015",
+   "pi": "David Tirrell (lab alumnus Alborz Mahdavi)",
+   "silo": [],
+   "product": "Molecule-activated protein therapeutics, e.g. glucose-responsive insulin",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Eli Lilly 2021 (potential value over $1B incl. milestones)",
+   "outcome_value_usd": null,
+   "source": "https://jacobsinstitute.caltech.edu/impact-highlights"
+  },
+  {
+   "name": "Proteolix",
+   "year": "2003",
+   "pi": "Raymond J. Deshaies",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Proteasome inhibitor carfilzomib (Kyprolis)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Onyx Pharmaceuticals 2009",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Raymond_J._Deshaies"
+  },
+  {
+   "name": "Cleave Biosciences",
+   "year": "2011",
+   "pi": "Raymond J. Deshaies",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "p97 inhibitor CB-5083 for cancer",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Raymond_J._Deshaies"
+  },
+  {
+   "name": "Palamedrix",
+   "year": "",
+   "pi": "Paul Rothemund",
+   "silo": [
+    "diagnostics",
+    "tools-omics"
+   ],
+   "product": "DNA origami for drug development, disease detection and monitoring",
+   "builder": "Wilson Hill Ventures",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.caltech.edu/about/news/new-private-venture-funding-available-to-launch-caltech-startups"
+  },
+  {
+   "name": "DNATWO",
+   "year": "",
+   "pi": "Judith Campbell; Brian Stoltz",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "DNA2 inhibitors to selectively kill cancer cells",
+   "builder": "Wilson Hill Ventures",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.caltech.edu/about/news/new-private-venture-funding-available-to-launch-caltech-startups"
+  },
+  {
+   "name": "Port Therapeutics",
+   "year": "",
+   "pi": "Mikhail Shapiro",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Programmable, remotely controllable cell therapies",
+   "builder": "Wilson Hill Ventures",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.caltech.edu/about/news/new-private-venture-funding-available-to-launch-caltech-startups"
+  },
+  {
+   "name": "Aizen Therapeutics",
+   "year": "",
+   "pi": "David Van Valen",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "AI (DaX) designed oral D-peptide/noncanonical peptide drugs for immune disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://aizentx.com/"
+  },
+  {
+   "name": "Merge Labs",
+   "year": "",
+   "pi": "Mikhail Shapiro",
+   "silo": [],
+   "product": "Brain-computer interface research lab co-founded with Sam Altman",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://merge.io/"
+  }
+ ]
+}

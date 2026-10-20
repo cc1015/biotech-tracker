@@ -1,0 +1,484 @@
+{
+ "name": "NEA Healthcare (Life Sciences)",
+ "profile": {
+  "parent": "New Enterprise Associates (NEA)",
+  "type": "generalist-vc-bio-arm",
+  "hq": "Menlo Park, California, USA",
+  "founded": "",
+  "leadership": [
+   "Ali Behbahani, MD — Partner, Co-Head of Healthcare",
+   "Paul Walker — Partner, Co-Head of Healthcare",
+   "Mohamad Makhzoumi — Co-CEO (former Managing General Partner of Healthcare)",
+   "Edward Mathers — Partner, healthcare (biotech and specialty pharma)"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "",
+   "size_usd": null,
+   "year": ""
+  },
+  "model": "Multi-stage generalist whose healthcare team invests from seed and early-stage company formation through growth rounds, crossovers and public PIPEs in life sciences. Biopharma bets skew to clinical-stage small molecules and biologics in oncology, immunology and cardiometabolic disease, plus a growing set of AI-enabled drug developers (Xaira, Pathos) and global in-licensing platforms (Corxel, Avenzo).",
+  "summary": "NEA is among the largest venture investors in biopharma, with a long record of exits to big pharma (Tesaro to GSK, Akouos to Lilly, Inversago to Novo Nordisk, Verona to Merck). Its ability to fund companies from early rounds through PIPEs makes it a frequent anchor investor around IPOs.",
+  "website": "https://www.nea.com",
+  "sources": [
+   "https://www.nea.com/portfolio",
+   "https://www.nea.com/about",
+   "https://www.nea.com/team",
+   "https://www.nea.com/team/ali-behbahani-md",
+   "https://www.nea.com/team/paul-walker",
+   "https://www.nea.com/team/mohamad-makhzoumi",
+   "https://www.nea.com/team/ed-mathers",
+   "https://en.wikipedia.org/wiki/New_Enterprise_Associates"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Verona Pharma",
+   "launched": "2017",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Inhaled therapies for respiratory diseases such as COPD",
+   "status": "acquired",
+   "outcome": "acquired by Merck Sharp & Dohme",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/verona-pharma"
+  },
+  {
+   "name": "Tempus",
+   "launched": "2017",
+   "role": "participated",
+   "silo": [
+    "precision-data",
+    "diagnostics",
+    "ai-discovery"
+   ],
+   "product": "Molecular and clinical data platform with AI-driven diagnostics",
+   "status": "public",
+   "outcome": "IPO (NASDAQ: TEM)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/tempus"
+  },
+  {
+   "name": "Xaira Therapeutics",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI-first integrated drug discovery and development company",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/xaira-therapeutics"
+  },
+  {
+   "name": "Pathos",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "precision-data"
+   ],
+   "product": "AI-enabled precision oncology drug development via pharma partnerships",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/pathos"
+  },
+  {
+   "name": "Corxel",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Clinical-stage cardiometabolic therapies developed globally",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/corxel"
+  },
+  {
+   "name": "Ouro Medicines",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Cell-depleting 'immune reset' therapies for chronic immune diseases",
+   "status": "acquired",
+   "outcome": "acquired by Gilead",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/ouro"
+  },
+  {
+   "name": "Abcuro",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-KLRG1 antibody ulviprubart for inclusion body myositis",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/abcuro"
+  },
+  {
+   "name": "Avenzo Therapeutics",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "adc"
+   ],
+   "product": "In-licensed small-molecule and ADC oncology therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/avenzo"
+  },
+  {
+   "name": "Zenas BioPharma",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Immunology-focused therapeutics development and commercialization",
+   "status": "public",
+   "outcome": "IPO (NASDAQ: ZBIO)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/zenas-biopharma"
+  },
+  {
+   "name": "Cardurion Pharmaceuticals",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Next-generation drugs for cardiovascular disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/cardurion"
+  },
+  {
+   "name": "CHARM Therapeutics",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Resistance-robust next-generation menin inhibitor for AML",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/charm-therapeutics"
+  },
+  {
+   "name": "Orbis Medicines",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral macrocycle drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/orbis-medicines"
+  },
+  {
+   "name": "Tectora Therapeutics",
+   "launched": "2026",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral medicines for immune-mediated diseases",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/tectora"
+  },
+  {
+   "name": "RedRidge Bio",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [],
+   "product": "Therapies for cancer and autoimmune diseases",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/red-ridge-bio"
+  },
+  {
+   "name": "Tagworks Pharmaceuticals",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [
+    "adc"
+   ],
+   "product": "Click-to-release chemistry to widen therapeutic windows",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/tagworks"
+  },
+  {
+   "name": "Revelio Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Tumor-specific biologics for cancer",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/revelio"
+  },
+  {
+   "name": "Nexo Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small-molecule oncology drugs for underserved patients",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/nexo"
+  },
+  {
+   "name": "Inversago Pharma",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Peripherally acting CB1 inverse agonists for metabolic disease",
+   "status": "acquired",
+   "outcome": "acquired by Novo Nordisk",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/inversago"
+  },
+  {
+   "name": "Celcuity",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Molecularly targeted cancer drugs",
+   "status": "public",
+   "outcome": "public (NASDAQ: CELC)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/celcuity"
+  },
+  {
+   "name": "Stablix",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Targeted protein stabilization therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/stablix"
+  },
+  {
+   "name": "SpliceBio",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Protein-splicing gene therapies for large genes",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/splicebio"
+  },
+  {
+   "name": "858 Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "rna"
+   ],
+   "product": "Small molecules against RNA-regulating and innate immune proteins in cancer",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/858-therapeutics"
+  },
+  {
+   "name": "Monte Rosa Therapeutics",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "protein-degradation",
+    "small-molecule"
+   ],
+   "product": "Molecular glue degraders",
+   "status": "public",
+   "outcome": "IPO (NASDAQ: GLUE)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/monte-rosa-therapeutics"
+  },
+  {
+   "name": "Tune Therapeutics",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Epigenome-editing therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/tune-therapeutics"
+  },
+  {
+   "name": "MBX Biosciences",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [],
+   "product": "Therapies for rare endocrine diseases",
+   "status": "public",
+   "outcome": "IPO (NASDAQ: MBX)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/mbx-biosciences"
+  },
+  {
+   "name": "Korro Bio",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "rna",
+    "gene-editing"
+   ],
+   "product": "ADAR-based RNA editing therapeutics",
+   "status": "public",
+   "outcome": "merged with Frequency Therapeutics (NASDAQ: KRRO)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/korro"
+  },
+  {
+   "name": "Affinia Therapeutics",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Rationally designed AAV vectors and gene therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/affinia-therapeutics"
+  },
+  {
+   "name": "Tidal Therapeutics",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "rna",
+    "cell-therapy"
+   ],
+   "product": "mRNA nanoparticles reprogramming immune cells in vivo",
+   "status": "acquired",
+   "outcome": "acquired by Sanofi",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/tidal-therapeutics"
+  },
+  {
+   "name": "Acrivon Therapeutics",
+   "launched": "2018",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Proteomics-guided patient selection for targeted oncology drugs",
+   "status": "public",
+   "outcome": "IPO (NASDAQ: ACRV)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/acrivon-therapeutics"
+  },
+  {
+   "name": "Akouos",
+   "launched": "2017",
+   "role": "participated",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Gene therapies to restore and preserve hearing",
+   "status": "acquired",
+   "outcome": "IPO (NASDAQ: AKUS); acquired by Eli Lilly",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/akouos"
+  },
+  {
+   "name": "Arcellx",
+   "launched": "2015",
+   "role": "participated",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Controllable CAR-T cell therapies for cancer and autoimmunity",
+   "status": "acquired",
+   "outcome": "IPO (NASDAQ: ACLX); acquired by Gilead",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/arcellx"
+  },
+  {
+   "name": "CRISPR Therapeutics",
+   "launched": "2015",
+   "role": "participated",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "CRISPR-Cas9 gene-editing medicines",
+   "status": "public",
+   "outcome": "IPO (NASDAQ: CRSP)",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/crispr"
+  },
+  {
+   "name": "Tesaro",
+   "launched": "2010",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oncology therapeutics",
+   "status": "acquired",
+   "outcome": "IPO (NASDAQ: TSRO); acquired by GlaxoSmithKline",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/tesaro"
+  },
+  {
+   "name": "Ra Pharmaceuticals",
+   "launched": "2010",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Orally available macrocyclic peptide drugs",
+   "status": "acquired",
+   "outcome": "IPO (NASDAQ: RARX); acquired by UCB",
+   "outcome_value_usd": null,
+   "source": "https://www.nea.com/portfolio/ra-pharmaceuticals"
+  }
+ ]
+}

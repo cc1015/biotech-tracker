@@ -1,0 +1,492 @@
+{
+ "name": "Atlas Venture",
+ "profile": {
+  "type": "vc-company-creation",
+  "hq": "Cambridge, MA",
+  "founded": "1980",
+  "founders": [
+   "Michiel de Haan"
+  ],
+  "leadership": [
+   "Bruce Booth — Partner",
+   "Jean-François Formela — Partner",
+   "Kevin Bitterman — Partner",
+   "Michael Gladstone — Partner",
+   "David Grayzel — Partner",
+   "Jason Rhodes — Partner",
+   "Peter Barrett — Partner, Legacy Funds",
+   "Ommer Chohan — CFO"
+  ],
+  "aum_usd": 2700000000,
+  "latest_fund": {
+   "name": "Atlas Venture Fund XIV",
+   "size_usd": 450000000,
+   "year": "2024"
+  },
+  "model": "Atlas runs a seed-led model: partners and entrepreneurs-in-residence scout academic and pharma science, then incubate companies in-house with small seed tranches that are released as key experiments read out. Successful seeds graduate into Series A launches alongside syndicate partners, building both platform and single-asset companies.",
+  "summary": "Founded in Amsterdam in 1980 and biotech-only since 2014, Atlas is one of Boston's most consistent early-stage company builders, citing 92 startups launched from its incubator, 43 IPOs and 39 M&A exits. Partner Bruce Booth's LifeSciVC blog also makes it an influential voice on biotech venture practice.",
+  "website": "https://atlasventure.com",
+  "sources": [
+   "https://atlasventure.com/portfolio/",
+   "https://atlasventure.com/",
+   "https://atlasventure.com/discover/",
+   "https://atlasventure.com/team/",
+   "https://atlasventure.com/news/",
+   "https://en.wikipedia.org/wiki/Atlas_Venture",
+   "https://venturecapitaljournal.com/atlas-venture-closes-on-450m-for-oversubscribed-14th-fund"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Stromedix",
+   "launched": "2007",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-fibrosis antibody (anti-αvβ6)",
+   "status": "acquired",
+   "outcome": "Acquired by Biogen Idec 2012",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Nimbus Therapeutics",
+   "launched": "2009",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Computationally designed small molecules (sold TYK2 program to Takeda)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Arteaus Therapeutics",
+   "launched": "2011",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-CGRP antibody for migraine prevention",
+   "status": "acquired",
+   "outcome": "Acquired by Eli Lilly 2013",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Translate Bio",
+   "launched": "2011",
+   "silo": [
+    "rna"
+   ],
+   "product": "mRNA therapeutics and vaccines",
+   "status": "acquired",
+   "outcome": "IPO 2018; acquired by Sanofi 2021 for ~$3.2B",
+   "outcome_value_usd": 3200000000,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Synlogic",
+   "launched": "2014",
+   "silo": [
+    "synbio",
+    "microbiome"
+   ],
+   "product": "Engineered bacterial therapeutics",
+   "status": "merged",
+   "outcome": "Public 2017 via reverse merger (NASDAQ: SYBX); reverse-merged with Caldera 2026",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Surface Oncology",
+   "launched": "2014",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Antibodies targeting the tumor microenvironment",
+   "status": "acquired",
+   "outcome": "IPO 2018; acquired by Coherus 2023",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Delinia",
+   "launched": "2014",
+   "silo": [],
+   "product": "Treg-selective IL-2 biologic for autoimmunity",
+   "status": "acquired",
+   "outcome": "Acquired by Celgene 2017",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Padlock Therapeutics",
+   "launched": "2014",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "PAD4 inhibitors for autoimmune disease",
+   "status": "acquired",
+   "outcome": "Acquired by Bristol Myers Squibb 2016",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Intellia Therapeutics",
+   "launched": "2014",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "In vivo CRISPR gene-editing therapies",
+   "status": "public",
+   "outcome": "IPO 2016 (NASDAQ: NTLA)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Obsidian Therapeutics",
+   "launched": "2015",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Regulatable engineered cell therapies (TIL with membrane-bound IL-15)",
+   "status": "public",
+   "outcome": "IPO 2026 (NASDAQ: OBX)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Kymera Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "Small-molecule protein degraders for immunology",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: KYMR)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Generation Bio",
+   "launched": "2016",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Non-viral genetic medicines",
+   "status": "acquired",
+   "outcome": "IPO 2020; acquired by XOMA Royalty 2026",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Ikena Oncology",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Targeted oncology therapies",
+   "status": "merged",
+   "outcome": "IPO 2021; merged with Inmagene 2024",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Rodin Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Synaptic-integrity drugs for neurological disorders",
+   "status": "acquired",
+   "outcome": "Acquired by Alkermes 2019",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Disarm Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "SARM1 inhibitors to prevent axonal degeneration",
+   "status": "acquired",
+   "outcome": "Acquired by Eli Lilly 2020",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Disc Medicine",
+   "launched": "2017",
+   "silo": [
+    "small-molecule",
+    "antibody"
+   ],
+   "product": "Hematology drugs targeting heme biology (bitopertin)",
+   "status": "public",
+   "outcome": "Public 2022 via merger with Gemini (NASDAQ: IRON)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Dyne Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "rna",
+    "antibody"
+   ],
+   "product": "Antibody-oligonucleotide conjugates for muscle diseases",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: DYN)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "HotSpot Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Allosteric small molecules at regulatory 'hotspots'",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Accent Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision oncology targeting RNA-modifying and related proteins",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Q32 Bio",
+   "launched": "2017",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Immune-regulating biologics for autoimmune disease",
+   "status": "public",
+   "outcome": "Public 2024 via merger with Homology (NASDAQ: QTTB)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Day One Biopharmaceuticals",
+   "launched": "2018",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Targeted cancer drugs for children and adults (tovorafenib)",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: DAWN)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Korro Bio",
+   "launched": "2018",
+   "silo": [
+    "rna"
+   ],
+   "product": "RNA-editing oligonucleotide therapies",
+   "status": "public",
+   "outcome": "Public 2023 via merger with Frequency (NASDAQ: KRRO)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Arkuda Therapeutics",
+   "launched": "2019",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Progranulin/lysosomal drugs for neurodegeneration",
+   "status": "acquired",
+   "outcome": "Acquired by Johnson & Johnson 2025",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Vedere Bio",
+   "launched": "2019",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Optogenetic gene therapies for vision loss",
+   "status": "acquired",
+   "outcome": "Acquired by Novartis 2020",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Third Harmonic Bio",
+   "launched": "2019",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral KIT inhibitors for allergy and inflammation",
+   "status": "public",
+   "outcome": "IPO 2022 (NASDAQ: THRD)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Vigil Neuroscience",
+   "launched": "2020",
+   "silo": [
+    "antibody",
+    "small-molecule"
+   ],
+   "product": "TREM2-targeting microglial therapies for neurodegeneration",
+   "status": "acquired",
+   "outcome": "IPO 2022; acquired by Sanofi 2025",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Scorpion Therapeutics",
+   "launched": "2020",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Mutant-selective precision oncology; PI3Kα inhibitor STX-478",
+   "status": "acquired",
+   "outcome": "Acquired by Eli Lilly 2025 for up to $2.5B",
+   "outcome_value_usd": 2500000000,
+   "source": "https://www.businesswire.com/news/home/20250610961759/en/Antares-Therapeutics-Launches-with-$177-Million-to-Develop-First-in-Class-Precision-Medicines-for-Cancer-and-Other-Serious-Diseases"
+  },
+  {
+   "name": "Mariana Oncology",
+   "launched": "2021",
+   "silo": [
+    "radiopharma"
+   ],
+   "product": "Precision radioligand therapies for solid tumors",
+   "status": "acquired",
+   "outcome": "Acquired by Novartis 2024 for $1B upfront (up to $1.75B)",
+   "outcome_value_usd": 1000000000,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "nChroma Bio",
+   "launched": "2024",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Epigenetic editing with in vivo delivery (Chroma + Nvelop merger)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Matchpoint Therapeutics",
+   "launched": "2022",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision covalent medicines for immune diseases",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Rectify Pharmaceuticals",
+   "launched": "",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "ABC transporter positive modulators for genetic diseases",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Remix Therapeutics",
+   "launched": "",
+   "silo": [
+    "rna",
+    "small-molecule"
+   ],
+   "product": "Small molecules that reprogram RNA processing",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  },
+  {
+   "name": "Judo Bio",
+   "launched": "2024",
+   "silo": [
+    "rna"
+   ],
+   "product": "Kidney-targeted siRNA conjugates (STRIKE platform)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.businesswire.com/news/home/20241007110284/en/Judo-Bio-Launches-with-100-Million-Financing-to-Develop-Oligonucleotide-Therapies-Delivered-to-the-Kidney-and-Appoints-Rajiv-Patni-as-CEO"
+  },
+  {
+   "name": "Kailera Therapeutics",
+   "launched": "2024",
+   "silo": [],
+   "product": "Injectable and oral incretin drugs for obesity",
+   "status": "public",
+   "outcome": "IPO 2026 (NASDAQ: KLRA)",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Antares Therapeutics",
+   "launched": "2025",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Precision oncology pipeline spun out of Scorpion",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.businesswire.com/news/home/20250610961759/en/Antares-Therapeutics-Launches-with-$177-Million-to-Develop-First-in-Class-Precision-Medicines-for-Cancer-and-Other-Serious-Diseases"
+  },
+  {
+   "name": "Caldera Therapeutics",
+   "launched": "2025",
+   "silo": [
+    "antibody"
+   ],
+   "product": "IL-23p19/TL1A bispecific antibody CLD-423 for IBD",
+   "status": "public",
+   "outcome": "Public 2026 via reverse merger with Synlogic (Nasdaq)",
+   "outcome_value_usd": null,
+   "source": "https://www.fiercebiotech.com/biotech/caldera-launches-112m-former-morphic-ceo-and-ibd-drug-china",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Vima Therapeutics",
+   "launched": "2026",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral therapies for dystonia and other movement disorders",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://atlasventure.com/portfolio/"
+  }
+ ]
+}

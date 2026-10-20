@@ -1,0 +1,564 @@
+{
+ "name": "University of Cambridge",
+ "profile": {
+  "city": "Cambridge, United Kingdom",
+  "type": "university",
+  "tech_transfer": "Cambridge Enterprise (incl. Cambridge Enterprise Ventures); MRC LMB spinouts handled by LGC for the MRC",
+  "tech_transfer_url": "https://www.enterprise.cam.ac.uk/",
+  "summary": "Cambridge and the neighbouring MRC Laboratory of Molecular Biology seeded several of the UK's defining biotechs, from phage-display antibodies (CAT, Humira) to Solexa sequencing, fragment-based drug discovery (Astex) and the PARP inhibitor olaparib (KuDOS). It remains one of Europe's most prolific spinout generators, forming 20 new companies in FY2024-25 and holding a 196-company cash-and-equity portfolio.",
+  "programs": [
+   "Founders at the University of Cambridge (SYNC, SPARK, START)",
+   "Cambridge Enterprise Ventures",
+   "University Venture Fund",
+   "University Discovery Fund",
+   "University of Cambridge Enterprise Fund (UCEF)",
+   "Technology Investment Fund",
+   "ideaSpace",
+   "Cambridge Innovation Capital (£100m commitment to university spinouts)",
+   "Milner Therapeutics Institute bio-incubator"
+  ],
+  "website": "https://www.cam.ac.uk/",
+  "sources": [
+   "https://www.enterprise.cam.ac.uk/",
+   "https://www.enterprise.cam.ac.uk/about/our-performance",
+   "https://www.enterprise.cam.ac.uk/venture-building-investment/our-funds/",
+   "https://www.enterprise.cam.ac.uk/venture-building-investment/founders-at-the-university-of-cambridge/",
+   "https://www.enterprise.cam.ac.uk/news/cambridge-leads-in-spinouts-success-in-2024-new-report-reveals/",
+   "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Sir Greg Winter",
+   "lab": "MRC Laboratory of Molecular Biology; Trinity College",
+   "known_for": "Antibody humanisation and phage display; bicyclic peptides",
+   "silo": [
+    "antibody",
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Gregory_Winter"
+  },
+  {
+   "pi": "Shankar Balasubramanian",
+   "lab": "Yusuf Hamied Department of Chemistry; CRUK Cambridge Institute",
+   "known_for": "Solexa/Illumina sequencing-by-synthesis; epigenetic base sequencing",
+   "silo": [
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Shankar_Balasubramanian"
+  },
+  {
+   "pi": "Steve Jackson",
+   "lab": "Gurdon Institute (CRUK Laboratories)",
+   "known_for": "DNA damage response; PARP inhibitor olaparib; DUB inhibitors",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://www.cam.ac.uk/stories/manonamission"
+  },
+  {
+   "pi": "Tony Kouzarides",
+   "lab": "Gurdon Institute",
+   "known_for": "Chromatin and epigenetics in cancer; RNA-modifying enzymes",
+   "silo": [
+    "small-molecule",
+    "rna"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Tony_Kouzarides"
+  },
+  {
+   "pi": "Sir Tom Blundell & Chris Abell",
+   "lab": "Department of Biochemistry / Department of Chemistry",
+   "known_for": "Structure-guided, fragment-based drug discovery",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Astex_Pharmaceuticals"
+  },
+  {
+   "pi": "Richard Henderson & Chris Tate",
+   "lab": "MRC Laboratory of Molecular Biology, Structural Studies",
+   "known_for": "Stabilised GPCRs for structure-based drug design",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "pi": "Jason Chin",
+   "lab": "MRC Laboratory of Molecular Biology",
+   "known_for": "Genetic code expansion; synthetic recoded genomes",
+   "silo": [
+    "synbio"
+   ],
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "pi": "Tuomas Knowles",
+   "lab": "Yusuf Hamied Department of Chemistry; Cavendish Laboratory",
+   "known_for": "Microfluidics and biomolecular condensate drug discovery",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "source": "https://www.enterprise.cam.ac.uk/news/joint-harvard-cambridge-spin-out-closes-50m-series-a-to-drive-biomolecular-condensate-drug-discovery/"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Cambridge Antibody Technology",
+   "year": "1989",
+   "pi": "Greg Winter (MRC LMB)",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Phage-display human antibodies; technology behind adalimumab (Humira)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by AstraZeneca 2006 for £702M",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Cambridge_Antibody_Technology"
+  },
+  {
+   "name": "Abcam",
+   "year": "1998",
+   "pi": "Tony Kouzarides (with Jonathan Milner, postdoc in his lab)",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Online supplier of research antibodies and assay reagents",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Danaher 2023 for ~$5.7B",
+   "outcome_value_usd": 5700000000,
+   "source": "https://en.wikipedia.org/wiki/Abcam"
+  },
+  {
+   "name": "Solexa",
+   "year": "1998",
+   "pi": "Shankar Balasubramanian, David Klenerman",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Sequencing-by-synthesis next-generation DNA sequencing",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Illumina 2007 for ~$650M",
+   "outcome_value_usd": 650000000,
+   "source": "https://en.wikipedia.org/wiki/Solexa"
+  },
+  {
+   "name": "KuDOS Pharmaceuticals",
+   "year": "1997",
+   "pi": "Steve Jackson",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "DNA-repair drugs; originated PARP inhibitor olaparib (Lynparza)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by AstraZeneca 2006 for $210M",
+   "outcome_value_usd": 210000000,
+   "source": "https://www.cam.ac.uk/stories/olaparib-cancer-drug-steve-jackson"
+  },
+  {
+   "name": "Astex Therapeutics",
+   "year": "1999",
+   "pi": "Tom Blundell, Chris Abell",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Fragment-based, crystallography-driven small-molecule drug discovery",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "merged with SuperGen 2011 (NASDAQ: ASTX); acquired by Otsuka 2013 for ~$900M",
+   "outcome_value_usd": 900000000,
+   "source": "https://en.wikipedia.org/wiki/Astex_Pharmaceuticals"
+  },
+  {
+   "name": "Domantis",
+   "year": "2000",
+   "pi": "Greg Winter, Ian Tomlinson (MRC LMB)",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Domain antibodies (dAbs), smallest functional human antibody fragments",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by GSK 2006 for £230M ($454M)",
+   "outcome_value_usd": 454000000,
+   "source": "https://www.investegate.co.uk/announcement/rns/gsk--gsk/acquisition-of-domantis/926509"
+  },
+  {
+   "name": "Heptares Therapeutics",
+   "year": "2007",
+   "pi": "Richard Henderson, Chris Tate (MRC LMB)",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Structure-based drugs against stabilised GPCRs",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Sosei 2015 for up to $400M ($180M upfront); now Nxera Pharma UK",
+   "outcome_value_usd": 400000000,
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "name": "Bicycle Therapeutics",
+   "year": "2009",
+   "pi": "Greg Winter (MRC LMB), with Christian Heinis",
+   "silo": [
+    "small-molecule",
+    "adc"
+   ],
+   "product": "Bicyclic peptide therapeutics and conjugates for cancer",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "name": "Mission Therapeutics",
+   "year": "2011",
+   "pi": "Steve Jackson",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "DUB inhibitors (USP30) for Parkinson's and kidney disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.cam.ac.uk/stories/manonamission"
+  },
+  {
+   "name": "Cambridge Epigenetix (now biomodal)",
+   "year": "2013",
+   "pi": "Shankar Balasubramanian",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "duet multiomics: genetic plus 5mC/5hmC epigenetic sequencing",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://biomodal.com/about/"
+  },
+  {
+   "name": "STORM Therapeutics",
+   "year": "",
+   "pi": "Tony Kouzarides",
+   "silo": [
+    "small-molecule",
+    "rna"
+   ],
+   "product": "Small-molecule inhibitors of RNA-modifying enzymes for cancer",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Tony_Kouzarides"
+  },
+  {
+   "name": "Adrestia Therapeutics",
+   "year": "",
+   "pi": "Steve Jackson",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Disease Rebalancing platform for genetic disease drug discovery",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.cam.ac.uk/stories/manonamission"
+  },
+  {
+   "name": "bit.bio",
+   "year": "2016",
+   "pi": "Mark Kotter",
+   "silo": [
+    "cell-therapy",
+    "tools-omics"
+   ],
+   "product": "opti-ox reprogramming of iPSCs into defined human cell types",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.bit.bio/about-us"
+  },
+  {
+   "name": "DIOSynVax",
+   "year": "2017",
+   "pi": "Jonathan Heeney",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Computationally designed broad vaccines (haemorrhagic fever, coronavirus)",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/university-of-cambridge-and-diosynvax-awarded-4-28-m-to-advance-broadly-protective-haemorrhagic-fever-vaccine/"
+  },
+  {
+   "name": "PepGen",
+   "year": "2018",
+   "pi": "Mike Gait (MRC LMB)",
+   "silo": [
+    "rna"
+   ],
+   "product": "Cell-penetrating peptide-conjugated oligonucleotides for neuromuscular disease",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "name": "Morphogen-IX",
+   "year": "",
+   "pi": "Nick Morrell",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Engineered BMP9 protein (MGX292) for pulmonary arterial hypertension",
+   "builder": "",
+   "status": "merged",
+   "outcome": "folded into Centessa Pharmaceuticals 2021",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/spin-morphogen-ix-raises-18-4m-series-b-financing/"
+  },
+  {
+   "name": "Z Factor",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Lung disease treatment programme",
+   "builder": "",
+   "status": "merged",
+   "outcome": "folded into Centessa Pharmaceuticals 2021",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/three-cambridge-spin-outs-join-centessa-pharmaceuticals-launched-today-with-a-250m-series-a-round/"
+  },
+  {
+   "name": "ApcinteX",
+   "year": "",
+   "pi": "",
+   "silo": [],
+   "product": "",
+   "builder": "",
+   "status": "merged",
+   "outcome": "folded into Centessa Pharmaceuticals 2021",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/three-cambridge-spin-outs-join-centessa-pharmaceuticals-launched-today-with-a-250m-series-a-round/"
+  },
+  {
+   "name": "Transition Bio",
+   "year": "2020",
+   "pi": "Tuomas Knowles (with Harvard's David Weitz)",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Microfluidics + AI platform targeting biomolecular condensates",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/joint-harvard-cambridge-spin-out-closes-50m-series-a-to-drive-biomolecular-condensate-drug-discovery/"
+  },
+  {
+   "name": "Semarion",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "SemaCyte optically barcoded cell microcarriers for assays",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/semarion-secures-3-8-million-to-scale-next-generation-cell-assay-technology-and-accelerate-pharma-adoption/"
+  },
+  {
+   "name": "Spirea",
+   "year": "",
+   "pi": "Myriam Ouberai (Nanoscience Centre)",
+   "silo": [
+    "adc"
+   ],
+   "product": "High drug-to-antibody-ratio ADCs for solid tumours",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/cambridge-enterprise-co-leads-2-4m-investment-in-spin-out-developing-adc-cancer-therapeutics/"
+  },
+  {
+   "name": "Pretzel Therapeutics",
+   "year": "2022",
+   "pi": "Michal Minczuk (MRC Mitochondrial Biology Unit)",
+   "silo": [
+    "gene-editing",
+    "small-molecule"
+   ],
+   "product": "Mitochondrial genome editing and small-molecule mitochondrial modulators",
+   "builder": "ARCH Venture Partners",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/cambridge-joins-72-5m-round-launching-mitochondrial-therapies-pioneer-pretzel/"
+  },
+  {
+   "name": "Constructive Bio",
+   "year": "2022",
+   "pi": "Jason Chin (MRC LMB)",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Recoded cells using non-canonical amino acids for new biomolecules",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "name": "Concr",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "precision-data",
+    "ai-discovery"
+   ],
+   "product": "FarrSight cancer-patient digital twins predicting treatment response",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/independent-test-shows-concrs-digital-twins-predict-whether-chemotherapy-will-control-a-patients-pancreatic-cancer/"
+  },
+  {
+   "name": "T-Therapeutics",
+   "year": "",
+   "pi": "Allan Bradley (Department of Medicine)",
+   "silo": [
+    "antibody",
+    "cell-therapy"
+   ],
+   "product": "OpTiMus human TCRs; TCR-CD3 bispecifics for cancer and autoimmunity",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/next-gen-cancer-therapies-lands-48-million-for-t-therapeutics/"
+  },
+  {
+   "name": "RNAvate",
+   "year": "2023",
+   "pi": "Venki Ramakrishnan (MRC LMB)",
+   "silo": [
+    "rna"
+   ],
+   "product": "Novel RNA medicines",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "name": "Sortera Bio",
+   "year": "2023",
+   "pi": "Philipp Holliger (MRC LMB)",
+   "silo": [
+    "antibody",
+    "ai-discovery"
+   ],
+   "product": "Deep screening technology for biologics discovery",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://mrclmb.ac.uk/achievements/commercial-activities/"
+  },
+  {
+   "name": "TRIMTECH Therapeutics",
+   "year": "2024",
+   "pi": "Leo James (MRC LMB), Will McEwan (UK DRI at Cambridge)",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "TRIM21-based aggregate-selective degraders for Alzheimer's, Huntington's",
+   "builder": "Cambridge Innovation Capital; Dementia Discovery Fund",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/trimtech-therapeutics-raises-31m-seed-funding-to-advance-targeted-protein-degradation/"
+  },
+  {
+   "name": "De la Roche (superkiller CAR-T project)",
+   "year": "",
+   "pi": "Maike de la Roche (CRUK CI), Marc de la Roche (Biochemistry)",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "LGR5-targeted 'superkiller' CAR-T for colorectal and liver cancer",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/de-la-roche-secures-funding-to-develop-new-immunotherapy-targeting-colorectal-and-liver-cancers/"
+  },
+  {
+   "name": "CamGene Therapeutics",
+   "year": "",
+   "pi": "Manohar Bance, Matthew Smith",
+   "silo": [
+    "rna"
+   ],
+   "product": "LNP-delivered RNA therapeutics for hearing loss",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/camgene-therapeutics-announces-seed-round-to-advance-rna-therapeutics-for-hearing-loss/"
+  },
+  {
+   "name": "Houdini Bio",
+   "year": "2025",
+   "pi": "Jonathan Cohen-Gold (building on Paul Lehner's HUSH work, Dept of Medicine)",
+   "silo": [
+    "gene-therapy",
+    "ai-discovery"
+   ],
+   "product": "ML redesign of therapeutic DNA to evade HUSH silencing",
+   "builder": "Deep Science Ventures",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/houdini-bio-raises-1-5m-to-tackle-gene-therapy-durability-challenges/"
+  },
+  {
+   "name": "Immutrin",
+   "year": "",
+   "pi": "Mark Pepys, Greg Winter, Daniel Christ",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Amyloid-fibril-depleting antibody for ATTR cardiomyopathy",
+   "builder": "Cambridge Innovation Capital",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.enterprise.cam.ac.uk/news/immutrin-raises-65-million-series-a/"
+  }
+ ]
+}

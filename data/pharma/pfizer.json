@@ -1,0 +1,492 @@
+{
+ "company": "Pfizer",
+ "profile": {
+  "legal_name": "Pfizer Inc.",
+  "hq": "New York City, United States",
+  "founded": "1849",
+  "founders_or_origin": "Charles Pfizer and Charles Erhart, fine-chemicals business in Brooklyn",
+  "ceo": "Albert Bourla",
+  "ceo_since": "2019",
+  "ticker": "NYSE:PFE",
+  "website": "https://www.pfizer.com",
+  "revenue_usd": 62580000000,
+  "revenue_year": "2025",
+  "employees": 75000,
+  "employees_year": "2025",
+  "therapeutic_areas": [
+   "Oncology",
+   "Vaccines",
+   "Internal medicine (cardiovascular and metabolic, including obesity)",
+   "Inflammation and immunology",
+   "Anti-infectives",
+   "Hematology and rare disease"
+  ],
+  "top_products": [
+   {
+    "name": "Eliquis",
+    "what": "Anticoagulant for stroke and clot prevention",
+    "revenue_usd": 7900000000,
+    "year": "2025"
+   },
+   {
+    "name": "Prevnar family",
+    "what": "Pneumococcal conjugate vaccine",
+    "revenue_usd": 6500000000,
+    "year": "2025"
+   },
+   {
+    "name": "Vyndaqel family",
+    "what": "Transthyretin amyloid cardiomyopathy",
+    "revenue_usd": 6400000000,
+    "year": "2025"
+   },
+   {
+    "name": "Comirnaty",
+    "what": "COVID-19 mRNA vaccine (with BioNTech)",
+    "revenue_usd": 4400000000,
+    "year": "2025"
+   },
+   {
+    "name": "Ibrance",
+    "what": "HR+/HER2- metastatic breast cancer",
+    "revenue_usd": 4100000000,
+    "year": "2025"
+   },
+   {
+    "name": "Paxlovid",
+    "what": "Oral COVID-19 antiviral",
+    "revenue_usd": 2400000000,
+    "year": "2025"
+   }
+  ],
+  "venture_arm": {
+   "name": "Pfizer Ventures (Pfizer Venture Investments)",
+   "founded": "",
+   "fund_size_usd": 1000000000,
+   "url": "https://www.pfizer.com/about/partners/venture-investments",
+   "notable_investments": [
+    "Cortexyme",
+    "Neuronetics",
+    "eFFECTOR Therapeutics",
+    "Jnana Therapeutics",
+    "Strata Oncology",
+    "Autifony"
+   ]
+  },
+  "summary": "Pfizer is a New York-based drugmaker that grew into one of the world's largest pharma companies through mega-deals for Warner-Lambert, Pharmacia and Wyeth, and later Hospira and Seagen. Over the 2010s it shed animal health (Zoetis), off-patent brands (Upjohn, now part of Viatris), nutrition and consumer health to concentrate on innovative medicines and vaccines.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pfizer",
+   "https://www.biospace.com/pfizer-to-expand-venture-investing-with-600-million-commitment-to-pfizer-ventures",
+   "https://pharmaphorum.com/news/pfizer-expands-venture-arm-cash-boost/"
+  ]
+ },
+ "events": [
+  {
+   "year": "1985",
+   "type": "acquisition",
+   "counterparty": "G. D. Searle & Company",
+   "via": "Pharmacia",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Monsanto bought Searle, the drug business that later developed Celebrex and passed into Pharmacia.",
+   "source": "https://en.wikipedia.org/wiki/G._D._Searle_%26_Company"
+  },
+  {
+   "year": "1989",
+   "type": "acquisition",
+   "counterparty": "A.H. Robins",
+   "via": "Wyeth",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "American Home Products bought A.H. Robins, bringing Robitussin, ChapStick and Dimetapp.",
+   "source": "https://en.wikipedia.org/wiki/Wyeth"
+  },
+  {
+   "year": "1994",
+   "type": "acquisition",
+   "counterparty": "American Cyanamid",
+   "via": "Wyeth",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "AHP acquired American Cyanamid and its Lederle unit, gaining Centrum and Lederle vaccines.",
+   "source": "https://en.wikipedia.org/wiki/Wyeth"
+  },
+  {
+   "year": "1995",
+   "type": "merger",
+   "counterparty": "Upjohn",
+   "via": "Pharmacia",
+   "result": "Pharmacia & Upjohn",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Sweden's Pharmacia AB combined with US-based Upjohn to form Pharmacia & Upjohn.",
+   "source": "https://en.wikipedia.org/wiki/Pharmacia_%26_Upjohn"
+  },
+  {
+   "year": "1997",
+   "type": "joint-venture",
+   "counterparty": "Warner-Lambert",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Pfizer agreed to co-market Warner-Lambert's cholesterol drug Lipitor, the alliance that later motivated its takeover bid.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "1999",
+   "type": "acquisition",
+   "counterparty": "Agouron Pharmaceuticals",
+   "via": "Warner-Lambert",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Warner-Lambert acquired Agouron, maker of the HIV protease inhibitor Viracept.",
+   "source": "https://en.wikipedia.org/wiki/Warner%E2%80%93Lambert"
+  },
+  {
+   "year": "1999",
+   "type": "merger",
+   "counterparty": "American Home Products",
+   "via": "Warner-Lambert",
+   "result": "",
+   "value_usd": null,
+   "status": "terminated",
+   "description": "Planned Warner-Lambert/AHP merger collapsed after Pfizer's rival bid; AHP collected a $1.8B break fee.",
+   "source": "https://en.wikipedia.org/wiki/Warner%E2%80%93Lambert"
+  },
+  {
+   "year": "2000",
+   "type": "acquisition",
+   "counterparty": "Warner-Lambert",
+   "via": "",
+   "result": "",
+   "value_usd": 90200000000,
+   "status": "completed",
+   "description": "Hostile-turned-agreed takeover of Warner-Lambert, gaining full ownership of Lipitor and Parke-Davis; outbid American Home Products.",
+   "source": "https://en.wikipedia.org/wiki/Warner%E2%80%93Lambert"
+  },
+  {
+   "year": "2000",
+   "type": "merger",
+   "counterparty": "Monsanto",
+   "via": "Pharmacia",
+   "result": "Pharmacia Corporation",
+   "value_usd": 27000000000,
+   "status": "completed",
+   "description": "Pharmacia & Upjohn merged with Monsanto (agreed December 1999), keeping Searle and renaming itself Pharmacia.",
+   "source": "https://en.wikipedia.org/wiki/Monsanto"
+  },
+  {
+   "year": "2000",
+   "type": "spin-off",
+   "counterparty": "Monsanto agricultural business",
+   "via": "Pharmacia",
+   "result": "Monsanto Company (new)",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Pharmacia separated Monsanto's agro-biotech operations into a new standalone Monsanto.",
+   "source": "https://en.wikipedia.org/wiki/Monsanto"
+  },
+  {
+   "year": "2002",
+   "type": "rename",
+   "counterparty": "American Home Products",
+   "via": "Wyeth",
+   "result": "Wyeth",
+   "value_usd": null,
+   "status": "completed",
+   "description": "American Home Products renamed itself Wyeth in March 2002.",
+   "source": "https://en.wikipedia.org/wiki/Wyeth"
+  },
+  {
+   "year": "2003",
+   "type": "acquisition",
+   "counterparty": "Pharmacia",
+   "via": "",
+   "result": "",
+   "value_usd": 56000000000,
+   "status": "completed",
+   "description": "All-stock purchase of Pharmacia, closed April 2003, mainly to secure Celebrex and the Searle portfolio.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000078003/000007800303000172/q2-031pfe.htm"
+  },
+  {
+   "year": "2004",
+   "type": "spin-off",
+   "counterparty": "Abbott Laboratories",
+   "via": "Hospira",
+   "result": "Hospira",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Abbott spun off its hospital products division as independent Hospira in May 2004.",
+   "source": "https://en.wikipedia.org/wiki/Hospira"
+  },
+  {
+   "year": "2009",
+   "type": "acquisition",
+   "counterparty": "Wyeth",
+   "via": "",
+   "result": "",
+   "value_usd": 68000000000,
+   "status": "completed",
+   "description": "Cash-and-stock takeover of Wyeth, closed October 2009, adding vaccines (Prevnar), biologics and consumer brands.",
+   "source": "https://en.wikipedia.org/wiki/Wyeth"
+  },
+  {
+   "year": "2011",
+   "type": "acquisition",
+   "counterparty": "King Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 3600000000,
+   "status": "completed",
+   "description": "Bought King Pharmaceuticals, adding its pain-medicine franchise.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2011",
+   "type": "divestiture",
+   "counterparty": "Kohlberg Kravis Roberts",
+   "via": "",
+   "result": "Capsugel (KKR)",
+   "value_usd": 2375000000,
+   "status": "completed",
+   "description": "Sold the Capsugel capsule-manufacturing business to a KKR affiliate; closed August 2011.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000078003/000115752311004964/a6825454.htm"
+  },
+  {
+   "year": "2012",
+   "type": "divestiture",
+   "counterparty": "Nestlé",
+   "via": "",
+   "result": "Nestlé (Wyeth Nutrition)",
+   "value_usd": 11850000000,
+   "status": "completed",
+   "description": "Agreed to sell the infant nutrition business inherited from Wyeth to Nestlé for cash.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000078003/000007800312000003/x99423.htm"
+  },
+  {
+   "year": "2013",
+   "type": "spin-off",
+   "counterparty": "Pfizer Animal Health",
+   "via": "",
+   "result": "Zoetis",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Animal health unit IPO'd as Zoetis in February 2013 (raising $2.2B); Pfizer exited its remaining stake by June.",
+   "source": "https://en.wikipedia.org/wiki/Zoetis"
+  },
+  {
+   "year": "2015",
+   "type": "acquisition",
+   "counterparty": "Hospira",
+   "via": "",
+   "result": "",
+   "value_usd": 17000000000,
+   "status": "completed",
+   "description": "Acquired sterile injectables and biosimilars maker Hospira, closed September 2015.",
+   "source": "https://en.wikipedia.org/wiki/Hospira"
+  },
+  {
+   "year": "2016",
+   "type": "merger",
+   "counterparty": "Allergan",
+   "via": "",
+   "result": "",
+   "value_usd": 160000000000,
+   "status": "terminated",
+   "description": "Planned tax-inversion merger with Allergan was called off in April 2016 after new US Treasury rules.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2016",
+   "type": "acquisition",
+   "counterparty": "Anacor Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 5200000000,
+   "status": "completed",
+   "description": "Bought Anacor for its topical eczema drug crisaborole (Eucrisa).",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2016",
+   "type": "acquisition",
+   "counterparty": "Medivation",
+   "via": "",
+   "result": "",
+   "value_usd": 14000000000,
+   "status": "completed",
+   "description": "Acquired Medivation for its prostate cancer drug Xtandi.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2016",
+   "type": "acquisition",
+   "counterparty": "AstraZeneca (small-molecule antibiotics business)",
+   "via": "",
+   "result": "",
+   "value_usd": 1575000000,
+   "status": "completed",
+   "description": "Bought AstraZeneca's late-stage small-molecule antibiotics business outside the US, up to $1.575B.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2018",
+   "type": "venture-arm",
+   "counterparty": "Pfizer Ventures",
+   "via": "",
+   "result": "",
+   "value_usd": 600000000,
+   "status": "completed",
+   "description": "Committed an extra $600M to Pfizer Ventures, lifting its assets under management above $1B.",
+   "source": "https://www.biospace.com/pfizer-to-expand-venture-investing-with-600-million-commitment-to-pfizer-ventures"
+  },
+  {
+   "year": "2018",
+   "type": "joint-venture",
+   "counterparty": "BioNTech",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "mRNA flu vaccine collaboration with BioNTech, the partnership that later produced Comirnaty.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2018",
+   "type": "acquisition",
+   "counterparty": "Cascadian Therapeutics",
+   "via": "Seagen",
+   "result": "",
+   "value_usd": 614000000,
+   "status": "completed",
+   "description": "Seattle Genetics bought Cascadian for tucatinib, later approved as Tukysa.",
+   "source": "https://en.wikipedia.org/wiki/Seagen"
+  },
+  {
+   "year": "2019",
+   "type": "acquisition",
+   "counterparty": "Array BioPharma",
+   "via": "",
+   "result": "",
+   "value_usd": 10640000000,
+   "status": "completed",
+   "description": "Acquired Array for its BRAF/MEK melanoma and colorectal cancer drugs Braftovi and Mektovi.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2019",
+   "type": "joint-venture",
+   "counterparty": "GlaxoSmithKline",
+   "via": "",
+   "result": "GSK Consumer Healthcare (later Haleon)",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Combined consumer health with GSK's in a JV, about 68% GSK and 32% Pfizer.",
+   "source": "https://en.wikipedia.org/wiki/Haleon"
+  },
+  {
+   "year": "2020",
+   "type": "spin-off",
+   "counterparty": "Mylan",
+   "via": "",
+   "result": "Viatris",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Off-patent Upjohn unit was spun off and merged with Mylan via Reverse Morris Trust, forming Viatris.",
+   "source": "https://en.wikipedia.org/wiki/Viatris"
+  },
+  {
+   "year": "2021",
+   "type": "acquisition",
+   "counterparty": "Trillium Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 2300000000,
+   "status": "completed",
+   "description": "Bought Trillium for its CD47-targeting blood cancer immunotherapies.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2022",
+   "type": "acquisition",
+   "counterparty": "Arena Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 6700000000,
+   "status": "completed",
+   "description": "Acquired Arena for etrasimod, an oral drug for ulcerative colitis.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2022",
+   "type": "acquisition",
+   "counterparty": "Biohaven Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 11600000000,
+   "status": "completed",
+   "description": "Acquired Biohaven's CGRP migraine franchise, including Nurtec ODT.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2022",
+   "type": "acquisition",
+   "counterparty": "Global Blood Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 5400000000,
+   "status": "completed",
+   "description": "Bought Global Blood Therapeutics to enter sickle cell disease.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2022",
+   "type": "spin-off",
+   "counterparty": "GlaxoSmithKline",
+   "via": "",
+   "result": "Haleon",
+   "value_usd": null,
+   "status": "completed",
+   "description": "The GSK-Pfizer consumer JV was demerged and listed in London as Haleon in July 2022.",
+   "source": "https://en.wikipedia.org/wiki/Haleon"
+  },
+  {
+   "year": "2023",
+   "type": "acquisition",
+   "counterparty": "Seagen",
+   "via": "",
+   "result": "",
+   "value_usd": 43000000000,
+   "status": "completed",
+   "description": "Acquired antibody-drug conjugate leader Seagen; closed December 2023.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  },
+  {
+   "year": "2025",
+   "type": "divestiture",
+   "counterparty": "Haleon (institutional investors)",
+   "via": "",
+   "result": "",
+   "value_usd": 3240000000,
+   "status": "completed",
+   "description": "Sold its entire remaining Haleon stake, exiting consumer health.",
+   "source": "https://en.wikipedia.org/wiki/Haleon"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Metsera",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Won a bidding war with Novo Nordisk for obesity biotech Metsera, reportedly over $10B.",
+   "source": "https://en.wikipedia.org/wiki/Pfizer"
+  }
+ ]
+}

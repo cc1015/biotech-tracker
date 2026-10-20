@@ -1,0 +1,664 @@
+{
+ "name": "Flagship Pioneering",
+ "profile": {
+  "type": "venture-studio",
+  "hq": "Cambridge, MA",
+  "founded": "2000",
+  "founders": [
+   "Noubar Afeyan",
+   "Ed Kania"
+  ],
+  "leadership": [
+   "Noubar Afeyan — Founder & CEO"
+  ],
+  "aum_usd": 14000000000,
+  "latest_fund": {
+   "name": "Flagship Fund VIII",
+   "size_usd": 2600000000,
+   "year": "2024"
+  },
+  "model": "Flagship originates companies entirely in-house: small partner-led teams pose speculative 'what if' questions, run stealth explorations, and spin promising ones into ProtoCos and then NewCos that Flagship funds and staffs itself before bringing in outside investors. It launches roughly 6–8 companies a year around bioplatforms and patentable white space, and increasingly applies the model beyond human health to agriculture and AI.",
+  "summary": "Flagship is the archetypal biotech venture studio, having originated 120+ companies including Moderna and producing about 25 IPOs since 2013. With roughly $14B under management and newer bets like Lila Sciences and Generate:Biomedicines, it sets the template for AI-era company creation.",
+  "website": "https://www.flagshippioneering.com",
+  "sources": [
+   "https://www.flagshippioneering.com/companies",
+   "https://www.flagshippioneering.com/companies?status=past",
+   "https://www.flagshippioneering.com/about",
+   "https://en.wikipedia.org/wiki/Flagship_Pioneering",
+   "https://www.fiercebiotech.com/biotech/flagship-brings-26b-8th-fund-another-1b-coming-other-projects",
+   "https://www.biospace.com/article/vc-firm-flagship-pioneering-raises-3-6b-to-create-support-25-breakthrough-companies/"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Moderna",
+   "launched": "2010",
+   "silo": [
+    "rna"
+   ],
+   "product": "mRNA vaccines and therapeutics (Spikevax COVID-19 vaccine)",
+   "status": "public",
+   "outcome": "IPO 2018 (NASDAQ: MRNA)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Generate:Biomedicines",
+   "launched": "2018",
+   "silo": [
+    "ai-discovery",
+    "antibody"
+   ],
+   "product": "Generative AI-designed protein and antibody therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Lila Sciences",
+   "launched": "2023",
+   "silo": [
+    "foundation-models",
+    "lab-automation"
+   ],
+   "product": "'Scientific superintelligence' with autonomous AI-run labs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.thepharmaletter.com/pharmaceutical/lila-sciences-raises-235-million-to-expand-ai-driven-research-platform"
+  },
+  {
+   "name": "Sana Biotechnology",
+   "launched": "2018",
+   "silo": [
+    "cell-therapy",
+    "gene-therapy"
+   ],
+   "product": "Engineered hypoimmune cells and in vivo cell engineering",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: SANA)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Indigo (Indigo Ag / Indigo Carbon)",
+   "launched": "2013",
+   "silo": [
+    "microbiome",
+    "synbio"
+   ],
+   "product": "Plant microbial biologicals and agricultural carbon programs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Denali Therapeutics",
+   "launched": "2015",
+   "silo": [
+    "small-molecule",
+    "antibody"
+   ],
+   "product": "Blood-brain-barrier-crossing therapies for neurodegeneration",
+   "status": "public",
+   "outcome": "IPO 2017 (NASDAQ: DNLI)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Rubius Therapeutics",
+   "launched": "2013",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Engineered red-blood-cell therapeutics",
+   "status": "defunct",
+   "outcome": "IPO 2018 (NASDAQ: RUBY); liquidated and dissolved 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.fiercebiotech.com/biotech/after-last-ditch-effort-cellular-medicine-biotech-rubius-moves-dissolve",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Kaleido Biosciences",
+   "launched": "2015",
+   "silo": [
+    "microbiome"
+   ],
+   "product": "Microbiome metabolic therapies (glycan-based)",
+   "status": "defunct",
+   "outcome": "IPO 2019 (NASDAQ: KLDO); ceased operations 2022",
+   "outcome_value_usd": null,
+   "source": "https://www.fiercebiotech.com/biotech/cut-music-kaleido-calls-it-quits-after-fda-scrum-precipitated-pipeline-implosion",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Omega Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "gene-editing",
+    "rna"
+   ],
+   "product": "mRNA-encoded epigenomic controllers",
+   "status": "defunct",
+   "outcome": "IPO 2021 (NASDAQ: OMGA); Chapter 11 2025, assets sold (~$14M) to Flagship affiliate",
+   "outcome_value_usd": 14000000,
+   "source": "https://www.biopharmadive.com/news/omega-therapeutics-bankruptcy-flagship-genetic-medicines/739175/",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Tessera Therapeutics",
+   "launched": "2018",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Gene writing (RNA-based in vivo genome editing)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Cellarity",
+   "launched": "2017",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Cell-state-based drug discovery using ML and single-cell data",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Ampersand Biomedicines",
+   "launched": "2021",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Tissue-targeted 'address' biologics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Montai Therapeutics",
+   "launched": "2019",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Oral small molecules drawn from AI-mined natural chemistry",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "ProFound Therapeutics",
+   "launched": "2020",
+   "silo": [
+    "tools-omics",
+    "ai-discovery"
+   ],
+   "product": "Mining the expanded human proteome for new protein therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Seres Therapeutics",
+   "launched": "2011",
+   "silo": [
+    "microbiome"
+   ],
+   "product": "Microbiome therapeutics (Vowst for recurrent C. difficile)",
+   "status": "public",
+   "outcome": "IPO 2015 (NASDAQ: MCRB)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Editas Medicine",
+   "launched": "2013",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "CRISPR gene-editing medicines",
+   "status": "public",
+   "outcome": "IPO 2016 (NASDAQ: EDIT)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Foghorn Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "small-molecule",
+    "protein-degradation"
+   ],
+   "product": "Chromatin-regulating small molecules and degraders for cancer",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: FHTX)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Agios Pharmaceuticals",
+   "launched": "2007",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Cellular-metabolism drugs (mitapivat for rare blood disorders)",
+   "status": "public",
+   "outcome": "IPO 2013 (NASDAQ: AGIO)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Acceleron Pharma",
+   "launched": "2004",
+   "silo": [
+    "antibody"
+   ],
+   "product": "TGF-beta superfamily protein therapeutics (sotatercept)",
+   "status": "acquired",
+   "outcome": "acquired by Merck 2021 for $11.5B",
+   "outcome_value_usd": 11500000000,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Receptos",
+   "launched": "2009",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "S1P receptor modulator ozanimod for immune disease",
+   "status": "acquired",
+   "outcome": "acquired by Celgene 2015 for $7.2B",
+   "outcome_value_usd": 7200000000,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Concert Pharmaceuticals",
+   "launched": "2006",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Deuterated small molecules (deuruxolitinib for alopecia)",
+   "status": "acquired",
+   "outcome": "acquired by Sun Pharma 2023 for ~$576M upfront",
+   "outcome_value_usd": 576000000,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Evelo Biosciences",
+   "launched": "2015",
+   "silo": [
+    "microbiome"
+   ],
+   "product": "Oral single-strain microbial therapies acting via the gut",
+   "status": "defunct",
+   "outcome": "IPO 2018 (NASDAQ: EVLO); wound down 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/flagship-founded-microbiome-company-evelo-biosciences-throws-in-the-towel",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Syros Pharmaceuticals",
+   "launched": "2012",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Gene-control oncology drugs (tamibarotene for blood cancers)",
+   "status": "public",
+   "outcome": "IPO 2016 (NASDAQ: SYRS)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Quanterix",
+   "launched": "2007",
+   "silo": [
+    "tools-omics",
+    "diagnostics"
+   ],
+   "product": "Ultrasensitive Simoa protein biomarker detection",
+   "status": "public",
+   "outcome": "IPO 2017 (NASDAQ: QTRX)",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Sigilon Therapeutics",
+   "launched": "2016",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Encapsulated engineered-cell therapies",
+   "status": "acquired",
+   "outcome": "acquired by Eli Lilly 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Selecta Biosciences",
+   "launched": "2008",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Tolerogenic nanoparticles to curb anti-drug immunity",
+   "status": "merged",
+   "outcome": "IPO 2016 (NASDAQ: SELB); merged with Cartesian Therapeutics 2023",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "BIND Therapeutics",
+   "launched": "2007",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Targeted polymeric nanoparticle drugs",
+   "status": "acquired",
+   "outcome": "bankrupt 2016; assets bought by Pfizer for ~$40M",
+   "outcome_value_usd": 40000000,
+   "source": "https://www.flagshippioneering.com/companies?status=past",
+   "outcome_unverified": true
+  },
+  {
+   "name": "Sail Biomedicines",
+   "launched": "2017 / 2023",
+   "silo": [
+    "rna"
+   ],
+   "product": "Programmable circular/endless RNA medicines (Laronde-Senda merger)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Valo Health",
+   "launched": "2019",
+   "silo": [
+    "ai-discovery",
+    "precision-data"
+   ],
+   "product": "Human-data and AI-driven drug discovery (Opal platform)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Harbinger Health",
+   "launched": "2018",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Blood-based multi-cancer early detection",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Repertoire Immune Medicines",
+   "launched": "2019",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Decoding T-cell/antigen immune synapses for autoimmunity and cancer",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Ring Therapeutics",
+   "launched": "2017",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Anellovirus-based redosable delivery vectors",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Alltrna",
+   "launched": "2018",
+   "silo": [
+    "rna"
+   ],
+   "product": "Engineered tRNA medicines for nonsense-mutation diseases",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Apriori Bio",
+   "launched": "2020",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "ML-designed variant-resilient vaccines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "KSQ Therapeutics",
+   "launched": "2015",
+   "silo": [
+    "small-molecule",
+    "cell-therapy"
+   ],
+   "product": "CRISPR-screen-derived oncology targets and engineered TIL",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Quotient Therapeutics",
+   "launched": "2022",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Somatic genomics to find drug targets in healthy tissue",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Etiome",
+   "launched": "2021",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Therapies targeting disease progression trajectories",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Expedition Medicines",
+   "launched": "2022",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Generative design of covalent small molecules (unveiled 2025)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Prologue Medicines",
+   "launched": "2021",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Viral-protein-derived therapeutics via DELVE ML platform",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies/prologue-medicines"
+  },
+  {
+   "name": "Metaphore Biotechnologies",
+   "launched": "2021",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Mirai Bio",
+   "launched": "2021",
+   "silo": [
+    "rna",
+    "gene-therapy"
+   ],
+   "product": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Serif Biomedicines",
+   "launched": "2021",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Modified DNA as a new drug class (launched 2026)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.bioworld.com/articles/keyword/21419-flagship-pioneering-inc"
+  },
+  {
+   "name": "Vesalius Therapeutics",
+   "launched": "2019",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Empress Therapeutics",
+   "launched": "2020",
+   "silo": [
+    "microbiome",
+    "small-molecule"
+   ],
+   "product": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Inari Agriculture",
+   "launched": "2016",
+   "silo": [
+    "gene-editing",
+    "synbio"
+   ],
+   "product": "Gene-edited seed varieties",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies"
+  },
+  {
+   "name": "Terrana Biosciences",
+   "launched": "2021",
+   "silo": [
+    "rna",
+    "synbio"
+   ],
+   "product": "RNA-based products for plant health",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies/terrana-biosciences"
+  },
+  {
+   "name": "ENAI",
+   "launched": "2026",
+   "silo": [
+    "microbiome",
+    "synbio"
+   ],
+   "product": "Endophyte-powered biologicals working inside crop plants",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies/enai"
+  },
+  {
+   "name": "Terion",
+   "launched": "2026",
+   "silo": [],
+   "product": "Agricultural data/verification infrastructure for farmers and enterprises",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.flagshippioneering.com/companies/terion"
+  },
+  {
+   "name": "Extuitive",
+   "launched": "2025",
+   "silo": [],
+   "product": "AI 'virtual shopper' software for consumer-product design",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.bostonglobe.com/2025/09/18/business/flagship-startup-artificial-intelligence"
+  },
+  {
+   "name": "iris labs",
+   "launched": "2025",
+   "silo": [],
+   "product": "AI wellbeing products (iris chat)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://briefglance.com/companies/flagship-pioneering/pulses/84779"
+  }
+ ]
+}

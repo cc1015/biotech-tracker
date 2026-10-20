@@ -1,0 +1,7 @@
+{"totalCount":133057,"studies":[
+{"protocolSection":{"statusModule":{"startDateStruct":{"date":"2022-12-20"}},"sponsorCollaboratorsModule":{"leadSponsor":{"name":"Jacobio Pharmaceuticals Co., Ltd."}}}},
+{"protocolSection":{"statusModule":{"startDateStruct":{"date":"2022-03-03"}},"sponsorCollaboratorsModule":{"leadSponsor":{"name":"Novo Nordisk A/S"}}}},
+{"protocolSection":{"statusModule":{"startDateStruct":{"date":"2018-05-15"}},"sponsorCollaboratorsModule":{"leadSponsor":{"name":"Inovio Pharmaceuticals"}}}},
+{"protocolSection":{"statusModule":{"startDateStruct":{"date":"2023-12-29"}},"sponsorCollaboratorsModule":{"leadSponsor":{"name":"Bristol-Myers Squibb"}}}},
+{"protocolSection":{"statusModule":{"startDateStruct":{"date":"2013-10"}},"sponsorCollaboratorsModule":{"leadSponsor":{"name":"Novartis Pharmaceuticals"}}}}
+],"nextPageToken":"ZVNj7o2Elu8o3lpzWomz5OytmpOQJJxtZPKp"}

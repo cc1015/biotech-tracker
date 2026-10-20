@@ -1,0 +1,423 @@
+{
+ "name": "Harvard University & Wyss Institute",
+ "profile": {
+  "city": "Boston / Cambridge, MA, USA",
+  "type": "university",
+  "tech_transfer": "Harvard Office of Technology Development (OTD)",
+  "tech_transfer_url": "https://otd.harvard.edu/",
+  "summary": "Harvard's OTD reports about 90 startups in five years, and its Wyss Institute runs an in-house commercialization engine that has spun out dozens of companies from organs-on-chips to AAV engineering. George Church's Harvard Medical School lab alone is linked to well over a hundred companies across sequencing, synthetic biology, gene editing and xenotransplantation.",
+  "programs": [
+   "Blavatnik Biomedical Accelerator",
+   "Harvard Grid Accelerator",
+   "Wyss Institute for Biologically Inspired Engineering",
+   "Climate and Sustainability Translational Fund"
+  ],
+  "website": "https://www.harvard.edu",
+  "sources": [
+   "https://otd.harvard.edu/",
+   "https://wyss.harvard.edu/commercialization/startups/",
+   "https://en.wikipedia.org/wiki/Wyss_Institute_for_Biologically_Inspired_Engineering",
+   "https://arep.med.harvard.edu/gmc/tech.html",
+   "https://en.wikipedia.org/wiki/Donald_E._Ingber",
+   "https://en.wikipedia.org/wiki/David_A._Sinclair",
+   "https://en.wikipedia.org/wiki/David_R._Liu",
+   "https://en.wikipedia.org/wiki/Douglas_Melton",
+   "https://en.wikipedia.org/wiki/Colossal_Biosciences"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "George Church",
+   "lab": "Church Lab, Harvard Medical School / Wyss",
+   "known_for": "Multiplex genome engineering, sequencing, synthetic biology; prolific founder",
+   "silo": [
+    "gene-editing",
+    "synbio",
+    "tools-omics"
+   ],
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "pi": "Donald Ingber",
+   "lab": "Wyss Institute (founding director)",
+   "known_for": "Organs-on-chips; mechanobiology; sepsis blood-cleansing devices",
+   "silo": [
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Donald_E._Ingber"
+  },
+  {
+   "pi": "David Sinclair",
+   "lab": "Sinclair Lab, Harvard Medical School",
+   "known_for": "Sirtuins, NAD+ biology and aging",
+   "silo": [
+    "longevity"
+   ],
+   "source": "https://en.wikipedia.org/wiki/David_A._Sinclair"
+  },
+  {
+   "pi": "David R. Liu",
+   "lab": "Department of Chemistry and Chemical Biology",
+   "known_for": "Base and prime editing; DNA-templated synthesis",
+   "silo": [
+    "gene-editing",
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "pi": "Douglas Melton",
+   "lab": "Harvard Stem Cell Institute",
+   "known_for": "Stem-cell biology; co-founded Semma, Ontogeny, iPierian",
+   "silo": [
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Douglas_Melton"
+  },
+  {
+   "pi": "James J. Collins",
+   "lab": "Wyss Institute (core faculty)",
+   "known_for": "Synthetic biology; paper-based and CRISPR diagnostics",
+   "silo": [
+    "synbio",
+    "diagnostics"
+   ],
+   "source": "https://wyss.harvard.edu/commercialization/startups/"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "eGenesis",
+   "year": "2013",
+   "pi": "George Church",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "CRISPR-engineered pig organs for xenotransplantation",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Dyno Therapeutics",
+   "year": "2018",
+   "pi": "George Church",
+   "silo": [
+    "gene-therapy",
+    "ai-discovery"
+   ],
+   "product": "Machine-learning-optimized AAV capsids",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Colossal Biosciences",
+   "year": "2021",
+   "pi": "George Church",
+   "silo": [
+    "gene-editing",
+    "synbio"
+   ],
+   "product": "Genome engineering for de-extinction and conservation",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Colossal_Biosciences"
+  },
+  {
+   "name": "ReadCoor",
+   "year": "2014",
+   "pi": "George Church",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "In situ spatial RNA sequencing",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by 10x Genomics",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "GRO Biosciences",
+   "year": "2016",
+   "pi": "George Church",
+   "silo": [
+    "synbio",
+    "antibody"
+   ],
+   "product": "Protein therapeutics using an expanded genetic code",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Manifold Bio",
+   "year": "2020",
+   "pi": "George Church",
+   "silo": [
+    "tools-omics",
+    "antibody"
+   ],
+   "product": "Protein barcoding for multiplexed in vivo drug screening",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Nabla Bio",
+   "year": "2020",
+   "pi": "George Church",
+   "silo": [
+    "ai-discovery",
+    "antibody"
+   ],
+   "product": "Machine-learning protein/antibody design",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "64x Bio",
+   "year": "2017",
+   "pi": "George Church",
+   "silo": [
+    "cell-therapy",
+    "gene-therapy"
+   ],
+   "product": "Engineered cell lines for gene-therapy manufacturing",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Shape Therapeutics",
+   "year": "2018",
+   "pi": "George Church",
+   "silo": [
+    "rna"
+   ],
+   "product": "RNA editing therapeutics",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Rejuvenate Bio",
+   "year": "2015",
+   "pi": "George Church",
+   "silo": [
+    "gene-therapy",
+    "longevity"
+   ],
+   "product": "Gene therapies for age-related disease, starting with dogs",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Gen9",
+   "year": "2009",
+   "pi": "George Church",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Large-scale synthetic DNA manufacturing",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Ginkgo Bioworks",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Warp Drive Bio",
+   "year": "2011",
+   "pi": "George Church",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Genomics-guided natural product drug discovery",
+   "builder": "",
+   "status": "merged",
+   "outcome": "became Revolution Medicines",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "EnPlusOne Biosciences",
+   "year": "2022",
+   "pi": "George Church",
+   "silo": [
+    "rna",
+    "synbio"
+   ],
+   "product": "Enzymatic RNA oligonucleotide synthesis",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://wyss.harvard.edu/commercialization/startups/"
+  },
+  {
+   "name": "Emulate",
+   "year": "2014",
+   "pi": "Donald Ingber",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Human organ-on-a-chip systems for drug testing",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Donald_E._Ingber"
+  },
+  {
+   "name": "BOA Biomedical",
+   "year": "",
+   "pi": "Donald Ingber",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Pathogen-capturing blood filtration for sepsis",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://wyss.harvard.edu/commercialization/startups/"
+  },
+  {
+   "name": "Sherlock Biosciences",
+   "year": "2019",
+   "pi": "James J. Collins",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "CRISPR and synthetic-biology molecular diagnostics",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by OraSure Technologies 2024",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Sherlock_Biosciences"
+  },
+  {
+   "name": "Unravel Biosciences",
+   "year": "2023",
+   "pi": "",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "Computational drug discovery for CNS and rare disorders",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://arep.med.harvard.edu/gmc/tech.html"
+  },
+  {
+   "name": "Breaking",
+   "year": "2024",
+   "pi": "",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Plastic-degrading microbes and enzymes",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://wyss.harvard.edu/commercialization/startups/"
+  },
+  {
+   "name": "Sirtris Pharmaceuticals",
+   "year": "2004",
+   "pi": "David Sinclair",
+   "silo": [
+    "small-molecule",
+    "longevity"
+   ],
+   "product": "Sirtuin-activating small molecules",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by GSK 2008 for $720M",
+   "outcome_value_usd": 720000000,
+   "source": "https://en.wikipedia.org/wiki/David_A._Sinclair"
+  },
+  {
+   "name": "Life Biosciences",
+   "year": "2017",
+   "pi": "David Sinclair",
+   "silo": [
+    "gene-therapy",
+    "longevity"
+   ],
+   "product": "Epigenetic reprogramming gene therapies for age-related disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_A._Sinclair"
+  },
+  {
+   "name": "Semma Therapeutics",
+   "year": "",
+   "pi": "Douglas Melton",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Douglas_Melton"
+  },
+  {
+   "name": "Ensemble Therapeutics",
+   "year": "2004",
+   "pi": "David R. Liu",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "DNA-templated macrocycle drug discovery",
+   "builder": "Flagship Ventures",
+   "status": "defunct",
+   "outcome": "shut down 2017",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  },
+  {
+   "name": "Permeon Biologics",
+   "year": "2011",
+   "pi": "David R. Liu",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Cell-penetrating proteins for intracellular antibodies",
+   "builder": "Flagship Ventures",
+   "status": "defunct",
+   "outcome": "ceased operations 2015",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_R._Liu"
+  }
+ ]
+}

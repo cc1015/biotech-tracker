@@ -1,0 +1,132 @@
+{
+ "name": "Foresite Labs",
+ "profile": {
+  "type": "incubator",
+  "hq": "San Francisco, CA",
+  "founded": "2019",
+  "founders": [
+   "Vikram Bajaj",
+   "Jim Tananbaum"
+  ],
+  "leadership": [
+   "Vikram Bajaj — Co-founder & CEO, Foresite Labs; Managing Director, Foresite Capital",
+   "Jim Tananbaum — Founder & CEO, Foresite Capital"
+  ],
+  "aum_usd": 3500000000,
+  "latest_fund": {
+   "name": "Foresite Capital Fund VI",
+   "size_usd": 900000000,
+   "year": "2024"
+  },
+  "model": "Foresite Labs is the incubation arm of Foresite Capital, a multi-stage healthcare investor. It builds a small number of data- and AI-heavy companies in-house, supplying founding scientists, engineers and operators plus shared AI/data-science capabilities, and sometimes co-incubates with partners such as ARCH Venture Partners. A dedicated $173M Foresite Labs fund (closed 2022) plus Foresite Capital's main funds finance the companies it launches.",
+  "summary": "Foresite Labs co-incubated Xaira Therapeutics, one of the largest biotech launches ever at more than $1B in committed capital, and its autoimmune bets (Alumis, Candid) have produced an IPO and a roughly $2.2B sale to UCB. It is a compact, AI-first company-creation shop tied to a roughly $3.5B+ crossover/venture firm.",
+  "website": "https://www.foresitelabs.com",
+  "sources": [
+   "https://www.foresitelabs.com",
+   "https://www.foresitelabs.com/companies",
+   "https://www.foresitelabs.com/about",
+   "https://en.wikipedia.org/wiki/Foresite_Capital",
+   "https://www.biospace.com/foresite-labs-hatches-big-data-driven-companies-destined-to-shake-up-healthcare",
+   "https://www.businesswire.com/news/home/20220303005413/en/Foresite-Capital-Raises-%24173-Million-to-Fund-Foresite-Labs-Incubated-Life-Science-Companies",
+   "https://pulse2.com/foresite-capital-healthcare-and-life-sciences-company-raises-900-million"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Xaira Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI protein/antibody design platform (RFdiffusion lineage) plus large-scale perturbation data generation",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.businesswire.com/news/home/20240423707240/en/Xaira-Therapeutics-Launches-to-Deliver-Transformative-Medicines-by-Advancing-and-Harnessing-AI-for-Drug-Discovery-and-Development"
+  },
+  {
+   "name": "Alumis (formerly Esker Therapeutics)",
+   "launched": "2021",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Oral TYK2 inhibitors for psoriasis and other immune-mediated diseases",
+   "status": "public",
+   "outcome": "IPO 2024 (NASDAQ: ALMS); merged with ACELYRIN 2025",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/press-releases/alumis-completes-merger-with-acelyrin"
+  },
+  {
+   "name": "Candid Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "antibody"
+   ],
+   "product": "T-cell engagers for autoimmune disease; lead cizutamig (BCMA)",
+   "status": "acquired",
+   "outcome": "UCB agreed to acquire 2026 for up to $2.2B ($2B upfront)",
+   "outcome_value_usd": 2200000000,
+   "source": "https://www.pharmexec.com/view/ucb-enters-2-billion-agreement-acquire-candid-therapeutics"
+  },
+  {
+   "name": "Interline Therapeutics",
+   "launched": "2021",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/foresite-labs-hatches-big-data-driven-companies-destined-to-shake-up-healthcare"
+  },
+  {
+   "name": "Sestina Bio",
+   "launched": "",
+   "silo": [
+    "synbio"
+   ],
+   "product": "",
+   "status": "acquired",
+   "outcome": "acquired by Inscripta",
+   "outcome_value_usd": null,
+   "source": "https://www.genengnews.com/?p=190496"
+  },
+  {
+   "name": "TenSixteen Bio",
+   "launched": "",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.businesswire.com/news/home/20220303005413/en/Foresite-Capital-Raises-%24173-Million-to-Fund-Foresite-Labs-Incubated-Life-Science-Companies"
+  },
+  {
+   "name": "Khartis Therapeutics",
+   "launched": "2024",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral therapy for thyroid eye disease (alternative to Tepezza)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biocentury.com/article/660475/khartis-emerges-from-stealth-with-95m-to-challenge-tepezza-venture-report"
+  },
+  {
+   "name": "Prometheus",
+   "launched": "2024",
+   "silo": [],
+   "product": "AI for the physical economy (co-incubated with ARCH)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.foresitelabs.com"
+  }
+ ]
+}

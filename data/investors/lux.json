@@ -1,0 +1,404 @@
+{
+ "name": "Lux Capital (Bio & Deep Tech)",
+ "profile": {
+  "parent": "Lux Capital",
+  "type": "generalist-vc-bio-arm",
+  "hq": "New York, New York, USA",
+  "founded": "",
+  "leadership": [
+   "Josh Wolfe — Partner & Co-Founder",
+   "Peter Hébert — Partner & Co-Founder",
+   "Tess van Stekelenburg — Partner (co-founder of portfolio company Valthos)",
+   "Deena Shakir — Partner",
+   "Shaq Vayda — Partner"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "Lux Capital Fund IX",
+   "size_usd": 1500000000,
+   "year": "2026"
+  },
+  "model": "Deep-tech generalist that backs 'scientific risk' companies across biology, AI, defense and hardware from a single fund rather than a separate bio vehicle. In life sciences it co-founds companies around star academic founders (Kallyope, Kala) and invests early in platform biotechs that pair high-throughput biology with machine learning, increasingly at the AI-bio and biosecurity interface (EvolutionaryScale, Valthos).",
+  "summary": "Lux was an early investor in Recursion and has co-founded or seeded a run of platform biotechs built on top-tier academic science, from Kallyope to Eikon and Cajal. Its cross-sector AI exposure positions it as a prominent backer of protein foundation models and AI-native drug discovery.",
+  "website": "https://www.luxcapital.com",
+  "sources": [
+   "https://www.luxcapital.com/companies",
+   "https://www.luxcapital.com/people",
+   "https://www.luxcapital.com/news",
+   "https://en.wikipedia.org/wiki/Lux_Capital",
+   "https://www.vcbacked.co/directory/investors/lux-capital/biotechnology",
+   "https://www.vcbacked.co/company/atrandi-biosciences",
+   "https://www.vcbacked.co/company/evolutionaryscale",
+   "https://www.vcbacked.co/company/nilo-therapeutics",
+   "https://www.evolutionaryscale.ai/",
+   "https://egenesisbio.com/press-releases/egenesis-raises-191-million-series-d-financing-to-advance-lead-program-for-kidney-transplant/",
+   "https://www.luxcapital.com/companies/evolutionaryscale",
+   "https://www.luxcapital.com/companies/kallyope",
+   "https://www.luxcapital.com/companies/eikon-therapeutics",
+   "https://www.luxcapital.com/companies/recursion-pharma",
+   "https://www.luxcapital.com/companies/eGenesis",
+   "https://www.luxcapital.com/companies/kala-pharmaceuticals",
+   "https://www.luxcapital.com/companies/valthos"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Recursion Pharmaceuticals",
+   "launched": "2016",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "Phenomics imaging plus machine learning platform for drug discovery",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: RXRX)",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/recursion-pharma"
+  },
+  {
+   "name": "Kallyope",
+   "launched": "2015",
+   "role": "co-founded",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Gut-brain axis platform for therapeutics and nutrition products",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/kallyope"
+  },
+  {
+   "name": "Eikon Therapeutics",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "tools-omics"
+   ],
+   "product": "Single-molecule live-cell imaging platform for drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/eikon-therapeutics"
+  },
+  {
+   "name": "eGenesis",
+   "launched": "2024",
+   "role": "led",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Gene-edited pig organs (EGEN-2784 kidney) for human transplant",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://egenesisbio.com/press-releases/egenesis-raises-191-million-series-d-financing-to-advance-lead-program-for-kidney-transplant/"
+  },
+  {
+   "name": "EvolutionaryScale",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [
+    "foundation-models"
+   ],
+   "product": "ESM3 generative protein language model",
+   "status": "acquired",
+   "outcome": "acquired 2025; now part of Biohub",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/evolutionaryscale"
+  },
+  {
+   "name": "Valthos",
+   "launched": "2025",
+   "role": "co-founded",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "AI biodefense: detecting biological threats and designing countermeasures",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/valthos",
+   "founding_unconfirmed": true
+  },
+  {
+   "name": "Kala Pharmaceuticals",
+   "launched": "2009",
+   "role": "co-founded",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Mucus-penetrating nanoparticle eye-drop therapies for ocular disease",
+   "status": "public",
+   "outcome": "IPO 2017",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/kala-pharmaceuticals"
+  },
+  {
+   "name": "Cajal Neuroscience",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "tools-omics",
+    "precision-data"
+   ],
+   "product": "Neuroscience-driven drug discovery for neurodegenerative disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/cajal-neuroscience"
+  },
+  {
+   "name": "Benchling",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Cloud R&D informatics platform for life sciences",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/benchling"
+  },
+  {
+   "name": "Variant Bio",
+   "launched": "2018",
+   "role": "participated",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Genetics of outlier populations to find drug targets",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/variant-bio"
+  },
+  {
+   "name": "Dyno Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "gene-therapy",
+    "ai-discovery"
+   ],
+   "product": "Machine-learning-designed AAV capsids for gene therapy",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/dyno-therapeutics"
+  },
+  {
+   "name": "Enveda Biosciences",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "ML and metabolomics to discover small-molecule drugs from nature",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/enveda-biosciences"
+  },
+  {
+   "name": "Plexium",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "DNA-encoded library phenotypic screening for small molecules",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/plexium"
+  },
+  {
+   "name": "Atavistik Bio",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Metabolite-protein interaction platform for allosteric drugs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/atavistik-bio"
+  },
+  {
+   "name": "Creyon Bio",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "rna",
+    "ai-discovery"
+   ],
+   "product": "Machine-learning design of oligonucleotide-based medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/creyon"
+  },
+  {
+   "name": "Anagenex",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Machine learning combined with DNA-encoded libraries for hit discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/anagenex"
+  },
+  {
+   "name": "Gandeeva Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "Cryo-EM plus machine learning for structure-based drug discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/gandeeva-therapeutics"
+  },
+  {
+   "name": "Inductive Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "ML models predicting ADMET to speed compound optimization",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/inductive-bio"
+  },
+  {
+   "name": "Atrandi Biosciences",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Semi-permeable capsule technology for single-cell analysis",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/atrandi"
+  },
+  {
+   "name": "Babylon Bio",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [],
+   "product": "Alzheimer's disease drug programs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/babylon-bio"
+  },
+  {
+   "name": "Until Labs",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "longevity"
+   ],
+   "product": "Reversible cryopreservation of donor organs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/until-labs"
+  },
+  {
+   "name": "Medra",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "lab-automation"
+   ],
+   "product": "General-purpose lab robots with LLM reasoning running experiments",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/medra"
+  },
+  {
+   "name": "Senti Biosciences",
+   "launched": "2016",
+   "role": "participated",
+   "silo": [
+    "cell-therapy",
+    "synbio"
+   ],
+   "product": "Gene-circuit engineered cell and gene therapies",
+   "status": "public",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/senti-biosciences"
+  },
+  {
+   "name": "Resilience",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [],
+   "product": "Biomanufacturing network for resilient medicine supply chains",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/resilience"
+  },
+  {
+   "name": "Adimab",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Partnered antibody discovery platform",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/adimab"
+  },
+  {
+   "name": "NILO Therapeutics",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [],
+   "product": "Therapeutics startup (2025 $101M Series A)",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.vcbacked.co/company/nilo-therapeutics"
+  },
+  {
+   "name": "Visterra",
+   "launched": "2008",
+   "role": "participated",
+   "silo": [
+    "antibody",
+    "ai-discovery"
+   ],
+   "product": "Computationally designed epitope-targeted monoclonal antibodies",
+   "status": "acquired",
+   "outcome": "acquired 2018",
+   "outcome_value_usd": null,
+   "source": "https://www.luxcapital.com/companies/visterra"
+  }
+ ]
+}

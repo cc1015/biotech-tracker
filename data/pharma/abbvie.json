@@ -1,0 +1,425 @@
+{
+ "company": "AbbVie",
+ "profile": {
+  "legal_name": "AbbVie Inc.",
+  "hq": "North Chicago, Illinois, United States",
+  "founded": "2013",
+  "founders_or_origin": "Spun off from Abbott Laboratories' research-based pharmaceuticals business",
+  "ceo": "Robert Michael",
+  "ceo_since": "2024",
+  "ticker": "NYSE:ABBV",
+  "website": "https://www.abbvie.com",
+  "revenue_usd": 61160000000,
+  "revenue_year": "2025",
+  "employees": 57000,
+  "employees_year": "2025",
+  "therapeutic_areas": [
+   "Immunology",
+   "Oncology",
+   "Neuroscience",
+   "Aesthetics",
+   "Eye care"
+  ],
+  "top_products": [
+   {
+    "name": "Skyrizi",
+    "what": "Psoriasis, psoriatic arthritis, Crohn's, ulcerative colitis",
+    "revenue_usd": 17562000000,
+    "year": "2025"
+   },
+   {
+    "name": "Rinvoq",
+    "what": "JAK inhibitor for RA and IBD",
+    "revenue_usd": 8304000000,
+    "year": "2025"
+   },
+   {
+    "name": "Botox (therapeutic + cosmetic)",
+    "what": "Migraine, spasticity, and facial wrinkles",
+    "revenue_usd": 6371000000,
+    "year": "2025"
+   },
+   {
+    "name": "Humira",
+    "what": "Anti-TNF for autoimmune diseases",
+    "revenue_usd": 4540000000,
+    "year": "2025"
+   },
+   {
+    "name": "Vraylar",
+    "what": "Schizophrenia, bipolar disorder, adjunctive depression",
+    "revenue_usd": 3621000000,
+    "year": "2025"
+   },
+   {
+    "name": "Imbruvica",
+    "what": "BTK inhibitor for blood cancers",
+    "revenue_usd": 2869000000,
+    "year": "2025"
+   }
+  ],
+  "venture_arm": {
+   "name": "AbbVie Ventures",
+   "founded": "2009",
+   "fund_size_usd": null,
+   "url": "",
+   "notable_investments": [
+    "Carisma Therapeutics",
+    "Caribou Biosciences",
+    "Jnana Therapeutics",
+    "Tizona Therapeutics",
+    "Ribometrix",
+    "Enthera"
+   ]
+  },
+  "summary": "AbbVie is the former pharmaceutical arm of Abbott, split off in 2013 with the blockbuster Humira as its anchor. It has since bought Pharmacyclics, Allergan, ImmunoGen and Cerevel to build oncology, aesthetics and neuroscience businesses, while Skyrizi and Rinvoq replaced Humira as its growth engines.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/AbbVie",
+   "https://news.abbvie.com/2026-02-04-AbbVie-Reports-Full-Year-and-Fourth-Quarter-2025-Financial-Results",
+   "https://www.excedr.com/blog/abbvie-ventures"
+  ]
+ },
+ "events": [
+  {
+   "year": "1989",
+   "type": "spin-off",
+   "counterparty": "SmithKline",
+   "via": "Allergan",
+   "result": "Allergan, Inc.",
+   "value_usd": null,
+   "status": "completed",
+   "description": "SmithKline, which had bought Allergan in 1980 for $259M, spun it off as an independent company.",
+   "source": "https://en.wikipedia.org/wiki/Allergan,_Inc."
+  },
+  {
+   "year": "1991",
+   "type": "acquisition",
+   "counterparty": "Oculinum",
+   "via": "Allergan",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Allergan bought Oculinum, whose botulinum toxin product was renamed Botox.",
+   "source": "https://en.wikipedia.org/wiki/Allergan"
+  },
+  {
+   "year": "2002",
+   "type": "spin-off",
+   "counterparty": "Allergan surgical and contact lens businesses",
+   "via": "Allergan",
+   "result": "Advanced Medical Optics",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Allergan spun off its ophthalmic surgical and contact lens units as Advanced Medical Optics.",
+   "source": "https://en.wikipedia.org/wiki/Allergan,_Inc."
+  },
+  {
+   "year": "2006",
+   "type": "acquisition",
+   "counterparty": "Inamed",
+   "via": "Allergan",
+   "result": "",
+   "value_usd": 3000000000,
+   "status": "completed",
+   "description": "Allergan bought breast-implant and aesthetics maker Inamed.",
+   "source": "https://en.wikipedia.org/wiki/Allergan,_Inc."
+  },
+  {
+   "year": "2009",
+   "type": "venture-arm",
+   "counterparty": "AbbVie Ventures",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Corporate venture group, started under Abbott in 2009, backing early-stage drug discovery startups.",
+   "source": "https://www.excedr.com/blog/abbvie-ventures"
+  },
+  {
+   "year": "2012",
+   "type": "acquisition",
+   "counterparty": "Actavis Group",
+   "via": "Allergan",
+   "result": "Actavis",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Watson Pharmaceuticals bought generics maker Actavis Group and adopted the Actavis name.",
+   "source": "https://en.wikipedia.org/wiki/Actavis"
+  },
+  {
+   "year": "2013",
+   "type": "spin-off",
+   "counterparty": "Abbott Laboratories",
+   "via": "",
+   "result": "AbbVie",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Abbott separated its research-based pharma business; AbbVie was formed in 2012 and began trading in January 2013.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2013",
+   "type": "acquisition",
+   "counterparty": "Warner Chilcott",
+   "via": "Allergan",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Actavis acquired Warner Chilcott and redomiciled to Ireland in a tax inversion.",
+   "source": "https://en.wikipedia.org/wiki/Actavis"
+  },
+  {
+   "year": "2014",
+   "type": "joint-venture",
+   "counterparty": "Calico",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "R&D collaboration with Alphabet-backed Calico on diseases of aging.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2014",
+   "type": "acquisition",
+   "counterparty": "Shire",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "terminated",
+   "description": "Abandoned its tax-inversion takeover of Shire after US rule changes, paying a $1.6B break fee.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2014",
+   "type": "acquisition",
+   "counterparty": "Forest Laboratories",
+   "via": "Allergan",
+   "result": "",
+   "value_usd": 25000000000,
+   "status": "completed",
+   "description": "Actavis bought Forest Laboratories, adding CNS and gastrointestinal brands.",
+   "source": "https://en.wikipedia.org/wiki/Actavis"
+  },
+  {
+   "year": "2015",
+   "type": "acquisition",
+   "counterparty": "Pharmacyclics",
+   "via": "",
+   "result": "",
+   "value_usd": 21000000000,
+   "status": "completed",
+   "description": "Cash-and-stock purchase of Pharmacyclics for the BTK inhibitor Imbruvica (ibrutinib).",
+   "source": "https://en.wikipedia.org/wiki/Pharmacyclics"
+  },
+  {
+   "year": "2015",
+   "type": "acquisition",
+   "counterparty": "Allergan, Inc.",
+   "via": "Allergan",
+   "result": "Allergan plc",
+   "value_usd": 70500000000,
+   "status": "completed",
+   "description": "Actavis bought Allergan Inc. as a white knight against Valeant, then renamed itself Allergan plc.",
+   "source": "https://en.wikipedia.org/wiki/Actavis"
+  },
+  {
+   "year": "2016",
+   "type": "acquisition",
+   "counterparty": "Stemcentrx",
+   "via": "",
+   "result": "",
+   "value_usd": 5800000000,
+   "status": "completed",
+   "description": "Bought private Stemcentrx for Rova-T in small cell lung cancer, plus up to $4B in milestones; Rova-T later failed.",
+   "source": "https://www.biopharmadive.com/news/abbvie-buys-stemcentrx-for-58-billion-builds-cancer-drug-offerings/418288/"
+  },
+  {
+   "year": "2016",
+   "type": "divestiture",
+   "counterparty": "Teva Pharmaceutical",
+   "via": "Allergan",
+   "result": "Teva",
+   "value_usd": 40500000000,
+   "status": "completed",
+   "description": "Allergan sold its global generics business, including Anda, to Teva.",
+   "source": "https://en.wikipedia.org/wiki/Actavis"
+  },
+  {
+   "year": "2016",
+   "type": "merger",
+   "counterparty": "Pfizer",
+   "via": "Allergan",
+   "result": "",
+   "value_usd": 160000000000,
+   "status": "terminated",
+   "description": "Allergan's planned merger with Pfizer was abandoned; Pfizer paid a $150M break fee.",
+   "source": "https://en.wikipedia.org/wiki/Allergan"
+  },
+  {
+   "year": "2017",
+   "type": "acquisition",
+   "counterparty": "Zeltiq Aesthetics",
+   "via": "Allergan",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Allergan bought Zeltiq (CoolSculpting) and also LifeCell that year, expanding medical aesthetics.",
+   "source": "https://en.wikipedia.org/wiki/Allergan"
+  },
+  {
+   "year": "2018",
+   "type": "founding",
+   "counterparty": "Pfizer; Bain Capital",
+   "via": "Cerevel Therapeutics",
+   "result": "Cerevel Therapeutics",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Cerevel was created in October 2018 by Bain Capital and Pfizer around Pfizer neuroscience assets.",
+   "source": "https://en.wikipedia.org/wiki/Cerevel_Therapeutics"
+  },
+  {
+   "year": "2019",
+   "type": "divestiture",
+   "counterparty": "AstraZeneca",
+   "via": "",
+   "result": "AstraZeneca",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Sold Allergan's gastrointestinal candidate brazikumab to AstraZeneca to satisfy FTC conditions for the Allergan deal.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2019",
+   "type": "divestiture",
+   "counterparty": "Nestlé",
+   "via": "",
+   "result": "Nestlé",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Divested Allergan's pancreatic enzyme products Zenpep and Viokace under FTC remedies.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2020",
+   "type": "acquisition",
+   "counterparty": "Allergan",
+   "via": "",
+   "result": "",
+   "value_usd": 63000000000,
+   "status": "completed",
+   "description": "Acquired Allergan plc (closed May 2020), adding Botox, aesthetics and neuroscience brands.",
+   "source": "https://en.wikipedia.org/wiki/Allergan"
+  },
+  {
+   "year": "2020",
+   "type": "joint-venture",
+   "counterparty": "Genmab",
+   "via": "",
+   "result": "",
+   "value_usd": 750000000,
+   "status": "completed",
+   "description": "Oncology alliance for bispecifics including epcoritamab (Epkinly); $750M upfront plus up to $3.15B in milestones.",
+   "source": "https://news.abbvie.com/2020-06-10-AbbVie-and-Genmab-Announce-Broad-Oncology-Collaboration"
+  },
+  {
+   "year": "2021",
+   "type": "acquisition",
+   "counterparty": "TeneoOne",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Exercised option to buy TeneoOne and its BCMAxCD3 bispecific TNB-383B for multiple myeloma.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2022",
+   "type": "acquisition",
+   "counterparty": "Syndesi Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Bought Syndesi and its synaptic modulator SDI-118 in a deal worth up to $1B.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "ImmunoGen",
+   "via": "",
+   "result": "",
+   "value_usd": 10100000000,
+   "status": "completed",
+   "description": "Acquired ADC developer ImmunoGen and its ovarian cancer drug Elahere; closed February 2024.",
+   "source": "https://www.biospace.com/abbvie-completes-acquisition-of-immunogen"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Cerevel Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 8700000000,
+   "status": "completed",
+   "description": "Bought neuroscience biotech Cerevel for $45 per share, closing August 2024; lead asset emraclidine later disappointed.",
+   "source": "https://en.wikipedia.org/wiki/Cerevel_Therapeutics"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Landos Biopharma",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Bought Landos for its oral ulcerative colitis candidate, in a deal over $200M.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Aliada Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 1400000000,
+   "status": "completed",
+   "description": "Acquired Aliada and its brain-penetrant anti-amyloid antibody for Alzheimer's disease.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Nimble Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 200000000,
+   "status": "completed",
+   "description": "Bought peptide-discovery company Nimble, adding an oral peptide platform for immunology.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Capstan Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Acquired Capstan for its in vivo CAR-T platform targeting autoimmune disease.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "Gilgamesh Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Bought Gilgamesh's psychedelic-derived depression candidate bretisilocin for up to $1.2B.",
+   "source": "https://en.wikipedia.org/wiki/AbbVie"
+  }
+ ]
+}

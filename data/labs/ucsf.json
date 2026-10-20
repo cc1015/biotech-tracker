@@ -1,0 +1,505 @@
+{
+ "name": "University of California, San Francisco",
+ "profile": {
+  "city": "San Francisco, United States",
+  "type": "university",
+  "tech_transfer": "UCSF Innovation Ventures",
+  "tech_transfer_url": "https://innovation.ucsf.edu",
+  "summary": "UCSF is where modern biotech began: Herbert Boyer's recombinant-DNA work led to Genentech, and UCSF scientists such as William Rutter went on to start many of the early Bay Area biotech firms. Today its Mission Bay campus keeps producing companies in chemical biology, programmable cell therapy, CNS medicines and AI-driven single-cell biology.",
+  "programs": [
+   "Catalyst Program",
+   "Executive-In-Residence (XiR) Program",
+   "UCSF LaunchPad",
+   "QB3 (UCSF/UC Berkeley/UC Santa Cruz)"
+  ],
+  "website": "https://www.ucsf.edu",
+  "sources": [
+   "https://innovation.ucsf.edu",
+   "https://innovation.ucsf.edu/about/featured-startups/medical-therapeutics",
+   "https://innovation.ucsf.edu/media/news",
+   "https://en.wikipedia.org/wiki/University_of_California,_San_Francisco"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Kevan Shokat",
+   "lab": "Shokat Lab, Dept. of Cellular and Molecular Pharmacology",
+   "known_for": "Chemical biology of kinases and GTPases; covalent KRAS G12C inhibitors",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://welch1.org/about/advisory-board/dr-kevan-m-shokat"
+  },
+  {
+   "pi": "Jim Wells",
+   "lab": "Wells Lab, Pharmaceutical Chemistry",
+   "known_for": "Antibody and protein engineering; extracellular protein degraders",
+   "silo": [
+    "antibody",
+    "protein-degradation"
+   ],
+   "source": "https://1stoncology.com/blog/?p=96442"
+  },
+  {
+   "pi": "Wendell Lim",
+   "lab": "Lim Lab, Cellular and Molecular Pharmacology",
+   "known_for": "Synthetic cell-signaling circuits; synNotch logic-gated CAR-T",
+   "silo": [
+    "cell-therapy",
+    "synbio"
+   ],
+   "source": "https://globalventuring.com/cell-design-sells-to-gilead-in-567m-deal"
+  },
+  {
+   "pi": "Alex Marson",
+   "lab": "Gladstone-UCSF Institute of Genomic Immunology",
+   "known_for": "CRISPR engineering of human T cells",
+   "silo": [
+    "cell-therapy",
+    "gene-editing"
+   ],
+   "source": "https://bioscommunity.substack.com/p/beaker-list-ucsf-edition"
+  },
+  {
+   "pi": "Hani Goodarzi",
+   "lab": "Goodarzi Lab, Biochemistry & Biophysics",
+   "known_for": "Cancer RNA biology; oncRNA liquid biopsy; single-cell perturbation atlases",
+   "silo": [
+    "diagnostics",
+    "foundation-models"
+   ],
+   "source": "https://innovation.ucsf.edu/media/news/vevo-therapeutics-open-sources-tahoe-100m-worlds-largest-single-cell-dataset-inaugural"
+  },
+  {
+   "pi": "Herbert Boyer",
+   "lab": "Biochemistry & Biophysics",
+   "known_for": "Recombinant DNA; co-founded Genentech",
+   "silo": [
+    "antibody"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Herbert_Boyer"
+  },
+  {
+   "pi": "William J. Rutter",
+   "lab": "Biochemistry & Biophysics",
+   "known_for": "Recombinant vaccines; co-founded Chiron",
+   "silo": [
+    "diagnostics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Chiron_Corporation"
+  },
+  {
+   "pi": "Arturo Alvarez-Buylla / Arnold Kriegstein",
+   "lab": "Eli and Edythe Broad Center of Regeneration Medicine",
+   "known_for": "Inhibitory interneuron cell therapy for epilepsy",
+   "silo": [
+    "cell-therapy"
+   ],
+   "source": "https://innovation.ucsf.edu/media/news/ucb-acquire-neurona-therapeutics-advancing-its-innovative-leadership-epilepsy-through"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Genentech",
+   "year": "1976",
+   "pi": "Herbert Boyer",
+   "silo": [
+    "antibody"
+   ],
+   "product": "First recombinant-DNA therapeutics company; biologics for cancer and immunology",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Roche 2009 for ~$46.8B",
+   "outcome_value_usd": 46800000000,
+   "source": "https://en.wikipedia.org/wiki/Genentech"
+  },
+  {
+   "name": "Chiron",
+   "year": "1981",
+   "pi": "William J. Rutter, Pablo Valenzuela",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Recombinant vaccines, blood-screening diagnostics, biologics",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Novartis 2006",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Chiron_Corporation"
+  },
+  {
+   "name": "Cytokinetics",
+   "year": "1997",
+   "pi": "",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Cardiac myosin modulators such as aficamten and omecamtiv mecarbil",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2004 (NASDAQ: CYTK)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Cytokinetics"
+  },
+  {
+   "name": "Intellikine",
+   "year": "2007",
+   "pi": "Kevan Shokat",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "PI3K and mTORC1/2 kinase inhibitors (INK128, INK1117)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Takeda 2012 for $190M upfront, up to $310M",
+   "outcome_value_usd": 310000000,
+   "source": "https://www.biospace.com/takeda-pharmaceutical-co-ltd-to-acquire-privately-held-intellikine-inc-for-up-to-310-million-cash"
+  },
+  {
+   "name": "Calithera Biosciences",
+   "year": "2010",
+   "pi": "Jim Wells",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small-molecule cancer drugs, starting from caspase activators",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ucsf.edu/news/2010/07/101189/ucsf-spinoff-calithera-shows-promise-translational-research"
+  },
+  {
+   "name": "Principia Biopharma",
+   "year": "",
+   "pi": "Jack Taunton",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Reversible covalent BTK inhibitors for immunology and multiple sclerosis",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Sanofi 2020 for ~$3.68B",
+   "outcome_value_usd": 3680000000,
+   "source": "https://innovation.ucsf.edu/about/featured-startups/medical-therapeutics"
+  },
+  {
+   "name": "Mitokinin",
+   "year": "2013",
+   "pi": "Kevan Shokat",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "PINK1 activators to restore mitochondrial health in Parkinson's",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by AbbVie 2023 for $110M upfront, up to $655M",
+   "outcome_value_usd": 655000000,
+   "source": "https://news.abbvie.com/2023-10-05-AbbVie-Exercises-Exclusive-Right-to-Acquire-Mitokinin,-Further-Strengthening-Neuroscience-Pipeline"
+  },
+  {
+   "name": "Revolution Medicines",
+   "year": "",
+   "pi": "Kevan Shokat",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "RAS(ON) inhibitors and other RAS-pathway cancer drugs",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: RVMD)",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/revolution-medicines-announces-pricing-of-initial-public-offering-at-17-00-per-share"
+  },
+  {
+   "name": "Erasca",
+   "year": "",
+   "pi": "Kevan Shokat",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Drug combinations that shut down the RAS/MAPK pathway in cancer",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: ERAS)",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/erasca-announces-pricing-of-upsized-initial-public-offering"
+  },
+  {
+   "name": "Cell Design Labs",
+   "year": "",
+   "pi": "Wendell Lim",
+   "silo": [
+    "cell-therapy",
+    "synbio"
+   ],
+   "product": "Logic-gated, controllable CAR-T cell therapies",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Gilead/Kite 2017 for up to ~$567M",
+   "outcome_value_usd": 567000000,
+   "source": "https://globalventuring.com/cell-design-sells-to-gilead-in-567m-deal"
+  },
+  {
+   "name": "Pliant Therapeutics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral integrin inhibitors for fibrosis and cancer",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: PLRX)",
+   "outcome_value_usd": null,
+   "source": "https://www.1stoncology.com/blog/?p=46271"
+  },
+  {
+   "name": "ArsenalBio",
+   "year": "",
+   "pi": "Kole Roybal, Alex Marson",
+   "silo": [
+    "cell-therapy",
+    "synbio"
+   ],
+   "product": "Programmable, logic-gated CAR-T therapies for solid tumors",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/arsenalbio-announces-325-million-financing-advance-programmable-cell-therapy-programs"
+  },
+  {
+   "name": "Neurona Therapeutics",
+   "year": "",
+   "pi": "Cory Nicholas, Arturo Alvarez-Buylla, John Rubenstein, Arnold Kriegstein",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Inhibitory interneuron cell therapy NRTX-1001 for drug-resistant epilepsy",
+   "builder": "",
+   "status": "private",
+   "outcome": "UCB agreed to acquire (announced Apr 2026), terms undisclosed",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/ucb-acquire-neurona-therapeutics-advancing-its-innovative-leadership-epilepsy-through"
+  },
+  {
+   "name": "Siolta Therapeutics",
+   "year": "",
+   "pi": "Susan Lynch",
+   "silo": [
+    "microbiome"
+   ],
+   "product": "Oral live biotherapeutic STMC-103H to prevent allergic disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/siolta-therapeutics-reports-positive-phase-2-results-adored-study"
+  },
+  {
+   "name": "Aer Therapeutics",
+   "year": "",
+   "pi": "John Fahy",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Inhaled mucolytic fexlamose for COPD",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/aer-therapeutics-announces-first-patient-dosed-phase-2-clinical-trial-fexlamose-chronic"
+  },
+  {
+   "name": "EpiBiologics",
+   "year": "",
+   "pi": "Jim Wells",
+   "silo": [
+    "protein-degradation",
+    "antibody"
+   ],
+   "product": "EpiTAC bispecific antibodies that degrade membrane and secreted proteins",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://1stoncology.com/blog/?p=96442"
+  },
+  {
+   "name": "Rezo Therapeutics",
+   "year": "",
+   "pi": "Nevan Krogan, Kevan Shokat, Natalia Jura",
+   "silo": [
+    "precision-data",
+    "small-molecule"
+   ],
+   "product": "Disease protein-network mapping to find precision cancer drug targets",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/rezo-therapeutics-appoints-derek-hicks-ceo"
+  },
+  {
+   "name": "Exai Bio",
+   "year": "",
+   "pi": "Hani Goodarzi",
+   "silo": [
+    "diagnostics",
+    "ai-discovery"
+   ],
+   "product": "Liquid biopsy combining orphan noncoding RNAs and generative AI",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/exai-bio-appoints-new-chief-executive-officer"
+  },
+  {
+   "name": "Tahoe Therapeutics (formerly Vevo Therapeutics)",
+   "year": "",
+   "pi": "Hani Goodarzi, Kevan Shokat, Johnny Yu",
+   "silo": [
+    "foundation-models",
+    "tools-omics"
+   ],
+   "product": "Single-cell drug-perturbation atlas (Tahoe-100M) for virtual cell models",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/vevo-therapeutics-open-sources-tahoe-100m-worlds-largest-single-cell-dataset-inaugural"
+  },
+  {
+   "name": "Montara Therapeutics",
+   "year": "",
+   "pi": "Kevan Shokat, Martin Kampmann",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "BrainOnly platform confining drug activity to the CNS",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/montara-therapeutics-closes-8-million-seed-round-develop-safer-more-effective"
+  },
+  {
+   "name": "Delve Bio",
+   "year": "",
+   "pi": "Charles Chiu, Joe DeRisi, Michael Wilson",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Metagenomic sequencing test (Delve Detect) for infections",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/new-data-show-delve-bios-metagenomic-platform-accurately-identifies-viruses-and-their"
+  },
+  {
+   "name": "Shinobi Therapeutics",
+   "year": "",
+   "pi": "Tobias Deuse",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Immune-evasive iPSC-derived T cell therapies for solid tumors",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/shinobi-therapeutics-secures-59m-grant-japanese-agency-medical-research-and-development"
+  },
+  {
+   "name": "Enlaza Therapeutics",
+   "year": "",
+   "pi": "Lei Wang",
+   "silo": [
+    "antibody",
+    "adc"
+   ],
+   "product": "Covalent biologics (War-Lock) for drug conjugates and T-cell engagers",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/enlaza-therapeutics-announces-strategic-collaboration-vertex-pharmaceuticals-develop-war"
+  },
+  {
+   "name": "Junevity",
+   "year": "",
+   "pi": "Janine Sengstack",
+   "silo": [
+    "longevity",
+    "rna",
+    "ai-discovery"
+   ],
+   "product": "siRNA repression of AI-selected transcription factors to reset aged cells",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/junevity-raises-10m-develop-cell-reset-therapeutics-longevity"
+  },
+  {
+   "name": "Regel Therapeutics",
+   "year": "",
+   "pi": "",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Targeted CRISPR epi-editing for SCN2A and other neurodevelopmental disorders",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/Landmark%20UCSF%20Study%20Demonstrates%20Functional%20Rescue%20of%20SCN2A"
+  },
+  {
+   "name": "Azalea Therapeutics",
+   "year": "2025",
+   "pi": "Justin Eyquem",
+   "silo": [
+    "gene-therapy",
+    "cell-therapy"
+   ],
+   "product": "Enveloped delivery vehicles that engineer therapeutic cells in the body",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/azalea-therapeutics-launches-82-million-financing-redefine-precision-genomic-medicines"
+  },
+  {
+   "name": "Kopra Bio",
+   "year": "",
+   "pi": "Manish Aghi, Noriyuki Kasahara",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Engineered virus that makes brain tumors express an immune-recruiting protein",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/ucsf-spinout-nets-91-m-test-virus-therapy-brain-cancer-china"
+  },
+  {
+   "name": "Thymmune Therapeutics",
+   "year": "",
+   "pi": "Matthias Hebrok, Audrey Parent, Mark Anderson",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Regenerative stem-cell-derived thymic cell therapies for immune tolerance",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by United Therapeutics 2026, terms undisclosed",
+   "outcome_value_usd": null,
+   "source": "https://innovation.ucsf.edu/media/news/united-therapeutics-corporation-acquires-thymmune-therapeutics"
+  }
+ ]
+}

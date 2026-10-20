@@ -1,0 +1,339 @@
+{
+ "name": "General Catalyst Life Sciences (Healthcare practice)",
+ "profile": {
+  "parent": "General Catalyst",
+  "type": "generalist-vc-bio-arm",
+  "hq": "Cambridge, MA",
+  "founded": "",
+  "leadership": [
+   "Elena Viboch — Managing Director, life sciences and health technology",
+   "Hemant Taneja — CEO and Managing Director, General Catalyst"
+  ],
+  "aum_usd": 700000000,
+  "latest_fund": {
+   "name": "2024 raise (firm-wide; reported as Fund XII)",
+   "size_usd": 8000000000,
+   "year": "2024"
+  },
+  "model": "The firm's life-sciences thesis centers on computationally enabled drug discovery, harnessing biological systems (cell and gene therapy, immunotherapy, protein engineering) and software, services and tools for the industry. It says its core focus is seed and company creation, but it also invests through clinical-stage rounds and public debuts, and it has recently led AI-biology rounds such as Chai Discovery, Manas AI and Maxion.",
+  "summary": "General Catalyst pairs its large health-assurance and health-system strategy with a growing therapeutics and AI-bio portfolio, reporting about $700M deployed across 30+ life-sciences investments since 2021. Recent outcomes include the ArriVent, Maze, Eikon and Parabilis IPOs and Halozyme's acquisition of Elektrofi.",
+  "website": "https://www.generalcatalyst.com/",
+  "sources": [
+   "https://www.generalcatalyst.com/portfolio",
+   "https://www.generalcatalyst.com/stories/the-future-of-life-sciences-investment",
+   "https://www.generalcatalyst.com/team/elena-viboch",
+   "https://en.wikipedia.org/wiki/General_Catalyst",
+   "https://www.generalcatalyst.com/stories/our-investment-in-chai-discovery",
+   "https://www.generalcatalyst.com/stories/our-investment-in-manas-ai",
+   "https://www.generalcatalyst.com/stories/our-investment-in-maxion-therapeutics",
+   "https://www.generalcatalyst.com/stories/our-investment-in-lila-sciences",
+   "https://www.generalcatalyst.com/companies/eikon",
+   "https://www.generalcatalyst.com/companies/arrivent",
+   "https://www.generalcatalyst.com/companies/elektrofi",
+   "https://www.generalcatalyst.com/companies/tahoe",
+   "https://www.generalcatalyst.com/companies/odyssey",
+   "https://arrivent.com/",
+   "https://odysseytx.com/"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Chai Discovery",
+   "launched": "2025",
+   "role": "led",
+   "silo": [
+    "ai-discovery",
+    "foundation-models",
+    "antibody"
+   ],
+   "product": "Frontier AI models that design antibodies and other molecules",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/stories/our-investment-in-chai-discovery"
+  },
+  {
+   "name": "Manas AI",
+   "launched": "2025",
+   "role": "led",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "AI drug discovery platform starting with aggressive cancers",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/stories/our-investment-in-manas-ai"
+  },
+  {
+   "name": "Maxion Therapeutics",
+   "launched": "2025",
+   "role": "led",
+   "silo": [
+    "antibody"
+   ],
+   "product": "KnotBody antibodies against ion channels and GPCRs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/stories/our-investment-in-maxion-therapeutics"
+  },
+  {
+   "name": "Lila Sciences",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "lab-automation",
+    "foundation-models"
+   ],
+   "product": "AI agents and autonomous labs for scientific discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/stories/our-investment-in-lila-sciences"
+  },
+  {
+   "name": "ArriVent BioPharma",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "adc"
+   ],
+   "product": "Firmonertinib for EGFR-mutant lung cancer, plus next-generation ADCs",
+   "status": "public",
+   "outcome": "IPO Jan 2024 (Nasdaq: AVBP), $175M raised",
+   "outcome_value_usd": 175000000,
+   "source": "https://www.iposcoop.com/?p=32268"
+  },
+  {
+   "name": "Elektrofi",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [],
+   "product": "High-concentration microparticle formulation for subcutaneous biologics",
+   "status": "acquired",
+   "outcome": "Acquired by Halozyme 2025 for up to $900M ($750M upfront)",
+   "outcome_value_usd": 900000000,
+   "source": "https://www.dcatvci.org/top-industry-news/halozyme-to-acquire-elektrofi-in-900-m-deal/"
+  },
+  {
+   "name": "Eikon Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Late-stage oncology drugs found with single-molecule tracking",
+   "status": "public",
+   "outcome": "IPO Feb 2026 (Nasdaq: EIKN), ~$381M raised",
+   "outcome_value_usd": 381000000,
+   "source": "https://www.eikontx.com/news/eikon-therapeutics-announces-pricing-of-upsized-initial-public-offering/"
+  },
+  {
+   "name": "Parabilis Medicines",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [],
+   "product": "Stapled-peptide drugs against intracellular targets such as beta-catenin",
+   "status": "public",
+   "outcome": "IPO 2026",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/parabilis-medicines"
+  },
+  {
+   "name": "Maze Therapeutics",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Human-genetics-driven precision medicines",
+   "status": "public",
+   "outcome": "IPO Jan 2025 (Nasdaq: MAZE), $140M raised",
+   "outcome_value_usd": 140000000,
+   "source": "https://www.generalcatalyst.com/companies/maze"
+  },
+  {
+   "name": "Fractyl Health",
+   "launched": "2009",
+   "role": "participated",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Metabolic disease therapies for obesity and type 2 diabetes",
+   "status": "public",
+   "outcome": "IPO Feb 2024 (Nasdaq: GUTS), ~$110M raised",
+   "outcome_value_usd": 110000000,
+   "source": "https://www.iposcoop.com/?p=32312"
+  },
+  {
+   "name": "Odyssey Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small-molecule and protein drugs targeting upstream immune signaling",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://odysseytx.com/"
+  },
+  {
+   "name": "Tahoe Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "tools-omics",
+    "foundation-models"
+   ],
+   "product": "Large-scale biological ground-truth data for AI-driven discovery",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/tahoe"
+  },
+  {
+   "name": "Altos Labs",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "longevity"
+   ],
+   "product": "Cell-rejuvenation science to reverse disease and age-related decline",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/altos-labs"
+  },
+  {
+   "name": "Variant Bio",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Drug discovery from genetics of people with exceptional health traits",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/variant-bio"
+  },
+  {
+   "name": "Dewpoint Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Drug discovery targeting biomolecular condensates",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/dewpoint-therapeutics"
+  },
+  {
+   "name": "Cellanome",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Live-cell imaging plus same-cell transcriptomics platform",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/cellanome"
+  },
+  {
+   "name": "Alpha-9 Oncology",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [
+    "radiopharma"
+   ],
+   "product": "Peptide-based radiopharmaceuticals for cancer",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/alpha-9-oncology"
+  },
+  {
+   "name": "Georgiamune",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [],
+   "product": "Immune-signaling modulators for cancer and autoimmune disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/georgiamune"
+  },
+  {
+   "name": "TenSixty Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [],
+   "product": "Epitope-defined oncology therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/tensixty-bio"
+  },
+  {
+   "name": "Pallando Therapeutics",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "Targeted protein degradation therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/pallando-therapeutics"
+  },
+  {
+   "name": "Waypoint Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "cell-therapy",
+    "tools-omics"
+   ],
+   "product": "Spatial biology to optimize cell therapies",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/waypoint-bio"
+  },
+  {
+   "name": "Karius",
+   "launched": "2020",
+   "role": "participated",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Microbial cell-free DNA sequencing tests for infectious disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/karius"
+  },
+  {
+   "name": "Truvian",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Automated benchtop blood-testing analyzer",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.generalcatalyst.com/companies/truvian"
+  }
+ ]
+}

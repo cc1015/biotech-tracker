@@ -1,0 +1,615 @@
+{
+ "name": "UC Berkeley & Innovative Genomics Institute",
+ "profile": {
+  "city": "Berkeley, USA",
+  "type": "university",
+  "tech_transfer": "UC Berkeley Intellectual Property & Industry Research Alliances (IPIRA)",
+  "tech_transfer_url": "https://ipira.berkeley.edu/",
+  "summary": "Berkeley is the home of Jennifer Doudna's CRISPR-Cas9 work, and its Innovative Genomics Institute has produced a large group of gene-editing companies, from Caribou and Intellia to Mammoth and Scribe. Labs in chemistry, molecular biology and chemical engineering have also spun out synthetic-biology, protein-degradation and gene-therapy companies; IPIRA counts more than 310 startups built on licensed Berkeley IP.",
+  "programs": [
+   "Bakar Labs (Bakar Bio Labs incubator, powered by QB3)",
+   "QB3",
+   "Berkeley SkyDeck",
+   "BEVC",
+   "IGI-Bakar Labs building (planned, 2028-29)"
+  ],
+  "website": "https://innovativegenomics.org/",
+  "sources": [
+   "https://news.berkeley.edu/2025/07/17/crispr-researchers-and-startup-entrepreneurs-will-share-new-building-in-uc-berkeleys-innovation-zone/",
+   "https://ipira.berkeley.edu/about/our-impact",
+   "https://ipira.berkeley.edu/about",
+   "https://ipira.berkeley.edu/entrepreneurs/startups-launched/medical-therapeutics",
+   "https://ipira.berkeley.edu/entrepreneurs/startups-launched/research-tools",
+   "https://ipira.berkeley.edu/entrepreneurs/startups-launched/medical-diagnostics",
+   "https://bio.bakarlabs.org/",
+   "https://en.wikipedia.org/wiki/Jennifer_Doudna",
+   "https://en.wikipedia.org/wiki/Jay_Keasling"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Jennifer Doudna",
+   "lab": "Doudna Lab, Molecular & Cell Biology / Innovative Genomics Institute",
+   "known_for": "CRISPR-Cas9 genome editing; Cas12/Cas13 diagnostics; delivery",
+   "silo": [
+    "gene-editing",
+    "diagnostics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Jennifer_Doudna"
+  },
+  {
+   "pi": "Jay Keasling",
+   "lab": "Chemical & Biomolecular Engineering / Bioengineering; JBEI",
+   "known_for": "Metabolic engineering of microbes for drugs, fuels and chemicals",
+   "silo": [
+    "synbio"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Jay_Keasling"
+  },
+  {
+   "pi": "David Schaffer",
+   "lab": "Chemical & Biomolecular Engineering; QB3 / Bakar Labs director",
+   "known_for": "Directed evolution of AAV gene-therapy vectors",
+   "silo": [
+    "gene-therapy",
+    "gene-editing"
+   ],
+   "source": "https://ipira.berkeley.edu/4d-molecular-therapeutics-llc"
+  },
+  {
+   "pi": "Daniel Nomura",
+   "lab": "Nomura Lab, Chemistry / Molecular & Cell Biology",
+   "known_for": "Chemoproteomics; covalent ligands; DUBTAC protein stabilizers",
+   "silo": [
+    "small-molecule",
+    "protein-degradation"
+   ],
+   "source": "https://ipira.berkeley.edu/frontier-medicines-corporation"
+  },
+  {
+   "pi": "Michael Rape",
+   "lab": "Rape Lab, Molecular & Cell Biology",
+   "known_for": "Ubiquitin signalling; E3 ligases and targeted protein degradation",
+   "silo": [
+    "protein-degradation"
+   ],
+   "source": "https://ipira.berkeley.edu/nurix"
+  },
+  {
+   "pi": "Patrick Hsu",
+   "lab": "Hsu Lab, Bioengineering (Arc Institute co-founder)",
+   "known_for": "RNA-targeting CRISPR; recombinase and gene-insertion tools",
+   "silo": [
+    "gene-editing",
+    "rna"
+   ],
+   "source": "https://ipira.berkeley.edu/stylus-medicine"
+  },
+  {
+   "pi": "Robert Tjian",
+   "lab": "Molecular & Cell Biology",
+   "known_for": "Gene transcription regulation; founded Tularik",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://ipira.berkeley.edu/tularik-inc"
+  },
+  {
+   "pi": "Carolyn Bertozzi",
+   "lab": "Chemistry",
+   "known_for": "Bioorthogonal chemistry; site-specific protein conjugation for ADCs",
+   "silo": [
+    "adc"
+   ],
+   "source": "https://ipira.berkeley.edu/redwood-bioscience-inc"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Caribou Biosciences",
+   "year": "2011",
+   "pi": "Jennifer Doudna; James Berger",
+   "silo": [
+    "gene-editing",
+    "cell-therapy"
+   ],
+   "product": "CRISPR-edited allogeneic CAR-T cell therapies",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: CRBU); dropped CAR-T programs and began strategic review Oct 2026",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/caribou-biosciences-inc"
+  },
+  {
+   "name": "Intellia Therapeutics",
+   "year": "2014",
+   "pi": "Jennifer Doudna",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "In vivo CRISPR therapies delivered by lipid nanoparticles",
+   "builder": "Atlas Venture",
+   "status": "public",
+   "outcome": "IPO 2016 (NASDAQ: NTLA)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Intellia_Therapeutics"
+  },
+  {
+   "name": "Mammoth Biosciences",
+   "year": "2017",
+   "pi": "Jennifer Doudna",
+   "silo": [
+    "gene-editing",
+    "diagnostics"
+   ],
+   "product": "Ultra-compact Cas enzymes for in vivo editing; began in CRISPR diagnostics",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/mammoth-biosciences"
+  },
+  {
+   "name": "Scribe Therapeutics",
+   "year": "2018",
+   "pi": "Jennifer Doudna; David Savage",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Engineered CRISPR editors for cardiometabolic disease",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2026 (upsized $129M)",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/scribe-therapeutics"
+  },
+  {
+   "name": "Azalea Therapeutics",
+   "year": "2023",
+   "pi": "Jennifer Doudna",
+   "silo": [
+    "gene-editing",
+    "cell-therapy"
+   ],
+   "product": "Cell-targeted delivery vehicles for in vivo genomic medicines and CAR-T",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/azalea-therapeutics-inc"
+  },
+  {
+   "name": "Evercrisp Biosciences",
+   "year": "2021",
+   "pi": "Jennifer Doudna",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Self-delivering protein-based CRISPR editors, starting in oncology",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/evercrisp-biosciences"
+  },
+  {
+   "name": "Amber Bio",
+   "year": "2021",
+   "pi": "Jennifer Doudna",
+   "silo": [
+    "gene-editing",
+    "rna"
+   ],
+   "product": "Multi-kilobase RNA writing for genetic medicine",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/amber-bio"
+  },
+  {
+   "name": "Algen Biotechnologies",
+   "year": "2018",
+   "pi": "Jennifer Doudna",
+   "silo": [
+    "tools-omics",
+    "ai-discovery"
+   ],
+   "product": "CRISPR functional-genomics platform for cancer target discovery",
+   "builder": "",
+   "status": "private",
+   "outcome": "AstraZeneca deal worth up to $555M (2025)",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/algen-biotechnologies"
+  },
+  {
+   "name": "Catena Biosciences",
+   "year": "2020",
+   "pi": "Matthew Francis; Jennifer Doudna",
+   "silo": [
+    "antibody",
+    "tools-omics"
+   ],
+   "product": "Tyrosine-cysteine protein conjugation for complex biologics",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/catena-biosciences"
+  },
+  {
+   "name": "EditPep",
+   "year": "2021",
+   "pi": "Ross Wilson",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Peptide carriers delivering CRISPR enzymes into hard-to-transfect cells",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/editpep-inc"
+  },
+  {
+   "name": "Spotlight Therapeutics",
+   "year": "2017",
+   "pi": "Jacob Corn; Patrick Hsu",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Cell-targeted programmable nucleases for in vivo editing",
+   "builder": "",
+   "status": "defunct",
+   "outcome": "shut down 2025",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/spotlight-therapeutics"
+  },
+  {
+   "name": "Moment Bio",
+   "year": "2022",
+   "pi": "Patrick Hsu",
+   "silo": [
+    "rna",
+    "gene-editing"
+   ],
+   "product": "RNA-targeting therapies",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/moment-bio"
+  },
+  {
+   "name": "Stylus Medicine",
+   "year": "2022",
+   "pi": "Patrick Hsu",
+   "silo": [
+    "gene-editing",
+    "ai-discovery"
+   ],
+   "product": "Machine-learning-redesigned recombinases for targeted DNA insertion",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/stylus-medicine"
+  },
+  {
+   "name": "Addition Therapeutics",
+   "year": "2021",
+   "pi": "Kathleen Collins",
+   "silo": [
+    "rna",
+    "gene-editing"
+   ],
+   "product": "RNA-only retroelement-based gene insertion at safe-harbor sites",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/addition-therapeutics"
+  },
+  {
+   "name": "4D Molecular Therapeutics",
+   "year": "2013",
+   "pi": "David Schaffer",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Directed-evolution AAV vectors for genetic and ocular diseases",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: FDMT)",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/4d-molecular-therapeutics-llc"
+  },
+  {
+   "name": "Tessera Therapeutics",
+   "year": "2018",
+   "pi": "David Schaffer",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Gene writing for permanent small and large genome changes",
+   "builder": "Flagship Pioneering",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/tessera-therapeutics-inc"
+  },
+  {
+   "name": "Rewrite Therapeutics",
+   "year": "2018",
+   "pi": "David Schaffer",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "CRISPR-based DNA writing and evolution platform",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Intellia Therapeutics 2022",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/rewrite-therapeutics"
+  },
+  {
+   "name": "Juvena Therapeutics",
+   "year": "2017",
+   "pi": "David Schaffer; Irina Conboy",
+   "silo": [
+    "longevity",
+    "ai-discovery"
+   ],
+   "product": "Secreted-protein therapeutics for muscle regeneration and aging",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/juvena-therapeutics"
+  },
+  {
+   "name": "Amyris",
+   "year": "2003",
+   "pi": "Jay Keasling",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Engineered-yeast production of farnesene-derived chemicals and ingredients",
+   "builder": "",
+   "status": "",
+   "outcome": "IPO 2010",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/amyris-inc"
+  },
+  {
+   "name": "Demetrix",
+   "year": "2015",
+   "pi": "Jay Keasling",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Yeast fermentation of cannabinoids and other rare ingredients",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/demetrix-inc"
+  },
+  {
+   "name": "Apertor Pharmaceuticals",
+   "year": "2020",
+   "pi": "Jay Keasling",
+   "silo": [
+    "small-molecule",
+    "synbio"
+   ],
+   "product": "Natural-product-inspired molecular glues via synthetic biology",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/apertor-pharmaceuticals"
+  },
+  {
+   "name": "Ansa Biotechnologies",
+   "year": "2018",
+   "pi": "Jay Keasling",
+   "silo": [
+    "synbio",
+    "tools-omics"
+   ],
+   "product": "Enzymatic DNA synthesis",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/ansa-biotechnologies"
+  },
+  {
+   "name": "Nurix Therapeutics",
+   "year": "2009",
+   "pi": "John Kuriyan; Michael Rape",
+   "silo": [
+    "protein-degradation",
+    "small-molecule"
+   ],
+   "product": "Small molecules targeting E3 ligases to degrade or stabilize proteins",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2020 (NASDAQ: NRIX)",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/nurix"
+  },
+  {
+   "name": "Lyterian Therapeutics",
+   "year": "2022",
+   "pi": "Michael Rape; Robert Tjian",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "Drugs harnessing protein homeostasis against validated targets",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/lyterian-therapeutics-inc"
+  },
+  {
+   "name": "Zenith Therapeutics",
+   "year": "2022",
+   "pi": "Michael Rape; Daniel Nomura",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "New protein-degradation approach for hard-to-drug targets",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/zenith-therapeutics"
+  },
+  {
+   "name": "Frontier Medicines",
+   "year": "2018",
+   "pi": "Daniel Nomura; Roberto Zoncu",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Chemoproteomics and covalent chemistry for undruggable oncology targets",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/frontier-medicines-corporation"
+  },
+  {
+   "name": "Vicinitas Therapeutics",
+   "year": "2022",
+   "pi": "Daniel Nomura",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "DUBTAC targeted protein stabilizers",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/vicinitas-therapeutics"
+  },
+  {
+   "name": "Tularik",
+   "year": "1991",
+   "pi": "Robert Tjian",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral drugs that regulate gene expression",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "IPO 1999 (NASDAQ: TLRK); acquired by Amgen 2004 for $1.3B",
+   "outcome_value_usd": 1300000000,
+   "source": "https://ipira.berkeley.edu/tularik-inc"
+  },
+  {
+   "name": "Exelixis",
+   "year": "1994",
+   "pi": "Corey Goodman; Gerald Rubin",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oncology small molecules including cabozantinib (CABOMETYX)",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2000 (NASDAQ: EXEL)",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/exelixis-inc"
+  },
+  {
+   "name": "Chiron",
+   "year": "1981",
+   "pi": "Edward Penhoet",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Biopharmaceuticals, vaccines and blood-screening tests",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Novartis 2006",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/chiron-corporation"
+  },
+  {
+   "name": "Ambrx",
+   "year": "2003",
+   "pi": "Peter Schultz",
+   "silo": [
+    "adc",
+    "antibody"
+   ],
+   "product": "Expanded-genetic-code protein therapeutics and site-specific ADCs",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "IPO 2021 (NASDAQ: AMAM); acquired by Johnson & Johnson 2024",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/ambrx-inc"
+  },
+  {
+   "name": "Redwood Bioscience",
+   "year": "2008",
+   "pi": "Carolyn Bertozzi",
+   "silo": [
+    "adc"
+   ],
+   "product": "SMARTag site-specific conjugation for antibody-drug conjugates",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Catalent 2014",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/redwood-bioscience-inc"
+  },
+  {
+   "name": "Tenaya Therapeutics",
+   "year": "2016",
+   "pi": "Kevin Healy",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Gene therapies and precision medicines for heart disease",
+   "builder": "Casdin Capital",
+   "status": "public",
+   "outcome": "IPO 2021 (NASDAQ: TNYA)",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/tenaya-therapeutics",
+   "builder_unconfirmed": true
+  },
+  {
+   "name": "Vedere Bio",
+   "year": "2019",
+   "pi": "Ehud Isacoff; John Flannery",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Optogenetic gene therapy to restore vision in retinal degeneration",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Novartis 2020",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/vedere"
+  },
+  {
+   "name": "iota Biosciences",
+   "year": "2017",
+   "pi": "Michel Maharbiz; Jose Carmena",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Neural dust bioelectronic implants for monitoring and treatment",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Astellas 2020",
+   "outcome_value_usd": null,
+   "source": "https://ipira.berkeley.edu/iota-biosciences"
+  }
+ ]
+}

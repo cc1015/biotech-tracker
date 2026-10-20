@@ -1,0 +1,459 @@
+{
+ "company": "AstraZeneca",
+ "profile": {
+  "legal_name": "AstraZeneca PLC",
+  "hq": "Cambridge, United Kingdom",
+  "founded": "1999",
+  "founders_or_origin": "Merger of Sweden's Astra AB and UK's Zeneca Group (demerged from ICI in 1993)",
+  "ceo": "Pascal Soriot",
+  "ceo_since": "2012",
+  "ticker": "LSE:AZN",
+  "website": "https://www.astrazeneca.com",
+  "revenue_usd": 58739000000,
+  "revenue_year": "2025",
+  "employees": 89900,
+  "employees_year": "2025",
+  "therapeutic_areas": [
+   "Oncology",
+   "Cardiovascular, renal and metabolism",
+   "Respiratory and immunology",
+   "Rare disease (Alexion)",
+   "Vaccines and immune therapies"
+  ],
+  "top_products": [
+   {
+    "name": "Tagrisso",
+    "what": "EGFR-mutated non-small cell lung cancer",
+    "revenue_usd": 7250000000,
+    "year": "2025"
+   },
+   {
+    "name": "Imfinzi",
+    "what": "PD-L1 antibody for lung, bladder, GI cancers",
+    "revenue_usd": 6060000000,
+    "year": "2025"
+   },
+   {
+    "name": "Enhertu",
+    "what": "HER2-directed ADC (with Daiichi Sankyo)",
+    "revenue_usd": 2780000000,
+    "year": "2025"
+   },
+   {
+    "name": "Farxiga",
+    "what": "SGLT2 inhibitor for diabetes, heart failure, CKD",
+    "revenue_usd": null,
+    "year": ""
+   },
+   {
+    "name": "Ultomiris",
+    "what": "C5 inhibitor for PNH, aHUS, gMG",
+    "revenue_usd": null,
+    "year": ""
+   },
+   {
+    "name": "Calquence",
+    "what": "BTK inhibitor for CLL",
+    "revenue_usd": null,
+    "year": ""
+   }
+  ],
+  "venture_arm": {
+   "name": "MedImmune Ventures",
+   "founded": "2002",
+   "fund_size_usd": 400000000,
+   "url": "",
+   "notable_investments": [
+    "G1 Therapeutics",
+    "Melinta Therapeutics",
+    "Astria Therapeutics",
+    "Xencor",
+    "NeuProtect"
+   ]
+  },
+  "summary": "AstraZeneca is a Cambridge, UK-based drugmaker formed in 1999 when Sweden's Astra merged with Zeneca, the pharma business demerged from ICI. Under Pascal Soriot it fought off a 2014 Pfizer bid and rebuilt around oncology, biologics from MedImmune, and rare disease through the $39B Alexion purchase.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/AstraZeneca",
+   "https://www.biospace.com/press-releases/astrazeneca-results-fy-and-q4-2025",
+   "https://www.pharmaceutical-technology.com/news/astrazeneca-bets-on-continued-oncology-demand-for-2026-growth/",
+   "https://hub.waveup.com/funds/medimmune-ventures",
+   "https://www.mednous.com/news/az-commits-100-million-venture-arm"
+  ]
+ },
+ "events": [
+  {
+   "year": "1992",
+   "type": "founding",
+   "counterparty": "Leonard Bell; Steven Squinto",
+   "via": "Alexion Pharmaceuticals",
+   "result": "Alexion Pharmaceuticals",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Alexion was founded in New Haven, Connecticut.",
+   "source": "https://en.wikipedia.org/wiki/Alexion_Pharmaceuticals"
+  },
+  {
+   "year": "1993",
+   "type": "spin-off",
+   "counterparty": "Imperial Chemical Industries (ICI)",
+   "via": "Zeneca",
+   "result": "Zeneca Group",
+   "value_usd": null,
+   "status": "completed",
+   "description": "ICI demerged its pharmaceuticals and agrochemicals businesses as Zeneca Group in June 1993.",
+   "source": "https://en.wikipedia.org/wiki/Zeneca"
+  },
+  {
+   "year": "1997",
+   "type": "acquisition",
+   "counterparty": "Salick Health Care",
+   "via": "Zeneca",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Zeneca bought the remaining half of US cancer-care provider Salick, having taken 50% in 1994.",
+   "source": "https://en.wikipedia.org/wiki/Zeneca"
+  },
+  {
+   "year": "1999",
+   "type": "merger",
+   "counterparty": "Astra AB",
+   "via": "",
+   "result": "AstraZeneca",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Zeneca and Sweden's Astra merged, Zeneca holders getting 53.5% of the new AstraZeneca plc.",
+   "source": "https://en.wikipedia.org/wiki/Astra_AB"
+  },
+  {
+   "year": "2000",
+   "type": "spin-off",
+   "counterparty": "Novartis (agribusiness)",
+   "via": "",
+   "result": "Syngenta",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Zeneca Agrochemicals was combined with Novartis' agribusiness to form Syngenta in November 2000.",
+   "source": "https://en.wikipedia.org/wiki/Syngenta"
+  },
+  {
+   "year": "2002",
+   "type": "acquisition",
+   "counterparty": "Aviron",
+   "via": "MedImmune",
+   "result": "",
+   "value_usd": 1500000000,
+   "status": "completed",
+   "description": "MedImmune bought Aviron, gaining the FluMist nasal flu vaccine.",
+   "source": "https://en.wikipedia.org/wiki/MedImmune"
+  },
+  {
+   "year": "2002",
+   "type": "venture-arm",
+   "counterparty": "MedImmune Ventures",
+   "via": "MedImmune",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "MedImmune set up an evergreen corporate venture fund investing in private life-science companies.",
+   "source": "https://hub.waveup.com/funds/medimmune-ventures"
+  },
+  {
+   "year": "2005",
+   "type": "acquisition",
+   "counterparty": "KuDOS Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Bought UK DNA-repair biotech KuDOS for £120M, the source of PARP inhibitor olaparib (Lynparza).",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2006",
+   "type": "acquisition",
+   "counterparty": "Cambridge Antibody Technology",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Acquired antibody-discovery firm CAT for £702M, a key biologics platform.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2007",
+   "type": "acquisition",
+   "counterparty": "MedImmune",
+   "via": "",
+   "result": "",
+   "value_usd": 15200000000,
+   "status": "completed",
+   "description": "All-cash takeover of MedImmune at $58 per share, completed June 2007, creating AZ's biologics arm.",
+   "source": "https://en.wikipedia.org/wiki/MedImmune"
+  },
+  {
+   "year": "2011",
+   "type": "venture-arm",
+   "counterparty": "MedImmune Ventures",
+   "via": "",
+   "result": "",
+   "value_usd": 100000000,
+   "status": "completed",
+   "description": "AstraZeneca added $100M to MedImmune Ventures, lifting capital under management to $400M.",
+   "source": "https://www.mednous.com/news/az-commits-100-million-venture-arm"
+  },
+  {
+   "year": "2011",
+   "type": "divestiture",
+   "counterparty": "Dentsply International",
+   "via": "",
+   "result": "Dentsply",
+   "value_usd": 1800000000,
+   "status": "completed",
+   "description": "Sold dental and healthcare unit Astra Tech to Dentsply for about $1.8B cash.",
+   "source": "https://www.astrazeneca.com/media-centre/press-releases/2011/AstraZeneca-to-sell-AstraTech-to-DENTSPLY-International-22062011.html"
+  },
+  {
+   "year": "2012",
+   "type": "acquisition",
+   "counterparty": "Ardea Biosciences",
+   "via": "",
+   "result": "",
+   "value_usd": 1260000000,
+   "status": "completed",
+   "description": "Acquired Ardea for its gout program lesinurad.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2012",
+   "type": "joint-venture",
+   "counterparty": "Bristol-Myers Squibb (Amylin)",
+   "via": "",
+   "result": "",
+   "value_usd": 3400000000,
+   "status": "completed",
+   "description": "Paid BMS $3.4B to share Amylin's diabetes business in a joint venture after BMS bought Amylin.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2013",
+   "type": "acquisition",
+   "counterparty": "Pearl Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Bought inhaled-respiratory specialist Pearl, whose platform underpins Breztri.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2014",
+   "type": "acquisition",
+   "counterparty": "Pfizer",
+   "via": "",
+   "result": "",
+   "value_usd": 117000000000,
+   "status": "terminated",
+   "description": "Rejected Pfizer's final takeover offer of £55 per share (about $117B).",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2014",
+   "type": "acquisition",
+   "counterparty": "Almirall (respiratory business)",
+   "via": "",
+   "result": "",
+   "value_usd": 2100000000,
+   "status": "completed",
+   "description": "Acquired Almirall's respiratory franchise, including Almirall Sofotec.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2015",
+   "type": "acquisition",
+   "counterparty": "ZS Pharma",
+   "via": "",
+   "result": "",
+   "value_usd": 2700000000,
+   "status": "completed",
+   "description": "Bought ZS Pharma for its hyperkalaemia drug, later Lokelma.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2015",
+   "type": "stake",
+   "counterparty": "Acerta Pharma",
+   "via": "",
+   "result": "",
+   "value_usd": 4000000000,
+   "status": "completed",
+   "description": "Took a 55% majority stake in Acerta, developer of the BTK inhibitor Calquence.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2015",
+   "type": "acquisition",
+   "counterparty": "Synageva BioPharma",
+   "via": "Alexion Pharmaceuticals",
+   "result": "",
+   "value_usd": 8400000000,
+   "status": "completed",
+   "description": "Alexion bought Synageva, maker of the enzyme replacement therapy Kanuma, in a stock-and-cash deal.",
+   "source": "https://en.wikipedia.org/wiki/Alexion_Pharmaceuticals"
+  },
+  {
+   "year": "2018",
+   "type": "spin-off",
+   "counterparty": "MedImmune early-stage portfolio",
+   "via": "",
+   "result": "Viela Bio",
+   "value_usd": 250000000,
+   "status": "completed",
+   "description": "Spun six early-stage inflammation and autoimmunity drugs out into new company Viela Bio.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2018",
+   "type": "acquisition",
+   "counterparty": "Wilson Therapeutics",
+   "via": "Alexion Pharmaceuticals",
+   "result": "",
+   "value_usd": 855000000,
+   "status": "completed",
+   "description": "Alexion bought Swedish Wilson Therapeutics for its Wilson disease candidate.",
+   "source": "https://en.wikipedia.org/wiki/Alexion_Pharmaceuticals"
+  },
+  {
+   "year": "2019",
+   "type": "joint-venture",
+   "counterparty": "Daiichi Sankyo",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Co-development deal for ADC trastuzumab deruxtecan (Enhertu), worth up to $6.9B.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2019",
+   "type": "rename",
+   "counterparty": "MedImmune",
+   "via": "",
+   "result": "AstraZeneca",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Retired the MedImmune name and brand in favour of AstraZeneca.",
+   "source": "https://en.wikipedia.org/wiki/MedImmune"
+  },
+  {
+   "year": "2020",
+   "type": "acquisition",
+   "counterparty": "Achillion Pharmaceuticals",
+   "via": "Alexion Pharmaceuticals",
+   "result": "",
+   "value_usd": 930000000,
+   "status": "completed",
+   "description": "Alexion acquired Achillion and its oral complement factor D inhibitors.",
+   "source": "https://en.wikipedia.org/wiki/Alexion_Pharmaceuticals"
+  },
+  {
+   "year": "2020",
+   "type": "acquisition",
+   "counterparty": "Portola Pharmaceuticals",
+   "via": "Alexion Pharmaceuticals",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Alexion bought Portola, maker of the anticoagulant reversal agent Andexxa.",
+   "source": "https://en.wikipedia.org/wiki/Alexion_Pharmaceuticals"
+  },
+  {
+   "year": "2021",
+   "type": "acquisition",
+   "counterparty": "Alexion Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 39000000000,
+   "status": "completed",
+   "description": "Acquired rare-disease leader Alexion (Soliris, Ultomiris), closing July 2021; it became Alexion, AstraZeneca Rare Disease.",
+   "source": "https://en.wikipedia.org/wiki/Alexion_Pharmaceuticals"
+  },
+  {
+   "year": "2022",
+   "type": "acquisition",
+   "counterparty": "TeneoTwo",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Acquired TeneoTwo and its CD19/CD3 T-cell engager for blood cancers, up to $1.3B.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2023",
+   "type": "acquisition",
+   "counterparty": "CinCor Pharma",
+   "via": "",
+   "result": "",
+   "value_usd": 1800000000,
+   "status": "completed",
+   "description": "Bought CinCor for baxdrostat, an aldosterone synthase inhibitor for hypertension.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2023",
+   "type": "acquisition",
+   "counterparty": "Icosavax",
+   "via": "",
+   "result": "",
+   "value_usd": 1100000000,
+   "status": "completed",
+   "description": "Acquired vaccine developer Icosavax for its virus-like-particle RSV/hMPV vaccine.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2023",
+   "type": "acquisition",
+   "counterparty": "Gracell Biotechnologies",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Bought Chinese cell therapy company Gracell and its FasTCAR platform, up to $1.2B.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Amolyt Pharma",
+   "via": "",
+   "result": "",
+   "value_usd": 1050000000,
+   "status": "completed",
+   "description": "Acquired Amolyt for its hypoparathyroidism treatment, strengthening rare endocrinology.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2024",
+   "type": "acquisition",
+   "counterparty": "Fusion Pharmaceuticals",
+   "via": "",
+   "result": "",
+   "value_usd": 2000000000,
+   "status": "completed",
+   "description": "Bought radioconjugate developer Fusion to enter radiopharmaceuticals.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2025",
+   "type": "acquisition",
+   "counterparty": "EsoBiotec",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Acquired EsoBiotec and its in vivo cell therapy lentiviral platform, worth up to $1B.",
+   "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  }
+ ]
+}

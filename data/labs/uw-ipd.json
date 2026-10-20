@@ -1,0 +1,296 @@
+{
+ "name": "University of Washington Institute for Protein Design",
+ "profile": {
+  "city": "Seattle, USA",
+  "type": "research institute",
+  "tech_transfer": "UW CoMotion",
+  "tech_transfer_url": "",
+  "summary": "The IPD, part of the UW School of Medicine, is the hub of computational and AI-driven de novo protein design (Rosetta, RFdiffusion), and it produced the first computationally designed protein medicine to be approved (the SKYCovione COVID-19 vaccine). Its Translational Investigator Program has seeded 11 spinouts whose alumni have raised more than $1B, and Baker-lab tools also underpin outside companies such as Xaira and Arzeda.",
+  "programs": [
+   "IPD Translational Investigator Program"
+  ],
+  "website": "https://www.ipd.uw.edu/",
+  "sources": [
+   "https://www.ipd.uw.edu/translation/",
+   "https://www.ipd.uw.edu/?p=5049",
+   "https://www.ipd.uw.edu/research/translation",
+   "https://www.ipd.uw.edu/",
+   "https://www.ipd.uw.edu/2022/08/annual-report-2022",
+   "https://www.ipd.uw.edu/people/lance-stewart",
+   "https://kinglab.ipd.uw.edu/"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "David Baker",
+   "lab": "Baker Lab (Biochemistry / IPD)",
+   "known_for": "Rosetta, RFdiffusion; de novo protein design; 2024 Nobel Prize",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "source": "https://www.biospace.com/xaira-therapeutics-launches-to-deliver-transformative-medicines-by-advancing-and-harnessing-ai-for-drug-discovery-and-development"
+  },
+  {
+   "pi": "Neil King",
+   "lab": "King Lab (IPD)",
+   "known_for": "Self-assembling protein nanoparticles; designed nanoparticle vaccines",
+   "silo": [
+    "ai-discovery"
+   ],
+   "source": "https://kinglab.ipd.uw.edu/"
+  },
+  {
+   "pi": "Gaurav Bhardwaj",
+   "lab": "Bhardwaj Lab (IPD)",
+   "known_for": "Designed membrane-permeable macrocyclic peptides",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "source": "https://www.ipd.uw.edu/?p=6930"
+  },
+  {
+   "pi": "Lance Stewart",
+   "lab": "IPD Translational Investigator Program",
+   "known_for": "Co-founded Archon, Lila, Mopac, Vilya, Transcyton",
+   "silo": [
+    "ai-discovery"
+   ],
+   "source": "https://www.ipd.uw.edu/people/lance-stewart"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Arzeda",
+   "year": "2008",
+   "pi": "David Baker; Alexandre Zanghellini, Eric Althoff, Daniela Grabs-Röthlisberger",
+   "silo": [
+    "synbio"
+   ],
+   "product": "Rosetta-based computational enzyme and protein design for industrial products",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ipd.uw.edu/2016/11/arzeda-scales-its-automated-molecule-development-pipeline/"
+  },
+  {
+   "name": "Prospect Genomics",
+   "year": "",
+   "pi": "David Baker",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by an Eli Lilly subsidiary 2001",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/David_Baker_(biochemist)"
+  },
+  {
+   "name": "Cyrus Biotechnology",
+   "year": "2014",
+   "pi": "David Baker (scientific co-founder); Lucas Nivon, Yifan Song",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Rosetta- and AI-driven protein therapeutics design; merged with Orthogonal Biologics 2021",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://cyrusbio.com/about/"
+  },
+  {
+   "name": "PvP Biologics",
+   "year": "2016",
+   "pi": "",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Designed oral enzyme degrading gluten for celiac disease (TAK-062)",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Takeda 2020 for up to $330M",
+   "outcome_value_usd": 330000000,
+   "source": "https://www.ipd.uw.edu/2020/02/ipd-spinout-pvp-biologics-acquired-by-takeda"
+  },
+  {
+   "name": "Icosavax",
+   "year": "2017",
+   "pi": "",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Designed virus-like-particle vaccines; IVX-A12 for RSV and hMPV",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by AstraZeneca 2024 for up to ~$1.1B",
+   "outcome_value_usd": 1100000000,
+   "source": "https://www.astrazeneca.com/media-centre/press-releases/2024/astrazeneca-completes-acquisition-of-icosavax.html"
+  },
+  {
+   "name": "A-Alpha Bio",
+   "year": "2018",
+   "pi": "David Younger, Randolph Lopez",
+   "silo": [
+    "tools-omics",
+    "ai-discovery"
+   ],
+   "product": "AlphaSeq high-throughput protein-protein binding measurement; AlphaBind ML prediction",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.aalphabio.com/about"
+  },
+  {
+   "name": "Neoleukin Therapeutics",
+   "year": "2018",
+   "pi": "",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "De novo designed proteins for cancer immunotherapy",
+   "builder": "",
+   "status": "merged",
+   "outcome": "reverse-merged with Neurogene 2023 (NASDAQ: NGNE)",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/neurogene-announces-closing-of-merger-with-neoleukin-therapeutics-and-concurrent-private-placement-of-95-million"
+  },
+  {
+   "name": "Mopac Biologics",
+   "year": "2020",
+   "pi": "Lance Stewart",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Oral designed IL-23R inhibitor (MB1) for inflammatory bowel disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ipd.uw.edu/translation/"
+  },
+  {
+   "name": "Transcyton Bio",
+   "year": "2020",
+   "pi": "Lance Stewart",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "De novo designed blood-brain barrier transport proteins",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ipd.uw.edu/people/lance-stewart"
+  },
+  {
+   "name": "Outpace Bio",
+   "year": "2021",
+   "pi": "Marc Lajoie, Scott Boyken",
+   "silo": [
+    "cell-therapy",
+    "ai-discovery"
+   ],
+   "product": "Designed protein control tools for safer, more potent cell therapies",
+   "builder": "Lyell Immunopharma",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://1stoncology.com/blog/?p=91908"
+  },
+  {
+   "name": "Monod Bio",
+   "year": "2021",
+   "pi": "Daniel-Adriano Silva",
+   "silo": [
+    "diagnostics",
+    "synbio"
+   ],
+   "product": "Designed luminescent biosensors for detecting biomolecules",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ipd.uw.edu/2022/08/biosensor-startup-monod-secures-25m-seed-financing"
+  },
+  {
+   "name": "Lila Biologics",
+   "year": "2022",
+   "pi": "Lance Stewart",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "De novo designed integrin inhibitors for fibrotic disease, including IPF",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ipd.uw.edu/people/lance-stewart"
+  },
+  {
+   "name": "Vilya",
+   "year": "2022",
+   "pi": "David Baker, Gaurav Bhardwaj, Lance Stewart, Patrick Salveson, Adam Moyer, Naozumi Hiranuma",
+   "silo": [
+    "ai-discovery",
+    "small-molecule"
+   ],
+   "product": "Computationally designed membrane-permeable macrocycles against hard targets",
+   "builder": "ARCH Venture Partners",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/vilya-launches-to-design-a-new-transformational-class-of-medicines-that-precisely-target-disease-biology"
+  },
+  {
+   "name": "Archon Biosciences",
+   "year": "2023",
+   "pi": "James Lazarovits, George Ueda (platform co-invented with David Baker)",
+   "silo": [
+    "antibody",
+    "ai-discovery"
+   ],
+   "product": "Antibody Cages: antibodies assembled with designed protein nanostructures",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/press-releases/archon-biosciences-emerges-from-stealth-to-advance-a-new-class-of-biologic-invented-in-nobel-prize-winning-computational-protein-design-lab"
+  },
+  {
+   "name": "Xaira Therapeutics",
+   "year": "2024",
+   "pi": "David Baker, Hetu Kamisetty",
+   "silo": [
+    "ai-discovery",
+    "foundation-models",
+    "antibody"
+   ],
+   "product": "Generative AI drug discovery built on RFdiffusion and RFantibody",
+   "builder": "ARCH Venture Partners; Foresite Labs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/xaira-therapeutics-launches-to-deliver-transformative-medicines-by-advancing-and-harnessing-ai-for-drug-discovery-and-development"
+  },
+  {
+   "name": "Skape Bio",
+   "year": "2025",
+   "pi": "",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Miniprotein therapeutics against integral membrane protein targets",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.ipd.uw.edu/translation/"
+  }
+ ]
+}

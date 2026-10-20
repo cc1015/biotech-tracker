@@ -1,0 +1,68 @@
+{
+ "company": "Novo Nordisk",
+ "profile": {
+   "legal_name": "Novo Nordisk A/S",
+   "hq": "Bagsværd, Denmark",
+   "founded": "1989",
+   "founders_or_origin": "1989 merger of insulin makers Novo Industri (founded 1925 by Harald and Thorvald Pedersen) and Nordisk Gentofte (Nordisk Insulinlaboratorium, 1923, August Krogh)",
+   "ceo": "Mike Doustdar",
+   "ceo_since": "2025",
+   "ticker": "CPH:NOVO-B",
+   "website": "https://www.novonordisk.com",
+   "revenue_usd": 46830000000,
+   "revenue_year": "2025",
+   "employees": 68794,
+   "employees_year": "2025",
+   "therapeutic_areas": ["Diabetes", "Obesity", "Cardiovascular & metabolic (incl. MASH)", "Rare blood disorders", "Rare endocrine disorders"],
+   "top_products": [
+     {"name": "Ozempic", "what": "Type 2 diabetes GLP-1 injection (semaglutide)", "revenue_usd": 19260000000, "year": "2025"},
+     {"name": "Wegovy", "what": "Obesity / weight management (semaglutide)", "revenue_usd": 11990000000, "year": "2025"},
+     {"name": "Rybelsus", "what": "Oral semaglutide for type 2 diabetes", "revenue_usd": 3350000000, "year": "2025"},
+     {"name": "NovoRapid / NovoLog", "what": "Fast-acting mealtime insulin", "revenue_usd": 2390000000, "year": "2025"},
+     {"name": "Tresiba", "what": "Ultra-long-acting basal insulin", "revenue_usd": 1830000000, "year": "2025"},
+     {"name": "NovoSeven", "what": "Haemophilia with inhibitors, bleeding disorders", "revenue_usd": 1110000000, "year": "2025"}
+   ],
+   "venture_arm": {
+     "name": "Novo Holdings (Seed, Venture, Growth and Principal Investments; REPAIR Impact Fund) - owned by the Novo Nordisk Foundation, Novo Nordisk's controlling shareholder",
+     "founded": "1999",
+     "fund_size_usd": null,
+     "url": "https://novoholdings.com/investments/venture-investments",
+     "notable_investments": ["Catalent (acquired 2024)", "Xellia Pharmaceuticals", "ConvaTec (stake)", "Myricx Bio", "Nalu Medical", "Expedition Therapeutics"]
+   },
+   "summary": "Novo Nordisk is a Danish drugmaker formed in 1989 from two century-old insulin rivals, now the leading supplier of GLP-1 medicines for diabetes and obesity (Ozempic, Wegovy, Rybelsus). It is controlled by the Novo Nordisk Foundation through Novo Holdings, which also spun out the enzymes business (Novozymes, now Novonesis) and bought Catalent to expand Novo's fill-finish capacity.",
+   "sources": [
+     "https://en.wikipedia.org/wiki/Novo_Nordisk",
+     "https://www.novonordisk.com/content/nncorp/global/en/news-and-media/news-and-ir-materials/news-details.html?id=916483",
+     "https://www.novonordisk.com/content/dam/nncorp/global/en/investors/irmaterial/annual_report/2026/Q4-2025-financial-workbook.xlsx",
+     "https://en.wikipedia.org/wiki/Novo_Holdings",
+     "https://novoholdings.com/investments/venture-investments"
+   ]
+ },
+ "events": [
+   {"year": "1923", "type": "founding", "counterparty": "Nordisk Insulinlaboratorium", "via": "Nordisk", "result": "Nordisk Insulinlaboratorium", "value_usd": null, "status": "completed", "description": "Nordisk began making insulin in Denmark, building on August Krogh's work; incorporated as a company in 1924.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "1925", "type": "founding", "counterparty": "Novo Terapeutisk Laboratorium", "via": "Novo", "result": "Novo Terapeutisk Laboratorium", "value_usd": null, "status": "completed", "description": "Former Nordisk staff Harald and Thorvald Pedersen founded rival insulin maker Novo.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "1982", "type": "joint-venture", "counterparty": "Squibb", "via": "Novo", "result": "", "value_usd": null, "status": "completed", "description": "Novo entered the US insulin market through a joint venture with Squibb.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "1989", "type": "merger", "counterparty": "Nordisk Gentofte", "via": "", "result": "Novo Nordisk", "value_usd": null, "status": "completed", "description": "Danish insulin rivals Novo and Nordisk combined to form Novo Nordisk.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "1991", "type": "spin-off", "counterparty": "Novo Nordisk Engineering", "via": "", "result": "NNE", "value_usd": null, "status": "completed", "description": "In-house pharma engineering consultancy demerged as NNE.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "1994", "type": "spin-off", "counterparty": "IT operations", "via": "", "result": "NNIT", "value_usd": null, "status": "completed", "description": "IT units spun out as NNIT, which later listed on Nasdaq Copenhagen in 2015.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "1999", "type": "venture-arm", "counterparty": "Novo Nordisk Foundation", "via": "", "result": "Novo A/S (now Novo Holdings)", "value_usd": null, "status": "completed", "description": "Foundation's holding and investment company set up; it controls Novo Nordisk and runs the group's life-science investing.", "source": "https://en.wikipedia.org/wiki/Novo_Holdings"},
+   {"year": "2000", "type": "spin-off", "counterparty": "Enzymes business", "via": "", "result": "Novozymes (now Novonesis)", "value_usd": null, "status": "completed", "description": "Industrial enzymes business demerged and listed separately as Novozymes.", "source": "https://en.wikipedia.org/wiki/Novozymes"},
+   {"year": "2013", "type": "acquisition", "counterparty": "Xellia Pharmaceuticals", "via": "", "result": "", "value_usd": 700000000, "status": "completed", "description": "Parent Novo A/S (Novo Holdings) bought anti-infectives maker Xellia; held outside Novo Nordisk.", "source": "https://en.wikipedia.org/wiki/Novo_Holdings"},
+   {"year": "2015", "type": "spin-off", "counterparty": "NNIT", "via": "", "result": "NNIT", "value_usd": null, "status": "completed", "description": "NNIT floated on Nasdaq Copenhagen, reducing Novo's ownership.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2018", "type": "venture-arm", "counterparty": "REPAIR Impact Fund", "via": "", "result": "REPAIR Impact Fund", "value_usd": 165000000, "status": "completed", "description": "Novo Holdings launched an antimicrobial-resistance fund with $165M initial budget.", "source": "https://en.wikipedia.org/wiki/Novo_Holdings"},
+   {"year": "2018", "type": "acquisition", "counterparty": "Ziylo", "via": "", "result": "", "value_usd": 800000000, "status": "completed", "description": "Bought UK start-up Ziylo for glucose-binding molecules aimed at glucose-responsive insulin (value includes milestones).", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2018", "type": "acquisition", "counterparty": "Ablynx", "via": "", "result": "Sanofi", "value_usd": 3100000000, "status": "terminated", "description": "Unsolicited bid for Belgian nanobody firm Ablynx rejected; Sanofi bought it instead.", "source": "https://en.wikipedia.org/wiki/Ablynx"},
+   {"year": "2020", "type": "acquisition", "counterparty": "Corvidia Therapeutics", "via": "", "result": "", "value_usd": 725000000, "status": "completed", "description": "Bought AstraZeneca spin-out Corvidia for anti-IL-6 ziltivekimab in cardiovascular disease; up to $2.1B total.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2020", "type": "acquisition", "counterparty": "Emisphere Technologies", "via": "", "result": "", "value_usd": 1800000000, "status": "completed", "description": "Bought owner of SNAC oral-delivery technology behind Rybelsus, including related royalty rights.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2021", "type": "acquisition", "counterparty": "Dicerna Pharmaceuticals", "via": "", "result": "", "value_usd": 3300000000, "status": "completed", "description": "Bought RNAi company Dicerna to add a gene-silencing platform.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2022", "type": "acquisition", "counterparty": "Forma Therapeutics", "via": "", "result": "", "value_usd": 1100000000, "status": "completed", "description": "Bought Forma to expand in sickle cell disease and rare blood disorders.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2023", "type": "acquisition", "counterparty": "Inversago Pharma", "via": "", "result": "", "value_usd": 1000000000, "status": "completed", "description": "Bought Montreal obesity biotech Inversago for CB1-blocker candidates.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2023", "type": "acquisition", "counterparty": "Embark Biotech", "via": "", "result": "", "value_usd": 500000000, "status": "completed", "description": "Bought Danish metabolic-disease start-up Embark (value up to, incl. milestones).", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2023", "type": "acquisition", "counterparty": "KBP Biosciences (ocedurenone)", "via": "", "result": "", "value_usd": 1300000000, "status": "completed", "description": "Bought rights to hypertension drug ocedurenone; after trial failure Novo sued KBP and impaired the asset.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2024", "type": "acquisition", "counterparty": "Cardior Pharmaceuticals", "via": "", "result": "", "value_usd": 1100000000, "status": "completed", "description": "Bought German RNA-therapeutics firm Cardior for heart-failure candidates (value up to).", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2024", "type": "stake", "counterparty": "Single Use Support", "via": "", "result": "", "value_usd": null, "status": "completed", "description": "Took a majority stake in Austrian bioprocess-equipment supplier Single Use Support.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
+   {"year": "2024", "type": "acquisition", "counterparty": "Catalent", "via": "", "result": "Novo Holdings", "value_usd": 16500000000, "status": "completed", "description": "Parent Novo Holdings bought contract manufacturer Catalent and took it private.", "source": "https://en.wikipedia.org/wiki/Catalent"},
+   {"year": "2024", "type": "acquisition", "counterparty": "Catalent (three fill-finish sites, from Novo Holdings)", "via": "", "result": "", "value_usd": 11000000000, "status": "completed", "description": "Novo Nordisk bought three Catalent plants from its parent to boost Wegovy and Ozempic supply.", "source": "https://en.wikipedia.org/wiki/Catalent"},
+   {"year": "2025", "type": "acquisition", "counterparty": "Akero Therapeutics", "via": "", "result": "", "value_usd": 4700000000, "status": "completed", "description": "Bought MASH developer Akero for FGF21 analog efruxifermin; CVR adds up to $500M.", "source": "https://www.dcatvci.org/top-industry-news/novo-nordisk-completes-acquisition-of-akero-therapeutics/"}
+ ]
+}

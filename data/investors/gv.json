@@ -1,0 +1,358 @@
+{
+ "name": "GV Life Sciences",
+ "profile": {
+  "parent": "GV (formerly Google Ventures), Alphabet",
+  "type": "tech-corporate-vc",
+  "hq": "Mountain View, CA (offices in San Francisco, New York, Cambridge MA, London)",
+  "founded": "2009",
+  "leadership": [
+   "Krishna Yeshwant — Managing Partner; leads early life-sciences investing and founded GV's incubation program",
+   "David Schenkein — General Partner; leads the life sciences investment team (former Agios CEO)",
+   "Issi Rozen — General Partner; company formation and early-stage life sciences",
+   "Anthony Philippakis — General Partner; life sciences and data science",
+   "Brendan Bulik-Sullivan — General Partner; life sciences",
+   "David Krane — CEO & Managing Partner, GV"
+  ],
+  "aum_usd": null,
+  "latest_fund": {
+   "name": "",
+   "size_usd": null,
+   "year": ""
+  },
+  "model": "Alphabet's venture arm invests in therapeutics, diagnostics, devices and health tech, from formation through later rounds. It incubates companies with entrepreneurs-in-residence (ROME Therapeutics and Verve Therapeutics came out of this program), co-leads launch rounds with partners such as ARCH and Lux, and often leads early rounds of platform companies.",
+  "summary": "GV has invested in healthcare since 2009 and has backed many prominent genetic-medicine and AI-biology companies, including Beam, Verve, Prime Medicine and Isomorphic Labs. Its exits include Foundation Medicine and Flatiron Health to Roche and Verve to Lilly.",
+  "website": "https://www.gv.com/",
+  "sources": [
+   "https://www.gv.com/portfolio",
+   "https://www.gv.com/team?sector=life-sciences",
+   "https://www.gv.com/team/krishna-yeshwant",
+   "https://www.gv.com/team/david-schenkein",
+   "https://www.gv.com/team/issi-rozen",
+   "https://www.gv.com/team/anthony-philippakis",
+   "https://www.gv.com/team/brendan-bulik-sullivan",
+   "https://en.wikipedia.org/wiki/GV_(company)",
+   "https://pharmashots.com/28753/know-your-investor-google-ventures-october25-edition/",
+   "https://globalventuring.com/university/verve-swerves-into-63m",
+   "https://www.biospace.com/press-releases/lilly-completes-acquisition-of-verve-therapeutics-to-advance-one-time-treatments-for-people-with-high-cardiovascular-risk",
+   "https://en.wikipedia.org/wiki/Verve_Therapeutics",
+   "https://en.wikipedia.org/wiki/Beam_Therapeutics",
+   "https://en.wikipedia.org/wiki/Prime_Medicine",
+   "https://www.goodwinlaw.com/en/news-and-events/news/2020/04/04_27-rome-therapeutics-launches-with-50m-series-a",
+   "https://www.statnews.com/2025/09/22/pfizer-metsera-acquisition-obesity-weight-loss/"
+  ]
+ },
+ "companies": [
+  {
+   "name": "Verve Therapeutics",
+   "launched": "2019",
+   "role": "co-founded",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "One-time base-editing medicines to lower LDL cholesterol",
+   "status": "acquired",
+   "outcome": "Acquired by Eli Lilly 2025",
+   "outcome_value_usd": null,
+   "source": "https://globalventuring.com/university/verve-swerves-into-63m"
+  },
+  {
+   "name": "ROME Therapeutics",
+   "launched": "2020",
+   "role": "co-founded",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Therapies targeting the repetitive genome for cancer and autoimmunity",
+   "status": "acquired",
+   "outcome": "Acquired by Pretzel Therapeutics",
+   "outcome_value_usd": null,
+   "source": "https://www.gv.com/team/krishna-yeshwant"
+  },
+  {
+   "name": "Beam Therapeutics",
+   "launched": "2017",
+   "role": "led",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Base-editing genetic medicines",
+   "status": "public",
+   "outcome": "IPO 2020, $180M raised",
+   "outcome_value_usd": 180000000,
+   "source": "https://en.wikipedia.org/wiki/Beam_Therapeutics"
+  },
+  {
+   "name": "Relay Therapeutics",
+   "launched": "",
+   "role": "led",
+   "silo": [
+    "small-molecule",
+    "ai-discovery"
+   ],
+   "product": "Computation- and protein-motion-driven small-molecule drug discovery",
+   "status": "public",
+   "outcome": "IPO July 2020 (Nasdaq: RLAY), $400M base offering",
+   "outcome_value_usd": 400000000,
+   "source": "https://globalventuring.com/blog/2020/07/17/relay-receives-400m-in-ipo"
+  },
+  {
+   "name": "insitro",
+   "launched": "2018",
+   "role": "led",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Machine-learning drug discovery on large in-house datasets",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://techcrunch.com/2019/05/21/famed-founder-daphne-koller-tells-it-straight-with-most-drugs-we-do-not-understand-why-they-work"
+  },
+  {
+   "name": "Foundation Medicine",
+   "launched": "2010",
+   "role": "led",
+   "silo": [
+    "diagnostics",
+    "precision-data"
+   ],
+   "product": "Comprehensive genomic profiling of cancers",
+   "status": "acquired",
+   "outcome": "IPO 2013; Roche bought the remaining 42.5% in 2018 for $2.4B",
+   "outcome_value_usd": 2400000000,
+   "source": "https://en.wikipedia.org/wiki/Foundation_Medicine"
+  },
+  {
+   "name": "Flatiron Health",
+   "launched": "",
+   "role": "led",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Oncology real-world data and EHR software",
+   "status": "acquired",
+   "outcome": "Acquired by Roche 2018 for $1.9B",
+   "outcome_value_usd": 1900000000,
+   "source": "https://www.roche.com/media/releases/med-cor-2018-04-06.htm"
+  },
+  {
+   "name": "EQRx",
+   "launched": "2020",
+   "role": "led",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Lower-cost medicines against validated drug targets",
+   "status": "acquired",
+   "outcome": "Acquired by Revolution Medicines",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/why-were-investing-in-eqrx/"
+  },
+  {
+   "name": "Aera Therapeutics",
+   "launched": "2023",
+   "role": "led",
+   "silo": [
+    "gene-therapy",
+    "rna"
+   ],
+   "product": "Protein-nanoparticle and tLNP delivery for genetic medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://aeratx.com/aera-therapeutics-launches-with-193-million-in-financing-to-enable-and-advance-the-next-generation-of-transformative-genetic-medicines/"
+  },
+  {
+   "name": "Granata Bio",
+   "launched": "2024",
+   "role": "led",
+   "silo": [],
+   "product": "Infertility medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://vcnewsdaily.com/granata-bio/venture-capital-funding/fshzgfbrrn"
+  },
+  {
+   "name": "Leyden Labs",
+   "launched": "",
+   "role": "led",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Intranasal antibody sprays for protection against influenza and other viruses",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.geneonline.com/?p=18638"
+  },
+  {
+   "name": "Prime Medicine",
+   "launched": "2021",
+   "role": "participated",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "Prime-editing genetic therapies",
+   "status": "public",
+   "outcome": "IPO 2022",
+   "outcome_value_usd": null,
+   "source": "https://www.geneonline.com/primed-to-surpass-crispr-prime-medicine-emerges-out-of-stealth-with-315-million-in-funding/"
+  },
+  {
+   "name": "Metsera",
+   "launched": "2024",
+   "role": "participated",
+   "silo": [],
+   "product": "Next-generation injectable and oral obesity medicines",
+   "status": "acquired",
+   "outcome": "Pfizer agreed to acquire it in Sept 2025 at $47.50/share plus CVR (EV ~$4.9B at signing)",
+   "outcome_value_usd": 4900000000,
+   "source": "https://www.statnews.com/2024/04/18/metsera-obesity-drugs-arch-venture-partners-medicines-company/"
+  },
+  {
+   "name": "Maze Therapeutics",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "precision-data"
+   ],
+   "product": "Human-genetics-driven precision medicines",
+   "status": "public",
+   "outcome": "IPO 2025 (Nasdaq: MAZE), $140M raised",
+   "outcome_value_usd": 140000000,
+   "source": "https://www.gv.com/team/brendan-bulik-sullivan"
+  },
+  {
+   "name": "Parabilis Medicines (formerly FOG Pharma)",
+   "launched": "2018",
+   "role": "participated",
+   "silo": [],
+   "product": "Cell-penetrating stapled peptides against intracellular targets like beta-catenin",
+   "status": "public",
+   "outcome": "IPO 2026",
+   "outcome_value_usd": null,
+   "source": "https://gv.com/news/parabilis-medicines-public-ipo"
+  },
+  {
+   "name": "Isomorphic Labs",
+   "launched": "2025",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI drug design engine spun out of Google DeepMind",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-600m-external-investment-round"
+  },
+  {
+   "name": "Areteia Therapeutics",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Oral dexpramipexole for eosinophilic asthma",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/350m-funding-breaths-life-into-areteia-for-asthma-drug"
+  },
+  {
+   "name": "Treeline Biosciences",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "small-molecule",
+    "protein-degradation",
+    "adc"
+   ],
+   "product": "Multi-modality oncology, immunology and neurology medicines",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://medcitynews.com/2025/09/biotech-startup-treeline-biosciences-cancer-drug-discovery/"
+  },
+  {
+   "name": "Gate Bioscience",
+   "launched": "2023",
+   "role": "participated",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small molecules that block secretion of disease-causing proteins",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://a16z.com/announcement/investing-in-gate-bio/"
+  },
+  {
+   "name": "Stipple Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Epitope-targeted precision oncology biologics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/GV_(company)"
+  },
+  {
+   "name": "nChroma Bio",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "gene-editing"
+   ],
+   "product": "In vivo epigenetic silencers, starting with chronic hepatitis B",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.nchromabio.com/about-us/"
+  },
+  {
+   "name": "Cardurion Pharmaceuticals",
+   "launched": "",
+   "role": "participated",
+   "silo": [],
+   "product": "Cardiovascular therapeutics",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://pharmashots.com/28753/know-your-investor-google-ventures-october25-edition/"
+  },
+  {
+   "name": "Arda Therapeutics",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "antibody",
+    "tools-omics"
+   ],
+   "product": "Single-cell-guided biologics that clear disease-driving cells",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.gv.com/team/david-schenkein"
+  },
+  {
+   "name": "Mestag Therapeutics",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Fibroblast-immunology antibodies for cancer and inflammatory disease",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.gv.com/team/david-schenkein"
+  }
+ ]
+}

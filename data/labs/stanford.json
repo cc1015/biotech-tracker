@@ -1,0 +1,448 @@
+{
+ "name": "Stanford University",
+ "profile": {
+  "city": "Stanford, United States",
+  "type": "university",
+  "tech_transfer": "Stanford Office of Technology Licensing (OTL)",
+  "tech_transfer_url": "https://otl.stanford.edu/",
+  "summary": "Stanford's licensing of the Cohen-Boyer recombinant DNA patents to hundreds of companies helped create the biotech industry, and its medical school and engineering labs keep feeding the Bay Area ecosystem with therapeutics, diagnostics and tools companies. Its SPARK translational program produced Attruby (acoramidis), a drug developed in academia and taken to FDA approval by spinout Eidos Therapeutics.",
+  "programs": [
+   "SPARK (Stanford Program in Translational Research)",
+   "Stanford Biodesign",
+   "OTL High Impact Technology (HIT) Fund",
+   "StartX"
+  ],
+  "website": "https://www.stanford.edu/",
+  "sources": [
+   "https://otl.stanford.edu/",
+   "https://techfinder.stanford.edu/",
+   "https://otl.stanford.edu/researchers/startups/startup-resources-programs",
+   "https://otl.stanford.edu/researchers/high-impact-technology-hit-fund/hit-fund-startups",
+   "https://facts.stanford.edu/research/technology-inventions",
+   "https://sparkmed.stanford.edu/",
+   "https://sparkmed.stanford.edu/fda-approves-drug-developed-through-spark/",
+   "https://en.wikipedia.org/wiki/Stanley_Norman_Cohen"
+  ]
+ },
+ "labs": [
+  {
+   "pi": "Irving Weissman",
+   "lab": "Institute for Stem Cell Biology and Regenerative Medicine",
+   "known_for": "CD47 and CD24 'don't eat me' signals; blood stem cells",
+   "silo": [
+    "antibody",
+    "cell-therapy"
+   ],
+   "source": "https://blog.cirm.ca.gov/2018/07/03/early-cirm-support-helps-stem-cell-pioneer-develop-promising-new-therapy-for-cancer"
+  },
+  {
+   "pi": "Stephen Quake",
+   "lab": "Bioengineering / Applied Physics",
+   "known_for": "Microfluidics, single-molecule sequencing, cell-free DNA diagnostics",
+   "silo": [
+    "diagnostics",
+    "tools-omics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Stephen_Quake"
+  },
+  {
+   "pi": "Carolyn Bertozzi",
+   "lab": "Department of Chemistry / Sarafan ChEM-H",
+   "known_for": "Bioorthogonal chemistry; glycobiology; LYTAC extracellular degraders",
+   "silo": [
+    "protein-degradation",
+    "diagnostics"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Carolyn_Bertozzi"
+  },
+  {
+   "pi": "James Spudich",
+   "lab": "Department of Biochemistry",
+   "known_for": "Myosin motor biology; cardiac myosin modulators",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://en.wikipedia.org/wiki/James_Spudich"
+  },
+  {
+   "pi": "Garry Nolan",
+   "lab": "Department of Pathology",
+   "known_for": "Mass cytometry and CODEX spatial proteomics",
+   "silo": [
+    "tools-omics",
+    "precision-data"
+   ],
+   "source": "https://en.wikipedia.org/wiki/Garry_Nolan"
+  },
+  {
+   "pi": "K. Christopher Garcia",
+   "lab": "Molecular & Cellular Physiology / Structural Biology",
+   "known_for": "Structure-guided engineered cytokines, Wnt surrogates, TCR discovery",
+   "silo": [
+    "antibody",
+    "cell-therapy"
+   ],
+   "source": "https://en.wikipedia.org/wiki/K._Christopher_Garcia"
+  },
+  {
+   "pi": "Karl Deisseroth",
+   "lab": "Bioengineering / Psychiatry and Behavioral Sciences",
+   "known_for": "Optogenetics; CLARITY tissue clearing; circuit-based neuropsychiatry",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://maplightrx.com/team/"
+  },
+  {
+   "pi": "Isabella Graef",
+   "lab": "School of Medicine (SPARK)",
+   "known_for": "AG10/acoramidis TTR stabilizer, approved as Attruby",
+   "silo": [
+    "small-molecule"
+   ],
+   "source": "https://sparkmed.stanford.edu/fda-approves-drug-developed-through-spark/"
+  }
+ ],
+ "spinouts": [
+  {
+   "name": "Forty Seven",
+   "year": "",
+   "pi": "Irving Weissman; Ravi Majeti",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-CD47 antibody magrolimab for blood cancers",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Gilead 2020 for $4.9B",
+   "outcome_value_usd": 4900000000,
+   "source": "https://www.biospace.com/gilead-to-acquire-forty-seven-for-4-9-billion"
+  },
+  {
+   "name": "Pheast Therapeutics",
+   "year": "2022",
+   "pi": "Irving Weissman; Ravi Majeti",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-CD24 antibody PHST001 for ovarian and breast cancers",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biocentury.com/article/643336/april-26-quick-takes-cd24-will-be-new-focus-of-forty-seven-founders-as-stanford-spinout-pheast-debuts"
+  },
+  {
+   "name": "MyoKardia",
+   "year": "2012",
+   "pi": "James Spudich",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Cardiac myosin inhibitor mavacamten for hypertrophic cardiomyopathy",
+   "builder": "Third Rock Ventures",
+   "status": "acquired",
+   "outcome": "acquired by Bristol Myers Squibb 2020 for $13.1B",
+   "outcome_value_usd": 13100000000,
+   "source": "https://en.wikipedia.org/wiki/James_Spudich"
+  },
+  {
+   "name": "Cytokinetics",
+   "year": "1997",
+   "pi": "James Spudich",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Muscle-directed small molecules for heart failure and cardiomyopathy",
+   "builder": "",
+   "status": "public",
+   "outcome": "IPO 2004 (NASDAQ: CYTK)",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Cytokinetics"
+  },
+  {
+   "name": "Kainomyx",
+   "year": "2019",
+   "pi": "James Spudich",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Therapeutics for neglected tropical diseases",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/James_Spudich"
+  },
+  {
+   "name": "Eidos Therapeutics",
+   "year": "2013",
+   "pi": "Isabella Graef; Mamoun Alhamadsheh",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "TTR stabilizer acoramidis (Attruby) for ATTR cardiomyopathy",
+   "builder": "",
+   "status": "merged",
+   "outcome": "merged into BridgeBio Pharma 2021; Attruby FDA-approved 2024",
+   "outcome_value_usd": null,
+   "source": "https://sparkmed.stanford.edu/fda-approves-drug-developed-through-spark/"
+  },
+  {
+   "name": "Shenandoah Therapeutics",
+   "year": "",
+   "pi": "Isabella Graef",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://sparkmed.stanford.edu/fda-approves-drug-developed-through-spark/"
+  },
+  {
+   "name": "Verinata Health",
+   "year": "",
+   "pi": "Stephen Quake",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "verifi noninvasive prenatal test using cell-free DNA",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Illumina 2013 for $350M upfront plus up to $100M milestones",
+   "outcome_value_usd": 350000000,
+   "source": "https://hedgefundalpha.com/news/illumina-buys-maker-of-down-syndrome-test-for-350m/"
+  },
+  {
+   "name": "Karius",
+   "year": "2014",
+   "pi": "Stephen Quake",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Microbial cell-free DNA blood test for infectious disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://kariusdx.com/about"
+  },
+  {
+   "name": "Cellular Research",
+   "year": "",
+   "pi": "Stephen Quake",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "Single-cell molecular barcoding tools",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Becton, Dickinson and Company",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stephen_Quake"
+  },
+  {
+   "name": "Quanticel Pharmaceuticals",
+   "year": "",
+   "pi": "Stephen Quake",
+   "silo": [
+    "tools-omics",
+    "small-molecule"
+   ],
+   "product": "Single-cell genomics-driven cancer drug discovery",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Celgene",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Stephen_Quake"
+  },
+  {
+   "name": "Bolt Biotherapeutics",
+   "year": "2015",
+   "pi": "Edgar Engleman",
+   "silo": [
+    "adc",
+    "antibody"
+   ],
+   "product": "Boltbody immune-stimulating antibody conjugates for cancer",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.boltbio.com/about"
+  },
+  {
+   "name": "Lycia Therapeutics",
+   "year": "2019",
+   "pi": "Carolyn Bertozzi",
+   "silo": [
+    "protein-degradation"
+   ],
+   "product": "LYTAC extracellular protein degraders for autoimmune disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Carolyn_Bertozzi"
+  },
+  {
+   "name": "OliLux Biosciences",
+   "year": "2019",
+   "pi": "Carolyn Bertozzi",
+   "silo": [
+    "diagnostics"
+   ],
+   "product": "Rapid tuberculosis detection methods",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Carolyn_Bertozzi"
+  },
+  {
+   "name": "Akoya Biosciences",
+   "year": "2015",
+   "pi": "Garry Nolan",
+   "silo": [
+    "tools-omics"
+   ],
+   "product": "CODEX multiplexed spatial biology imaging platform",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Quanterix",
+   "outcome_value_usd": null,
+   "source": "https://www.quanterix.com/about-us/"
+  },
+  {
+   "name": "BINA Technologies",
+   "year": "2010",
+   "pi": "Garry Nolan",
+   "silo": [
+    "precision-data"
+   ],
+   "product": "Genomic data analysis platform",
+   "builder": "",
+   "status": "acquired",
+   "outcome": "acquired by Roche 2014 for $107M",
+   "outcome_value_usd": 107000000,
+   "source": "https://en.wikipedia.org/wiki/Garry_Nolan"
+  },
+  {
+   "name": "Rigel Pharmaceuticals",
+   "year": "1996",
+   "pi": "Garry Nolan",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Small-molecule drugs for immune and hematologic diseases",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/Garry_Nolan"
+  },
+  {
+   "name": "3T Biosciences",
+   "year": "",
+   "pi": "K. Christopher Garcia",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "TCR-based immunotherapies for solid tumors",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/K._Christopher_Garcia"
+  },
+  {
+   "name": "Surrozen",
+   "year": "",
+   "pi": "K. Christopher Garcia",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Wnt-pathway multi-target antibodies for eye diseases",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://en.wikipedia.org/wiki/K._Christopher_Garcia"
+  },
+  {
+   "name": "MapLight Therapeutics",
+   "year": "",
+   "pi": "Karl Deisseroth; Robert Malenka",
+   "silo": [
+    "small-molecule"
+   ],
+   "product": "Circuit-targeted drugs for schizophrenia, Alzheimer's psychosis, autism",
+   "builder": "",
+   "status": "public",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://maplightrx.com/team/"
+  },
+  {
+   "name": "Genesis Therapeutics",
+   "year": "2019",
+   "pi": "",
+   "silo": [
+    "ai-discovery"
+   ],
+   "product": "Deep-learning platform for small-molecule drug discovery",
+   "builder": "",
+   "status": "",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://medcitynews.com/2019/12/ai-drug-discovery-firm-spins-out-of-stanford-research/"
+  },
+  {
+   "name": "Deepcell",
+   "year": "2017",
+   "pi": "Euan Ashley",
+   "silo": [
+    "tools-omics",
+    "ai-discovery"
+   ],
+   "product": "AI-driven label-free single-cell imaging, classification and sorting",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://globalventuring.com/university/deepcell-caps-20m-series-a/?format=md"
+  },
+  {
+   "name": "Edifice Health",
+   "year": "",
+   "pi": "David Furman",
+   "silo": [
+    "longevity",
+    "diagnostics"
+   ],
+   "product": "Immune-aging analytics for chronic diseases of aging",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://globalventuring.com/university/edifice-builds-12m-seed-round"
+  },
+  {
+   "name": "Tr1X",
+   "year": "",
+   "pi": "Maria Grazia Roncarolo",
+   "silo": [
+    "cell-therapy"
+   ],
+   "product": "Tr1 regulatory T-cell therapies for autoimmune and inflammatory disease",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.tr1x.bio/about/"
+  }
+ ]
+}
