@@ -58,6 +58,8 @@ Run `python3 web/build.py`, then open `web/index.html` in a browser. It needs no
 
 `sweep/run_sweep.sh` runs every morning from launchd. It refreshes the trial snapshot (and, on Mondays, the company universe and logos), then runs `claude -p` with `sweep/PROMPT.md`. If the sweep exits cleanly and every CSV is well-formed, it commits only `data/`, `notes/` and `web/logos/` on `dev`, pushes, then applies the same commit to `main` (in `sweep/main-worktree/`) and pushes that, which redeploys the site. Logs are in `sweep/logs/`.
 
+The first successful sweep of each month also runs `claude -p` with `sweep/PROFILES_PROMPT.md`. It re-checks the profile facts in `data/pharma/`, `data/builders/`, `data/investors/` and `data/labs/` (CEOs, revenue, leadership, funds, whether each PI is still at their lab), sets `profile.last_verified`, and writes the changes with sources to `notes/profiles-YYYY-MM.md`. A stamp file in `sweep/cache/` records that the month is done, so a missed or failed month retries the next day. Nothing is published if a JSON file in `data/` doesn't parse.
+
 ## Confirmation
 
 The `confirmed_by` column in `news.csv` lists the free trackers (BioBucks, Cure, Fierce) that independently list each event. The front end counts the primary `source` plus these trackers and labels each event as 2+ sources, single source or no source.
