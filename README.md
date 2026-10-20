@@ -124,3 +124,13 @@ Silo pages and company profiles link to the labs and investors involved.
 - **Silos:** these come from intervention and condition wording, so trials of plain-named small molecules mostly go untagged.
 - **Updates:** the daily sweep refreshes the snapshot.
 - **Where it shows:** the **Trials** tab, plus trial sections on Labs and silo pages.
+
+## Forecast (deal predictor)
+
+The **Forecast** tab is a signal-based forecast, not a trained model. Each score is a plain sum of named, capped signals taken from the tracker's own data, and every row lists the signals behind it. The weights are in the `W` object in `web/template.html`. It has four parts:
+1. **Likely acquisition targets.** Signals: late-stage programs, recent results, approved products, existing pharma partnerships, how active the silo is in M&A, funding momentum, backers, and listing status. Stopped trials count against. Big pharma, companies that are themselves acquirers, already-acquired companies and known subsidiaries are excluded.
+2. **Likely buyers for each target.** Each of the 15 pharma families is scored on therapeutic-area overlap, activity in the target's silo, recent deal pace and any existing partnership.
+3. **Likely platform partnerships.** Platform and AI companies with funding momentum, paired with the pharmas doing platform deals.
+4. **Academia → industry.** Phase 2/3 academic trials of the institution's own agents that just posted results or completed are listed as licensing candidates. Labs are ranked by their recent spinout pace and trial activity.
+
+The page shows a backtest: the target score is run on the news log's actual acquisitions, with each deal itself removed. Results so far are modest: a median 60th-percentile rank, and 3 of 16 in the top 25%. The score has no financial data, so treat it as a way to explore, not a forecast.
