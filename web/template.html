@@ -291,6 +291,9 @@ a.chip.silo:hover { color: var(--accent); text-decoration: underline; }
 .ol-card { border-top: 1px solid var(--grid); padding-top: 6px; }
 .ol-table td:nth-child(2) { min-width: 180px; }
 /* frontiers */
+.fs-table td:nth-child(2) { min-width: 170px; } .fs-table th[data-tip] { cursor: help; }
+.fs-head { display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 8px; }
+.fs-head dt { font-size: 11.5px; color: var(--text-secondary); } .fs-head dd { margin: 0; font-size: 14px; }
 .fr-mom { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr)); gap: 8px; }
 .fr-tile { text-align: left; background: none; border: 1px solid var(--grid); padding: 7px 9px; font: inherit; cursor: pointer; color: var(--text-primary); border-radius: 3px; }
 .fr-tile.on { box-shadow: 0 0 0 2px var(--accent); }
@@ -1301,7 +1304,11 @@ function siloPage(id) {
     </dl>
     ${news.length ? sec("Activity", `${mix.length ? `<div class="mix" style="max-width:520px">${mix.map(([c, ns]) => `<span style="flex:${ns.length};background:${c.color}" data-tip="${esc(c.label)}: ${ns.length}"></span>`).join("")}</div><div class="key" style="margin-bottom:10px">${mix.map(([c, ns]) => `<span><i style="background:${c.color}"></i>${esc(c.label)} ${ns.length}</span>`).join("")}</div>` : ""}${chart}`) : ""}
     ${(() => { const ps = frFor(it => it.silo.includes(id)), m = DATA.frontiers && DATA.frontiers.momentum[id];
-      return ps.length || m ? sec("Research frontier", `${m ? `<div class="note" style="margin-bottom:6px">${m[1].toLocaleString()} matching preprints in the last 30 days (${m[0].toLocaleString()} in the 30 before)</div>` : ""}<ul class="feed fr-feed">${ps.slice(0, 6).map(frItem).join("")}</ul>`, ps.length || null) : ""; })()}
+      const rk = fsRanked(), at = rk.findIndex(([s]) => s === id), r = at >= 0 ? rk[at][1] : null;
+      const fs = r && r.score != null ? `<div class="fs-head"><div><dt>Research score</dt><dd>${scoreBar(r.score)} <span class="muted">#${at + 1} of ${rk.filter(([, x]) => x.score != null).length}</span></dd></div>
+        ${FS_PARTS.map(([k, l, , tip]) => `<div data-tip="${esc(tip)}"><dt>${l}</dt><dd>${r.parts[k] ?? "—"} <span class="muted">${fsRaw(k, r)}</span></dd></div>`).join("")}</div>
+        ${r.top_journals.length ? `<div class="note" style="margin-bottom:10px">Most-used well-cited journals: ${r.top_journals.map(([n, c]) => `${esc(n)} ${c}`).join(" · ")}</div>` : ""}` : "";
+      return ps.length || m || fs ? sec("Research frontier", `${fs}${m ? `<div class="note" style="margin-bottom:6px">${m[1].toLocaleString()} matching preprints in the last 30 days (${m[0].toLocaleString()} in the 30 before)</div>` : ""}<ul class="feed fr-feed">${ps.slice(0, 6).map(frItem).join("")}</ul>`, ps.length || null) : ""; })()}
     ${(() => { const ts = (DATA.trials.trials || []).filter(t => t.silo.includes(id)).sort((a, z) => trWhen(z).localeCompare(trWhen(a)));
       if (!ts.length) return ""; const ind = ts.filter(t => t.sector === "industry").length;
       return sec(`Clinical trials · last ${DATA.trials.days} days`, `<div class="note" style="margin-bottom:6px">${ind} industry · ${ts.length - ind} academic & government · matched from trial wording</div>${trialList(ts)}`, ts.length); })()}
@@ -1708,6 +1715,12 @@ function frontiersTab() {
   const count = k => k === "all" ? items.length : items.filter(it => frKind(it) === k).length;
   el.innerHTML = `
     <details class="about"><summary>About this data</summary><p>The earliest signal: what the leading labs are publishing and preprinting, and which fields are gaining momentum, often years before companies form or deals happen. Papers come from PubMed for the PIs on the Labs pages (last 6 months). Preprints come from bioRxiv and medRxiv (last ${F.days} days, ${F.preprints_scanned.toLocaleString()} scanned). Preprints aren't peer-reviewed. "Full text" opens through your library via LibKey.</p></details>
+    ${(() => { const FS = DATA.fieldScores, rk = fsRanked(); if (!rk.length) return "";
+      return `<div class="card" style="margin-bottom:20px"><h2>Field scores</h2><p class="sub">Each silo's research activity in four signals, each ranked 0–100 against the other silos and averaged. A high score means the field is growing and landing in well-cited journals; it isn't a forecast. Hover a column for what it measures. Updated ${esc(FS.fetched)}.</p>
+        <div class="table-wrap"><table class="ol-table fs-table"><thead><tr><th>#</th><th>Silo</th><th>Score</th>${FS_PARTS.map(([, l, , tip]) => `<th data-tip="${esc(tip)}">${l}</th>`).join("")}</tr></thead><tbody>${rk.map(([id, r], i) => `
+          <tr><td class="num">${r.score == null ? "" : i + 1}</td><td><a href="#silo/${id}">${esc(siloName(id))}</a></td><td>${r.score == null ? '<span class="muted">too little data</span>' : scoreBar(r.score)}</td>
+          ${FS_PARTS.map(([k]) => `<td class="num">${r.parts[k] ?? "—"}<div class="note">${fsRaw(k, r)}</div></td>`).join("")}</tr>`).join("")}</tbody></table></div>
+        <p class="note" style="margin-top:8px">Articles are OpenAlex journal papers in biomedical fields whose title or abstract matches the silo, ${esc(FS.windows.current[0])} to ${esc(FS.windows.current[1])}. Journal quality uses each journal's 2-year mean citedness, a free stand-in for the impact factor, so it rates the journal, not the paper. Keyword-matched, so read scores as a ranking, not exact measures.</p></div>`; })()}
     <div class="card" style="margin-bottom:20px"><h2>Field momentum</h2><p class="sub">New bioRxiv + medRxiv preprints matching each silo: last 30 days vs the 30 before. Keyword-matched, so read it as direction, not exact counts. Click a silo to filter.</p>
       <div class="fr-mom">${mom.map(m => `<button class="fr-tile${s.silo === m.id ? " on" : ""}" data-silo="${m.id}"><span>${esc(siloName(m.id))}</span><b>${m.cur.toLocaleString()}</b><em class="${m.ch == null ? "" : m.ch >= 0.05 ? "up" : m.ch <= -0.05 ? "dn" : ""}">${m.ch == null ? "new" : `${m.ch >= 0 ? "▲" : "▼"} ${Math.abs(Math.round(m.ch * 100))}%`}</em></button>`).join("")}</div></div>
     <div class="filters">
@@ -1725,6 +1738,17 @@ function frontiersTab() {
   const m = $("#fr-more"); if (m) m.onclick = () => redo({ shown: s.shown + 60 });
   let qt; $("#fr-q").oninput = e => { clearTimeout(qt); qt = setTimeout(() => { redo({ q: e.target.value.toLowerCase(), shown: 60 }); const i = $("#fr-q"); i.focus(); i.setSelectionRange(i.value.length, i.value.length); }, 250); };
 }
+// silo research scores (data/field_scores.json): four signals, each a 0-100 rank across silos
+const FS_PARTS = [
+  ["preprints", "Preprints", r => r.preprint_growth, "bioRxiv + medRxiv preprints, last 30 days vs the 30 before"],
+  ["growth", "Journal growth", r => r.growth, "Journal articles, last 90 days vs the 90 before, compared with all biomedical articles (OpenAlex)"],
+  ["quality", "Journal quality", null, "How well cited the journals are: average journal citation rate, and share in journals cited 10+ times per paper"],
+  ["uptake", "Uptake", r => r.uptake, "Share of articles 6–18 months old already cited 5+ times"],
+];
+const pctChange = v => v == null ? "—" : `${v >= 0 ? "▲" : "▼"} ${Math.abs(Math.round(v * 100))}%`;
+const fsRaw = (k, r) => k === "quality" ? (r.top_share == null ? "—" : `${Math.round(r.top_share * 100)}% top`) : k === "uptake" ? (r.uptake == null ? "—" : `${Math.round(r.uptake * 100)}%`) : pctChange(FS_PARTS.find(p => p[0] === k)[2](r));
+const fsRanked = () => DATA.fieldScores ? Object.entries(DATA.fieldScores.silos).filter(([id]) => DATA.siloInfo[id])
+  .sort((a, b) => (b[1].score ?? -1) - (a[1].score ?? -1)) : [];
 const frFor = pred => DATA.frontiers ? DATA.frontiers.items.filter(pred).sort((a, b) => (b.date || "").localeCompare(a.date || "")) : [];
 
 function pulse() {

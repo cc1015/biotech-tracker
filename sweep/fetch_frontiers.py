@@ -79,7 +79,8 @@ def pi_key(name):
 
 
 def pubmed(labs, since):
-    out = []
+    """(papers, number of PI queries, number that failed)."""
+    out, asked, failed = [], 0, 0
     for lab in labs:
         affil = LAB_AFFIL.get(lab["slug"], [lab["name"]])
         for l in lab.get("labs", []):
@@ -87,6 +88,7 @@ def pubmed(labs, since):
                 last, ini = pi_key(pi)
                 if not last:
                     continue
+                asked += 1
                 term = f'"{last} {ini}"[au] AND ({" OR ".join(f"{a}[ad]" for a in affil)}) AND {since.replace("-", "/")}:3000[dp]'
                 try:
                     ids = json.loads(get(EUTILS + "esearch.fcgi?" + urllib.parse.urlencode({"db": "pubmed", "retmode": "json", "retmax": 6, "sort": "pub_date", "term": term})))["esearchresult"]["idlist"]
@@ -97,6 +99,7 @@ def pubmed(labs, since):
                     time.sleep(0.4)
                 except Exception as e:  # noqa: BLE001
                     warn(f"pubmed {pi}: {e}")
+                    failed += 1
                     continue
                 for art in root.iter("PubmedArticle"):
                     title = "".join(art.find(".//ArticleTitle").itertext()) if art.find(".//ArticleTitle") is not None else ""
@@ -121,10 +124,11 @@ def pubmed(labs, since):
     for p in sorted(out, key=lambda p: p["date"], reverse=True):  # a paper can match two co-authoring PIs
         if p["url"] not in seen:
             seen.add(p["url"]); uniq.append(p)
-    return uniq
+    return uniq, asked, failed
 
 
 def preprint_day(server, d):
+    """The day's preprints, or None if the fetch failed (a partial day is never cached)."""
     f = CACHE / f"{server}-{d}.json"
     if f.exists() and d < (date.today() - timedelta(days=2)).isoformat():
         return json.loads(f.read_text())
@@ -134,7 +138,7 @@ def preprint_day(server, d):
             j = json.loads(get(f"https://api.biorxiv.org/details/{server}/{d}/{d}/{cursor}", timeout=60))
         except Exception as e:  # noqa: BLE001
             warn(f"{server} {d}: {e}")
-            break
+            return None
         coll = j.get("collection", [])
         for c in coll:
             rows.append({k: c.get(k, "") for k in ("title", "authors", "author_corresponding", "author_corresponding_institution", "doi", "date", "category", "version")}
@@ -157,7 +161,7 @@ def main():
     labs = []
     for f in sorted((ROOT / "data" / "labs").glob("*.json")):
         d = json.loads(f.read_text()); d["slug"] = f.stem; labs.append(d)
-    papers = pubmed(labs, (today - timedelta(days=180)).isoformat())
+    papers, asked, failed = pubmed(labs, (today - timedelta(days=180)).isoformat())
     # PI name patterns as bioRxiv writes them: 'Liu, D. R.' -> surname + first initial
     pis = []
     for lab in labs:
@@ -167,12 +171,16 @@ def main():
                 if last:
                     pis.append((re.compile(rf"\b{re.escape(last)}, {ini}\.", re.I), pi.strip(), lab["slug"]))
     inst = {k: re.compile(v, re.I) for k, v in INST_RX.items()}
-    keep, momentum, n_all = [], {}, 0
+    keep, momentum, n_all, bad_days = [], {}, 0, []
     half = (today - timedelta(days=args.days // 2)).isoformat()
     for server in ("biorxiv", "medrxiv"):
         for k in range(args.days, -1, -1):
             d = (today - timedelta(days=k)).isoformat()
-            for c in preprint_day(server, d):
+            day = preprint_day(server, d)
+            if day is None:
+                bad_days.append(f"{server} {d}")
+                continue
+            for c in day:
                 if c.get("version") not in ("1", 1):  # count each preprint once, at first posting
                     continue
                 n_all += 1
@@ -192,6 +200,11 @@ def main():
                                  "lab": (pi[1] if pi else lab) or "", "inst": ci, "authors": "; ".join(auth[:3]) + (" et al." if len(auth) > 3 else ""),
                                  "industry": [company] if company else [], "silo": sl, "snip": c["snip"]})
         print(f"  {server}: done ({n_all} first versions so far)")
+    # a missing day skews the 30-vs-30 momentum, and a PubMed outage would empty the lab papers,
+    # so keep the last full file instead of writing a partial one
+    if bad_days or failed > asked // 10:
+        warn(f"{len(bad_days)} preprint days and {failed} of {asked} PubMed queries failed; keeping the existing file")
+        sys.exit(1)
     out = {"fetched": today.isoformat(), "days": args.days, "half": half, "preprints_scanned": n_all,
            "momentum": momentum, "items": papers + sorted(keep, key=lambda p: p["date"], reverse=True)}
     OUT.write_text(json.dumps(out, separators=(",", ":")))

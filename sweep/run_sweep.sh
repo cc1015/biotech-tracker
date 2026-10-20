@@ -46,6 +46,8 @@ cd "$ROOT" || exit 1
     python3 "$ROOT/sweep/fetch_logos.py"   # only fetches logos not already in web/logos/
   fi
   python3 "$ROOT/sweep/fetch_trials.py"   # daily ClinicalTrials.gov snapshot (last 90 days of milestones)
+  python3 "$ROOT/sweep/fetch_frontiers.py"   # Frontiers papers + preprints (preprint days are cached)
+  python3 "$ROOT/sweep/fetch_field_scores.py"   # silo scores from OpenAlex + preprint momentum; needs OPENALEX_API_KEY
   claude -p "$(cat "$ROOT/sweep/PROMPT.md")" \
     --permission-mode acceptEdits \
     --allowedTools "WebSearch" "WebFetch" "Read" "Edit" "Write" "Glob" "Grep" "Bash(python3:*)"

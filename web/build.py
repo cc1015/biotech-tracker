@@ -298,6 +298,8 @@ def load_data():
         "labs": read_json_dir("labs"),
         "trials": read_trials(),
         "frontiers": json.loads((ROOT / "data" / "frontiers.json").read_text()) if (ROOT / "data" / "frontiers.json").exists() else None,
+        # silo research scores (sweep/fetch_field_scores.py)
+        "fieldScores": json.loads((ROOT / "data" / "field_scores.json").read_text()) if (ROOT / "data" / "field_scores.json").exists() else None,
     }
     link_universe(data)
     del data["products"], data["coverage"]  # merged into the universe / news rows
