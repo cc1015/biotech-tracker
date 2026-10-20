@@ -1,7 +1,7 @@
 You are running the daily news sweep for the biotech biotech-tracker in the current directory. Nobody is watching, so finish the whole job in one go.
 
 ## 1. Orient
-- Read `README.md` and `taxonomy/silos.md` for conventions and silo IDs.
+- Read `docs/conventions.md` and `taxonomy/silos.md` for conventions and silo IDs.
 - Read `data/news.csv`. The newest `date` in it tells you where the last sweep stopped. Cover everything from that date up to today. If that's more than 14 days, cover the last 14 days only.
 
 ## 1b. Collect and triage leads

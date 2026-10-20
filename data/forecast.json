@@ -1,0 +1,502 @@
+{
+ "fitted": "2026-10-19",
+ "train": "features 2026-01-01, acquired 2026-01-01..2026-06-01",
+ "test": {
+  "fitted model": {
+   "auc": 0.853,
+   "positives": 28,
+   "candidates": 8140,
+   "hits_top25": 7,
+   "hits_top100": 13,
+   "hits_top10pct": 23
+  },
+  "hand-set weights": {
+   "auc": 0.747,
+   "positives": 28,
+   "candidates": 8140,
+   "hits_top25": 1,
+   "hits_top100": 6,
+   "hits_top10pct": 16
+  },
+  "most news coverage": {
+   "auc": 0.507,
+   "positives": 28,
+   "candidates": 8140,
+   "hits_top25": 1,
+   "hits_top100": 1,
+   "hits_top10pct": 4
+  },
+  "random": {
+   "auc": 0.5,
+   "hits_top10pct": 2.8
+  }
+ },
+ "train_positives": 24,
+ "leakage_check": {
+  "without product-line features": {
+   "auc": 0.383,
+   "positives": 28,
+   "candidates": 8140,
+   "hits_top25": 0,
+   "hits_top100": 0,
+   "hits_top10pct": 7
+  },
+  "only features timed to the cutoff (news-based)": {
+   "auc": 0.518,
+   "positives": 28,
+   "candidates": 8140,
+   "hits_top25": 0,
+   "hits_top100": 1,
+   "hits_top10pct": 4
+  }
+ },
+ "verdict": "no demonstrated skill: the apparent signal comes from product-line features that leak the outcome",
+ "coefficients": [
+  {
+   "feature": "has a partnership",
+   "train_coef": -0.55,
+   "final_coef": -0.7
+  },
+  {
+   "feature": "works in an active M&A silo",
+   "train_coef": 0.5,
+   "final_coef": 0.7
+  },
+  {
+   "feature": "size of trial portfolio",
+   "train_coef": -0.38,
+   "final_coef": -0.62
+  },
+  {
+   "feature": "news coverage in the prior year",
+   "train_coef": -0.11,
+   "final_coef": -0.48
+  },
+  {
+   "feature": "sells an approved product",
+   "train_coef": 0.41,
+   "final_coef": 0.34
+  },
+  {
+   "feature": "late-stage program (product line)",
+   "train_coef": 0.23,
+   "final_coef": 0.33
+  },
+  {
+   "feature": "partnered with a top-15 pharma",
+   "train_coef": -0.13,
+   "final_coef": -0.26
+  },
+  {
+   "feature": "backed by a tracked builder or investor",
+   "train_coef": 0.24,
+   "final_coef": 0.23
+  },
+  {
+   "feature": "money raised in the prior year",
+   "train_coef": -0.25,
+   "final_coef": -0.21
+  },
+  {
+   "feature": "headcount",
+   "train_coef": -0.18,
+   "final_coef": -0.21
+  },
+  {
+   "feature": "publicly listed",
+   "train_coef": -0.19,
+   "final_coef": 0.11
+  }
+ ],
+ "targets": [
+  {
+   "uid": 8765,
+   "p": 0.999,
+   "why": [
+    "works in an active M&A silo",
+    "sells an approved product",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 5721,
+   "p": 0.999,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 2894,
+   "p": 0.999,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 7289,
+   "p": 0.999,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 2010,
+   "p": 0.999,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 4515,
+   "p": 0.999,
+   "why": [
+    "late-stage program (product line)",
+    "backed by a tracked builder or investor",
+    "publicly listed",
+    "news coverage in the prior year"
+   ]
+  },
+  {
+   "uid": 1134,
+   "p": 0.998,
+   "why": [
+    "works in an active M&A silo",
+    "sells an approved product",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 72,
+   "p": 0.998,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "backed by a tracked builder or investor",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 2542,
+   "p": 0.997,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 9196,
+   "p": 0.997,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 8355,
+   "p": 0.997,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 9286,
+   "p": 0.995,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 8731,
+   "p": 0.995,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 8594,
+   "p": 0.995,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 3249,
+   "p": 0.994,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "news coverage in the prior year"
+   ]
+  },
+  {
+   "uid": 5209,
+   "p": 0.994,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "news coverage in the prior year"
+   ]
+  },
+  {
+   "uid": 9538,
+   "p": 0.994,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "news coverage in the prior year"
+   ]
+  },
+  {
+   "uid": 7360,
+   "p": 0.994,
+   "why": [
+    "sells an approved product",
+    "works in an active M&A silo",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 9548,
+   "p": 0.987,
+   "why": [
+    "sells an approved product",
+    "works in an active M&A silo",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 5607,
+   "p": 0.983,
+   "why": [
+    "sells an approved product",
+    "works in an active M&A silo",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 6445,
+   "p": 0.979,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 1846,
+   "p": 0.979,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 586,
+   "p": 0.975,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 4894,
+   "p": 0.971,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 850,
+   "p": 0.97,
+   "why": [
+    "works in an active M&A silo",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 7863,
+   "p": 0.97,
+   "why": [
+    "works in an active M&A silo",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 1974,
+   "p": 0.97,
+   "why": [
+    "works in an active M&A silo",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 7151,
+   "p": 0.969,
+   "why": [
+    "works in an active M&A silo",
+    "size of trial portfolio",
+    "news coverage in the prior year",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 3555,
+   "p": 0.968,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 3270,
+   "p": 0.963,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 5422,
+   "p": 0.955,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 8456,
+   "p": 0.921,
+   "why": [
+    "works in an active M&A silo",
+    "late-stage program (product line)",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 7783,
+   "p": 0.92,
+   "why": [
+    "works in an active M&A silo",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 4821,
+   "p": 0.915,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 8773,
+   "p": 0.914,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 1051,
+   "p": 0.911,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 6453,
+   "p": 0.897,
+   "why": [
+    "backed by a tracked builder or investor",
+    "publicly listed",
+    "size of trial portfolio",
+    "news coverage in the prior year"
+   ]
+  },
+  {
+   "uid": 6429,
+   "p": 0.875,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 6186,
+   "p": 0.865,
+   "why": [
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "news coverage in the prior year",
+    "has a partnership"
+   ]
+  },
+  {
+   "uid": 8423,
+   "p": 0.864,
+   "why": [
+    "works in an active M&A silo",
+    "backed by a tracked builder or investor",
+    "size of trial portfolio",
+    "has a partnership"
+   ]
+  }
+ ],
+ "notes": "News features use only events before each cutoff. Trial-portfolio size, product line, backers, listing and headcount are today's values, so they can leak a little. Acquisitions are from the news log (first listed company is the buyer)."
+}

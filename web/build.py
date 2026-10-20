@@ -251,7 +251,7 @@ def read_trials():
 
 
 def read_pharma():
-    """One JSON per big pharma: profile + lineage events (see README "Pharma families")."""
+    """One JSON per big pharma: profile + lineage events (see docs/conventions.md "Pharma families")."""
     out = []
     for f in sorted((ROOT / "data" / "pharma").glob("*.json")):
         d = json.loads(f.read_text())
@@ -277,7 +277,7 @@ def logo_token():
 
 
 def load_data():
-    """Everything the page embeds, linked together."""
+    """Everything the page embeds, linked together (also used by sweep/fit_forecast.py)."""
     data = {
         "logoToken": logo_token(),
         "built": date.today().isoformat(),
@@ -300,6 +300,8 @@ def load_data():
     }
     link_universe(data)
     del data["products"], data["coverage"]  # merged into the universe / news rows
+    f = ROOT / "data" / "forecast.json"  # fitted target model + rankings (sweep/fit_forecast.py)
+    data["forecast"] = json.loads(f.read_text()) if f.exists() else None
     return data
 
 

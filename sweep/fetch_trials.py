@@ -62,7 +62,8 @@ def fetch(cond, label, cap=2500):
     out, token = [], None
     while True:
         q = dict(params, **({"pageToken": token} if token else {}))
-        d = json.loads(get(API + urllib.parse.urlencode(q), timeout=90))
+        # tries=6 waits ~30s in all, long enough for a network still coming up after wake
+        d = json.loads(get(API + urllib.parse.urlencode(q), timeout=90, tries=6))
         out += d.get("studies", [])
         token = d.get("nextPageToken")
         if not token or len(out) >= cap:
@@ -105,7 +106,7 @@ def main():
         ("stopped", f"AREA[LastUpdatePostDate]RANGE[{since},MAX] AND (AREA[OverallStatus]TERMINATED OR "
                     "AREA[OverallStatus]SUSPENDED OR AREA[OverallStatus]WITHDRAWN)"),
     ]
-    trials = {}
+    trials, failed = {}, []
     for label, cond in queries:
         try:
             for s in fetch(cond, label):
@@ -116,9 +117,11 @@ def main():
                     trials[t["id"]] = t
         except Exception as e:  # noqa: BLE001
             warn(f"{label}: {e}")
-    if not trials:
-        warn("no trials fetched; keeping the existing file")
-        return
+            failed.append(label)
+    if failed or not trials:
+        # a partial snapshot would silently drop most trials from the page, so keep the last full one
+        warn(f"{', '.join(failed) or 'all queries'} failed; keeping the existing file")
+        sys.exit(1)
     OUT.write_text(json.dumps({"fetched": today.isoformat(), "since": since, "days": args.days,
                                "trials": list(trials.values())}, separators=(",", ":")))
     ind = sum(t["sector"] == "industry" for t in trials.values())
