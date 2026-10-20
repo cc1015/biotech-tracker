@@ -3,6 +3,7 @@
 
 Embeds the data as JSON so the page opens from disk (file://) with no server.
 Run from anywhere:  python3 web/build.py
+           python3 web/build.py --public   # the live site (GitHub Pages): leaves out the Forecast tab
 """
 import csv
 import json
@@ -305,10 +306,23 @@ def load_data():
     return data
 
 
+# the Forecast tab is for local use only; --public drops its tab button, section and data
+PRIVATE_HTML = ('    <button role="tab" data-tab="outlook">Forecast</button>\n', '  <section id="outlook" hidden></section>\n')
+
+
 def main():
+    public = "--public" in sys.argv[1:]
     data = load_data()
+    if public:
+        data["forecast"] = None
     blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
-    html = (WEB / "template.html").read_text().replace("/*__DATA__*/null", blob)
+    html = (WEB / "template.html").read_text()
+    if public:
+        for frag in PRIVATE_HTML:
+            if frag not in html:
+                sys.exit(f"--public: {frag.strip()!r} not found in template.html; update PRIVATE_HTML")
+            html = html.replace(frag, "")
+    html = html.replace("/*__DATA__*/null", blob)
     (WEB / "index.html").write_text(html)
     print(f"wrote {WEB / 'index.html'}: "
           + ", ".join(f"{k}={len(v)}" for k, v in data.items() if isinstance(v, list)))

@@ -1646,7 +1646,8 @@ const coCell = u => `<span class="cochip">${uLogo(u, "sm")}<a class="co" href="#
 const phCell = ph => `<a class="cochip" href="#ph/${ph.p.slug}" style="text-decoration:none">${uLogoLike(phCo(ph.p), "sm")}<span>${esc(ph.p.company)}</span></a>`;
 const scoreBar = (s, max = 100) => `<span class="ol-score"><i style="background-size:${Math.max(4, Math.min(100, (s / max) * 100))}% 100%"></i><b>${s}</b></span>`;
 function outlookTab() {
-  const el = $("#outlook"), O = computeOutlook();
+  const el = $("#outlook"); if (!el) return; // left out of the public build
+  const O = computeOutlook();
   const sec = (title, sub, body) => `<div class="card ol-sec"><h2>${esc(title)}</h2><p class="sub">${sub}</p>${body}</div>`;
   const btTop = O.bt.filter(x => x.pct >= 0.9).length;
   el.innerHTML = `

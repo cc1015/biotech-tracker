@@ -134,7 +134,7 @@ Silo pages and company profiles link to the labs and investors involved.
 
 ## Forecast (deal predictor)
 
-The **Forecast** tab is a signal-based forecast, not a trained model. Each score is a plain sum of named, capped signals taken from the tracker's own data, and every row lists the signals behind it. The weights are in the `W` object in `web/template.html`. It has four parts:
+The **Forecast** tab is local-only: `python3 web/build.py` includes it, while the live site is built with `python3 web/build.py --public`, which leaves it out. It is a signal-based forecast, not a trained model. Each score is a plain sum of named, capped signals taken from the tracker's own data, and every row lists the signals behind it. The weights are in the `W` object in `web/template.html`. It has four parts:
 1. **Likely acquisition targets.** Signals: late-stage programs, recent results, approved products, existing pharma partnerships, how active the silo is in M&A, funding momentum, backers, and listing status. Stopped trials count against. Big pharma, companies that are themselves acquirers, already-acquired companies and known subsidiaries are excluded.
 2. **Likely buyers for each target.** Each of the 15 pharma families is scored on therapeutic-area overlap, activity in the target's silo, recent deal pace and any existing partnership.
 3. **Likely platform partnerships.** Platform and AI companies with funding momentum, paired with the pharmas doing platform deals.
