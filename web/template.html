@@ -278,18 +278,6 @@ a.chip.silo:hover { color: var(--accent); text-decoration: underline; }
 .tr-table .cochip { white-space: normal; align-items: flex-start; }
 .tr-table td:nth-child(6) { min-width: 90px; }
 .tr-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
-/* outlook */
-.ol-intro { border-left: 3px solid var(--accent); padding: 8px 12px; margin-bottom: 22px; font-size: 13px; color: var(--text-secondary); max-width: 900px; }
-.ol-sec { margin-bottom: 28px; }
-.ol-score { display: inline-flex; align-items: center; gap: 6px; min-width: 110px; }
-.ol-score i { display: block; height: 8px; width: 70px; background: var(--grid); border-radius: 0 4px 4px 0; position: relative; overflow: hidden; }
-.ol-score i { background: linear-gradient(to right, var(--series-1) 0 100%) no-repeat; background-color: var(--grid); }
-.ol-score b { font-size: 13px; font-variant-numeric: tabular-nums; }
-.ol-why { display: flex; flex-wrap: wrap; gap: 3px 6px; }
-.ol-why span { font-size: 11.5px; color: var(--text-secondary); border: 1px solid var(--grid); padding: 0 5px; border-radius: 2px; }
-.ol-buyer { margin: 2px 0; white-space: nowrap; }
-.ol-card { border-top: 1px solid var(--grid); padding-top: 6px; }
-.ol-table td:nth-child(2) { min-width: 180px; }
 /* frontiers */
 .fr-mom { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(170px, 100%), 1fr)); gap: 8px; }
 .fr-tile { text-align: left; background: none; border: 1px solid var(--grid); padding: 7px 9px; font: inherit; cursor: pointer; color: var(--text-primary); border-radius: 3px; }
@@ -332,8 +320,6 @@ details.about p { margin: 6px 0 0; }
     <button role="tab" data-tab="labs">Labs</button>
     <button role="tab" data-tab="silos">Silos</button>
     <button role="tab" data-tab="frontiers">Frontiers</button>
-    <i class="nav-sep"></i>
-    <button role="tab" data-tab="outlook">Forecast</button>
   </nav>
   <div class="page-head" id="page-head"></div>
 
@@ -418,8 +404,6 @@ details.about p { margin: 6px 0 0; }
   <section id="labs" hidden></section>
 
   <section id="trials" hidden></section>
-
-  <section id="outlook" hidden></section>
 
   <section id="frontiers" hidden></section>
 
@@ -1520,165 +1504,6 @@ function trialsTab() {
 // recent trials list for a lab page or silo page
 const trialList = ts => `<ul class="feed">${ts.slice(0, 12).map(t => `<li><span class="d">${esc(t._when || trWhen(t))}</span><div>${link("https://clinicaltrials.gov/study/" + t.id, t.title)}<div class="note">${t.milestones.map(m => (TR_MS.find(x => x.id === m) || {}).label).join(", ")} · phase ${esc(t.phase || "—")} · ${trSponsorHTML(t)}</div></div></li>`).join("")}</ul>${ts.length > 12 ? `<p class="note">+ ${ts.length - 12} more in the Trials tab</p>` : ""}`;
 
-// ---------- outlook: signal-based predictions (not a trained model) ----------
-// therapeutic areas from free text (trial conditions, product lines, pharma profiles)
-const TA_RULES = {
-  oncology: /cancer|tumou?r|carcinoma|lymphoma|leuk(a)?emia|myeloma|melanoma|sarcoma|glioma|oncolog|neoplasm|nsclc/i,
-  immunology: /arthritis|psoriasis|lupus|colitis|crohn|dermatitis|asthma|autoimmun|immunolog|inflammat|sj[oö]gren|hidradenitis|urticaria|copd/i,
-  neuroscience: /alzheimer|parkinson|epilep|schizophren|depress|\bals\b|amyotrophic|migraine|neuro|huntington|multiple sclerosis|pain|psychiat|bipolar/i,
-  cardiometabolic: /obes|diabet|cardio|heart|hypertens|nash|mash|lipid|cholesterol|metabolic|kidney|renal|thrombo|atrial/i,
-  infectious: /hiv|hepatitis|influenza|vaccin|infect|covid|rsv|malaria|tubercul|antibiot|viral|bacteri/i,
-  rare: /rare|duchenne|spinal muscular|hemophilia|haemophilia|sickle|fabry|gaucher|pompe|cystic fibrosis|amyloid|thalass|orphan|lysosomal/i,
-  ophthalmology: /retina|macular|ophthalm|eye|glaucoma|uveitis/i,
-};
-const taOf = text => Object.entries(TA_RULES).filter(([, rx]) => rx.test(text || "")).map(([k]) => k);
-const yearsAgo = (d, n) => d && d >= `${new Date().getFullYear() - n}${new Date().toISOString().slice(4, 10)}`;
-// weights: every score is a sum of these named, capped signals (shown on the page)
-const W = {
-  lateStage: 25, recentResults: 8, approved: 18, pharmaPartner: 20, anyPartner: 8, hotSilo: 12, funding: 10, backed: 5, publicCo: 6, failed: -12,
-};
-let OUTLOOK = null;
-function computeOutlook() {
-  if (OUTLOOK) return OUTLOOK;
-  const U = DATA.universe, N = DATA.news, T = (DATA.trials && DATA.trials.trials) || [];
-  const pharmaIds = new Set(DATA.pharma.map(p => p.uid).filter(x => x != null));
-  const trialsBy = new Map(); T.forEach(t => { if (t.uid != null) { if (!trialsBy.has(t.uid)) trialsBy.set(t.uid, []); trialsBy.get(t.uid).push(t); } });
-  const acquired = new Set(), buyers = new Set();
-  N.forEach(n => { if (n.category === "m&a") { const r = roles(n); r.cos.slice(1).forEach(e => e.id != null && acquired.add(e.id)); if (r.cos[0] && r.cos[0].id != null) buyers.add(r.cos[0].id); } });
-  // already owned: completed buys in the pharma family trees, builders' "acquired/merged" companies, and any subsidiary
-  DATA.pharma.forEach(p => p.events.forEach(e => { if (PH_IN.has(e.type) && phDone(e) && e.cid != null) acquired.add(e.cid); }));
-  [...DATA.builders, ...DATA.investors, ...DATA.labs].forEach(b => (b.created || []).forEach(c => { if (c.uid != null && (c.status === "acquired" || c.status === "merged")) acquired.add(c.uid); }));
-  U.forEach(u => { if (u.parent || /\b(GK|K\.K\.|Japan|China|Korea|Taiwan|Europe|UK|USA|Deutschland|France|Italia)\b/.test(u.name) && /\b(GK|K\.K\.|Ltd|GmbH|S\.A\.|Inc)\b/.test(u.name)) acquired.add(u.id); });
-  // "big" = a top-15 pharma, a company that buys others, or one with a large workforce or trial portfolio
-  const big = u => pharmaIds.has(u.id) || buyers.has(u.id) || u._emp > 3000 || u._trials > 120 || (trialsBy.get(u.id) || []).length >= 8;
-  // silo heat: share of the last 12 months' M&A + partnerships in each silo
-  const recent = N.filter(n => yearsAgo(n.date, 1) && (n.category === "m&a" || n.category === "partnership"));
-  const heat = countBy(recent, n => n._silos), hmax = Math.max(1, ...heat.values());
-  const backedBy = new Map();
-  [...DATA.builders, ...DATA.investors].forEach(b => (b.created || []).forEach(c => { if (c.uid != null) { if (!backedBy.has(c.uid)) backedBy.set(c.uid, []); backedBy.get(c.uid).push(b.name); } }));
-  // pharma interest: silos and therapeutic areas from its own trials, news deals and profile
-  const PH = DATA.pharma.filter(p => p.uid != null).map(p => {
-    const ts = trialsBy.get(p.uid) || [], deals = N.filter(n => n._cos.some(e => e.id === p.uid));
-    const silo = countBy([...ts.map(t => ({ s: t.silo })), ...deals.map(n => ({ s: n._silos }))], x => x.s);
-    const ta = new Set([...taOf((p.profile.therapeutic_areas || []).join(" ")), ...ts.flatMap(t => taOf(t.conditions.join(" ")))]);
-    const pace = p.events.filter(e => PH_IN.has(e.type) && !e.via && (parseInt(e.year, 10) || 0) >= new Date().getFullYear() - 3 && phDone(e)).length
-      + deals.filter(n => n.category === "m&a" && yearsAgo(n.date, 1)).length;
-    const platformDeals = deals.filter(n => n.category === "partnership" && n._silos.some(s => ["ai-discovery", "foundation-models", "lab-automation"].includes(s))).length;
-    return { p, uid: p.uid, silo, ta, pace, platformDeals, partners: new Set(deals.filter(n => n.category === "partnership").flatMap(n => n._cos.map(e => e.id))) };
-  });
-  // ---- 1. M&A targets ----
-  const candidates = U.filter(u => !big(u) && !acquired.has(u.id) && u.status !== "defunct" && (u.prod || u._news.length || trialsBy.has(u.id)));
-  const scoreTarget = (u, excludeEvent = null) => {
-    const ts = trialsBy.get(u.id) || [], why = [];
-    const news = u._news.map(j => N[j]).filter(n => n !== excludeEvent);
-    const stage = ((u.prod || {}).stage || "").toLowerCase();
-    let s = 0;
-    const ph3 = ts.filter(t => t.phase.includes("3") && !t.milestones.includes("stopped"));
-    if (ph3.length || /phase 3/.test(stage)) { s += W.lateStage; why.push(`phase 3 program${ph3.length ? ` (${ph3.length} trial${ph3.length > 1 ? "s" : ""})` : ""}`); }
-    else if (ts.some(t => t.phase.includes("2")) || /phase 2/.test(stage)) { s += W.lateStage * 0.5; why.push("phase 2 program"); }
-    if (ts.some(t => t.milestones.includes("results") && /[23]/.test(t.phase))) { s += W.recentResults; why.push("phase 2/3 results posted in last 90 days"); }
-    if (/approved|commercial|marketed/.test(stage) || /\bmarkets?\b|commerciali[sz]ed|approved/i.test((u.prod || {}).product || "")) { s += W.approved; why.push("sells an approved product"); }
-    const partners = news.filter(n => n.category === "partnership").flatMap(n => n._cos.filter(e => e.id !== u.id));
-    const pharmaP = partners.filter(e => pharmaIds.has(e.id));
-    if (pharmaP.length) { s += W.pharmaPartner; why.push(`partnered with ${[...new Set(pharmaP.map(e => plainName(e.n)))].slice(0, 2).join(", ")}`); }
-    else if (partners.length) { s += W.anyPartner; why.push("has a partnership"); }
-    const silos = [...new Set([...news.flatMap(n => n._silos), ...ts.flatMap(t => t.silo), ...(u.cur >= 0 ? list(DATA.companies[u.cur].silo) : [])])];
-    const h = Math.max(0, ...silos.map(id => heat.get(id) || 0)) / hmax;
-    if (h > 0.2) { s += W.hotSilo * h; why.push(`active M&A silo (${siloName(silos.sort((a, b) => (heat.get(b) || 0) - (heat.get(a) || 0))[0])})`); }
-    const raise = news.filter(n => (n.category === "financing" || n.category === "ipo") && yearsAgo(n.date, 1) && n._amt >= 1e8);
-    if (raise.length) { s += W.funding; why.push(`raised ${usd(Math.max(...raise.map(n => n._amt)))} in the last year`); }
-    const bb = backedBy.get(u.id);
-    if (bb) { s += W.backed; why.push(`backed by ${bb.slice(0, 2).join(", ")}`); }
-    if (u.status === "public") { s += W.publicCo; why.push("publicly listed"); }
-    if (ts.some(t => t.milestones.includes("stopped") && /[23]/.test(t.phase))) { s += W.failed; why.push("a phase 2/3 trial was stopped"); }
-    const ta = new Set([...ts.flatMap(t => taOf(t.conditions.join(" "))), ...taOf(((u.prod || {}).product || "") + " " + ((u.prod || {}).lead_asset || ""))]);
-    return { u, s: Math.round(s), why, silos, ta };
-  };
-  const fit = (tg, ph) => {
-    let s = 0; const why = [];
-    const taHit = [...tg.ta].filter(x => ph.ta.has(x));
-    if (taHit.length) { s += 35 * Math.min(1, taHit.length / Math.max(1, tg.ta.size)); why.push(taHit.join(", ")); }
-    const siloHit = tg.silos.filter(id => ph.silo.get(id));
-    if (siloHit.length) { s += Math.min(25, 8 * siloHit.reduce((a, id) => a + Math.log2(1 + ph.silo.get(id)), 0)); why.push(`works in ${siloName(siloHit[0])}`); }
-    s += Math.min(20, ph.pace * 4); if (ph.pace >= 3) why.push(`${ph.pace} deals in 3 yrs`);
-    if (ph.partners.has(tg.u.id)) { s += 30; why.push("already partners"); }
-    return { ph, s: Math.round(s), why };
-  };
-  const targets = candidates.map(u => scoreTarget(u)).filter(t => t.s >= 20).sort((a, b) => b.s - a.s).slice(0, 40)
-    .map(t => ({ ...t, buyers: PH.map(ph => fit(t, ph)).sort((a, b) => b.s - a.s).slice(0, 3) }));
-  // ---- backtest: score each tracked acquisition's target without the deal itself, and see where it ranks ----
-  const pool = candidates.map(u => scoreTarget(u).s).sort((a, b) => b - a);
-  const bt = N.filter(n => n.category === "m&a").map(n => { const r = roles(n), e = r.cos[1]; return e && e.id != null ? { n, u: U[e.id] } : null; }).filter(Boolean)
-    .filter(x => !big(x.u)).map(x => { const sc = scoreTarget(x.u, x.n).s, rank = pool.filter(v => v > sc).length; return { ...x, sc, pct: 1 - rank / Math.max(1, pool.length) }; });
-  // ---- 3. partnerships: platform companies x pharmas doing platform deals ----
-  const platforms = candidates.filter(u => /platform|tools/.test(((u.prod || {}).stage || "")) || ((u.prod || {}).modality || "").match(/ai|platform/i)
-    || (u.cur >= 0 && DATA.companies[u.cur].model === "platform")).map(u => {
-    const tg = scoreTarget(u), raise = u._news.map(j => N[j]).filter(n => (n.category === "financing") && yearsAgo(n.date, 2));
-    const momentum = Math.min(30, raise.reduce((a, n) => a + Math.log10(Math.max(n._amt, 1e6)) - 5, 0) * 6) + (backedBy.get(u.id) ? 10 : 0);
-    const partners = PH.map(ph => { const f = fit(tg, ph); return { ph, s: Math.round(f.s * 0.6 + ph.platformDeals * 12), why: [ph.platformDeals ? `${ph.platformDeals} platform deal${ph.platformDeals > 1 ? "s" : ""} this year` : "", ...f.why].filter(Boolean) }; })
-      .filter(x => !x.ph.partners.has(u.id)).sort((a, b) => b.s - a.s).slice(0, 3);
-    return { u, s: Math.round(momentum + (tg.s * 0.4)), partners, why: [raise.length ? `raised ${usd(Math.max(...raise.map(n => n._amt)))}` : "", backedBy.get(u.id) ? `backed by ${backedBy.get(u.id)[0]}` : "", ...tg.why.slice(0, 2)].filter(Boolean) };
-  }).filter(p => p.s >= 15).sort((a, b) => b.s - a.s).slice(0, 20);
-  // ---- 4. academia -> industry ----
-  // licensable = the institution plausibly owns the asset: a code-named investigational agent or an academic-made modality
-  // (trials of approved industry drugs, e.g. "atezolizumab plus chemo", aren't licensing candidates)
-  const novel = t => t.interventions.some(i => /[A-Z]{1,6}[- ]?\d{2,6}[A-Z]?/.test(i) && !/placebo/i.test(i))
-    || t.silo.some(s => ["cell-therapy", "gene-therapy", "gene-editing", "rna"].includes(s));
-  const acad = T.filter(t => t.sector !== "industry" && novel(t) && (t.milestones.includes("results") || t.milestones.includes("completed")) && /[23]/.test(t.phase)).map(t => {
-    const h = Math.max(0, ...t.silo.map(id => heat.get(id) || 0)) / hmax, ta = taOf(t.conditions.join(" ") + " " + t.title);
-    let s = (t.phase.includes("3") ? 30 : 18) + (t.milestones.includes("results") ? 15 : 5) + h * 15 + Math.min(10, Math.log10((t.n || 10)) * 3);
-    const why = [`phase ${t.phase}`, t.milestones.includes("results") ? "results posted" : "completed", h > 0.2 ? `hot silo (${siloName(t.silo[0])})` : ""].filter(Boolean);
-    const partners = PH.map(ph => { const hit = ta.filter(x => ph.ta.has(x)); const sh = t.silo.filter(id => ph.silo.get(id)); return { ph, s: hit.length * 20 + sh.length * 15 + Math.min(15, ph.pace * 3), why: [...hit, ...sh.map(siloName)] }; })
-      .sort((a, b) => b.s - a.s).slice(0, 3);
-    return { t, s: Math.round(s), why, partners };
-  }).sort((a, b) => b.s - a.s).slice(0, 25);
-  const labsNext = DATA.labs.map(l => {
-    const cs = l.created || [], recentSpin = cs.filter(c => (parseInt(c.launched, 10) || 0) >= new Date().getFullYear() - 4).length;
-    const tr = T.filter(t => t.lab === l.slug), late = tr.filter(t => /[23]/.test(t.phase)).length;
-    const siloH = Math.max(0, ...cs.flatMap(c => c.silo || []).map(id => heat.get(id) || 0)) / hmax;
-    const s = Math.round(Math.min(40, recentSpin * 6) + Math.min(25, tr.length * 1.5) + Math.min(15, late * 2) + siloH * 20);
-    return { l, s, why: [recentSpin ? `${recentSpin} spinouts in 4 yrs` : "", tr.length ? `${tr.length} trials in 90 days` : "", siloH > 0.3 ? "works in hot silos" : ""].filter(Boolean) };
-  }).sort((a, b) => b.s - a.s);
-  OUTLOOK = { targets, bt, platforms, acad, labsNext, poolSize: pool.length, heat };
-  return OUTLOOK;
-}
-const coCell = u => `<span class="cochip">${uLogo(u, "sm")}<a class="co" href="#co/${u.id}">${esc(u.aka || u.name)}</a></span>`;
-const phCell = ph => `<a class="cochip" href="#ph/${ph.p.slug}" style="text-decoration:none">${uLogoLike(phCo(ph.p), "sm")}<span>${esc(ph.p.company)}</span></a>`;
-const scoreBar = (s, max = 100) => `<span class="ol-score"><i style="background-size:${Math.max(4, Math.min(100, (s / max) * 100))}% 100%"></i><b>${s}</b></span>`;
-function outlookTab() {
-  const el = $("#outlook"), O = computeOutlook();
-  const sec = (title, sub, body) => `<div class="card ol-sec"><h2>${esc(title)}</h2><p class="sub">${sub}</p>${body}</div>`;
-  const btTop = O.bt.filter(x => x.pct >= 0.9).length;
-  el.innerHTML = `
-    <div class="ol-intro"><b>Signals to explore, not a working prediction.</b> A time-split test (below) found that, on data the tracker can properly date, these signals don't yet predict which companies get acquired. Each score adds up named signals from the tracker's own data (trials, deals, products, backers) with the weights listed under "How the scores work". It points to where deals are <em>plausible</em>, and every row shows why. It isn't investment advice, and it only knows what the tracker knows.
-      <div style="margin-top:6px;font-size:12px">Rankings are generated automatically from public data. They are not investment advice or a recommendation to buy, sell or hold any security.</div></div>
-    ${sec("Likely acquisition targets", "Smaller companies with the profile acquirers usually buy: late-stage assets, existing pharma partners, hot silos and funding momentum. Likely buyers are matched on therapeutic area, silo and deal pace.",
-      `<div class="table-wrap"><table class="ol-table"><thead><tr><th>#</th><th>Company</th><th>Score</th><th>Why</th><th>Likely buyers</th></tr></thead><tbody>${O.targets.slice(0, 25).map((t, i) => `
-        <tr><td class="num">${i + 1}</td><td>${coCell(t.u)}${t.u.prod && t.u.prod.product ? `<div class="note">${esc(t.u.prod.product)}</div>` : ""}</td><td>${scoreBar(t.s, 96)}</td>
-        <td><div class="ol-why">${t.why.map(w => `<span>${esc(w)}</span>`).join("")}</div></td>
-        <td>${t.buyers.map(b => `<div class="ol-buyer">${phCell(b.ph)} <span class="note">${esc(b.why.slice(0, 2).join(" · "))}</span></div>`).join("")}</td></tr>`).join("")}</tbody></table></div>`)}
-    ${sec("Likely platform partnerships", "Platform and AI companies with funding momentum, paired with the big pharmas that are doing the most platform deals and work in the same areas. Existing partners are excluded.",
-      `<div class="sp-cos">${O.platforms.map(p => `<div class="ol-card"><div>${coCell(p.u)} ${scoreBar(p.s, 70)}</div>${p.u.prod && p.u.prod.product ? `<div class="prod">${esc(p.u.prod.product)}</div>` : ""}<div class="ol-why">${p.why.map(w => `<span>${esc(w)}</span>`).join("")}</div><div class="note" style="margin-top:4px">Likely partners: ${p.partners.map(x => phCell(x.ph)).join(" ")}</div></div>`).join("") || '<p class="muted">No platform companies with enough signal yet.</p>'}</div>`)}
-    ${sec("Academic programs likely to be licensed", "Phase 2/3 academic trials of the institution's own agents (code-named drugs, cell, gene and RNA therapies) that just posted results or completed, weighted toward hot silos. Licensing or a spinout often follows. Likely industry partners are matched on therapeutic area and silo.",
-      `<div class="table-wrap"><table class="ol-table"><thead><tr><th>Trial</th><th>Sponsor</th><th>Score</th><th>Why</th><th>Likely partners</th></tr></thead><tbody>${O.acad.map(a => `
-        <tr><td>${link("https://clinicaltrials.gov/study/" + a.t.id, a.t.title)}<div class="note">${esc(a.t.id)} · ${esc(a.t.conditions.slice(0, 2).join(", "))}</div></td><td>${trSponsorHTML(a.t)}</td><td>${scoreBar(a.s, 75)}</td>
-        <td><div class="ol-why">${a.why.map(w => `<span>${esc(w)}</span>`).join("")}</div></td><td>${a.partners.map(b => `<div class="ol-buyer">${phCell(b.ph)}</div>`).join("")}</td></tr>`).join("")}</tbody></table></div>`)}
-    ${sec("Labs most likely to spin out next", "Recent spinout pace, current trial activity and how hot their silos are.",
-      `<div class="sp-cos">${O.labsNext.map(x => `<div class="ol-card"><div><a class="co" href="#lab/${x.l.slug}">${esc(x.l.name)}</a> ${scoreBar(x.s, 100)}</div><div class="ol-why">${x.why.map(w => `<span>${esc(w)}</span>`).join("")}</div></div>`).join("")}</div>`)}
-    ${sec("How the scores work", "Plain sums of capped signals. Change the weights in <code>web/template.html</code> (the <code>W</code> object).",
-      `<dl class="kv">
-        <dt>Target score</dt><dd>phase 3 program +${W.lateStage} (phase 2 +${W.lateStage / 2}) · phase 2/3 results in last 90 days +${W.recentResults} · approved product +${W.approved} · partnered with a top-15 pharma +${W.pharmaPartner} (other partner +${W.anyPartner}) · silo's share of the last year's M&A and partnering, up to +${W.hotSilo} · raised $100M+ in the last year +${W.funding} · backed by a tracked venture builder or investor +${W.backed} · public +${W.publicCo} · stopped phase 2/3 trial ${W.failed}. Big pharma and companies already being acquired are excluded.</dd>
-        <dt>Buyer fit</dt><dd>therapeutic-area overlap with the target (from both sides' trial conditions) up to 35 · the pharma's own trials and deals in the target's silo up to 25 · completed acquisitions in the last 3 years up to 20 · already partners +30.</dd>
-        ${DATA.forecast ? (() => { const F = DATA.forecast, row = (k, r) => `<tr><td>${esc(k)}</td><td class="num">${r.auc ?? "—"}</td><td class="num">${r.hits_top25 ?? "—"}</td><td class="num">${r.hits_top10pct ?? "—"}</td></tr>`;
-          return `<dt>Time-split test</dt><dd>Fitted a logistic regression on companies' features as of ${esc(F.train.split(",")[0].replace("features ", ""))} (${F.train_positives} acquired by June), then scored the ${F.test["fitted model"].positives} companies acquired from June onward that it never saw, among ${F.test["fitted model"].candidates.toLocaleString()} candidates. AUC: 0.5 is chance, 1.0 is perfect.
-            <div class="table-wrap" style="margin:6px 0"><table style="font-size:13px"><thead><tr><th>Method</th><th>AUC</th><th>Hits in top 25</th><th>Hits in top 10%</th></tr></thead><tbody>
-            ${Object.entries(F.test).map(([k, r]) => row(k, r)).join("")}${Object.entries(F.leakage_check || {}).map(([k, r]) => row("fitted, " + k, r)).join("")}</tbody></table></div>
-            <b>Verdict: no demonstrated skill.</b> The good-looking scores disappear once product-line features are removed. Product lines were often researched <em>because</em> a company was in the news, including for being acquired, so they leak the answer. Using only properly dated features, the model is at chance. The rankings here are a way to browse plausible candidates, not predictions. Re-run <code>python3 sweep/fit_forecast.py</code> as the tracker accumulates dated history.</dd>`; })() : ""}
-        <dt>Backtest</dt><dd>${O.bt.length ? `Scoring the ${O.bt.length} acquired companies in the news log <em>with the deal itself removed</em>, ${btTop} ranked in the top 10% of ${O.poolSize.toLocaleString()} candidates (${O.bt.map(x => `${esc(plainName(x.u.aka || x.u.name))}: top ${Math.max(1, Math.round((1 - x.pct) * 100))}%`).join(", ")}). Treat this as a sanity check, not a validation: the sample is tiny, and other signals (partnerships, the silo's heat) still come from the same period.` : "Not enough tracked acquisitions to check yet."}</dd>
-        <dt>Blind spots</dt><dd>No financials (cash runway, market cap, patent cliffs), no private-company data beyond the news log, and silo tags from keyword matching. Subsidiaries are excluded only when the data names a parent, so some units of larger groups (especially Chinese pharma groups) can still appear. A company the tracker barely covers can't score well.</dd>
-      </dl>`)}`;
-}
-
 // ---------- frontiers: latest papers and preprints ----------
 const FR_SRC = { pubmed: "Lab papers", biorxiv: "Preprints", medrxiv: "Preprints" };
 let frState = { kind: "all", silo: "", q: "", shown: 60 };
@@ -1766,7 +1591,6 @@ const PAGE_HEADS = {
   labs: ["Labs", "The universities and institutes whose science keeps becoming companies."],
   silos: ["Silos", "The scientific fields companies come out of, and how busy each one is."],
   frontiers: ["Frontiers", "What leading labs are publishing now, and which fields are gaining momentum."],
-  outlook: ["Forecast", "Signals that sometimes come before a deal. Exploratory; see the test results below."],
 };
 function showTab(id) {
   const ph = PAGE_HEADS[id];
@@ -1805,7 +1629,7 @@ $("#tabs").addEventListener("click", e => { const b = e.target.closest("button")
 addEventListener("hashchange", route);
 
 $("#dateline").textContent = new Date(DATA.built + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" }) + " · updated daily";
-overview(); timeline(); pulse(); news(); universe(); pharmaIndex(); tech(); builders(); labs(); trialsTab(); outlookTab(); frontiersTab(); silos();
+overview(); timeline(); pulse(); news(); universe(); pharmaIndex(); tech(); builders(); labs(); trialsTab(); frontiersTab(); silos();
 if (location.hash) route();
 else try { const t = localStorage.getItem("ct-tab"); if (t && document.getElementById(t) && !["profile", "event", "pharmapage", "silopage", "builderpage"].includes(t)) showTab(t === "companies" ? "universe" : t); } catch {}
 // opening the page on a tab address: the browser's jump-to-anchor happens after load, so undo it then
