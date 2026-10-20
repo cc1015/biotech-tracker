@@ -23,6 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # web/index.html is generated, not committed: build it from data/ on every deploy
+      - name: Build web/index.html
+        run: python3 web/build.py
+        env:
+          LOGO_DEV_TOKEN: ${{ vars.LOGO_DEV_TOKEN }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
