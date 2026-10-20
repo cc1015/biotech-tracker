@@ -432,10 +432,10 @@
     "rna"
    ],
    "product": "Next-generation RNAi; lead CITY-FXI for thrombosis",
-   "status": "private",
-   "outcome": "",
-   "outcome_value_usd": null,
-   "source": "https://www.archventure.com/portfolio/",
+   "status": "public",
+   "outcome": "IPO Oct 2026 (Nasdaq; $200M at $18/share)",
+   "outcome_value_usd": 200000000,
+   "source": "https://www.sec.gov/Archives/edgar/data/0002143850/000110465926116636/tm2619715-10_424b4.htm",
    "founding_unconfirmed": true
   }
  ]

@@ -57,7 +57,7 @@
    "source": "https://www.luxcapital.com/companies/recursion-pharma"
   },
   {
-   "name": "Kallyope",
+   "name": "TriGemX Bio (formerly Kallyope)",
    "launched": "2015",
    "role": "co-founded",
    "silo": [
@@ -66,9 +66,9 @@
    ],
    "product": "Gut-brain axis platform for therapeutics and nutrition products",
    "status": "private",
-   "outcome": "",
+   "outcome": "Renamed TriGemX Bio; $94M financing (Oct 1 2026); SPAC merger with TCGX Acquisition announced Oct 19 2026 (pending)",
    "outcome_value_usd": null,
-   "source": "https://www.luxcapital.com/companies/kallyope"
+   "source": "https://www.sec.gov/Archives/edgar/data/0002137965/000119312526425370/d180140d425.htm"
   },
   {
    "name": "Eikon Therapeutics",
@@ -399,6 +399,19 @@
    "outcome": "acquired 2018",
    "outcome_value_usd": null,
    "source": "https://www.luxcapital.com/companies/visterra"
+  },
+  {
+   "name": "Multiply Labs",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "lab-automation"
+   ],
+   "product": "Robotic systems for automated cell-therapy manufacturing",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.multiplylabs.com/press/series-b-2026"
   }
  ]
 }

@@ -454,6 +454,17 @@
    "status": "completed",
    "description": "Acquired EsoBiotec and its in vivo cell therapy lentiviral platform, worth up to $1B.",
    "source": "https://en.wikipedia.org/wiki/AstraZeneca"
+  },
+  {
+   "year": "2026",
+   "type": "stake",
+   "counterparty": "Multiply Labs",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Joined Multiply Labs' $75M Series B as a new investor (cell-therapy manufacturing robotics).",
+   "source": "https://www.multiplylabs.com/press/series-b-2026"
   }
  ]
 }
