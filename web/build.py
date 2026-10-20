@@ -251,7 +251,7 @@ def read_trials():
 
 
 def read_pharma():
-    """One JSON per big pharma: profile + lineage events (see README "Pharma families")."""
+    """One JSON per big pharma: profile + lineage events (see docs/conventions.md "Pharma families")."""
     out = []
     for f in sorted((ROOT / "data" / "pharma").glob("*.json")):
         d = json.loads(f.read_text())
