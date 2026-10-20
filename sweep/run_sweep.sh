@@ -53,6 +53,19 @@ cd "$ROOT" || exit 1
     --allowedTools "WebSearch" "WebFetch" "Read" "Edit" "Write" "Glob" "Grep" "Bash(python3:*)"
   rc=$?
   echo "=== sweep end $(date) exit=$rc ==="
+  # first successful sweep of each month: re-check the pharma, builder, investor and lab profiles,
+  # which the daily sweep never revisits. The stamp makes a missed or failed month retry the next day.
+  STAMP="$ROOT/sweep/cache/profiles-checked-$(date +%Y-%m)"
+  if [ "$rc" = 0 ] && [ ! -f "$STAMP" ]; then
+    echo "=== profile check start $(date) ==="
+    claude -p "$(cat "$ROOT/sweep/PROFILES_PROMPT.md")" \
+      --permission-mode acceptEdits \
+      --allowedTools "WebSearch" "WebFetch" "Read" "Edit" "Write" "Glob" "Grep" "Bash(python3:*)"
+    prc=$?
+    echo "=== profile check end $(date) exit=$prc ==="
+    [ "$prc" = 0 ] && touch "$STAMP"
+    python3 "$ROOT/web/build.py"   # pick up profile edits made after the news sweep rebuilt the page
+  fi
   git fetch -q origin
   if [ "$rc" != 0 ]; then
     echo "publish: sweep exited $rc; not committing"
@@ -60,6 +73,9 @@ cd "$ROOT" || exit 1
   elif ! python3 -c "import csv,glob,sys
 sys.exit(any(len({len(r) for r in csv.reader(open(f))})>1 for f in glob.glob('data/*.csv')))"; then
     echo "publish: a CSV in data/ has rows of the wrong width; not committing"
+  elif ! python3 -c "import glob,json
+[json.load(open(f)) for f in glob.glob('data/**/*.json', recursive=True)]"; then
+    echo "publish: a JSON file in data/ doesn't parse; not committing"
   else
     publish
   fi
