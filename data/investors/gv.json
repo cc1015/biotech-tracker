@@ -353,6 +353,19 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://www.gv.com/team/david-schenkein"
+  },
+  {
+   "name": "Estuary Biotherapeutics",
+   "launched": "2026",
+   "role": "participated",
+   "silo": [
+    "gene-therapy"
+   ],
+   "product": "Targeted gene therapies for kidney disease based on Yale research",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://estuarybio.com/news/estuary-series-a"
   }
  ]
 }
