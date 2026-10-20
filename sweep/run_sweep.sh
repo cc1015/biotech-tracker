@@ -22,7 +22,7 @@ publish() {
   for p in $OUTPUT; do [ -e "$p" ] && paths+=("$p"); done   # notes/ appears after the first sweep
   git add -A -- $paths
   git diff --cached --quiet -- $paths && { echo "publish: nothing changed"; return 0; }
-  git commit -q -m "Daily sweep $(date +%Y-%m-%d)" -- $paths || return 1
+  git commit -q -m "$(date +%m_%d_%Y) sweep" -- $paths || return 1
   git pull -q --rebase --autostash origin dev || { git rebase --abort 2>/dev/null; echo "publish: pull of dev failed"; return 1; }
   git push -q origin dev || { echo "publish: push of dev failed"; return 1; }
   sha="$(git rev-parse HEAD)"
