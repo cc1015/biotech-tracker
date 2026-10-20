@@ -132,6 +132,18 @@ Silo pages and company profiles link to the labs and investors involved.
 - **Updates:** the daily sweep refreshes the snapshot.
 - **Where it shows:** the **Trials** tab, plus trial sections on Labs and silo pages.
 
+## Field scores
+
+`sweep/fetch_field_scores.py` scores each silo's research activity into `data/field_scores.json`, shown at the top of the **Frontiers** tab and on each silo page. Each of four signals is ranked 0–100 against the other silos, and the score is their average:
+- **Preprints:** bioRxiv + medRxiv momentum from `frontiers.json` (last 30 days vs the 30 before). Run `fetch_frontiers.py` first.
+- **Journal growth:** OpenAlex journal articles in the last 90 days vs the 90 before, relative to all biomedical articles over the same windows. OpenAlex indexes the newest papers late, so raw counts always dip; comparing with the baseline cancels that out.
+- **Journal quality:** the average of two ranks: the mean log of each article's journal 2-year mean citedness (a free stand-in for the impact factor), and the share of articles in journals at 10 or more.
+- **Uptake:** the share of articles 6–18 months old already cited 5 or more times.
+
+Articles are OpenAlex journal works in biomedical fields (agriculture is excluded, so plant CRISPR work doesn't count) whose title or abstract matches the silo's search in `SILO_SEARCH`. Windows end 14 days ago. A silo needs at least three of the four signals to get a score. Journal metrics are cached in `sweep/cache/openalex_sources.json` for 30 days.
+
+The script needs `OPENALEX_API_KEY` in `sweep/.env`. Without a key, OpenAlex refuses to page past the first 200 journals and shares a $0.10/day budget per IP; a run is about 300 requests. If any request fails, the script keeps the existing file.
+
 ## Forecast (deal predictor)
 
 The **Forecast** tab is local-only: `python3 web/build.py` includes it, while the live site is built with `python3 web/build.py --public`, which leaves it out. It is a signal-based forecast, not a trained model. Each score is a plain sum of named, capped signals taken from the tracker's own data, and every row lists the signals behind it. The weights are in the `W` object in `web/template.html`. It has four parts:
