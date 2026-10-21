@@ -476,6 +476,20 @@
    "outcome": "Acquired by Pretzel Therapeutics",
    "outcome_value_usd": null,
    "source": "https://a16z.com/portfolio/"
+  },
+  {
+   "name": "Orchestra Bio",
+   "launched": "2022",
+   "role": "participated",
+   "silo": [
+    "ai-discovery",
+    "precision-data"
+   ],
+   "product": "AI agents that coordinate drug-development operations for biopharma teams",
+   "status": "acquired",
+   "outcome": "Acquired by OpenAI (Oct 2026; terms undisclosed)",
+   "outcome_value_usd": null,
+   "source": "https://siliconangle.com/2026/10/20/openai-acquires-orchestra-bio-to-bring-ai-agents-into-drug-development/"
   }
  ]
 }
