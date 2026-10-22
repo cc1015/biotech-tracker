@@ -8,7 +8,7 @@ You are running the daily news sweep for the biotech biotech-tracker in the curr
 Run `python3 sweep/collect_leads.py`. It adds unconfirmed leads from newswires, Google News, SEC Form D filings and Bluesky to `data/leads.csv`. Then handle every row with `status=new`:
 - If the event is already in `news.csv`, set `status=known`.
 - If it's a real biotech or life-sciences event of the kind this tracker records, confirm it against a primary source (and the trackers, see 3b), add it to `news.csv`, then set `status=promoted`.
-- Otherwise set `status=rejected` and give a short reason in `notes`, for example "not biotech", "people move", "opinion piece" or "duplicate story".
+- Otherwise set `status=rejected` and give a short reason in `notes`, for example "not biotech", "people move", "opinion piece", "below materiality bar" or "duplicate story". A CEO exit at a tracked company isn't a "people move". Record it as `market`.
 Several stories often cover the same event. Promote it once and mark the others `known`.
 Form D filings mostly show small, quiet raises. If no press release exists, promote one anyway if it's ≥$5M, with the EDGAR link as `source` and "Form D only" in `notes`.
 
@@ -22,12 +22,19 @@ Run web searches for the window, sending several in parallel:
 - AI drug discovery and bio foundation-model companies: financings, deals and launches
 - life-sciences moves by tech companies: Alphabet/Isomorphic/DeepMind, NVIDIA, Microsoft, Amazon/AWS, Meta, OpenAI, Anthropic, Apple
 - new company launches from venture studios (Flagship, ARCH, Third Rock, Atlas, Foresite)
+- Phase 3 and pivotal readouts (topline results, or major-congress data such as ASCO, ESMO, ASH or AACR)
+- FDA and EMA decisions: approvals of new drugs, complete response letters, advisory committee votes, clinical holds
+- big biotech and pharma stock moves (shares plunge, soar or are halted) and what caused them
+- company crises: data leaks, security breaches, layoffs, CEO departures, short-seller reports
 
 Prefer primary sources (company press releases, Business Wire, PR Newswire) and trade press (Fierce Biotech, Endpoints, BioSpace, STAT, BioPharma Dive, BioCentury). Use trackers only to find leads, then confirm each one elsewhere.
 
 ## 3. Record
 - Add each new event to `data/news.csv` and keep the file sorted newest first. Columns: `date,headline,companies,category,silo,amount_usd,source,confirmed_by,notes`.
-  - `category` is one of: financing, ipo, m&a, partnership, launch, clinical, regulatory.
+  - `category` is one of: financing, ipo, m&a, partnership, launch, clinical, regulatory, market.
+    - `clinical`: trial readouts. `regulatory`: FDA/EMA decisions and clinical holds. `market`: events that matter mainly for the company's stock or operations, such as a big share move, a leak or breach, layoffs, a CEO exit or a short report.
+    - Record `clinical`, `regulatory` and `market` events only for companies already in `data/companies.csv`, `data/pharma/` or `data/universe.csv`, and only if they are material: a Phase 3 or pivotal readout, a decision on a new drug, a one-day share move of 15% or more (5% or more for companies worth over $50B), layoffs of 10% or more of staff, a CEO exit, or any security breach or leak. Leave `amount_usd` empty unless money changes hands.
+    - If the stock moved, put the ticker, the move and when it happened at the start of `notes`, for example "MRNA −25% intraday; trading halted". Use the move reported in the press. Don't work it out yourself.
   - `silo` uses IDs from `taxonomy/silos.md`, separated by `;`.
   - Skip duplicates. Check the companies and the event, not just the headline text.
 - **Include an event only if you have a source URL for it.** Don't fabricate. If you have just one secondary source, add the event anyway and write "single secondary source — verify" in `notes`.

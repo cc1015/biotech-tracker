@@ -5,7 +5,10 @@
     "series e", "series f", "private placement", "ipo", "initial public offering", "acquire", "acquires",
     "acquisition", "merger", "merge", "to buy", "collaboration", "license", "licensing", "partnership",
     "partners with", "launches", "emerges from stealth", "stealth", "spinout", "spin-out", "spun out",
-    "upfront", "milestones"
+    "upfront", "milestones", "topline", "primary endpoint", "fda approves", "fda approval",
+    "complete response letter", "advisory committee", "clinical hold", "shares fall", "shares plunge",
+    "shares soar", "stock plunges", "stock soars", "trading halted", "leaked", "data leak", "breach",
+    "cyberattack", "layoffs", "lays off", "short report"
   ],
   "biotech_terms": [
     "biotech", "therapeutics", "bio", "pharma", "biosciences", "medicines", "drug", "clinical",
@@ -24,7 +27,12 @@
     "\"emerges from stealth\" biotech",
     "biotech acquisition",
     "\"AI drug discovery\" raises",
-    "\"life sciences\" (NVIDIA OR OpenAI OR Anthropic OR Google OR Microsoft OR Amazon OR Meta)"
+    "\"life sciences\" (NVIDIA OR OpenAI OR Anthropic OR Google OR Microsoft OR Amazon OR Meta)",
+    "biotech shares (plunge OR soar OR halted)",
+    "biotech topline phase 3",
+    "FDA \"complete response letter\"",
+    "biotech layoffs",
+    "(biotech OR pharma) (\"data breach\" OR cyberattack OR leaked)"
   ],
   "bluesky_search_queries": [
     "biotech seed round",

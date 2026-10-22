@@ -74,7 +74,7 @@ td.nowrap { white-space: nowrap; }
 .feed .d { color: var(--text-muted); font-size: 12px; }
 .legend { color: var(--text-muted); font-size: 13px; margin-top: 10px; }
 /* timeline + pulse */
-:root { --cat-1: #2a78d6; --cat-2: #eb6834; --cat-3: #1baf7a; }
+:root { --cat-1: #2a78d6; --cat-2: #eb6834; --cat-3: #1baf7a; --cat-4: #9b5fd6; }
 .tl-head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
 .seg { display: flex; flex-wrap: wrap; gap: 2px; }
 .seg button { background: none; border: 1px solid var(--grid); color: var(--text-secondary); font: inherit; font-size: 12px; padding: 3px 9px; cursor: pointer; }
@@ -116,6 +116,7 @@ a.co:hover { color: var(--accent); text-decoration-color: var(--accent); }
 .facts div { border-top: 1px solid var(--grid); padding-top: 6px; min-width: 0; }
 .facts dt { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
 .facts dd { margin: 2px 0 0; font-size: 16px; overflow-wrap: anywhere; }
+.facts .chip { white-space: normal; } /* long silo names wrap inside their column instead of spilling into the next */
 .pf-sec { margin-bottom: 30px; }
 .pf-sec h3 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
 .pf-sec h3 .muted { text-transform: none; letter-spacing: 0; font-weight: 400; }
@@ -857,6 +858,7 @@ function silos() {
 const CATS = [
   { id: "raise", label: "Raise / IPO", color: "var(--cat-1)", has: c => c === "financing" || c === "ipo" },
   { id: "ma", label: "M&A", color: "var(--cat-2)", has: c => c === "m&a" },
+  { id: "event", label: "Readout / FDA / market", color: "var(--cat-4)", has: c => c === "clinical" || c === "regulatory" || c === "market" },
   { id: "deal", label: "Partnership / launch / other", color: "var(--cat-3)", has: () => true },
 ];
 const catOf = n => CATS.find(c => c.has(n.category));
