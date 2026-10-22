@@ -25,7 +25,7 @@ biotech-tracker/
 │   ├── aliases.csv         hand-kept alternative names (e.g. ModernaTX → Moderna) for merging duplicates
 │   ├── tech_entrants.csv   tech companies' moves into life sciences
 │   ├── builders.csv        venture studios & investors that create companies
-│   └── news.csv            dated news log (financings, M&A, launches, readouts)
+│   └── news.csv            dated news log (financings, M&A, launches, readouts, FDA decisions, market events)
 └── notes/                  free-form research notes, one file per topic/week
 ```
 
