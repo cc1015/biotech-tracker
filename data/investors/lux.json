@@ -412,6 +412,20 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://www.multiplylabs.com/press/series-b-2026"
+  },
+  {
+   "name": "Warp Sciences",
+   "launched": "2026",
+   "role": "participated",
+   "silo": [
+    "lab-automation",
+    "ai-discovery"
+   ],
+   "product": "AI- and robotics-driven US chemistry CRO for drug research",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://finance.yahoo.com/healthcare/articles/warp-sciences-emerges-stealth-215-180000040.html"
   }
  ]
 }
