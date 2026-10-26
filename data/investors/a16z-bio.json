@@ -490,6 +490,19 @@
    "outcome": "Acquired by OpenAI (Oct 2026; terms undisclosed)",
    "outcome_value_usd": null,
    "source": "https://siliconangle.com/2026/10/20/openai-acquires-orchestra-bio-to-bring-ai-agents-into-drug-development/"
+  },
+  {
+   "name": "Prana Therapies",
+   "launched": "",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Half-life-extended bispecific antibodies for type 2 inflammatory diseases (PRA-216)",
+   "status": "public",
+   "outcome": "Reverse merger into Bolt Biotherapeutics (BOLT) with $120M PIPE that a16z joined (Oct 2026)",
+   "outcome_value_usd": null,
+   "source": "https://www.sec.gov/Archives/edgar/data/0001641281/000119312526429647/bolt-ex99_1.htm"
   }
  ]
 }
