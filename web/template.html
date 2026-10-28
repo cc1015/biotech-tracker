@@ -916,7 +916,6 @@ const partyLine = n => {
 };
 
 let comboType = "all", comboAll = false, comboSort = "new", comboTop = 25;
-const RECENT_DAYS = 7;   // events this recent always make the Top N selection
 // "top" = biggest and most covered: log of the disclosed amount, plus articles and trackers reporting it
 const evRank = n => Math.log10((n._amt || 0) + 1) + 0.8 * ((n._cov || []).length + (n._trackers || []).length);
 // deal-size tiers: the shade of a timeline chip says how big the deal is
@@ -926,9 +925,7 @@ const tierOf = n => TIERS.find(t => n._amt >= t.min).id;
 function vCombo() {
   const el = $("#timeline"), win = inWindow();
   const inWin = win.rows.filter(n => comboType === "all" || catOf(n).id === comboType);
-  // top N by rank, plus everything from the last week: new events haven't gathered coverage yet, so they rank low
-  const best = new Set([...inWin].sort((a, b) => evRank(b) - evRank(a)).slice(0, comboTop));
-  const rows = comboTop ? inWin.filter(n => best.has(n) || parseDate(n.date) >= +win.end - RECENT_DAYS * 864e5) : inWin;
+  const rows = comboTop ? [...inWin].sort((a, b) => evRank(b) - evRank(a)).slice(0, comboTop) : inWin;
   const id = n => DATA.news.indexOf(n);
   // the legend doubles as the type filter
   $("#tl-key").innerHTML = `<span class="seg" id="cb-type">${[{ id: "all", label: "All types" }, ...CATS].map(c => `<button data-t="${c.id}" aria-pressed="${comboType === c.id}">${c.color ? `<i style="background:${c.color}"></i>` : ""}${esc(c.label.split(" /")[0])}</button>`).join("")}</span>`;
