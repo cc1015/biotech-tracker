@@ -28,10 +28,16 @@ publish() {
   sha="$(git rev-parse HEAD)"
   [ -d "$MAIN_WT" ] || git worktree add -q --detach "$MAIN_WT" origin/main || return 1
   git -C "$MAIN_WT" checkout -q --detach origin/main || return 1
-  git -C "$MAIN_WT" cherry-pick "$sha" >/dev/null ||
-    { git -C "$MAIN_WT" cherry-pick --abort; echo "publish: $sha does not apply to main; dev pushed, main left alone"; return 1; }
+  # every sweep commit on dev that main lacks, oldest first, so one that failed to reach main
+  # on an earlier run goes over with this one (--cherry-pick drops ones already applied)
+  local -a missing
+  missing=(${(f)"$(git log --cherry-pick --right-only --no-merges --reverse --format='%H %s' origin/main...HEAD |
+    grep -E '^[0-9a-f]+ [0-9]{2}_[0-9]{2}_[0-9]{4} sweep$' | cut -d' ' -f1)"})
+  (( ${#missing} )) || { echo "publish: pushed $(git rev-parse --short "$sha") to dev; main already has it"; return 0; }
+  git -C "$MAIN_WT" cherry-pick $missing >/dev/null ||
+    { git -C "$MAIN_WT" cherry-pick --abort; echo "publish: ${#missing} sweep commit(s) don't apply to main; dev pushed, main left alone"; return 1; }
   git -C "$MAIN_WT" push -q origin HEAD:main || { echo "publish: push of main failed"; return 1; }
-  echo "publish: pushed $(git rev-parse --short "$sha") to dev and main"
+  echo "publish: pushed $(git rev-parse --short "$sha") to dev and main (${#missing} sweep commit(s) carried to main)"
 }
 
 cd "$ROOT" || exit 1
