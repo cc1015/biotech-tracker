@@ -168,10 +168,10 @@
     "ai-discovery"
    ],
    "product": "Cell-state-based drug discovery using ML and single-cell data",
-   "status": "private",
-   "outcome": "",
+   "status": "merged",
+   "outcome": "Merged into Etcelera (Flagship) 2026-10-29",
    "outcome_value_usd": null,
-   "source": "https://www.flagshippioneering.com/companies"
+   "source": "https://www.prnewswire.com/news-releases/flagship-pioneering-forms-etcelera-to-move-drug-discovery-from-probability-to-prediction-302922499.html"
   },
   {
    "name": "Ampersand Biomedicines",
@@ -499,10 +499,10 @@
     "precision-data"
    ],
    "product": "Therapies targeting disease progression trajectories",
-   "status": "private",
-   "outcome": "",
+   "status": "merged",
+   "outcome": "Merged into Etcelera (Flagship) 2026-10-29",
    "outcome_value_usd": null,
-   "source": "https://www.flagshippioneering.com/companies"
+   "source": "https://www.prnewswire.com/news-releases/flagship-pioneering-forms-etcelera-to-move-drug-discovery-from-probability-to-prediction-302922499.html"
   },
   {
    "name": "Expedition Medicines",
@@ -586,10 +586,10 @@
     "small-molecule"
    ],
    "product": "",
-   "status": "private",
-   "outcome": "",
+   "status": "merged",
+   "outcome": "Merged into Etcelera (Flagship) 2026-10-29",
    "outcome_value_usd": null,
-   "source": "https://www.flagshippioneering.com/companies"
+   "source": "https://www.prnewswire.com/news-releases/flagship-pioneering-forms-etcelera-to-move-drug-discovery-from-probability-to-prediction-302922499.html"
   },
   {
    "name": "Inari Agriculture",
@@ -659,6 +659,19 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://briefglance.com/companies/flagship-pioneering/pulses/84779"
+  },
+  {
+   "name": "Etcelera",
+   "launched": "2026",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "AI drug developer predicting clinical success; hematology, metabolism and immunology programs",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.prnewswire.com/news-releases/flagship-pioneering-forms-etcelera-to-move-drug-discovery-from-probability-to-prediction-302922499.html"
   }
  ]
 }
