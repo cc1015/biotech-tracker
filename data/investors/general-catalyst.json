@@ -334,6 +334,19 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://www.generalcatalyst.com/companies/truvian"
+  },
+  {
+   "name": "Dren Bio",
+   "launched": "2019",
+   "role": "participated",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Anti-CD94 antibody dibotatug for T-cell lymphoma and LGL leukemia; myeloid engager platform",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.financialcontent.com/article/bizwire-2026-10-29-dren-bio-announces-350-million-financing-to-advance-dibotatug-toward-commercialization-and-accelerate-development-of-its-broader-pipeline"
   }
  ]
 }
