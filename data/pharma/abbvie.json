@@ -420,6 +420,17 @@
    "status": "completed",
    "description": "Bought Gilgamesh's psychedelic-derived depression candidate bretisilocin for up to $1.2B.",
    "source": "https://en.wikipedia.org/wiki/AbbVie"
+  },
+  {
+   "year": "2026",
+   "type": "acquisition",
+   "counterparty": "Apogee Therapeutics",
+   "via": "",
+   "result": "",
+   "value_usd": 10900000000,
+   "status": "completed",
+   "description": "Acquired Apogee ($135.11/share; ~$10.9B equity) for IL-13 antibody zumilokibart (atopic dermatitis) and the APG273 asthma combination; announced 2026-06-22, closed 2026-09-03.",
+   "source": "https://www.dcatvci.org/top-industry-news/abbvie-completes-10-9-bn-acquisition-of-apogee-therapeutics/"
   }
  ]
 }
