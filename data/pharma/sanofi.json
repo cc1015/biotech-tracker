@@ -11,8 +11,8 @@
    "website": "https://www.sanofi.com",
    "revenue_usd": 49300000000,
    "revenue_year": "2025",
-   "employees": 82878,
-   "employees_year": "2024",
+   "employees": 74846,
+   "employees_year": "2025",
    "therapeutic_areas": ["Immunology", "Vaccines", "Rare diseases", "Neurology", "Oncology", "Rare blood disorders", "Diabetes & cardiovascular (general medicines)"],
    "top_products": [
      {"name": "Dupixent", "what": "Atopic dermatitis, asthma, COPD (type 2 inflammation)", "revenue_usd": 17760000000, "year": "2025"},
@@ -20,12 +20,12 @@
      {"name": "Influenza & COVID-19 vaccines", "what": "Seasonal flu and COVID-19 prevention", "revenue_usd": 2610000000, "year": "2025"},
      {"name": "Beyfortus", "what": "RSV prevention antibody for infants", "revenue_usd": 2010000000, "year": "2025"},
      {"name": "Lantus", "what": "Long-acting basal insulin for diabetes", "revenue_usd": 1960000000, "year": "2025"},
-     {"name": "ALTUVIIIO", "what": "Hemophilia A factor VIII replacement", "revenue_usd": 1310000000, "year": "2025"}
+     {"name": "Toujeo", "what": "Long-acting basal insulin (glargine 300 U/mL) for diabetes", "revenue_usd": 1520000000, "year": "2025"}
    ],
    "venture_arm": {
      "name": "Sanofi Ventures",
      "founded": "",
-     "fund_size_usd": null,
+     "fund_size_usd": 1400000000,
      "url": "https://www.sanofiventures.com/",
      "notable_investments": ["Kymera Therapeutics", "Epicrispr Biotechnologies", "Icosavax", "Aetion", "Science 37", "Abcuro"]
    },
@@ -35,8 +35,12 @@
      "https://www.sanofi.com/en/media-room/press-releases/2026/2026-01-29-06-30-00-3228191",
      "https://www.sanofi.com/assets/dotcom/content-app/events/quaterly-results/2026/2025-q4-and-full-year-2025-results/2026_01_29_Sanofi_Q4_FY_2025_SALES_EN.xlsx",
      "https://www.sanofi.com/en/media-room/press-releases/2026/2026-07-30-05-30-00-3335767",
-     "https://www.sanofiventures.com/"
-   ]
+     "https://www.sanofiventures.com/",
+     "https://www.sec.gov/Archives/edgar/data/1121404/000112140426000001/pressreleaseq42025english.htm",
+     "https://www.blog-rh.com/recrutement-sanofi/",
+     "https://globalventuring.com/corporate/fundraising/sanofi-ventures-boosts-fund-to-1-4bn/"
+   ],
+   "last_verified": "2026-11-03"
  },
  "events": [
    {"year": "1973", "type": "founding", "counterparty": "Elf Aquitaine", "via": "", "result": "Sanofi", "value_usd": null, "status": "completed", "description": "Sanofi created as the health subsidiary of state oil group Elf Aquitaine after it took over the Labaz group.", "source": "https://en.wikipedia.org/wiki/Sanofi"},

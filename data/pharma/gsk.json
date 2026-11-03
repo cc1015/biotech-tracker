@@ -17,10 +17,10 @@
    "top_products": [
      {"name": "Shingrix", "what": "Shingles vaccine", "revenue_usd": 4750000000, "year": "2025"},
      {"name": "Trelegy Ellipta", "what": "COPD and asthma triple inhaler", "revenue_usd": 3960000000, "year": "2025"},
-     {"name": "Dovato", "what": "Two-drug HIV treatment regimen", "revenue_usd": null, "year": "2025"},
-     {"name": "Nucala", "what": "Severe eosinophilic asthma biologic", "revenue_usd": null, "year": "2025"},
-     {"name": "Meningitis vaccines (Bexsero, Menveo, Penmenvy)", "what": "Meningococcal disease prevention", "revenue_usd": 2110000000, "year": "2025"},
-     {"name": "Arexvy", "what": "RSV vaccine for older adults", "revenue_usd": 790000000, "year": "2025"}
+     {"name": "Dovato", "what": "Two-drug HIV treatment regimen", "revenue_usd": 3508000000, "year": "2025"},
+     {"name": "Nucala", "what": "Severe eosinophilic asthma biologic", "revenue_usd": 2630000000, "year": "2025"},
+     {"name": "Benlysta", "what": "Lupus and lupus nephritis biologic", "revenue_usd": 2323000000, "year": "2025"},
+     {"name": "Meningitis vaccines (Bexsero, Menveo, Penmenvy)", "what": "Meningococcal disease prevention", "revenue_usd": 2110000000, "year": "2025"}
    ],
    "venture_arm": {
      "name": "SR One (spun out as an independent firm in 2020; GSK remains largest LP)",
@@ -34,8 +34,10 @@
      "https://en.wikipedia.org/wiki/GSK_plc",
      "https://www.gsk.com/en-gb/media/press-releases/gsk-delivers-strong-2025-performance-and-re-affirms-long-term-outlooks/",
      "https://www.sec.gov/Archives/edgar/data/0001131399/000165495426004051/a2755c.htm",
-     "https://www.biospace.com/sr-one-completes-spin-out-from-gsk-and-closes-first-fund-at-500-million"
-   ]
+     "https://www.biospace.com/sr-one-completes-spin-out-from-gsk-and-closes-first-fund-at-500-million",
+     "https://www.sec.gov/Archives/edgar/data/1131399/000165495426000892/a5979rv2.htm"
+   ],
+   "last_verified": "2026-11-03"
  },
  "events": [
    {"year": "1982", "type": "merger", "counterparty": "Beckman Instruments", "via": "SmithKline Beecham", "result": "SmithKline Beckman", "value_usd": null, "status": "completed", "description": "Smith Kline & French combined with Beckman to create SmithKline Beckman.", "source": "https://en.wikipedia.org/wiki/SmithKline_Beecham"},

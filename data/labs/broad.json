@@ -19,8 +19,13 @@
    "https://en.wikipedia.org/wiki/Broad_Institute",
    "https://en.wikipedia.org/wiki/Feng_Zhang",
    "https://en.wikipedia.org/wiki/David_R._Liu",
-   "https://en.wikipedia.org/wiki/Stuart_Schreiber"
-  ]
+   "https://en.wikipedia.org/wiki/Stuart_Schreiber",
+   "https://www.broadinstitute.org/bios/stuart-l-schreiber",
+   "https://www.statnews.com/2025/11/04/arena-bioworks-research-institute-shuts-down/",
+   "https://www.biospace.com/roche-s-sandra-horning-to-retire-eli-lilly-s-levi-garraway-tapped-to-fill-her-shoes",
+   "https://en.wikipedia.org/wiki/Sekar_Kathiresan"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -46,7 +51,7 @@
   },
   {
    "pi": "Stuart Schreiber",
-   "lab": "Chemical Biology Program",
+   "lab": "Chemical Biology Program; now Founding Core Institute Member Emeritus (led Arena BioWorks, which closed Nov 2025)",
    "known_for": "Chemical biology; small-molecule probes; serial founder",
    "silo": [
     "small-molecule"
@@ -55,7 +60,7 @@
   },
   {
    "pi": "Matthew Meyerson / Levi Garraway",
-   "lab": "Cancer Genomics (Broad / Dana-Farber)",
+   "lab": "Cancer Genomics (Broad / Dana-Farber); Garraway left for industry (Lilly, then Roche CMO from 2019)",
    "known_for": "Large-panel tumor mutation profiling leading to Foundation Medicine",
    "silo": [
     "diagnostics",
@@ -65,7 +70,7 @@
   },
   {
    "pi": "Sekar Kathiresan",
-   "lab": "Cardiovascular Disease Initiative",
+   "lab": "Cardiovascular Disease Initiative; left for Verve Therapeutics in 2019",
    "known_for": "Human genetics of coronary disease; founded Verve",
    "silo": [
     "gene-editing"

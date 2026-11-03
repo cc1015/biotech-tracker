@@ -12,9 +12,9 @@
    "Deena Shakir — Partner",
    "Shaq Vayda — Partner"
   ],
-  "aum_usd": null,
+  "aum_usd": 7000000000,
   "latest_fund": {
-   "name": "Lux Capital Fund IX",
+   "name": "Lux Ventures IX",
    "size_usd": 1500000000,
    "year": "2026"
   },
@@ -38,8 +38,10 @@
    "https://www.luxcapital.com/companies/recursion-pharma",
    "https://www.luxcapital.com/companies/eGenesis",
    "https://www.luxcapital.com/companies/kala-pharmaceuticals",
-   "https://www.luxcapital.com/companies/valthos"
-  ]
+   "https://www.luxcapital.com/companies/valthos",
+   "https://www.sidley.com/en/newslanding/newsannouncements/2026/01/sidley-advises-lux-capital-on-new-vc-fund-lux-ix"
+  ],
+  "last_verified": "2026-11-03"
  },
  "companies": [
   {

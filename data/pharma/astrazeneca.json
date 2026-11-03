@@ -7,11 +7,11 @@
   "founders_or_origin": "Merger of Sweden's Astra AB and UK's Zeneca Group (demerged from ICI in 1993)",
   "ceo": "Pascal Soriot",
   "ceo_since": "2012",
-  "ticker": "LSE:AZN",
+  "ticker": "LSE:AZN; NYSE:AZN",
   "website": "https://www.astrazeneca.com",
   "revenue_usd": 58739000000,
   "revenue_year": "2025",
-  "employees": 89900,
+  "employees": 96100,
   "employees_year": "2025",
   "therapeutic_areas": [
    "Oncology",
@@ -22,40 +22,40 @@
   ],
   "top_products": [
    {
+    "name": "Farxiga",
+    "what": "SGLT2 inhibitor for diabetes, heart failure, CKD",
+    "revenue_usd": 8492000000,
+    "year": "2025"
+   },
+   {
     "name": "Tagrisso",
     "what": "EGFR-mutated non-small cell lung cancer",
-    "revenue_usd": 7250000000,
+    "revenue_usd": 7254000000,
     "year": "2025"
    },
    {
     "name": "Imfinzi",
     "what": "PD-L1 antibody for lung, bladder, GI cancers",
-    "revenue_usd": 6060000000,
+    "revenue_usd": 6063000000,
     "year": "2025"
-   },
-   {
-    "name": "Enhertu",
-    "what": "HER2-directed ADC (with Daiichi Sankyo)",
-    "revenue_usd": 2780000000,
-    "year": "2025"
-   },
-   {
-    "name": "Farxiga",
-    "what": "SGLT2 inhibitor for diabetes, heart failure, CKD",
-    "revenue_usd": null,
-    "year": ""
    },
    {
     "name": "Ultomiris",
     "what": "C5 inhibitor for PNH, aHUS, gMG",
-    "revenue_usd": null,
-    "year": ""
+    "revenue_usd": 4718000000,
+    "year": "2025"
    },
    {
     "name": "Calquence",
     "what": "BTK inhibitor for CLL",
-    "revenue_usd": null,
-    "year": ""
+    "revenue_usd": 3518000000,
+    "year": "2025"
+   },
+   {
+    "name": "Lynparza",
+    "what": "PARP inhibitor for ovarian, breast and prostate cancers (with Merck)",
+    "revenue_usd": 3279000000,
+    "year": "2025"
    }
   ],
   "venture_arm": {
@@ -77,8 +77,12 @@
    "https://www.biospace.com/press-releases/astrazeneca-results-fy-and-q4-2025",
    "https://www.pharmaceutical-technology.com/news/astrazeneca-bets-on-continued-oncology-demand-for-2026-growth/",
    "https://hub.waveup.com/funds/medimmune-ventures",
-   "https://www.mednous.com/news/az-commits-100-million-venture-arm"
-  ]
+   "https://www.mednous.com/news/az-commits-100-million-venture-arm",
+   "https://www.astrazeneca.com/media-centre/press-releases/2026/astrazeneca-begins-trading-on-NYSE.html",
+   "https://www.sec.gov/Archives/edgar/data/901832/000110465926019130/azn-20251231x20f.htm",
+   "https://data.fca.org.uk/artefacts/NSM/RNS/59563de3-5a71-4031-9f0b-61dfc61dc769.html"
+  ],
+  "last_verified": "2026-11-03"
  },
  "events": [
   {

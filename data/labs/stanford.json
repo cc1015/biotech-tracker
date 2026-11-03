@@ -21,8 +21,11 @@
    "https://facts.stanford.edu/research/technology-inventions",
    "https://sparkmed.stanford.edu/",
    "https://sparkmed.stanford.edu/fda-approves-drug-developed-through-spark/",
-   "https://en.wikipedia.org/wiki/Stanley_Norman_Cohen"
-  ]
+   "https://en.wikipedia.org/wiki/Stanley_Norman_Cohen",
+   "https://profiles.stanford.edu/james-spudich",
+   "https://profiles.stanford.edu/stephen-quake"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -37,7 +40,7 @@
   },
   {
    "pi": "Stephen Quake",
-   "lab": "Bioengineering / Applied Physics",
+   "lab": "Bioengineering / Applied Physics; on leave Oct 2026–Jun 2027",
    "known_for": "Microfluidics, single-molecule sequencing, cell-free DNA diagnostics",
    "silo": [
     "diagnostics",
@@ -57,7 +60,7 @@
   },
   {
    "pi": "James Spudich",
-   "lab": "Department of Biochemistry",
+   "lab": "Department of Biochemistry; emeritus since 2022",
    "known_for": "Myosin motor biology; cardiac myosin modulators",
    "silo": [
     "small-molecule"
@@ -95,7 +98,7 @@
   },
   {
    "pi": "Isabella Graef",
-   "lab": "School of Medicine (SPARK)",
+   "lab": "School of Medicine (SPARK); former faculty, now CEO of Shenandoah Therapeutics",
    "known_for": "AG10/acoramidis TTR stabilizer, approved as Attruby",
    "silo": [
     "small-molecule"

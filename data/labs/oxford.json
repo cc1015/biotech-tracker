@@ -19,8 +19,10 @@
    "https://www.oxfordscienceenterprises.com/portfolio/",
    "https://en.wikipedia.org/wiki/Oxford_University_Innovation",
    "https://en.wikipedia.org/wiki/Oxford_Science_Enterprises",
-   "https://en.wikipedia.org/wiki/Graham_Richards"
-  ]
+   "https://en.wikipedia.org/wiki/Graham_Richards",
+   "https://www.chem.ox.ac.uk/node/4306861"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -72,7 +74,7 @@
   },
   {
    "pi": "Graham Richards",
-   "lab": "Department of Chemistry",
+   "lab": "Department of Chemistry; died February 2025",
    "known_for": "Computational chemistry; university spinout funding model",
    "silo": [
     "ai-discovery"

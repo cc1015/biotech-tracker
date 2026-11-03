@@ -35,7 +35,8 @@
      "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
      "https://www.prnewswire.com/news-releases/lilly-reports-fourth-quarter-2025-financial-results-and-provides-2026-guidance-302678376.html",
      "https://www.prnewswire.com/news/eli-lilly-and-company/"
-   ]
+   ],
+   "last_verified": "2026-11-03"
  },
  "events": [
    {"year": "1986", "type": "acquisition", "counterparty": "Hybritech", "via": "", "result": "", "value_usd": 350000000, "status": "completed", "description": "Bought San Diego monoclonal-antibody diagnostics pioneer Hybritech; sold it to Beckman Coulter in 1995.", "source": "https://en.wikipedia.org/wiki/Eli_Lilly_and_Company"},

@@ -23,7 +23,8 @@
    "https://en.wikipedia.org/wiki/David_R._Liu",
    "https://en.wikipedia.org/wiki/Douglas_Melton",
    "https://en.wikipedia.org/wiki/Colossal_Biosciences"
-  ]
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -67,8 +68,8 @@
   },
   {
    "pi": "Douglas Melton",
-   "lab": "Harvard Stem Cell Institute",
-   "known_for": "Stem-cell biology; co-founded Semma, Ontogeny, iPierian",
+   "lab": "Harvard Stem Cell Institute; left for Vertex Pharmaceuticals in 2022",
+   "known_for": "Stem-cell biology; co-founded Semma, Ontogeny, iPierian; joined Vertex in 2022",
    "silo": [
     "cell-therapy"
    ],

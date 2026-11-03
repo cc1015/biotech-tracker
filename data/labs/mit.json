@@ -20,8 +20,10 @@
    "https://en.wikipedia.org/wiki/Phillip_Allen_Sharp",
    "https://en.wikipedia.org/wiki/Sangeeta_Bhatia",
    "https://en.wikipedia.org/wiki/James_J._Collins",
-   "https://en.wikipedia.org/wiki/Ginkgo_Bioworks"
-  ]
+   "https://en.wikipedia.org/wiki/Ginkgo_Bioworks",
+   "https://biology.mit.edu/profile/phillip-a-sharp/"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -37,7 +39,7 @@
   },
   {
    "pi": "Phillip Sharp",
-   "lab": "Sharp Lab, Koch Institute",
+   "lab": "Sharp Lab, Koch Institute; lab closed (Sharp now Institute Professor & Professor of Biology Emeritus)",
    "known_for": "RNA splicing; co-founded Biogen and Alnylam",
    "silo": [
     "rna",
