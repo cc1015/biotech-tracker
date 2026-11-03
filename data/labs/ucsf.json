@@ -17,8 +17,11 @@
    "https://innovation.ucsf.edu",
    "https://innovation.ucsf.edu/about/featured-startups/medical-therapeutics",
    "https://innovation.ucsf.edu/media/news",
-   "https://en.wikipedia.org/wiki/University_of_California,_San_Francisco"
-  ]
+   "https://en.wikipedia.org/wiki/University_of_California,_San_Francisco",
+   "https://www.ucsf.edu/news/2025/07/430346/ucsf-mourns-loss-of-william-j-rutter",
+   "https://www.ucsf.edu/news/2023/09/426191/ai-cancer-arc-institute-supports-curiosity-driven-science-ucsf"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -62,7 +65,7 @@
   },
   {
    "pi": "Hani Goodarzi",
-   "lab": "Goodarzi Lab, Biochemistry & Biophysics",
+   "lab": "Goodarzi Lab, Biochemistry & Biophysics; lab relocated to Arc Institute in 2023 (keeps UCSF appointment)",
    "known_for": "Cancer RNA biology; oncRNA liquid biopsy; single-cell perturbation atlases",
    "silo": [
     "diagnostics",
@@ -81,7 +84,7 @@
   },
   {
    "pi": "William J. Rutter",
-   "lab": "Biochemistry & Biophysics",
+   "lab": "Biochemistry & Biophysics; died July 2025",
    "known_for": "Recombinant vaccines; co-founded Chiron",
    "silo": [
     "diagnostics"

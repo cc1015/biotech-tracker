@@ -4,7 +4,7 @@
   "city": "Seattle, USA",
   "type": "research institute",
   "tech_transfer": "UW CoMotion",
-  "tech_transfer_url": "",
+  "tech_transfer_url": "https://comotion.uw.edu/",
   "summary": "The IPD, part of the UW School of Medicine, is the hub of computational and AI-driven de novo protein design (Rosetta, RFdiffusion), and it produced the first computationally designed protein medicine to be approved (the SKYCovione COVID-19 vaccine). Its Translational Investigator Program has seeded 11 spinouts whose alumni have raised more than $1B, and Baker-lab tools also underpin outside companies such as Xaira and Arzeda.",
   "programs": [
    "IPD Translational Investigator Program"
@@ -17,8 +17,11 @@
    "https://www.ipd.uw.edu/",
    "https://www.ipd.uw.edu/2022/08/annual-report-2022",
    "https://www.ipd.uw.edu/people/lance-stewart",
-   "https://kinglab.ipd.uw.edu/"
-  ]
+   "https://kinglab.ipd.uw.edu/",
+   "https://rosettacommons.org/2025/11/24/neil-king-named-deputy-director-of-uws-institute-for-protein-design/",
+   "https://comotion.uw.edu/"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -52,7 +55,7 @@
   },
   {
    "pi": "Lance Stewart",
-   "lab": "IPD Translational Investigator Program",
+   "lab": "IPD Translational Investigator Program; retiring from IPD (announced Nov 2025)",
    "known_for": "Co-founded Archon, Lila, Mopac, Vilya, Transcyton",
    "silo": [
     "ai-discovery"

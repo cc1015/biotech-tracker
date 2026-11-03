@@ -35,7 +35,8 @@
      "https://www.boardroomalpha.com/sec/bmy-8-k-2026-02-05-0000014272-26-000002/a2025q4ex991.htm",
      "https://www.sec.gov/Archives/edgar/data/14272/000001427226000004/bmy-20251231.htm",
      "https://globalventuring.com/powerlist-2025-jeffery-smith/"
-   ]
+   ],
+   "last_verified": "2026-11-03"
  },
  "events": [
    {"year": "1989", "type": "merger", "counterparty": "Bristol-Myers + Squibb", "via": "", "result": "Bristol-Myers Squibb", "value_usd": 12000000000, "status": "completed", "description": "Bristol-Myers and Squibb combined in a stock swap, creating one of the largest drug companies.", "source": "https://en.wikipedia.org/wiki/Bristol_Myers_Squibb"},

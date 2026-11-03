@@ -21,8 +21,11 @@
    "https://innovation.caltech.edu/new-ventures",
    "https://www.caltech.edu/about/news/new-private-venture-funding-available-to-launch-caltech-startups",
    "https://jacobsinstitute.caltech.edu/impact-highlights",
-   "https://en.wikipedia.org/wiki/California_Institute_of_Technology"
-  ]
+   "https://en.wikipedia.org/wiki/California_Institute_of_Technology",
+   "https://www.bbe.caltech.edu/news/caltech-mourns-the-passing-of-president-emeritus-and-nobel-laureate-david-baltimore",
+   "https://directory.caltech.edu/personnel/mdavis"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -36,8 +39,8 @@
   },
   {
    "pi": "David Baltimore",
-   "lab": "Biology (Baltimore Lab)",
-   "known_for": "Stem-cell-engineered T-cell immunotherapies; gene therapy",
+   "lab": "Biology (Baltimore Lab); died September 2025",
+   "known_for": "Stem-cell-engineered T-cell immunotherapies; gene therapy; died 2025",
    "silo": [
     "gene-therapy",
     "cell-therapy"
@@ -46,7 +49,7 @@
   },
   {
    "pi": "Mark E. Davis",
-   "lab": "Chemical Engineering (Davis Lab)",
+   "lab": "Chemical Engineering (Davis Lab); emeritus since 2023",
    "known_for": "Cyclodextrin polymer nanoparticles for drug and siRNA delivery",
    "silo": [
     "rna",

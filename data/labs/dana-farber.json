@@ -19,12 +19,13 @@
    "https://en.wikipedia.org/wiki/Dana%E2%80%93Farber_Cancer_Institute",
    "https://en.wikipedia.org/wiki/Nathanael_Gray",
    "https://en.wikipedia.org/wiki/Cigall_Kadoch"
-  ]
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
    "pi": "Nathanael Gray (formerly)",
-   "lab": "Department of Cancer Biology",
+   "lab": "Department of Cancer Biology; moved to Stanford in 2020",
    "known_for": "Kinase inhibitors and degraders; serial founder",
    "silo": [
     "small-molecule",

@@ -11,8 +11,8 @@
    "website": "https://www.novartis.com",
    "revenue_usd": 54532000000,
    "revenue_year": "2025",
-   "employees": 75883,
-   "employees_year": "2024",
+   "employees": 75267,
+   "employees_year": "2025",
    "therapeutic_areas": ["Cardiovascular, renal and metabolic", "Immunology", "Neuroscience", "Oncology"],
    "top_products": [
      {"name": "Entresto", "what": "Heart failure", "revenue_usd": 7748000000, "year": "2025"},
@@ -20,7 +20,7 @@
      {"name": "Kisqali", "what": "HR+/HER2- breast cancer", "revenue_usd": 4783000000, "year": "2025"},
      {"name": "Kesimpta", "what": "Relapsing multiple sclerosis", "revenue_usd": 4426000000, "year": "2025"},
      {"name": "Tafinlar + Mekinist", "what": "BRAF-mutant cancers", "revenue_usd": 2215000000, "year": "2025"},
-     {"name": "Pluvicto", "what": "PSMA-positive metastatic prostate cancer", "revenue_usd": 1994000000, "year": "2025"}
+     {"name": "Jakavi", "what": "JAK inhibitor for myelofibrosis, polycythemia vera and GvHD (ex-US)", "revenue_usd": 2110000000, "year": "2025"}
    ],
    "venture_arm": {
      "name": "Novartis Venture Fund",
@@ -37,8 +37,11 @@
      "https://www.nvfund.com/",
      "https://www.nvfund.com/portfolio",
      "https://globalventuring.com/corporate/healthcare/powerlist-2023-anja-konig/",
-     "https://pharmaphorum.com/articles/a-history-of-novartis/"
-   ]
+     "https://pharmaphorum.com/articles/a-history-of-novartis/",
+     "https://www.sec.gov/Archives/edgar/data/1114448/000111444826000007/a260204-99_1.htm",
+     "https://www.sec.gov/Archives/edgar/data/0001114448/000111444826000004/nvs-20251231.htm"
+   ],
+   "last_verified": "2026-11-03"
  },
  "events": [
    {"year": "1994", "type": "acquisition", "counterparty": "Gerber Products", "via": "Sandoz", "result": "", "value_usd": 3700000000, "status": "completed", "description": "Sandoz bought US baby-food maker Gerber for $53 per share in cash.", "source": "https://www.sec.gov/Archives/edgar/data/0000041130/000004113094000017/0000041130-94-000017.txt"},

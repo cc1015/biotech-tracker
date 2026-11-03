@@ -18,9 +18,9 @@
    {"name": "Keytruda / Keytruda Qlex", "what": "PD-1 immunotherapy across many cancers", "revenue_usd": 31700000000, "year": "2025"},
    {"name": "Gardasil / Gardasil 9", "what": "HPV vaccine", "revenue_usd": 5200000000, "year": "2025"},
    {"name": "Januvia / Janumet", "what": "Type 2 diabetes (DPP-4 inhibitor)", "revenue_usd": 2500000000, "year": "2025"},
+   {"name": "ProQuad / M-M-R II / Varivax", "what": "Measles, mumps, rubella and varicella vaccines", "revenue_usd": 2451000000, "year": "2025"},
    {"name": "Bridion", "what": "Reversal of neuromuscular blockade after surgery", "revenue_usd": 1800000000, "year": "2025"},
-   {"name": "Winrevair", "what": "Pulmonary arterial hypertension", "revenue_usd": 1400000000, "year": "2025"},
-   {"name": "Capvaxive", "what": "Adult pneumococcal vaccine", "revenue_usd": 759000000, "year": "2025"}
+   {"name": "Lynparza (alliance revenue)", "what": "PARP inhibitor for ovarian, breast and prostate cancers (with AstraZeneca)", "revenue_usd": 1450000000, "year": "2025"}
   ],
   "venture_arm": {
    "name": "Merck Global Health Innovation Fund (Merck GHI Fund)",
@@ -35,8 +35,10 @@
    "https://www.sec.gov/Archives/edgar/data/310158/000110465926009495/tm264564d1_ex99-1.htm",
    "https://www.sec.gov/Archives/edgar/data/310158/000110465926090045/tm2621496d1_ex99-1.htm",
    "https://www.sec.gov/Archives/edgar/data/310158/000031015826000237/exhibit9911.htm",
-   "https://www.merckghifund.com/"
-  ]
+   "https://www.merckghifund.com/",
+   "https://www.merck.com/news/merck-highlights-progress-advancing-broad-diverse-pipeline/"
+  ],
+  "last_verified": "2026-11-03"
  },
  "events": [
   {"year": "1891", "type": "founding", "counterparty": "Merck (Darmstadt)", "via": "", "result": "Merck & Co.", "value_usd": null, "status": "completed", "description": "Set up as the American arm of Germany's Merck; it was seized in WWI and became fully independent in 1917.", "source": "https://en.wikipedia.org/wiki/Merck_%26_Co."},

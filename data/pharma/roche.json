@@ -37,7 +37,8 @@
    "https://www.roche.com/media/releases/med-cor-2022-07-21b",
    "https://www.roche.com/venturefund.html",
    "https://ionanalytics.com/insights/mergermarket/roche-venture-fund-to-scale-up-commitments-as-holding-periods-lengthen/"
-  ]
+  ],
+  "last_verified": "2026-11-03"
  },
  "events": [
   {"year": "1896", "type": "founding", "counterparty": "", "via": "", "result": "F. Hoffmann-La Roche & Co.", "value_usd": null, "status": "completed", "description": "Fritz Hoffmann-La Roche founds the company in Basel to make branded, industrially produced medicines.", "source": "https://en.wikipedia.org/wiki/Roche"},

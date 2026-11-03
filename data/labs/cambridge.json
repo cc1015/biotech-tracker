@@ -24,13 +24,19 @@
    "https://www.enterprise.cam.ac.uk/venture-building-investment/our-funds/",
    "https://www.enterprise.cam.ac.uk/venture-building-investment/founders-at-the-university-of-cambridge/",
    "https://www.enterprise.cam.ac.uk/news/cambridge-leads-in-spinouts-success-in-2024-new-report-reveals/",
-   "https://mrclmb.ac.uk/achievements/commercial-activities/"
-  ]
+   "https://mrclmb.ac.uk/achievements/commercial-activities/",
+   "https://mrclmb.ac.uk/research-leaders/",
+   "https://www.stevejacksonlab.org/edit-news/2022/9/1/its-the-end-of-an-era-the-jackson-lab-is-moving",
+   "https://www.cam.ac.uk/research/news/professor-chris-abell-frs-fmedsci-1957-2020",
+   "https://royalsociety.org/people/tom-blundell-11101",
+   "https://mrclmb.ac.uk/research-leaders/jason-chin/"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
    "pi": "Sir Greg Winter",
-   "lab": "MRC Laboratory of Molecular Biology; Trinity College",
+   "lab": "MRC Laboratory of Molecular Biology; Trinity College; LMB emeritus, Master of Trinity until 2019",
    "known_for": "Antibody humanisation and phage display; bicyclic peptides",
    "silo": [
     "antibody",
@@ -49,7 +55,7 @@
   },
   {
    "pi": "Steve Jackson",
-   "lab": "Gurdon Institute (CRUK Laboratories)",
+   "lab": "Gurdon Institute (CRUK Laboratories); moved to CRUK Cambridge Institute in 2022",
    "known_for": "DNA damage response; PARP inhibitor olaparib; DUB inhibitors",
    "silo": [
     "small-molecule"
@@ -68,7 +74,7 @@
   },
   {
    "pi": "Sir Tom Blundell & Chris Abell",
-   "lab": "Department of Biochemistry / Department of Chemistry",
+   "lab": "Department of Biochemistry / Department of Chemistry; Abell died 2020, Blundell emeritus",
    "known_for": "Structure-guided, fragment-based drug discovery",
    "silo": [
     "small-molecule"
@@ -77,7 +83,7 @@
   },
   {
    "pi": "Richard Henderson & Chris Tate",
-   "lab": "MRC Laboratory of Molecular Biology, Structural Studies",
+   "lab": "MRC Laboratory of Molecular Biology, Structural Studies; Henderson emeritus",
    "known_for": "Stabilised GPCRs for structure-based drug design",
    "silo": [
     "small-molecule"
@@ -86,8 +92,8 @@
   },
   {
    "pi": "Jason Chin",
-   "lab": "MRC Laboratory of Molecular Biology",
-   "known_for": "Genetic code expansion; synthetic recoded genomes",
+   "lab": "MRC Laboratory of Molecular Biology; moved to Ellison Institute of Technology, Oxford in 2025",
+   "known_for": "Genetic code expansion; synthetic recoded genomes; moved to Oxford (EIT) in 2025",
    "silo": [
     "synbio"
    ],

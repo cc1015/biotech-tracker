@@ -5,7 +5,9 @@
   "type": "tech-corporate-vc",
   "hq": "Santa Clara, California, USA",
   "founded": "",
-  "leadership": [],
+  "leadership": [
+   "Mohamed \"Sid\" Siddeek — Corporate Vice President, NVIDIA; Head of NVentures"
+  ],
   "aum_usd": null,
   "latest_fund": {
    "name": "",
@@ -30,8 +32,10 @@
    "https://www.vcbacked.co/company/relation-therapeutics",
    "https://www.vcbacked.co/company/proxima",
    "https://www.luxcapital.com/companies/evolutionaryscale",
-   "https://www.evolutionaryscale.ai/"
-  ]
+   "https://www.evolutionaryscale.ai/",
+   "https://globalventuring.com/people/powerlist-2026-mohamed-siddeek-nventures/"
+  ],
+  "last_verified": "2026-11-03"
  },
  "companies": [
   {

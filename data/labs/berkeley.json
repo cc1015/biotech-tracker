@@ -23,8 +23,12 @@
    "https://ipira.berkeley.edu/entrepreneurs/startups-launched/medical-diagnostics",
    "https://bio.bakarlabs.org/",
    "https://en.wikipedia.org/wiki/Jennifer_Doudna",
-   "https://en.wikipedia.org/wiki/Jay_Keasling"
-  ]
+   "https://en.wikipedia.org/wiki/Jay_Keasling",
+   "https://profiles.stanford.edu/patrick-hsu",
+   "https://arcinstitute.org/labs/hsulab",
+   "https://chemh.stanford.edu/news/carolyn-bertozzi-join-chem-h-department-chemistry"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -77,8 +81,8 @@
   },
   {
    "pi": "Patrick Hsu",
-   "lab": "Hsu Lab, Bioengineering (Arc Institute co-founder)",
-   "known_for": "RNA-targeting CRISPR; recombinase and gene-insertion tools",
+   "lab": "Hsu Lab, Bioengineering (Arc Institute co-founder); moved to Stanford (Pathology) in 2026",
+   "known_for": "RNA-targeting CRISPR; recombinase and gene-insertion tools; moved to Stanford in 2026",
    "silo": [
     "gene-editing",
     "rna"
@@ -96,8 +100,8 @@
   },
   {
    "pi": "Carolyn Bertozzi",
-   "lab": "Chemistry",
-   "known_for": "Bioorthogonal chemistry; site-specific protein conjugation for ADCs",
+   "lab": "Chemistry; moved to Stanford in 2015",
+   "known_for": "Bioorthogonal chemistry; site-specific protein conjugation for ADCs; moved to Stanford in 2015",
    "silo": [
     "adc"
    ],

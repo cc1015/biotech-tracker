@@ -15,12 +15,12 @@
     "employees_year": "2025",
     "therapeutic_areas": ["Virology (HIV, hepatitis B/C/D, COVID-19)", "Oncology and cell therapy", "Inflammation and liver disease"],
     "top_products": [
-      {"name": "Biktarvy", "what": "HIV-1 treatment", "revenue_usd": null, "year": ""},
-      {"name": "Descovy", "what": "HIV treatment and PrEP", "revenue_usd": null, "year": ""},
-      {"name": "Veklury", "what": "COVID-19 antiviral (remdesivir)", "revenue_usd": 4500000000, "year": "2021"},
-      {"name": "Trodelvy", "what": "Metastatic triple-negative and HR+ breast cancer", "revenue_usd": null, "year": ""},
-      {"name": "Yescarta", "what": "CAR-T for large B-cell lymphoma", "revenue_usd": null, "year": ""},
-      {"name": "Livdelzi", "what": "Primary biliary cholangitis (seladelpar)", "revenue_usd": null, "year": ""}
+      {"name": "Biktarvy", "what": "HIV-1 treatment", "revenue_usd": 14334000000, "year": "2025"},
+      {"name": "Descovy", "what": "HIV treatment and PrEP", "revenue_usd": 2758000000, "year": "2025"},
+      {"name": "Genvoya", "what": "HIV-1 single-tablet regimen", "revenue_usd": 1498000000, "year": "2025"},
+      {"name": "Yescarta", "what": "CAR-T for large B-cell lymphoma", "revenue_usd": 1495000000, "year": "2025"},
+      {"name": "Trodelvy", "what": "Metastatic triple-negative and HR+ breast cancer", "revenue_usd": 1397000000, "year": "2025"},
+      {"name": "Epclusa", "what": "Hepatitis C (sofosbuvir/velpatasvir)", "revenue_usd": 1272000000, "year": "2025"}
     ],
     "venture_arm": {"name": "", "founded": "", "fund_size_usd": null, "url": "", "notable_investments": []},
     "summary": "Gilead began as an antiviral start-up and became the dominant HIV company through Triangle (emtricitabine) and later hepatitis C leader through the Pharmasset (sofosbuvir) deal. Since 2017 it has pushed into oncology and cell therapy with Kite, Forty Seven, Immunomedics and, in 2026, Arcellx and Tubulis, and into liver disease with CymaBay. It does not run a branded corporate venture fund, investing instead through equity stakes such as Galapagos and Pionyr.",
@@ -28,8 +28,10 @@
       "https://en.wikipedia.org/wiki/Gilead_Sciences",
       "https://www.gilead.com/company",
       "https://en.wikipedia.org/wiki/List_of_largest_biomedical_companies_by_revenue",
-      "https://en.wikipedia.org/wiki/Seladelpar"
-    ]
+      "https://en.wikipedia.org/wiki/Seladelpar",
+      "https://www.gilead.com/news/news-details/2026/gilead-sciences-announces-fourth-quarter-and-full-year-2025-financial-results"
+    ],
+    "last_verified": "2026-11-03"
   },
   "events": [
     {"year": "1987", "type": "founding", "counterparty": "", "via": "", "result": "Oligogen (later Gilead Sciences)", "value_usd": null, "status": "completed", "description": "Founded as Oligogen by Michael Riordan, who led it until 1996; Menlo Ventures made the first $2 million investment.", "source": "https://en.wikipedia.org/wiki/Gilead_Sciences"},

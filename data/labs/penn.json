@@ -25,8 +25,10 @@
    "https://en.wikipedia.org/wiki/Katalin_Karik%C3%B3",
    "https://en.wikipedia.org/wiki/James_Wilson_(scientist)",
    "https://en.wikipedia.org/wiki/Tisagenlecleucel",
-   "https://en.wikipedia.org/wiki/Spark_Therapeutics"
-  ]
+   "https://en.wikipedia.org/wiki/Spark_Therapeutics",
+   "https://www.nasonline.org/directory-entry/jean-bennett-2net24/"
+  ],
+  "last_verified": "2026-11-03"
  },
  "labs": [
   {
@@ -76,7 +78,7 @@
   },
   {
    "pi": "Jean Bennett",
-   "lab": "Department of Ophthalmology",
+   "lab": "Department of Ophthalmology; emerita (F.M. Kirby Emeritus Professor), still co-directs CAROT",
    "known_for": "Retinal gene therapy (Luxturna)",
    "silo": [
     "gene-therapy"

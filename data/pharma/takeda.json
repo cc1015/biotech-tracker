@@ -15,8 +15,8 @@
     "employees_year": "2023",
     "therapeutic_areas": ["Gastrointestinal and inflammation", "Rare diseases", "Plasma-derived therapies", "Oncology", "Neuroscience", "Vaccines"],
     "top_products": [
-      {"name": "Entyvio", "what": "Ulcerative colitis and Crohn's disease", "revenue_usd": null, "year": ""},
-      {"name": "Takhzyro", "what": "Hereditary angioedema attack prevention", "revenue_usd": null, "year": ""},
+      {"name": "Entyvio", "what": "Ulcerative colitis and Crohn's disease", "revenue_usd": 6230000000, "year": "2025"},
+      {"name": "Takhzyro", "what": "Hereditary angioedema attack prevention", "revenue_usd": 1460000000, "year": "2025"},
       {"name": "Velcade", "what": "Multiple myeloma and mantle cell lymphoma", "revenue_usd": null, "year": ""},
       {"name": "Ninlaro", "what": "Multiple myeloma", "revenue_usd": null, "year": ""},
       {"name": "Iclusig", "what": "Ph+ chronic myeloid and acute lymphoblastic leukemia", "revenue_usd": null, "year": ""},
@@ -31,8 +31,10 @@
       "https://www.takeda.com/what-we-do/areas-of-focus/",
       "https://en.wikipedia.org/wiki/List_of_largest_biomedical_companies_by_revenue",
       "https://en.wikipedia.org/wiki/Vedolizumab",
-      "https://en.wikipedia.org/wiki/Lanadelumab"
-    ]
+      "https://en.wikipedia.org/wiki/Lanadelumab",
+      "https://www.sec.gov/Archives/edgar/data/0001395064/000139506426000177/tak-20260331.htm"
+    ],
+    "last_verified": "2026-11-03"
   },
   "events": [
     {"year": "1985", "type": "joint-venture", "counterparty": "Abbott Laboratories", "via": "", "result": "TAP Pharmaceuticals Inc.", "value_usd": null, "status": "completed", "description": "Formed TAP Pharmaceuticals as a 50:50 U.S. venture with Abbott (roots in a 1977 partnership); sold Lupron and Prevacid.", "source": "https://www.takeda.com/who-we-are/company-information/history/"},

@@ -36,7 +36,8 @@
      "https://www.novonordisk.com/content/dam/nncorp/global/en/investors/irmaterial/annual_report/2026/Q4-2025-financial-workbook.xlsx",
      "https://en.wikipedia.org/wiki/Novo_Holdings",
      "https://novoholdings.com/investments/venture-investments"
-   ]
+   ],
+   "last_verified": "2026-11-03"
  },
  "events": [
    {"year": "1923", "type": "founding", "counterparty": "Nordisk Insulinlaboratorium", "via": "Nordisk", "result": "Nordisk Insulinlaboratorium", "value_usd": null, "status": "completed", "description": "Nordisk began making insulin in Denmark, building on August Krogh's work; incorporated as a company in 1924.", "source": "https://en.wikipedia.org/wiki/Novo_Nordisk"},
