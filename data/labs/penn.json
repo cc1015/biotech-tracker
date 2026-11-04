@@ -437,6 +437,20 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://pci.upenn.edu/entrepreneurs/pci-startup-portfolio/"
+  },
+  {
+   "name": "Emvena Therapeutics",
+   "year": 2026,
+   "pi": "Michael Mitchell; Kelsey Swingle",
+   "silo": [
+    "rna"
+   ],
+   "product": "Placenta-targeted mRNA-LNP therapy for preeclampsia",
+   "builder": "",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.prnewswire.com/news-releases/new-company-co-founded-by-rice-faculty-member-aims-to-move-beyond-symptom-management-in-preeclampsia-302928599.html"
   }
  ]
 }
