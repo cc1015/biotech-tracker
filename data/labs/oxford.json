@@ -451,6 +451,21 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://innovation.ox.ac.uk/investing/our-portfolio-companies"
+  },
+  {
+   "name": "Alethio Therapeutics",
+   "year": "",
+   "pi": "Adam Mead; Beth Psaila",
+   "silo": [
+    "antibody",
+    "adc"
+   ],
+   "product": "Anti-G6B antibody ATX-011 for essential thrombocythaemia; ADC for myelofibrosis",
+   "builder": "Oxford Science Enterprises",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://www.biospace.com/press-releases/alethio-therapeutics-raises-90-million-67-million-in-oversubscribed-series-a-financing-to-advance-a-new-generation-of-therapies-for-myeloproliferative-neoplasms"
   }
  ]
 }
