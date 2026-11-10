@@ -469,6 +469,17 @@
    "status": "completed",
    "description": "Joined Multiply Labs' $75M Series B as a new investor (cell-therapy manufacturing robotics).",
    "source": "https://www.multiplylabs.com/press/series-b-2026"
+  },
+  {
+   "year": "2026",
+   "type": "acquisition",
+   "counterparty": "Omniose",
+   "via": "",
+   "result": "",
+   "value_usd": null,
+   "status": "completed",
+   "description": "Acquired St. Louis bioconjugate bacterial-vaccine biotech Omniose after a three-year exclusive collaboration; joins the Infectious Disease Unit. Terms undisclosed.",
+   "source": "https://www.financialcontent.com/article/bizwire-2026-11-10-omniose-announces-its-acquisition-by-astrazeneca"
   }
  ]
 }
