@@ -1,39 +1,39 @@
 {
- "fetched": "2026-11-12",
+ "fetched": "2026-11-13",
  "windows": {
   "current": [
-   "2026-08-01",
-   "2026-10-29"
+   "2026-08-02",
+   "2026-10-30"
   ],
   "previous": [
-   "2026-05-03",
-   "2026-07-31"
+   "2026-05-04",
+   "2026-08-01"
   ],
   "uptake": [
-   "2025-05-13",
-   "2026-05-13"
+   "2025-05-14",
+   "2026-05-14"
   ]
  },
  "baseline": {
-  "articles": 555808,
-  "articles_prev": 569032
+  "articles": 531641,
+  "articles_prev": 598466
  },
  "top_citedness": 10.0,
  "cited_min": 5,
  "silos": {
   "ai-discovery": {
-   "articles": 844,
-   "articles_prev": 910,
-   "old": 3659,
-   "old_cited": 936,
-   "preprints": 326,
-   "preprints_prev": 340,
-   "mean_log_citedness": 1.509,
-   "top_share": 0.107,
+   "articles": 834,
+   "articles_prev": 931,
+   "old": 3661,
+   "old_cited": 933,
+   "preprints": 324,
+   "preprints_prev": 348,
+   "mean_log_citedness": 1.519,
+   "top_share": 0.11,
    "top_journals": [
     [
      "Nature Communications",
-     17,
+     18,
      18.5
     ],
     [
@@ -47,36 +47,36 @@
      17.4
     ],
     [
+     "Science Advances",
+     4,
+     13.3
+    ],
+    [
      "Cell Death Discovery",
      4,
      11.4
-    ],
-    [
-     "Angewandte Chemie International Edition",
-     4,
-     16.0
     ]
    ],
-   "growth": -0.05,
-   "preprint_growth": -0.041,
-   "uptake": 0.256,
+   "growth": 0.008,
+   "preprint_growth": -0.069,
+   "uptake": 0.255,
    "parts": {
-    "preprints": 42,
-    "growth": 12,
+    "preprints": 33,
+    "growth": 56,
     "quality": 47,
     "uptake": 69
    },
-   "score": 42
+   "score": 51
   },
   "foundation-models": {
-   "articles": 1374,
-   "articles_prev": 1260,
-   "old": 3817,
-   "old_cited": 1122,
-   "preprints": 57,
-   "preprints_prev": 44,
-   "mean_log_citedness": 1.636,
-   "top_share": 0.15,
+   "articles": 1345,
+   "articles_prev": 1301,
+   "old": 3831,
+   "old_cited": 1123,
+   "preprints": 55,
+   "preprints_prev": 47,
+   "mean_log_citedness": 1.644,
+   "top_share": 0.154,
    "top_journals": [
     [
      "npj Digital Medicine",
@@ -85,7 +85,7 @@
     ],
     [
      "Nature Communications",
-     18,
+     19,
      18.5
     ],
     [
@@ -104,30 +104,30 @@
      11.3
     ]
    ],
-   "growth": 0.116,
-   "preprint_growth": 0.295,
-   "uptake": 0.294,
+   "growth": 0.164,
+   "preprint_growth": 0.17,
+   "uptake": 0.293,
    "parts": {
-    "preprints": 100,
-    "growth": 100,
+    "preprints": 92,
+    "growth": 94,
     "quality": 84,
-    "uptake": 88
+    "uptake": 91
    },
-   "score": 93
+   "score": 90
   },
   "gene-editing": {
-   "articles": 2900,
-   "articles_prev": 3102,
-   "old": 13652,
-   "old_cited": 3134,
-   "preprints": 73,
-   "preprints_prev": 66,
-   "mean_log_citedness": 1.578,
-   "top_share": 0.146,
+   "articles": 2807,
+   "articles_prev": 3225,
+   "old": 13662,
+   "old_cited": 3118,
+   "preprints": 75,
+   "preprints_prev": 63,
+   "mean_log_citedness": 1.589,
+   "top_share": 0.147,
    "top_journals": [
     [
      "Nature Communications",
-     48,
+     47,
      18.5
     ],
     [
@@ -151,26 +151,26 @@
      19.5
     ]
    ],
-   "growth": -0.043,
-   "preprint_growth": 0.106,
-   "uptake": 0.23,
+   "growth": -0.02,
+   "preprint_growth": 0.19,
+   "uptake": 0.228,
    "parts": {
-    "preprints": 75,
-    "growth": 22,
+    "preprints": 100,
+    "growth": 31,
     "quality": 72,
     "uptake": 50
    },
-   "score": 55
+   "score": 63
   },
   "gene-therapy": {
-   "articles": 1436,
-   "articles_prev": 1502,
-   "old": 6770,
-   "old_cited": 1421,
-   "preprints": 27,
+   "articles": 1383,
+   "articles_prev": 1560,
+   "old": 6772,
+   "old_cited": 1414,
+   "preprints": 28,
    "preprints_prev": 29,
-   "mean_log_citedness": 1.423,
-   "top_share": 0.091,
+   "mean_log_citedness": 1.43,
+   "top_share": 0.092,
    "top_journals": [
     [
      "Nature Communications",
@@ -193,31 +193,31 @@
      32.7
     ],
     [
-     "International Journal of Nanomedicine",
+     "Cell stem cell",
      4,
-     10.2
+     19.7
     ]
    ],
-   "growth": -0.021,
-   "preprint_growth": -0.069,
-   "uptake": 0.21,
+   "growth": -0.002,
+   "preprint_growth": -0.034,
+   "uptake": 0.209,
    "parts": {
-    "preprints": 33,
-    "growth": 38,
+    "preprints": 42,
+    "growth": 44,
     "quality": 32,
     "uptake": 34
    },
-   "score": 34
+   "score": 38
   },
   "rna": {
-   "articles": 2555,
-   "articles_prev": 2661,
-   "old": 10659,
-   "old_cited": 2533,
-   "preprints": 84,
+   "articles": 2477,
+   "articles_prev": 2768,
+   "old": 10657,
+   "old_cited": 2516,
+   "preprints": 88,
    "preprints_prev": 83,
-   "mean_log_citedness": 1.597,
-   "top_share": 0.127,
+   "mean_log_citedness": 1.61,
+   "top_share": 0.128,
    "top_journals": [
     [
      "Journal of Controlled Release",
@@ -225,61 +225,56 @@
      11.4
     ],
     [
-     "Nature Communications",
-     18,
-     18.5
-    ],
-    [
      "Chemical Engineering Journal",
-     17,
+     18,
      11.4
     ],
     [
-     "International Journal of Nanomedicine",
-     13,
-     10.2
+     "Nature Communications",
+     18,
+     18.5
     ],
     [
      "Journal of Nanobiotechnology",
      13,
      13.4
+    ],
+    [
+     "ACS Nano",
+     12,
+     18.3
     ]
    ],
-   "growth": -0.017,
-   "preprint_growth": 0.012,
-   "uptake": 0.238,
+   "growth": 0.007,
+   "preprint_growth": 0.06,
+   "uptake": 0.236,
    "parts": {
-    "preprints": 58,
-    "growth": 44,
+    "preprints": 75,
+    "growth": 50,
     "quality": 69,
     "uptake": 56
    },
-   "score": 57
+   "score": 62
   },
   "cell-therapy": {
-   "articles": 2886,
-   "articles_prev": 2896,
-   "old": 14459,
-   "old_cited": 2727,
+   "articles": 2479,
+   "articles_prev": 3316,
+   "old": 14480,
+   "old_cited": 2721,
    "preprints": 29,
-   "preprints_prev": 27,
-   "mean_log_citedness": 1.276,
-   "top_share": 0.096,
+   "preprints_prev": 28,
+   "mean_log_citedness": 1.417,
+   "top_share": 0.108,
    "top_journals": [
-    [
-     "Journal for ImmunoTherapy of Cancer",
-     21,
-     10.2
-    ],
     [
      "Nature Communications",
      18,
      18.5
     ],
     [
-     "Cell Reports Medicine",
-     11,
-     12.4
+     "Journal for ImmunoTherapy of Cancer",
+     17,
+     10.2
     ],
     [
      "Nature Medicine",
@@ -290,28 +285,33 @@
      "Science Advances",
      10,
      13.3
+    ],
+    [
+     "Biomarker Research",
+     9,
+     15.1
     ]
    ],
-   "growth": 0.02,
-   "preprint_growth": 0.074,
-   "uptake": 0.189,
+   "growth": -0.158,
+   "preprint_growth": 0.036,
+   "uptake": 0.188,
    "parts": {
-    "preprints": 67,
-    "growth": 75,
-    "quality": 18,
+    "preprints": 50,
+    "growth": 12,
+    "quality": 28,
     "uptake": 19
    },
-   "score": 45
+   "score": 27
   },
   "antibody": {
-   "articles": 2782,
-   "articles_prev": 2977,
-   "old": 13704,
-   "old_cited": 2299,
-   "preprints": 117,
+   "articles": 2453,
+   "articles_prev": 3318,
+   "old": 13720,
+   "old_cited": 2294,
+   "preprints": 119,
    "preprints_prev": 102,
-   "mean_log_citedness": 1.313,
-   "top_share": 0.074,
+   "mean_log_citedness": 1.418,
+   "top_share": 0.083,
    "top_journals": [
     [
      "Nature Communications",
@@ -325,40 +325,40 @@
     ],
     [
      "Journal for ImmunoTherapy of Cancer",
-     8,
-     10.2
-    ],
-    [
-     "Nature Medicine",
      7,
-     33.2
+     10.2
     ],
     [
      "New England Journal of Medicine",
      7,
      32.7
+    ],
+    [
+     "ACS Nano",
+     6,
+     18.3
     ]
    ],
-   "growth": -0.043,
-   "preprint_growth": 0.147,
-   "uptake": 0.168,
+   "growth": -0.168,
+   "preprint_growth": 0.167,
+   "uptake": 0.167,
    "parts": {
-    "preprints": 92,
-    "growth": 22,
-    "quality": 16,
+    "preprints": 83,
+    "growth": 6,
+    "quality": 18,
     "uptake": 12
    },
-   "score": 36
+   "score": 30
   },
   "adc": {
-   "articles": 846,
-   "articles_prev": 1040,
-   "old": 3948,
-   "old_cited": 829,
+   "articles": 793,
+   "articles_prev": 1093,
+   "old": 3947,
+   "old_cited": 824,
    "preprints": 3,
    "preprints_prev": 3,
-   "mean_log_citedness": 1.384,
-   "top_share": 0.108,
+   "mean_log_citedness": 1.426,
+   "top_share": 0.113,
    "top_journals": [
     [
      "Journal of Hematology & Oncology",
@@ -386,9 +386,9 @@
      12.4
     ]
    ],
-   "growth": -0.167,
+   "growth": -0.183,
    "preprint_growth": null,
-   "uptake": 0.21,
+   "uptake": 0.209,
    "parts": {
     "preprints": null,
     "growth": 0,
@@ -398,14 +398,14 @@
    "score": 25
   },
   "radiopharma": {
-   "articles": 714,
-   "articles_prev": 721,
-   "old": 3087,
-   "old_cited": 447,
+   "articles": 697,
+   "articles_prev": 742,
+   "old": 3085,
+   "old_cited": 443,
    "preprints": 2,
    "preprints_prev": 4,
-   "mean_log_citedness": 1.182,
-   "top_share": 0.024,
+   "mean_log_citedness": 1.189,
+   "top_share": 0.023,
    "top_journals": [
     [
      "Theranostics",
@@ -433,26 +433,26 @@
      11.4
     ]
    ],
-   "growth": 0.014,
+   "growth": 0.057,
    "preprint_growth": null,
-   "uptake": 0.145,
+   "uptake": 0.144,
    "parts": {
     "preprints": null,
-    "growth": 62,
+    "growth": 69,
     "quality": 0,
     "uptake": 0
    },
-   "score": 21
+   "score": 23
   },
   "protein-degradation": {
-   "articles": 754,
-   "articles_prev": 732,
-   "old": 3048,
-   "old_cited": 824,
+   "articles": 737,
+   "articles_prev": 753,
+   "old": 3057,
+   "old_cited": 822,
    "preprints": 11,
-   "preprints_prev": 8,
-   "mean_log_citedness": 1.78,
-   "top_share": 0.163,
+   "preprints_prev": 7,
+   "mean_log_citedness": 1.796,
+   "top_share": 0.167,
    "top_journals": [
     [
      "Journal of the American Chemical Society",
@@ -480,26 +480,26 @@
      11.4
     ]
    ],
-   "growth": 0.055,
+   "growth": 0.102,
    "preprint_growth": null,
-   "uptake": 0.27,
+   "uptake": 0.269,
    "parts": {
     "preprints": null,
-    "growth": 84,
+    "growth": 88,
     "quality": 97,
     "uptake": 75
    },
-   "score": 85
+   "score": 87
   },
   "small-molecule": {
-   "articles": 2475,
-   "articles_prev": 2497,
-   "old": 11307,
-   "old_cited": 1784,
-   "preprints": 38,
-   "preprints_prev": 38,
-   "mean_log_citedness": 1.281,
-   "top_share": 0.062,
+   "articles": 2194,
+   "articles_prev": 2794,
+   "old": 11310,
+   "old_cited": 1769,
+   "preprints": 39,
+   "preprints_prev": 37,
+   "mean_log_citedness": 1.381,
+   "top_share": 0.067,
    "top_journals": [
     [
      "Signal Transduction and Targeted Therapy",
@@ -522,31 +522,31 @@
      29.7
     ],
     [
-     "The Lancet",
-     6,
-     21.2
+     "Science Advances",
+     5,
+     13.3
     ]
    ],
-   "growth": 0.015,
-   "preprint_growth": 0.0,
-   "uptake": 0.158,
+   "growth": -0.116,
+   "preprint_growth": 0.054,
+   "uptake": 0.156,
    "parts": {
-    "preprints": 50,
-    "growth": 69,
-    "quality": 9,
+    "preprints": 58,
+    "growth": 19,
+    "quality": 6,
     "uptake": 6
    },
-   "score": 34
+   "score": 22
   },
   "microbiome": {
-   "articles": 1861,
-   "articles_prev": 1969,
-   "old": 8017,
-   "old_cited": 2260,
-   "preprints": 95,
+   "articles": 1802,
+   "articles_prev": 2048,
+   "old": 8019,
+   "old_cited": 2252,
+   "preprints": 98,
    "preprints_prev": 121,
-   "mean_log_citedness": 1.524,
-   "top_share": 0.098,
+   "mean_log_citedness": 1.542,
+   "top_share": 0.1,
    "top_journals": [
     [
      "Gut Microbes",
@@ -555,7 +555,7 @@
     ],
     [
      "Microbiome",
-     13,
+     14,
      15.2
     ],
     [
@@ -574,35 +574,35 @@
      11.4
     ]
    ],
-   "growth": -0.032,
-   "preprint_growth": -0.215,
-   "uptake": 0.282,
+   "growth": -0.01,
+   "preprint_growth": -0.19,
+   "uptake": 0.281,
    "parts": {
     "preprints": 8,
-    "growth": 31,
-    "quality": 47,
+    "growth": 38,
+    "quality": 44,
     "uptake": 81
    },
-   "score": 42
+   "score": 43
   },
   "synbio": {
-   "articles": 967,
-   "articles_prev": 987,
-   "old": 3801,
-   "old_cited": 1121,
-   "preprints": 18,
+   "articles": 950,
+   "articles_prev": 1010,
+   "old": 3807,
+   "old_cited": 1117,
+   "preprints": 19,
    "preprints_prev": 25,
-   "mean_log_citedness": 1.763,
-   "top_share": 0.131,
+   "mean_log_citedness": 1.776,
+   "top_share": 0.137,
    "top_journals": [
     [
      "Biotechnology Advances",
-     21,
+     22,
      11.8
     ],
     [
      "Chemical Engineering Journal",
-     14,
+     15,
      11.4
     ],
     [
@@ -621,41 +621,41 @@
      13.7
     ]
    ],
-   "growth": 0.003,
-   "preprint_growth": -0.28,
-   "uptake": 0.295,
+   "growth": 0.059,
+   "preprint_growth": -0.24,
+   "uptake": 0.293,
    "parts": {
     "preprints": 0,
-    "growth": 50,
+    "growth": 75,
     "quality": 84,
-    "uptake": 94
+    "uptake": 91
    },
-   "score": 57
+   "score": 62
   },
   "tools-omics": {
-   "articles": 4188,
-   "articles_prev": 4249,
-   "old": 16423,
-   "old_cited": 3652,
-   "preprints": 167,
-   "preprints_prev": 150,
-   "mean_log_citedness": 1.68,
-   "top_share": 0.122,
+   "articles": 4043,
+   "articles_prev": 4420,
+   "old": 16452,
+   "old_cited": 3635,
+   "preprints": 166,
+   "preprints_prev": 157,
+   "mean_log_citedness": 1.696,
+   "top_share": 0.125,
    "top_journals": [
     [
      "Nature Communications",
-     76,
+     74,
      18.5
     ],
     [
-     "Journal for ImmunoTherapy of Cancer",
-     23,
-     10.2
+     "Science Advances",
+     18,
+     13.3
     ],
     [
-     "Science Advances",
-     16,
-     13.3
+     "Journal for ImmunoTherapy of Cancer",
+     18,
+     10.2
     ],
     [
      "Nature",
@@ -663,41 +663,41 @@
      19.5
     ],
     [
-     "Cell Communication and Signaling",
+     "Nucleic Acids Research",
      13,
-     10.3
+     17.4
     ]
    ],
-   "growth": 0.009,
-   "preprint_growth": 0.113,
-   "uptake": 0.222,
+   "growth": 0.03,
+   "preprint_growth": 0.057,
+   "uptake": 0.221,
    "parts": {
-    "preprints": 83,
-    "growth": 56,
+    "preprints": 67,
+    "growth": 62,
     "quality": 75,
     "uptake": 44
    },
-   "score": 64
+   "score": 62
   },
   "diagnostics": {
-   "articles": 1732,
-   "articles_prev": 1880,
-   "old": 7141,
-   "old_cited": 1371,
-   "preprints": 20,
+   "articles": 1662,
+   "articles_prev": 1968,
+   "old": 7145,
+   "old_cited": 1358,
+   "preprints": 21,
    "preprints_prev": 24,
-   "mean_log_citedness": 1.365,
-   "top_share": 0.083,
+   "mean_log_citedness": 1.384,
+   "top_share": 0.085,
    "top_journals": [
-    [
-     "Nature Medicine",
-     12,
-     33.2
-    ],
     [
      "Biosensors and Bioelectronics",
      11,
      11.4
+    ],
+    [
+     "Nature Medicine",
+     11,
+     33.2
     ],
     [
      "TrAC Trends in Analytical Chemistry",
@@ -715,20 +715,20 @@
      13.4
     ]
    ],
-   "growth": -0.057,
-   "preprint_growth": -0.167,
-   "uptake": 0.192,
+   "growth": -0.049,
+   "preprint_growth": -0.125,
+   "uptake": 0.19,
    "parts": {
     "preprints": 17,
-    "growth": 6,
-    "quality": 22,
+    "growth": 25,
+    "quality": 16,
     "uptake": 25
    },
-   "score": 18
+   "score": 21
   },
   "lab-automation": {
    "articles": 34,
-   "articles_prev": 33,
+   "articles_prev": 32,
    "old": 102,
    "old_cited": 35,
    "preprints": 8,
@@ -762,25 +762,25 @@
      18.5
     ]
    ],
-   "growth": 0.055,
+   "growth": 0.196,
    "preprint_growth": null,
    "uptake": 0.343,
    "parts": {
     "preprints": null,
-    "growth": 84,
+    "growth": 100,
     "quality": 72,
     "uptake": 100
    },
-   "score": 85
+   "score": 91
   },
   "longevity": {
-   "articles": 1529,
-   "articles_prev": 1477,
-   "old": 5413,
-   "old_cited": 1368,
-   "preprints": 397,
-   "preprints_prev": 449,
-   "mean_log_citedness": 1.617,
+   "articles": 1490,
+   "articles_prev": 1538,
+   "old": 5428,
+   "old_cited": 1365,
+   "preprints": 401,
+   "preprints_prev": 451,
+   "mean_log_citedness": 1.627,
    "top_share": 0.119,
    "top_journals": [
     [
@@ -790,7 +790,7 @@
     ],
     [
      "Nature Communications",
-     13,
+     12,
      18.5
     ],
     [
@@ -804,21 +804,21 @@
      11.4
     ],
     [
-     "MedComm",
-     6,
-     10.9
+     "Cell Communication and Signaling",
+     5,
+     10.3
     ]
    ],
-   "growth": 0.06,
-   "preprint_growth": -0.116,
-   "uptake": 0.253,
+   "growth": 0.091,
+   "preprint_growth": -0.111,
+   "uptake": 0.251,
    "parts": {
     "preprints": 25,
-    "growth": 94,
+    "growth": 81,
     "quality": 66,
     "uptake": 62
    },
-   "score": 62
+   "score": 58
   }
  }
 }
