@@ -518,6 +518,19 @@
       "outcome": "Listed via reverse merger into InMed Pharmaceuticals (MTRI) with ~$490M financing that a16z joined (Nov 2026)",
       "outcome_value_usd": null,
       "source": "https://www.manilatimes.net/2026/11/09/tmt-newswire/globenewswire/mentari-therapeutics-announces-closing-of-merger-with-inmed-pharmaceuticals-and-previously-announced-490-million-financing/2465128/amp"
+    },
+    {
+      "name": "Ollin Biosciences",
+      "launched": "2023",
+      "role": "participated",
+      "silo": [
+        "antibody"
+      ],
+      "product": "Ophthalmology bispecifics; lead OLN324 (VEGF/Ang2) for DME and wet AMD",
+      "status": "private",
+      "outcome": "",
+      "outcome_value_usd": null,
+      "source": "https://ollin.bio/press-releases/ollin-biosciences-announces-oversubscribed-330-million-series-b-financing-to-advance-global-phase-3-development-of-oln324-in-dme-and-wet-amd-studies-commencing-in-second-half-of-2026/"
     }
   ]
 }

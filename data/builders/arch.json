@@ -439,6 +439,19 @@
    "outcome_value_usd": 200000000,
    "source": "https://www.sec.gov/Archives/edgar/data/0002143850/000110465926116636/tm2619715-10_424b4.htm",
    "founding_unconfirmed": true
+  },
+  {
+   "name": "Ollin Biosciences",
+   "launched": "2023",
+   "silo": [
+    "antibody"
+   ],
+   "product": "Ophthalmology bispecifics; lead OLN324 (VEGF/Ang2, in-licensed from Innovent) for DME and wet AMD",
+   "status": "private",
+   "outcome": "$330M Series B co-led by TCGX and ARCH (Jun 2026); FT reported J&J in advanced talks to buy it for up to $3.4B (Nov 15 2026)",
+   "outcome_value_usd": null,
+   "source": "https://ollin.bio/press-releases/ollin-biosciences-announces-oversubscribed-330-million-series-b-financing-to-advance-global-phase-3-development-of-oln324-in-dme-and-wet-amd-studies-commencing-in-second-half-of-2026/",
+   "founding_unconfirmed": true
   }
  ]
 }
