@@ -466,6 +466,17 @@
    "status": "completed",
    "description": "Cash purchase of Firefly Bio and its degrader-antibody conjugate platform aimed at KRAS-driven tumors.",
    "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-completes-acquisition-of-firefly-bio-inc-to-advance-next-generation-oncology-innovation"
+  },
+  {
+   "year": "2026",
+   "type": "acquisition",
+   "counterparty": "Ollin Biosciences",
+   "via": "",
+   "result": "",
+   "value_usd": 3325000000,
+   "status": "pending",
+   "description": "Agreed to buy ophthalmology biotech Ollin and its Phase 3 VEGF/Ang2 bispecific OLN324 for $2.2B upfront plus up to ~$1.125B in milestones; Blackstone Life Sciences to fund Phase 3 with $750M. Close expected by end of 2026.",
+   "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-to-acquire-ollin-biosciences-and-late-stage-bispecific-antibody-with-best-in-class-potential-in-ophthalmology"
   }
  ]
 }
