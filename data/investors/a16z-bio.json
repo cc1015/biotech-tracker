@@ -460,11 +460,11 @@
       "silo": [
         "foundation-models"
       ],
-      "product": "Open frontier biomolecular AI models and infrastructure",
+      "product": "Open frontier biomolecular AI models and infrastructure; a16z co-led $28M seed and returned in Bessemer-led $110M Series A (Nov 2026)",
       "status": "private",
       "outcome": "",
       "outcome_value_usd": null,
-      "source": "https://a16z.com/portfolio/"
+      "source": "https://boltz.com/series-a"
     },
     {
       "name": "ROME Therapeutics",
@@ -531,6 +531,20 @@
       "outcome": "J&J agreed to acquire for $2.2B upfront + up to ~$1.125B milestones (announced Nov 16 2026; pending)",
       "outcome_value_usd": 3325000000,
       "source": "https://www.jnj.com/media-center/press-releases/johnson-johnson-to-acquire-ollin-biosciences-and-late-stage-bispecific-antibody-with-best-in-class-potential-in-ophthalmology"
+    },
+    {
+      "name": "Isomorphic Labs",
+      "launched": "2021",
+      "role": "participated",
+      "silo": [
+        "ai-discovery",
+        "foundation-models"
+      ],
+      "product": "AI drug design engine spun out of Google DeepMind; a16z joined the $5B Series C (Nov 2026) as a new investor",
+      "status": "private",
+      "outcome": "",
+      "outcome_value_usd": null,
+      "source": "https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round"
     }
   ]
 }
