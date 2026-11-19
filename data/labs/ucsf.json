@@ -503,6 +503,22 @@
    "outcome": "acquired by United Therapeutics 2026, terms undisclosed",
    "outcome_value_usd": null,
    "source": "https://innovation.ucsf.edu/media/news/united-therapeutics-corporation-acquires-thymmune-therapeutics"
+  },
+  {
+   "name": "Stipple Bio",
+   "year": "2022",
+   "pi": "Aashish Manglik (with Aaron Ring, Fred Hutch)",
+   "silo": [
+    "adc",
+    "antibody"
+   ],
+   "product": "Pointillist platform for tumor-specific cell-surface epitopes; lead ADC STP-100",
+   "builder": "",
+   "status": "private",
+   "outcome": "Lilly collaboration up to $5.9B plus equity (Nov 2026)",
+   "outcome_value_usd": null,
+   "source": "https://stipple.bio/stipple-bio-announces-multi-target-multi-modality-oncology-research-collaboration-with-lilly/",
+   "origin_unconfirmed": true
   }
  ]
 }

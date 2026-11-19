@@ -413,6 +413,21 @@
    "outcome": "",
    "outcome_value_usd": null,
    "source": "https://en.wikipedia.org/wiki/James_J._Collins"
+  },
+  {
+   "name": "Boltz",
+   "year": "2025",
+   "pi": "Regina Barzilay",
+   "silo": [
+    "ai-discovery",
+    "foundation-models"
+   ],
+   "product": "Open-source biomolecular structure and design models (Boltz-1, Boltz-2, BoltzGen) plus paid design platform",
+   "builder": "",
+   "status": "private",
+   "outcome": "$110M Series A led by Bessemer (Nov 2026)",
+   "outcome_value_usd": null,
+   "source": "https://boltz.com/series-a"
   }
  ]
 }
