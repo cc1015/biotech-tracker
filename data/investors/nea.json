@@ -480,6 +480,17 @@
    "outcome": "IPO (NASDAQ: RARX); acquired by UCB",
    "outcome_value_usd": null,
    "source": "https://www.nea.com/portfolio/ra-pharmaceuticals"
+  },
+  {
+   "name": "VitriVax",
+   "launched": "",
+   "role": "led",
+   "silo": [],
+   "product": "Thermostable single-dose vaccine formulations (ALTA); lead Lyme disease vaccine",
+   "status": "private",
+   "outcome": "",
+   "outcome_value_usd": null,
+   "source": "https://vitrivaxbio.com/vitrivax-announces-87-million-series-c-financing-to-advance-lyme-disease-vaccine-candidate/"
   }
  ]
 }
